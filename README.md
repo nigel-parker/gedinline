@@ -14,10 +14,10 @@ The validator is also available for use at [GED-inline](http://ged-inline.elasti
 ### Getting Started
 #### Prerequisites
 
-Java must be installed on your machine. You can verify this by typing
+A recent Java JDK must be installed on your machine. You can verify that it is by typing
 
 ```
-java -version
+javac -version
 ```
 
 on your command line.
