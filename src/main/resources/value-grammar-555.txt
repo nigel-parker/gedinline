@@ -1,0 +1,514 @@
+
+ADDRESS_CITY  := {Size=1:60}
+String
+
+ADDRESS_COUNTRY := {Size=1:60}
+String
+
+ADDRESS_EMAIL := {Size=5:120}
+String
+
+Consider using org.apache.commons.validator.EmailValidator
+
+ADDRESS_FAX := {Size=5:60}
+String
+
+ADDRESS_LINE1 := {Size=1:60}
+String
+
+ADDRESS_LINE2 := {Size=1:60}
+String
+
+ADDRESS_LINE3 := {Size=1:60}
+String
+
+ADDRESS_POSTAL_CODE := {Size=1:10}
+String
+
+
+ADDRESS_STATE := {Size=1:60}
+String
+
+
+ADDRESS_WEB_PAGE := {Size=4:2047}
+String
+
+
+ADOPTED_BY_WHICH_PARENT := {Size=4:4}
+[HUSB|WIFE|BOTH]
+
+AGE_AT_EVENT := {Size=2:13}
+AgeAtEvent
+
+
+ATTRIBUTE_DESCRIPTOR := {Size=1:90}
+String
+
+ATTRIBUTE_TYPE := {Size=4:4}
+[CAST|EDUC|NATI|OCCU|PROP|RELI|RESI|TITL|FACT]
+
+
+AUTOMATED_RECORD_ID := {Size=1:12}
+String
+
+
+BEFORE_COMMON_ERA := {Size=2:4}
+[BCE|BC|B.C.]
+
+
+CASTE_NAME := {Size=1:90}
+String
+
+
+CAUSE_OF_EVENT := {Size=1:90}
+String
+
+
+CERTAINTY_ASSESSMENT := {Size=1:1}
+[0|1|2|3]
+
+
+CHARACTER_ENCODING:= {Size=5:6}
+[UTF-8|UNICODE]
+
+
+COPYRIGHT_GEDCOM_FILE := {Size=1:248}
+String
+
+COPYRIGHT_SOURCE_DATA := {Size=1:248}
+String
+
+
+COUNT_OF_CHILDREN := {Size=1:3}
+Decimal
+
+
+DATE := {Size=3:40}
+[<DATE_CALENDAR_ESCAPE>|Null] <DATE_CALENDAR>
+
+
+DATE_CALENDAR := {Size=3:40}
+[<DATE_GREG>|<DATE_JULN>|<DATE_HEBR>|<DATE_FREN>]
+
+
+DATE_CALENDAR_ESCAPE := {Size=4:15}
+[@#DHEBREW@|@#DFRENCH R@|@#DGREGORIAN@|@#DJULIAN@|@#DUNKNOWN@]
+
+
+DATE_EXACT := {Size=10:11}
+<DAY> Whitespace <MONTH> Whitespace <YEAR_GREG>
+
+
+DATE_FREN := {Size=4:40}
+[<YEAR>|<MONTH_FREN> Whitespace <YEAR>|<DAY> Whitespace <MONTH_FREN> Whitespace <YEAR>]
+
+
+DATE_GREG := {Size=4:35}
+[<MONTH> Whitespace <YEAR>|<YEAR> [Whitespace <BEFORE_COMMON_ERA>]|<DAY> Whitespace <MONTH> Whitespace <YEAR>|<DAY> Whitespace <MONTH>|<MONTH> Whitespace <DUAL_STYLE_YEAR>|<DAY> Whitespace <MONTH> Whitespace <DUAL_STYLE_YEAR>]
+
+
+DATE_HEBR := {Size=4:35}
+[<YEAR>|<MONTH_HEBR> Whitespace <YEAR>|<DAY> Whitespace <MONTH_HEBR> Whitespace <YEAR>]
+
+
+DATE_JULN := {Size=4:35}
+[<YEAR> [Whitespace <BEFORE_COMMON_ERA>]|<MONTH> Whitespace <YEAR>|<DAY> Whitespace <MONTH> Whitespace <YEAR>|<MONTH> Whitespace <DUAL_STYLE_YEAR>|<DAY> Whitespace <MONTH> Whitespace <DUAL_STYLE_YEAR>]
+
+
+DATE_PERIOD := {Size=7:35}
+[FROM Whitespace <DATE> Whitespace TO Whitespace <DATE>|FROM Whitespace <DATE>|TO Whitespace <DATE>]
+
+
+DATE_RANGE := {Size=7:40}
+[BEF Whitespace <DATE>|AFT Whitespace <DATE>|BET Whitespace <DATE> Whitespace AND Whitespace <DATE>]
+
+
+DATE_VALUE := {Size=1:40}
+DateValue
+
+
+DAY := {Size=1:2}
+Decimal
+
+
+DESCRIPTIVE_TITLE := {Size=1:248}
+String
+
+
+DIGIT := {Size=1:1}
+Decimal
+
+
+DUAL_STYLE_YEAR := {Size=3:7}
+<YEAR> + slash + <DIGIT> + <DIGIT>
+
+
+ENTRY_RECORDING_DATE := {Size=1:90}
+<DATE_VALUE>
+
+
+EVENT_ATTRIBUTE_TYPE := {Size=1:15}
+[<EVENT_TYPE_INDIVIDUAL>|<EVENT_TYPE_FAMILY>|<ATTRIBUTE_TYPE>]
+
+EVENT_DESCRIPTOR := {Size=1:90}
+String
+
+
+EVENT_OR_FACT_CLASSIFICATION := {Size=1:90}
+String
+
+
+EVENT_TYPE_CITED_FROM := {Size=1:15}
+[<EVENT_ATTRIBUTE_TYPE>]
+
+
+EVENT_TYPE_FAMILY := {Size=3:4}
+[ANUL|CENS|DIV|DIVF|ENGA|MARR|MARB|MARC|MARL|MARS|EVEN]
+
+
+EVENT_TYPE_INDIVIDUAL := {Size=3:4}
+[ADOP|BIRT|BAPM|BARM|BASM|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|RETI|PROB|WILL|EVEN]
+
+
+EVENTS_RECORDED := {Size=1:90}
+[<EVENT_ATTRIBUTE_TYPE> , [Whitespace|Null] <EVENTS_RECORDED>|<EVENT_ATTRIBUTE_TYPE>]
+
+
+FILE_CREATION_DATE := {Size=10:11}
+<DATE_EXACT>
+
+
+GEDCOM_CONTENT_DESCRIPTION := {Size=1:248}
+String
+
+
+GEDCOM_FILE_NAME := {Size=1:90}
+String
+
+
+GEDCOM_VERSION_NUMBER := {Size=3:11}
+String
+
+
+HAPPENED := {Size=0:1}
+[Y|Null]
+
+
+ID_NUMBER := {Size=1:30}
+String
+
+
+LANGUAGE_ID := {Size=1:15}
+[Afrikaans|Albanian|Anglo-Saxon|Catalan|Catalan_Spn|Czech|Danish|Dutch|English|Esperanto|Estonian|Faroese|Finnish|French|German|Hawaiian|Hungarian|Icelandic|Indonesian|Italian|Latvian|Lithuanian|Navaho|Norwegian|Polish|Portuguese|Romanian|Serbo_Croa|Slovak|Slovene|Spanish|Swedish|Turkish|Wendic|Amharic|Arabic|Armenian|Assamese|Belorusian|Bengali|Braj|Bulgarian|Burmese|Cantonese|Church-Slavic|Dogri|Georgian|Greek|Gujarati|Hebrew|Hindi|Japanese|Kannada|Khmer|Konkani|Korean|Lahnda|Lao|Macedonian|Maithili|Malayalam|Mandarin|Manipuri|Marathi|Mewari|Nepali|Oriya|Pahari|Pali|Panjabi|Persian|Prakrit|Pusto|Rajasthani|Russian|Sanskrit|Serb|Tagalog|Tamil|Telugu|Thai|Tibetan|Ukrainian|Urdu|Vietnamese|Yiddish]
+
+
+LANGUAGE_OF_TEXT := {Size=1:15}
+[<LANGUAGE_ID>]
+
+
+LINEAGE-LINKED := {Size=14:14}
+[LINEAGE-LINKED]
+
+
+MONTH := {Size=3}
+[JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC]
+
+
+MONTH_FREN := {Size=4}
+[VEND|BRUM|FRIM|NIVO|PLUV|VENT|GERM|FLOR|PRAI|MESS|THER|FRUC|COMP]
+
+
+MONTH_HEBR := {Size=3}
+[TSH|CSH|KSL|TVT|SHV|ADR|ADS|NSN|IYR|SVN|TMZ|AAV|ELL]
+
+
+MULTIMEDIA_FILE_REFERENCE := {Size=1:259}
+String
+
+
+MULTIMEDIA_FORMAT := {Size=3:4}
+[AAC|AVI|BMP|ePub|FLAC|GIF|JPEG|JPG|MKV|mobi|MP3|PCX|PDF|PNG|TIFF|TIF|WAV]
+
+
+NAME_OF_BUSINESS := {Size=1:90}
+String
+
+
+NAME_OF_PRODUCT := {Size=1:90}
+String
+
+NAME_OF_REPOSITORY := {Size=1:90}
+String
+
+
+NAME_OF_SOURCE_DATA := {Size=1:90}
+String
+
+
+NAME_PERSONAL := {Size=1:120}
+[<NAME_TEXT>|/<NAME_TEXT>/|<NAME_TEXT>   /<NAME_TEXT>/|/<NAME_TEXT>/   <NAME_TEXT>|<NAME_TEXT>   /<NAME_TEXT>/   <NAME_TEXT>]
+
+
+NAME_PHONETIC := {Size=1:120}
+String
+
+
+NAME_PIECE := {Size=1:90}
+String
+
+
+NAME_PIECE_GIVEN := {Size=1:120}
+[<NAME_PIECE>|<NAME_PIECE_GIVEN>, <NAME_PIECE>]
+
+
+NAME_PIECE_NICKNAME := {Size=1:30}
+[<NAME_PIECE>|<NAME_PIECE_NICKNAME>, <NAME_PIECE>]
+
+
+NAME_PIECE_PREFIX := {Size=1:30}
+[<NAME_PIECE>|<NAME_PIECE_PREFIX>, <NAME_PIECE>]
+
+
+NAME_PIECE_SUFFIX := {Size=1:30}
+[<NAME_PIECE>|<NAME_PIECE_SUFFIX>, <NAME_PIECE>]
+
+
+NAME_PIECE_SURNAME := {Size=1:120}
+[<NAME_PIECE>|<NAME_PIECE_SURNAME>, <NAME_PIECE>]
+
+NAME_PIECE_SURNAME_PREFIX := {Size=1:30}
+[<NAME_PIECE>]
+
+
+NAME_ROMANISED := {Size=1:120}
+String
+
+
+NAME_TEXT := {Size=1:120}
+<TEXT>
+
+
+NAME_TYPE := {Size=5:30}
+String
+
+
+NATIONAL_OR_TRIBAL_ORIGIN := {Size=1:120}
+String
+
+
+NOBILITY_TYPE_TITLE := {Size=1:120}
+String
+
+
+NULL := {Size=0:0}
+String
+
+
+
+NUMBER := {Size=3:4}
+[<DIGIT>|<NUMBER>+<DIGIT>]
+
+
+NUMBER_OF_RELATIONSHIPS := {Size=1:3}
+Decimal
+
+
+OCCUPATION := {Size=1:90}
+String
+
+
+OPTIONAL_EVENT_DESCRIPTOR := {Size=0:90}
+[<EVENT_DESCRIPTOR>|<NULL>]
+
+
+PEDIGREE_LINKAGE_TYPE := {Size=5:7}
+[adopted|birth|foster]
+
+
+PHONE_NUMBER := {Size=1:25}
+String
+
+
+PHONETISATION_METHOD := {Size=5:30}
+[<user defined>|hangul|kana]
+
+
+PHYSICAL_DESCRIPTION := {Size=1:4095}
+String
+
+
+PLACE_LATITUDE := {Size=2:10}
+String
+
+
+PLACE_LONGITUDE := {Size=2:11}
+String
+
+PLACE_NAME := {Size=1:120}
+String
+
+[<PLACE_TEXT>|<PLACE_TEXT>,   <PLACE_NAME>]
+
+
+PLACE_PHONETIC := {Size=1:120}
+String
+
+
+PLACE_ROMANISED := {Size=1:120}
+String
+
+
+PLACE_TEXT := {Size=1:120}
+String
+
+
+POSSESSIONS := {Size=1:248}
+String
+
+
+PRODUCT_VERSION_NUMBER := {Size=3:15}
+regex:\d{1,3}\.\d{1,3}(\.\d{1,3}(\.\d{1,3})?)?
+ddd.ddd[.ddd[.ddd]]
+
+PUBLICATION_DATE := {Size=10:11}
+<DATE_EXACT>
+
+
+RECEIVING_SYSTEM_NAME := {Size=1:20}
+String
+
+
+RELATION_IS_DESCRIPTOR := {Size=1:25}
+String
+
+
+RELIGIOUS_AFFILIATION := {Size=1:90}
+String
+
+
+RESPONSIBLE_AGENCY := {Size=1:120}
+String
+
+
+ROLE_DESCRIPTOR := {Size=1:25}
+String
+
+
+ROLE_IN_EVENT := {Size=3:27}
+[CHIL|HUSB|WIFE|MOTH|FATH|SPOU|( <ROLE_DESCRIPTOR> )]
+
+
+ROMANISATION_METHOD := {Size=5:30}
+[<user defined>|pinyin|romaji|wadegiles]
+
+
+SCHOLASTIC_ACHIEVEMENT := {Size=1:248}
+String
+
+
+SEX_VALUE := {Size=1:1}
+[M|F|X|U|N]
+
+
+SOURCE_CALL_NUMBER := {Size=1:120}
+String
+
+
+SOURCE_DESCRIPTIVE_TITLE := {Size=1:4095}
+String
+
+
+SOURCE_FILED_BY_ENTRY := {Size=1:60}
+String
+
+
+SOURCE_JURISDICTION_PLACE := {Size=1:120}
+<PLACE_NAME>
+
+
+SOURCE_MEDIA_TYPE := {Size=1:15}
+[audio|book|card|electronic|fiche|film|magazine|manuscript|map|newspaper|photo|tombstone|video]
+
+
+SOURCE_ORIGINATOR := {Size=1:255}
+String
+
+
+SOURCE_PUBLICATION_FACTS := {Size=1:4095}
+String
+
+
+SUBMITTER_NAME := {Size=1:60}
+String
+
+
+SYSTEM_ID := {Size=1:20}
+String
+
+
+TEXT := {Size=1:32767}
+String
+
+
+TEXT_FROM_SOURCE := {Size=1:32767}
+<TEXT>
+
+
+TIME_VALUE := {Size=1:12}
+Time
+
+
+USER_REFERENCE_NUMBER := {Size=1:20}
+String
+
+
+USER_REFERENCE_TYPE := {Size=1:40}
+String
+
+
+USER_TEXT := {Size=1:32767}
+String
+
+
+WHERE_WITHIN_SOURCE := {Size=1:248}
+String
+
+
+XREF := {Size=1:20}
+Pointer
+
+
+XREF:FAM := {Size=1:20}
+Pointer
+
+
+XREF:INDI := {Size=1:20}
+Pointer
+
+
+XREF:NOTE := {Size=1:20}
+Pointer
+
+
+XREF:OBJE := {Size=1:20}
+Pointer
+
+
+XREF:REPO := {Size=1:20}
+Pointer
+
+
+XREF:SOUR := {Size=1:20}
+Pointer
+
+
+XREF:SUBM := {Size=1:20}
+Pointer
+
+
+YEAR := {Size=3:4}
+Decimal
+
+
+YEAR_GREG := {Size=4:4}
+Decimal

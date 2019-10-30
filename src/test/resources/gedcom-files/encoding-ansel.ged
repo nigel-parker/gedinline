@@ -1,0 +1,29 @@
+0 HEAD
+1 SOUR AncestQuest
+2 NAME Ancestry Family Tree
+2 VERS 3.0
+2 CORP Incline Software, LC
+3 ADDR 360 West 4800 North
+4 CONT Provo, UT 84604
+1 DEST Ancestry Family Tree
+1 DATE 21 NOV 2002
+2 TIME 08:18:37
+1 FILE rognefamilien.ged
+1 GEDC
+2 VERS 5.5
+2 FORM LINEAGE-LINKED
+1 CHAR ANSEL
+0 @I1@ INDI
+1 NAME Peder Ellingssen /Mµhlum/
+1 NAME Helga Agnethe Rogne /Indst²y/
+1 SEX M
+1 BIRT
+2 DATE 21 APR 1794
+1 DEAT
+2 DATE 4 AUG 1872
+1 FAMS @F1@
+1 FAMC @F2@
+1 CHAN
+2 DATE 27 OCT 2002
+3 TIME 21:24:22
+0 TRLR

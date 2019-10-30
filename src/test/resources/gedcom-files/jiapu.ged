@@ -1,0 +1,11 @@
+﻿0 HEAD
+1 CHAR UTF-8
+
+0 @I1@ INDI
+1 FAMS @F1@
+2 SOUR @@
+
+0 @I2@ INDI
+1 FAMS @F2@
+2 SOUR @@
+

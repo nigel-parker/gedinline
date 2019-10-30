@@ -1,0 +1,45 @@
+﻿0 HEAD
+1 SOUR Test
+2 VERS Test
+2 NAME Test
+2 CORP Test
+2 DATA test.familyx
+3 DATE 18 FEB 2012
+3 COPR Test
+1 DATE 24 FEB 2012
+2 TIME 19:41
+1 SUBM @SUBM1@
+1 SUBN @SUBN1@
+1 FILE test.ged
+1 COPR Test
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG English
+0 @I0@ INDI
+1 NAME George
+1 SEX M
+
+1 NOTE This file generates a misleading error message for the 3rd. object, the first 2 are OK. Might be fixed in a later release
+
+1 OBJE
+2 FILE image2.jpg
+3 FORM invalidtag
+4 MEDI photo
+
+1 OBJE
+2 FILE Filenameisveryveryveryverylong.jpg
+3 FORM jpg
+4 MEDI photo
+
+1 OBJE
+2 FILE Filenameisveryveryveryverylong.jpg
+3 FORM invalidtag
+4 MEDI photo
+
+0 @SUBN1@ SUBN
+1 SUBM @SUBM1@
+0 @SUBM1@ SUBM
+1 NAME Test
+0 TRLR

@@ -1,0 +1,892 @@
+
+ADDRESS_CITY := {Size=1:60}
+String
+The name of the city used in the address. Isolated for sorting or indexing.
+
+ADDRESS_COUNTRY := {Size=1:60}
+String
+The name of the country that pertains to the associated address. Isolated by some systems for sorting or indexing. Used in most cases to facilitate automatic sorting of mail.
+
+ADDRESS_EMAIL := {Size=5:120}
+String
+An electronic address that can be used for contact such as an email address.
+
+ADDRESS_FAX := {Size=5:60}
+String
+A FAX telephone number appropriate for sending data facsimiles.
+
+ADDRESS_LINE := {Size=1:60}
+String
+Address information that, when combined with NAME and CONTinuation lines, meets requirements for sending communications through the mail.
+
+ADDRESS_LINE1 := {Size=1:60}
+String
+The first line of the address used for indexing. This corresponds to the ADDRESS_LINE value of the ADDR line in the address structure.
+
+ADDRESS_LINE2 := {Size=1:60}
+String
+The second line of the address used for indexing. This corresponds to the ADDRESS_LINE value of the first CONT line subordinate to the ADDR tag in the address structure.
+
+ADDRESS_POSTAL_CODE := {Size=1:10}
+String
+The ZIP or postal code used by the various localities in handling of mail. Isolated for sorting or indexing.
+
+ADDRESS_STATE := {Size=1:60}
+String
+The name of the state used in the address. Isolated for sorting or indexing.
+
+ADDRESS_WEB_PAGE := {Size=5:120}
+String
+The world wide web page address.
+
+ADOPTED_BY_WHICH_PARENT := {Size=1:4}
+[HUSB|WIFE|BOTH]
+A code which shows which parent in the associated family record adopted this person.
+Where:
+HUSB =The HUSBand in the associated family adopted this person.
+WIFE =The WIFE in the associated family adopted this person.
+BOTH =Both HUSBand and WIFE adopted this person.
+
+AGE_AT_EVENT := {Size=1:12}
+AgeAtEvent
+Where :
+> = greater than indicated age
+< = less than indicated age
+y = a label indicating years
+m = a label indicating months
+d = a label indicating days
+YY = number of full years
+MM = number of months
+DDD = number of days
+CHILD = age < 8 years
+INFANT = age < 1 year
+STILLBORN = died just prior, at, or near birth, 0 years
+
+A number that indicates the age in years, months, and days that the principal was at the time of the associated event. Any labels must come after their corresponding number, for example; 4y 8m 10d.
+
+ANCESTRAL_FILE_NUMBER := {Size=1:12}
+String
+A unique permanent record number of an individual record contained in the Family History Department's Ancestral File.
+
+APPROVED_SYSTEM_ID := {Size=1:20}
+NonSpaceString
+A system identification name which was obtained through the GEDCOM registration process. This name must be unique from any other product. Spaces within the name must be substituted with a 0x5F (underscore _) so as to create one word.
+
+ATTRIBUTE_TYPE := {Size=1:4}
+[CAST|EDUC|NATI|OCCU|PROP|RELI|RESI|TITL]
+An attribute which may have caused name, addresses, phone numbers, family listings to be recorded. Its application is in helping to classify sources used for information.
+
+ATTRIBUTE_DESCRIPTOR := {Size=1:90}
+String
+Text describing a particular characteristic or attribute assigned to an individual. This attribute value is
+assigned to the FACT tag.  The classification of this specific attribute or fact is specified by the value
+of the subordinate TYPE tag selected from the EVENT_DETAIL structure.  For example if you were
+classifying the skills a person had obtained;
+1 FACT Woodworking
+2 TYPE Skills
+
+AUTOMATED_RECORD_ID := {Size=1:12}
+String
+A unique record identification number assigned to the record by the source system. This number is intended to serve as a more sure means of identification of a record between two interfacing systems.
+
+CASTE_NAME := {Size=1:90}
+String
+A name assigned to a particular group that this person was associated with, such as a particular racial group, religious group, or a group with an inherited status.
+
+CAUSE_OF_EVENT := {Size=1:90}
+String
+Used in special cases to record the reasons which precipitated an event. Normally this will be used subordinate to a death event to show cause of death, such as might be listed on a death certificate.
+
+CERTAINTY_ASSESSMENT := {Size=1:1}
+[0|1|2|3]
+The QUAY tag's value conveys the submitter's quantitative evaluation of the credibility of a piece of information, based upon its supporting evidence. Some systems use this feature to rank multiple conflicting opinions for display of most likely information first. It is not intended to eliminate the receiver's need to evaluate the evidence for themselves.
+
+0 =Unreliable evidence or estimated data
+1 =Questionable reliability of evidence (interviews, census, oral genealogies, or potential for bias for example, an autobiography)
+2 =Secondary evidence, data officially recorded sometime after event
+3 =Direct and primary evidence used, or by dominance of the evidence
+
+CHANGE_DATE := {Size=10:11}
+<DATE_EXACT>
+The date that this data was changed.
+
+CHARACTER_SET := {Size=1:8}
+[ANSEL|UNICODE|ASCII]
+A code value that represents the character set to be used to interpret this data. The default character set is ANSEL, which includes ASCII as a subset. UNICODE is not widely supported by most operating systems; therefore, GEDCOM produced using the UNICODE character set will be limited in acceptance for some time. See Chapter 3. ASCII contains the character set from 0x0 to 0x7F.
+
+Note:The IBMPC character set is not allowed. This character set cannot be interpreted properly without knowing which code page the sender was using.
+
+CHARACTER_SET_551 := {Size=1:8}
+[ANSEL|UNICODE|ASCII|UTF-8]
+A code value that represents the character set to be used to interpret this data. The default character set is ANSEL, which includes ASCII as a subset. UNICODE is not widely supported by most operating systems; therefore, GEDCOM produced using the UNICODE character set will be limited in acceptance for some time. See Chapter 3. ASCII contains the character set from 0x0 to 0x7F.
+
+CHILD_LINKAGE_STATUS := {Size=1:15}
+[challenged|disproven|proven]
+A status code that allows passing on the users opinion of the status of a child to family link.
+challenged = Linking this child to this family is suspect, but the linkage has been neither proven nor
+disproven.
+disproven  = There has been a claim by some that this child belongs to this family, but the linkage
+has been disproven.
+proven = There has been a claim by some that this child does not belongs to this family, but the
+linkage has been proven.
+
+COPYRIGHT_GEDCOM_FILE := {Size=1:90}
+String
+A copyright statement needed to protect the copyrights of the submitter of this GEDCOM file.
+
+COPYRIGHT_SOURCE_DATA := {Size=1:90}
+String
+A copyright statement required by the owner of data from which this information was down- loaded. For example, when a GEDCOM down-load is requested from the Ancestral File, this would be the copyright statement to indicate that the data came from a copyrighted source.
+
+COUNT_OF_CHILDREN := {Size=1:3}
+String
+The known number of children of this individual from all marriages or, if subordinate to a family record, the reported number of children known to belong to this family, regardless of whether the associated children are represented in the corresponding structure. This is not necessarily the count of children listed in a family structure.
+
+COUNT_OF_MARRIAGES := {Size=1:3}
+String
+The number of different families that this person was known to have been a member of as a spouse or parent, regardless of whether the associated families are represented in the GEDCOM file.
+
+DATE := {Size=3:40}
+[<DATE_CALENDAR_ESCAPE>|Null] <DATE_CALENDAR>
+
+DATE_APPROXIMATED := {Size=4:40}
+[ABT Whitespace <DATE>|CAL Whitespace <DATE>|EST Whitespace <DATE>]
+Where :
+ABT =About, meaning the date is not exact.
+CAL =Calculated mathematically, for example, from an event date and age.
+EST =Estimated based on an algorithm using some other event date.
+
+DATE_CALENDAR := {Size=3:40}
+[<DATE_GREG>|<DATE_JULN_ERA>|<DATE_HEBR>|<DATE_FREN>]
+
+The selection is based on the <DATE_CALENDAR_ESCAPE> that precedes the <DATE_CALENDAR> value immediately to the left. If <DATE_CALENDAR_ESCAPE> doesn't appear at this point, then @#DGREGORIAN@ is assumed. No future calendar types will use words (e.g., month names) from this list: FROM, TO, BEF, AFT, BET, AND, ABT, EST, CAL, or INT. When only a day and month appears as a DATE value it is considered a date phrase and not a valid date form.
+  Date Escape    Syntax Selected
+  -----------    -------------
+  @#DGREGORIAN@  <DATE_GREG>
+  @#DJULIAN@     <DATE_JULN>
+  @#DHEBREW@     <DATE_HEBR>
+  @#DFRENCH R@   <DATE_FREN>
+  @#DROMAN@      for future definition
+  @#DUNKNOWN@    calendar not known
+
+DATE_CALENDAR_ESCAPE := {Size=4:15}
+[@#DHEBREW@|@#DROMAN@|@#DFRENCH R@|@#DGREGORIAN@|@#DJULIAN@|@#DUNKNOWN@]
+The date escape determines the date interpretation by signifying which <DATE_CALENDAR> to use. The default calendar is the Gregorian calendar.
+
+DATE_EXACT := {Size=10:11}
+<DAY> Whitespace <MONTH> Whitespace <YEAR_GREG>
+
+DATE_FREN := {Size=4:40}
+[<YEAR>|<MONTH_FREN> Whitespace <YEAR>|<DAY> Whitespace <MONTH_FREN> Whitespace <YEAR>]
+See <MONTH_FREN>
+
+DATE_GREG := {Size=3:40}
+[<YEAR_GREG>|<MONTH> Whitespace <YEAR_GREG>|<DAY> Whitespace <MONTH> Whitespace <YEAR_GREG>]
+See <YEAR_GREG>.
+
+DATE_HEBR := {Size=4:40}
+[<YEAR>|<MONTH_HEBR> Whitespace <YEAR>|<DAY> Whitespace <MONTH_HEBR> Whitespace <YEAR>]
+See <MONTH_HEBR>.
+
+DATE_JULN := {Size=4:40}
+[<YEAR>|<MONTH> Whitespace <YEAR>|<DAY> Whitespace <MONTH> Whitespace <YEAR>]
+
+DATE_JULN_ERA := {Size=4:40}
+<DATE_JULN> [Whitespace|Null] [B.C.|Null]
+
+DATE_LDS_ORD := {Size=4:40}
+<DATE_VALUE>
+LDS ordinance dates use only the Gregorian date and most often use the form of day, month, and year. Only in rare instances is there a partial date. The temple tag and code should always accompany temple ordinance dates. Sometimes the LDS_(ordinance)_DATE_STATUS is used to indicate that an ordinance date and temple code is not required, such as when BIC is used. (See LDS_(ordinance)_DATE_STATUS definitions.)
+
+DATE_PERIOD := {Size=7:40}
+[FROM Whitespace <DATE> Whitespace TO Whitespace <DATE>|FROM Whitespace <DATE>|TO Whitespace <DATE>]
+Where:DATE>
+FROM =Indicates the beginning of a happening or state.
+TO =Indicates the ending of a happening or state.
+
+Examples:
+FROM 1904 to 1915
+=The state of some attribute existed from 1904 to 1915 inclusive.
+FROM 1904
+=The state of the attribute began in 1904 but the end date is unknown.
+TO 1915
+=The state ended in 1915 but the begin date is unknown.
+
+DATE_PHRASE := {Size=1:40}
+StringInBrackets
+Any statement offered as a date when the year is not recognizable to a date parser, but which gives information about when an event occurred. The date phrase is enclosed in matching parentheses.
+
+DATE_RANGE := {Size=7:40}
+[BEF Whitespace <DATE>|AFT Whitespace <DATE>|BET Whitespace <DATE> Whitespace AND Whitespace <DATE>]
+
+Where :
+AFT =Event happened after the given date.
+BEF =Event happened before the given date.
+BET =Event happened some time between date 1 AND date 2. For example, bet 1904 and 1915 indicates that the event state (perhaps a single day) existed somewhere between 1904 and 1915 inclusive.
+
+The date range differs from the date period in that the date range is an estimate that an event happened on a single date somewhere in the date range specified.
+
+The following are equivalent and interchangeable:
+  Short form  Long Form
+  ----------  ---------
+  1852        BET 1 JAN 1852 AND 31 DEC 1852
+  1852        BET 1 JAN 1852 AND DEC 1852
+  1852        BET JAN 1852 AND 31 DEC 1852
+  1852        BET JAN 1852 AND DEC 1852
+  JAN 1920    BET 1 JAN 1920 AND 31 JAN 1920
+
+DATE_VALUE := {Size=1:40}
+DateValue
+[<DATE>|<DATE_PERIOD>|<DATE_RANGE>|<DATE_APPROXIMATED>|INT Whitespace <DATE> Whitespace ( <DATE_PHRASE> )|( <DATE_PHRASE> )]
+
+The DATE_VALUE represents the date of an activity, attribute, or event where:
+INT =Interpreted from knowledge about the associated date phrase included in parentheses.
+
+An acceptable alternative to the date phrase choice is to use one of the other choices such as <DATE_APPROXIMATED> choice as the DATE line value and then include the <DATE_PHRASE> as a NOTE value subordinate to the DATE line.
+
+The date value can take on the date form of just a date, an approximated date, between a date and another date, and from one date to another date. The preferred form of showing date imprecision, is to show, for example, MAY 1890 rather than ABT 12 MAY 1890. This is because limits have not been assigned to the precision of the prefixes such as ABT or EST.
+
+DAY := {Size=1:2}
+Decimal
+Day of the month, where dd is a numeric digit whose value is within the valid range of the days for the associated calendar month.
+
+DESCRIPTIVE_TITLE := {Size=1:248}
+String
+The title of a work, record, item, or object.
+
+DIGIT := {Size=1:1}
+[0|1|2|3|4|5|6|7|8|9]
+A single digit (0-9).
+
+ENCODED_MULTIMEDIA_LINE := {Size=1:87}
+String
+A line from a multimedia object which has been ENCODED. Each 54 characters of the multimedia object is encoded and stored in a 72 byte value. The encoding algorithm is used to convert binary objects into legal ASCII values which can be transmitted. See the encoding and decoding algorithms that are defined in Appendix E.
+
+ENTRY_RECORDING_DATE := {Size=1:90}
+<DATE_VALUE>
+The date that this event data was entered into the original source document.
+
+EVENT_ATTRIBUTE_TYPE := {Size=1:15}
+[<EVENT_TYPE_INDIVIDUAL>|<EVENT_TYPE_FAMILY>|<ATTRIBUTE_TYPE>]
+A code that classifies the principal event or happening that caused the source record entry to be created. If the event or attribute doesn't translate to one of these tag codes, then a user supplied code is expected, but will be considered as the generic tag EVEN for source certainty evaluation.
+
+EVENT_DESCRIPTOR := {Size=1:90}
+String
+A descriptor that should be used whenever the EVEN tag is used to define the event being cited. For example, if the event was a purchase of a residence, the EVEN tag would be followed by a subordinate TYPE tag with the value "Purchased Residence." Using this descriptor with any of the other defined event tags basically classifies the basic definition of the associated tag but does not change its basic process. The form of using the TYPE tag with defined event tags has not been used by very many products. The MARR tag could be subordinated with a TYPE tag and EVENT_DESCRIPTOR value of Common Law. Other possible descriptor values might include "Childbirth%unmarried," "Common Law," or "Tribal Custom," for example. The event descriptor should use the same word or phrase and in the same language, when possible, as was used by the recorder of the event. Systems that display data from the GEDCOM form should be able to display the descriptor value in their screen or printed output.
+
+EVENT_TYPE_CITED_FROM := {Size=1:15}
+String
+A code that indicates the type of event which was responsible for the source entry being recorded. For example, if the entry was created to record a birth of a child, then the type would be BIRT regardless of the assertions made from that record, such as the mother's name or mother's birth date. This will allow a prioritized best view choice and a determination of the certainty associated with the source used in asserting the cited fact.
+
+EVENT_TYPE_FAMILY := {Size=3:4}
+[ANUL|CENS|DIV|DIVF|ENGA|MARR|MARB|MARC|MARL|MARS|EVEN]
+
+A code used to indicate the type of family event. The definition is the same as the corresponding event tag defined in Appendix A.
+
+EVENT_TYPE_INDIVIDUAL := {Size=3:4}
+[ADOP|BIRT|BAPM|BARM|BASM|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORDN|RETI|PROB|WILL|EVEN]
+
+A code used to indicate the type of family event. The definition is the same as the corresponding event tag defined in Appendix A.
+
+EVENTS_RECORDED := {Size=1:90}
+[<EVENT_ATTRIBUTE_TYPE> , [Whitespace|Null] <EVENTS_RECORDED>|<EVENT_ATTRIBUTE_TYPE>]
+An enumeration of the different kinds of events that were recorded in a particular source. Each enumeration is separated by a comma. Such as a parish register of births, deaths, and marriages would be BIRT, DEAT, MARR.
+
+FILE_NAME := {Size=1:90}
+String
+The name of the GEDCOM transmission file. If the file name includes a file extension it must be shown in the form (filename.ext).
+
+GEDCOM_CONTENT_DESCRIPTION := {Size=0:248}
+String
+A note that a user enters to describe the contents of the lineage-linked file in terms of "ancestors or descendants of" so that the person receiving the data knows what genealogical information the transmission contains.
+
+GEDCOM_FORM := {Size=14:20}
+[LINEAGE-LINKED]
+The GEDCOM form used to construct this transmission. There maybe other forms used such as CommSoft's "EVENT_LINEAGE_LINKED" but these specifications define only the LINEAGE-LINKED Form. Systems will use this value to specify GEDCOM compatible with these specifications.
+
+GENERATIONS_OF_ANCESTORS := {Size=1:4}
+String
+The number of generations of ancestors included in this transmission. This value is usually provided when FamilySearch programs build a GEDCOM file for a patron requesting a download of ancestors.
+
+GENERATIONS_OF_DESCENDANTS := {Size=1:4}
+String
+The number of generations of descendants included in this transmission. This value is usually provided when FamilySearch programs build a GEDCOM file for a patron requesting a download of descendants.
+
+HAPPENED := {Size=0:1}
+[Y|Null]
+
+LANGUAGE_ID := {Size=1:15}
+[Afrikaans|Albanian|Anglo-Saxon|Catalan|Catalan_Spn|Czech|Danish|Dutch|English|Esperanto|Estonian|Faroese|Finnish|French|German|Hawaiian|Hungarian|Icelandic|Indonesian|Italian|Latvian|Lithuanian|Navaho|Norwegian|Polish|Portuguese|Romanian|Serbo_Croa|Slovak|Slovene|Spanish|Swedish|Turkish|Wendic]
+A table of valid latin language identification codes.
+
+Other languages not supported until UNICODE
+[Amharic|Arabic|Armenian|Assamese|Belorusian|Bengali|Braj|Bulgarian|Burmese|Cantonese|Church-Slavic|Dogri|Georgian|Greek|Gujarati|Hebrew|Hindi|Japanese|Kannada|Khmer|Konkani|Korean|Lahnda|Lao|Macedonian|Maithili|Malayalam|Mandrin|Manipuri|Marathi|Mewari|Nepali|Oriya|Pahari|Pali|Panjabi|Persian|Prakrit|Pusto|Rajasthani|Russian|Sanskrit|Serb|Tagalog|Tamil|Telugu|Thai|Tibetan|Ukrainian|Urdu|Vietnamese|Yiddish]
+
+LANGUAGE_OF_TEXT := {Size=1:15}
+[<LANGUAGE_ID>]
+The human language in which the data in the transmission is normally read or written. It is used primarily by programs to select language-specific sorting sequences and phonetic name matching algorithms.
+
+LANGUAGE_PREFERENCE := {Size=1:90}
+[<LANGUAGE_ID>]
+
+The language in which a person prefers to communicate. Multiple language preference is shown by using multiple occurrences in order of priority.
+
+LDS_BAPTISM_DATE_STATUS := {Size=5:10}
+[CHILD|CLEARED|COMPLETED|INFANT|PRE-1970|QUALIFIED|STILLBORN|SUBMITTED|UNCLEARED]
+
+A code indicating the status of an LDS baptism and confirmation date where:
+
+CHILD =Died before eight years old.
+CLEARED = Baptism has been cleared for temple ordinance.
+COMPLETED =Completed but the date is not known.
+INFANT =Died before less than one year old, baptism not required.
+QUALIFIED =Ordinance request qualified by authorized criteria.
+PRE-1970 =Ordinance is likely completed, another ordinance for this person was converted from temple records of work completed before 1970, therefore this ordinance is assumed to be complete until all records are converted.
+STILLBORN =Stillborn, baptism not required.
+SUBMITTED =Ordinance was previously submitted.
+UNCLEARED =Data for clearing ordinance request was insufficient.
+
+LDS_BAPTISM_DATE_STATUS_551 := {Size=5:10}
+[CHILD|COMPLETED|EXCLUDED|PRE-1970|STILLBORN|SUBMITTED|UNCLEARED]
+
+LDS_CHILD_SEALING_DATE_STATUS := {Size=3:10}
+[BIC|CLEARED|COMPLETED|DNS|PRE-1970|QUALIFIED|STILLBORN|SUBMITTED|UNCLEARED]
+
+BIC =Born in the covenant receiving blessing of child to parent sealing.
+CLEARED = Sealing has been cleared for temple ordinance.
+COMPLETED =Completed but the date is not known.
+DNS =This record is not being submitted for this temple ordinances.
+QUALIFIED =Ordinance request qualified by authorized criteria.
+PRE-1970 = (See pre-1970 under LDS_BAPTISM_DATE_STATUS.)
+STILLBORN =Stillborn, not required.
+SUBMITTED =Ordinance was previously submitted.
+UNCLEARED =Data for clearing ordinance request was insufficient.
+
+LDS_CHILD_SEALING_DATE_STATUS_551 := {Size=3:10}
+[BIC|COMPLETED|DNS|EXCLUDED|PRE-1970|STILLBORN|SUBMITTED|UNCLEARED]
+
+LDS_ENDOWMENT_DATE_STATUS := {Size=5:10}
+[CHILD|CLEARED|COMPLETED|INFANT|PRE-1970|QUALIFIED|STILLBORN|SUBMITTED|UNCLEARED]
+
+A code indicating the status of an LDS endowment ordinance where:
+
+CHILD =Died before eight years old.
+CLEARED = Endowment has been cleared for temple ordinance.
+COMPLETED =Completed but the date is not known.
+INFANT =Died before less than one year old, baptism not required.
+QUALIFIED =Ordinance request qualified by authorized criteria.
+PRE-1970 = (See pre-1970 under LDS_BAPTISM_DATE_STATUS.)
+STILLBORN =Stillborn, ordinance not required.
+SUBMITTED =Ordinance was previously submitted.
+UNCLEARED =Data for clearing ordinance request was insufficient.
+
+LDS_ENDOWMENT_DATE_STATUS_551 := {Size=5:10}
+[CHILD|COMPLETED|EXCLUDED|PRE-1970|STILLBORN|SUBMITTED|UNCLEARED]
+
+LDS_SPOUSE_SEALING_DATE_STATUS := {Size=3:10}
+[CANCELED|CLEARED|COMPLETED|DNS|DNS/CAN|PRE-1970|QUALIFIED|SUBMITTED|UNCLEARED]
+
+CANCELED =Canceled and considered invalid.
+CLEARED = Sealing has been cleared for temple ordinance.
+COMPLETED =Completed but the date is not known.
+DNS =This record is not being submitted for this temple ordinances.
+DNS/CAN =This record is not being submitted for this temple ordinances.
+QUALIFIED =Ordinance request qualified by authorized criteria.
+PRE-1970 = (See pre-1970 under LDS_BAPTISM_DATE_STATUS.)
+SUBMITTED =Ordinance was previously submitted.
+UNCLEARED =Data for clearing ordinance request was insufficient.
+
+LDS_SPOUSE_SEALING_DATE_STATUS_551 := {Size=3:10}
+[CANCELED|COMPLETED|DNS|EXCLUDED|DNS/CAN|PRE-1970|SUBMITTED|UNCLEARED]
+
+MONTH := {Size=3}
+[JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC]
+Where :
+JAN = January
+FEB = February
+MAR = March
+APR = April
+MAY = May
+JUN = June
+JUL = July
+AUG = August
+SEP = September
+OCT = October
+NOV = November
+DEC = December
+
+MONTH_FREN := {Size=4}
+[VEND|BRUM|FRIM|NIVO|PLUV|VENT|GERM|FLOR|PRAI|MESS|THER|FRUC|COMP]
+
+Where:
+VEND = VENDEMIAIRE
+BRUM = BRUMAIRE
+FRIM = FRIMAIRE
+NIVO = NIVOSE
+PLUV = PLUVIOSE
+VENT = VENTOSE
+GERM = GERMINAL
+FLOR = FLOREAL
+PRAI = PRAIRIAL
+MESS = MESSIDOR
+THER = THERMIDOR
+FRUC = FRUCTIDOR
+COMP = JOUR_COMPLEMENTAIRS
+
+MONTH_HEBR := {Size=3}
+[TSH|CSH|KSL|TVT|SHV|ADR|ADS|NSN|IYR|SVN|TMZ|AAV|ELL]
+
+Where:
+TSH = Tishri
+CSH = Cheshvan
+KSL = Kislev
+TVT = Tevet
+SHV = Shevat
+ADR = Adar
+ADS = Adar Sheni
+NSN = Nisan
+IYR = Iyar
+SVN = Sivan
+TMZ = Tammuz
+AAV = Av
+ELL = Elul
+
+MULTIMEDIA_FILE_REFERENCE := {Size=1:30}
+String
+A complete local or remote file reference to the auxiliary data to be linked to the GEDCOM context. Remote reference would include a network address where the multimedia data may be obtained.
+
+MULTIMEDIA_FORMAT := {Size=3:4}
+[bmp|gif|jpeg|ole|pcx|tiff|wav]
+Indicates the format of the multimedia data associated with the specific GEDCOM context. This allows processors to determine whether they can process the data object. Any linked files should contain the data required, in the indicated format, to process the file data. Industry standards will emerge in this area and GEDCOM will then narrow its scope.
+
+MULTIMEDIA_FORMAT_551 := {Size=3:4}
+[bmp|gif|jpg|ole|pcx|tif|wav]
+Indicates the format of the multimedia data associated with the specific GEDCOM context. This allows processors to determine whether they can process the data object. Any linked files should contain the data required, in the indicated format, to process the file data. Industry standards will emerge in this area and GEDCOM will then narrow its scope.
+
+NAME_OF_BUSINESS := {Size=1:90}
+String
+Name of the business, corporation, or person that produced or commissioned the product.
+
+NAME_OF_FAMILY_FILE := {Size=1:120}
+String
+Name under which family names for ordinances are stored in the temple's family file.
+
+NAME_OF_PRODUCT := {Size=1:90}
+String
+The name of the software product that produced this transmission.
+
+NAME_OF_REPOSITORY := {Size=1:90}
+String
+The official name of the archive in which the stated source material is stored.
+
+NAME_OF_SOURCE_DATA := {Size=1:90}
+String
+The name of the electronic data source that was used to obtain the data in this transmission. For example, the data may have been obtained from a CD-ROM disc that was named "U.S. 1880 CENSUS CD-ROM vol. 13."
+
+NAME_PERSONAL := {Size=1:120}
+[<TEXT> Whitespace / <TEXT> / Whitespace <TEXT>|/ <TEXT> / Whitespace <TEXT>|/ <TEXT> /|<TEXT> Whitespace / <TEXT> /|<TEXT>]
+The surname of an individual, if known, is enclosed between two slash (/) characters. The order of the name parts should be the order that the person would, by custom of their culture, have used when giving it to a recorder. Early versions of Personal Ancestral File � and other products did not use the trailing slash when the surname was the last element of the name. If part of name is illegible, that part is indicated by an ellipsis (...). Capitalize the name of a person or place in the conventional manner%capitalize the first letter of each part and lowercase the other letters, unless conventional usage is otherwise. For example: McMurray.
+
+Examples :
+William Lee (given name only or surname not known)
+/Parry/ (surname only)
+William Lee /Parry/
+William Lee /Mac Parry/ (both parts (Mac and Parry) are surname parts
+William /Lee/ Parry (surname imbedded in the name string)
+William Lee /Pa.../
+
+NAME_PHONETIC_VARIATION := {Size=1:120}
+String
+The phonetic variation of the name is written in the same form as the was the name used in the
+superior <NAME_PERSONAL> primitive, but phonetically written using the method indicated by the
+subordinate <PHONETIC_TYPE> value, for example if hiragana was used to provide a reading of a
+name written in kanji, then the <PHONETIC_TYPE> value would indicate ?kana?. See page 57.
+
+NAME_PIECE := {Size=1:90}
+String
+The piece of the name pertaining to the name part of interest. The surname part, the given name part, the name prefix part, or the name suffix part.
+
+NAME_PIECE_GIVEN := {Size=1:120}
+String
+[<NAME_PIECE>|<NAME_PIECE_GIVEN> , Whitespace <NAME_PIECE>]
+Given name or earned name. Different given names are separated by a comma.
+
+NAME_PIECE_NICKNAME := {Size=1:30}
+String
+[<NAME_PIECE>|<NAME_PIECE_NICKNAME> , Whitespace <NAME_PIECE>]
+A descriptive or familiar name used in connection with one's proper name.
+
+NAME_PIECE_PREFIX := {Size=1:30}
+String
+[<NAME_PIECE>|<NAME_PIECE_PREFIX> , Whitespace <NAME_PIECE>]
+Non indexing name piece that appears preceding the given name and surname parts. Different name prefix parts are separated by a comma.
+For example :
+Lt. Cmndr. Joseph /Allen/ jr.
+In this example Lt. Cmndr. is considered as the name prefix portion.
+
+NAME_PIECE_SUFFIX := {Size=1:30}
+String
+[<NAME_PIECE>|<NAME_PIECE_SUFFIX> , Whitespace <NAME_PIECE>]
+Non-indexing name piece that appears after the given name and surname parts. Different name suffix parts are separated by a comma.
+For example :
+Lt. Cmndr. Joseph /Allen/ jr.
+In this example jr. is considered as the name suffix portion.
+
+NAME_PIECE_SURNAME := {Size=1:120}
+String
+[<NAME_PIECE>|<NAME_PIECE_SURNAME> , Whitespace <NAME_PIECE>]
+Surname or family name. Different surnames are separated by a comma.
+
+NAME_PIECE_SURNAME_PREFIX := {Size=1:30}
+String
+[<NAME_PIECE>|<NAME_PIECE_SURNAME_PREFIX>, Whitespace <NAME_PIECE>]
+Surname prefix or article used in a family name. Different surname articles are separated by a comma, for example in the name "de la Cruz", this value would be "de, la".
+
+NAME_ROMANIZED_VARIATION := {Size=1:120}
+String
+The romanized variation of the name is written in the same form prescribed for the name used in the
+superior <NAME_PERSONAL> context. The method used to romanize the name is indicated by the
+line_value of the subordinate <ROMANIZED_TYPE>, for example if romaji was used to provide a
+reading of a name written in kanji, then the ROMANIZED_TYPE subordinate to the ROMN tag
+would indicate romaji. See page 61
+
+NAME_TYPE := {Size=1:30}
+String
+Indicates the name type, for example the name issued or assumed as an immigrant.
+aka = also known as, alias, etc.
+birth = name given on birth certificate.
+immigrant = name assumed at the time of immigration.
+maiden = maiden name, name before first marriage.
+married = name was persons previous married name.
+user_defined= other text name that defines the name type.
+
+NATIONAL_ID_NUMBER := {Size=1:30}
+String
+A nationally-controlled number assigned to an individual. Commonly known national numbers should be assigned their own tag, such as SSN for U.S. Social Security Number. The use of the IDNO tag requires a subordinate TYPE tag to identify what kind of number is being stored.
+For example :
+  n IDNO 43-456-1899
+    +1 TYPE Canadian Health Registration
+
+NATIONAL_OR_TRIBAL_ORIGIN := {Size=1:120}
+String
+The person's division of national origin or other folk, house, kindred, lineage, or tribal interest. Examples: Irish, Swede, Egyptian Coptic, Sioux Dakota Rosebud, Apache Chiricawa, Navajo Bitter Water, Eastern Cherokee Taliwa Wolf, and so forth.
+
+NEW_TAG := {Size=1:15}
+String
+A user-defined tag that is contained in the GEDCOM current transmission. This tag must begin with an underscore (_) and should only be interpreted in the context of the sending system.
+
+NOBILITY_TYPE_TITLE := {Size=1:120}
+String
+The title given to or used by a person, especially of royalty or other noble class within a locality.
+
+OCCUPATION := {Size=1:90}
+String
+The kind of activity that an individual does for a job, profession, or principal activity.
+
+OPTIONAL_SUBMITTER_TEXT := {Size=0:248}
+[<SUBMITTER_TEXT>|Null]
+
+ORDINANCE_PROCESS_FLAG := {Size=2:3}
+[yes|no]
+A flag that indicates whether submission should be processed for clearing temple ordinances.
+
+PEDIGREE_LINKAGE_TYPE := {Size=5:7}
+[adopted|birth|foster|sealing]
+A code used to indicate the child to family relationship for pedigree navigation purposes.
+Where:
+adopted = indicates adoptive parents.
+birth = indicates birth parents.
+foster = indicates child was included in a foster or guardian family.
+sealing = indicates child was sealed to parents other than birth parents.
+
+PERMANENT_RECORD_FILE_NUMBER := {Size=1:90}
+String
+The record number that uniquely identifies this record within a registered network resource. The number will be usable as a cross-reference pointer. The use of the colon (:) is reserved to indicate the separation of the "registered resource identifier" (which precedes the colon) and the unique "record identifier" within that resource (which follows the colon). If the colon is used, implementations that check pointers should not expect to find a matching cross-reference identifier in the transmission but would find it in the indicated database within a network. Making resource files available to a public network is a future implementation.
+
+PHONETIC_TYPE := {Size=4:30}
+String
+Indicates the method used in transforming the text to the phonetic variation.
+<user define> record method used to arrive at the phonetic variation of the name.
+hangul Phonetic method for sounding Korean glifs.
+kana Hiragana and/or Katakana characters were used in sounding the Kanji character used by
+japanese
+
+PHONE_NUMBER := {Size=1:25}
+String
+A phone number.
+
+PHYSICAL_DESCRIPTION := {Size=1:248}
+String
+An unstructured list of the attributes that describe the physical characteristics of a person, place, or object. Commas separate each attribute.
+Example:
+  1 DSCR Hair Brown, Eyes Brown, Height 5 ft 8 in
+    2 DATE 23 JUL 1935
+
+PLACE_HIERARCHY := {Size=1:120}
+String
+This shows the jurisdictional entities that are named in a sequence from the lowest to the highest jurisdiction. The jurisdictions are separated by commas, and any jurisdiction's name that is missing is still accounted for by a comma. When a PLAC.FORM structure is included in the HEADER of a GEDCOM transmission, it implies that all place names follow this jurisdictional format and each jurisdiction is accounted for by a comma, whether the name is known or not. When the PLAC.FORM is subordinate to an event, it temporarily overrides the implications made by the PLAC.FORM structure stated in the HEADER. This usage is not common and, therefore, not encouraged. It should only be used when a system has over-structured its place-names.
+
+PLACE_LATITUDE := {Size=1:30}
+String
+The value specifying the latitudinal coordinate of the place name. The latitude coordinate is the
+direction North or South from the equator in degrees and fraction of degrees carried out to give the
+desired accuracy. For example:  18 degrees, 9 minutes, and 3.4 seconds North would be formatted as
+N18.150944.  Minutes and seconds are converted by dividing the minutes value by 60 and the seconds
+value by 3600 and adding the results together. This sum becomes the fractional part of the degree?s
+value.
+
+PLACE_LONGITUDE := {Size=1:30}
+String
+The value specifying the longitudinal coordinate of the place name. The longitude coordinate is
+Degrees and fraction of degrees east or west of the zero or base meridian coordinate. For example:
+168 degrees, 9 minutes, and 3.4 seconds East would be formatted as E168.150944.
+
+PLACE_LIVING_ORDINANCE := {Size=1:120}
+<PLACE_VALUE>
+The locality of the place where a living LDS ordinance took place. Usually only a living LDS baptism place is recorded in this field.
+
+PLACE_VALUE := {Size=1:120}
+<PLACE_VALUE_STRING>
+[<TEXT>|<TEXT> , Whitespace <PLACE_VALUE>]
+The jurisdictional name of the place where the event took place. Jurisdictions are separated by commas, for example, "Cove, Cache, Utah, USA." If the actual jurisdictional names of these places have been identified, they can be shown using a PLAC.FORM structure either in the HEADER or in the event structure. (See <PLACE_HIERARCHY>.)
+
+PLACE_VALUE_STRING := {Size=1:120}
+String
+[<TEXT>|<TEXT> , Whitespace <PLACE_VALUE>]
+The jurisdictional name of the place where the event took place. Jurisdictions are separated by commas, for example, "Cove, Cache, Utah, USA." If the actual jurisdictional names of these places have been identified, they can be shown using a PLAC.FORM structure either in the HEADER or in the event structure. (See <PLACE_HIERARCHY>.)
+
+POSSESSIONS := {Size=1:248}
+String
+A list of possessions (real estate or other property) belonging to this individual.
+
+PUBLICATION_DATE := {Size=10:11}
+<DATE_EXACT>
+The date this source was published or created.
+
+RECEIVING_SYSTEM_NAME := {Size=1:20}
+NonSpaceString
+The name of the system expected to process the GEDCOM-compatible transmission. The registered RECEIVING_SYSTEM_NAME for all GEDCOM submissions to the Family History Department must be one of the following names:
+"ANSTFILE" when submitting to Ancestral File.
+"TempleReady" when submitting for temple ordinance clearance.
+
+RECORD_IDENTIFIER := {Size=1:18}
+String
+An identification number assigned to each record within a specific database. The database to which the RECORD_IDENTIFIER pertains is indicated by the REGISTERED_RESOURCE_NUMBER which precedes the colon (:). If the RECORD_IDENTIFIER is not preceded by a colon, it is a reference to a record within the current GEDCOM transmission.
+
+RECORD_TYPE := {Size=3:4}
+[FAM|INDI|NOTE|OBJE|REPO|SOUR|SUBM|SUBN]
+An indicator of the record type being pointed to or used. For example if in an ASSOciation, an INDIvidual record were to be ASSOciated with a FAM record then:
+      0 INDI
+        1 ASSO @F1@
+          2 TYPE FAM   /* ASSOCIATION is with a FAM record.
+          2 RELA Witness at marriage
+
+REGISTERED_RESOURCE_IDENTIFIER := {Size=1:25}
+String
+This is an identifier assigned to a resource database that is available through access to a network. This is for future GEDCOM releases.
+
+RELATION_IS_DESCRIPTOR := {Size=1:25}
+String
+A word or phrase that states object 1's relation is object 2. For example you would read the following as "Joe Jacob's great grandson is the submitter pointed to by the @<XREF:SUBM>@": person pointed to by the @<XREF:INDI>@":
+  0 INDI
+    1 NAME Joe /Jacob/
+    1 ASSO @<XREF:SUBM>@
+    1 ASSO @<XREF:INDI>@
+      2 RELA great grandson
+
+  [NOTE: The ASSOCIATION_STRUCTURE can only link to an INDIVIDUAL_RECORD.]
+
+RELIGIOUS_AFFILIATION := {Size=1:90}
+String
+A name of the religion with which this person, event, or record was affiliated.
+
+RESPONSIBLE_AGENCY := {Size=1:120}
+String
+The organization, institution, corporation, person, or other entity that has authority or control interests in the associated context. For example, an employer of a person of an associated occupation, or a church that administered rites or events, or an organization responsible for creating and/or archiving records.
+
+RESTRICTION_NOTICE := {Size=6:12}
+[confidential|locked|privacy]
+The restriction notice is defined for Ancestral File usage. Ancestral File download GEDCOM files may contain this data.
+Where :
+confidential = This data was marked as confidential by the user.  In some systems data marked as
+confidential will be treated differently, for example, there might be an option that
+would stop confidential data from appearing on printed reports or would prevent that
+information from being exported.
+
+locked =Some records in Ancestral File have been satisfactorily proven by evidence, but because of source conflicts or incorrect traditions, there are repeated attempts to change this record. By arrangement, the Ancestral File Custodian can lock a record so that it cannot be changed without an agreement from the person assigned as the steward of such a record. The assigned steward is either the submitter listed for the record or Family History Support when no submitter is listed.
+
+privacy =Information concerning this record is not present due to rights of or an approved request for privacy.
+
+ROLE_DESCRIPTOR := {Size=1:25}
+StringInBrackets
+A word or phrase that identifies a person's role in an event being described. This should be the same word or phrase, and in the same language, that the recorder used to define the role in the actual record.
+
+ROLE_IN_EVENT := {Size=1:15}
+[CHIL|HUSB|WIFE|MOTH|FATH|SPOU|( <ROLE_DESCRIPTOR> )]
+Indicates what role this person played in the event that is being cited in this context. For example, if you cite a child's birth record as the source of the mother's name, the value for this field is "MOTH." If you describe the groom of a marriage, the role is "HUSB." If the role is something different than one of the six relationship role tags listed above then enclose the role name within matching parentheses.
+
+ROMANIZED_TYPE := {Size=5:30}
+String
+Indicates the method used in transforming the text to a romanized variation.
+
+SCHOLASTIC_ACHIEVEMENT := {Size=1:248}
+String
+A description of a scholastic or educational achievement or pursuit.
+
+SEX_VALUE := {Size=1:7}
+[M|F]
+A code that indicates the sex of the individual:
+M = Male
+F = Female
+
+SEX_VALUE_551 := {Size=1:7}
+[M|F|U]
+A code that indicates the sex of the individual:
+M = Male
+F = Female
+U = Unknown
+
+SOCIAL_SECURITY_NUMBER := {Size=9:11}
+String
+A number assigned to a person in the United States for identification purposes.
+
+SOURCE_CALL_NUMBER := {Size=1:120}
+String
+An identification or reference description used to file and retrieve items from the holdings of a repository.
+
+SOURCE_DESCRIPTION := {Size=1:248}
+String
+A free form text block used to describe the source from which information was obtained. This text block is used by those systems which cannot use a pointer to a source record. It must contain a descriptive title, who created the work, where and when it was created, and where is source data stored. The developer should encourage users to use an appropriate style for forming this free form bibliographic reference. Developers are encouraged to support the SOURCE_RECORD method of reporting bibliographic reference descriptions.
+
+SOURCE_DESCRIPTIVE_TITLE := {Size=0:248}
+String
+The title of the work, record, or item and, when appropriate, the title of the larger work or series of which it is a part.
+
+For a published work, a book for example, might have a title plus the title of the series of which the book is a part. A magazine article would have a title plus the title of the magazine that published the article.
+
+For An unpublished work, such as:
+A letter might include the date, the sender, and the receiver.
+A transaction between a buyer and seller might have their names and the transaction date.
+A family Bible containing genealogical information might have past and present owners and a physical description of the book.
+A personal interview would cite the informant and interviewer.
+
+SOURCE_FILED_BY_ENTRY := {Size=1:60}
+String
+This entry is to provide a short title used for sorting, filing, and retrieving source records.
+
+SOURCE_JURISDICTION_PLACE := {Size=1:120}
+<PLACE_VALUE>
+The name of the lowest jurisdiction that encompasses all lower-level places named in this source. For example, "Oneida, Idaho" would be used as a source jurisdiction place for events occurring in the various towns within Oneida County. "Idaho" would be the source jurisdiction place if the events recorded took place in other counties as well as Oneida County.
+
+SOURCE_MEDIA_TYPE := {Size=1:15}
+[audio|book|card|electronic|fiche|film|magazine|manuscript|map|newspaper|photo|tombstone|video]
+A code, selected from one of the media classifications choices above, that indicates the type of material in which the referenced source is stored.
+
+SOURCE_ORIGINATOR := {Size=1:248}
+String
+The person, agency, or entity who created the record. For a published work, this could be the author, compiler, transcriber, abstractor, or editor. For an unpublished source, this may be an individual, a government agency, church organization, or private organization, etc.
+
+SOURCE_PUBLICATION_FACTS := {Size=0:248}
+String
+When and where the record was created. For published works, this includes information such as the city of publication, name of the publisher, and year of publication.
+
+For an unpublished work, it includes the date the record was created and the place where it was created. For example, the county and state of residence of a person making a declaration for a pension or the city and state of residence of the writer of a letter.
+
+SUBMITTER_NAME := {Size=1:60}
+String
+The name of the submitter formatted for display and address generation.
+
+SUBMITTER_REGISTERED_RFN := {Size=1:30}
+String
+A registered number of a submitter of Ancestral File data. This number is used in subsequent submissions or inquiries by the submitter for identification purposes.
+
+SUBMITTER_TEXT := {Size=0:248}
+String
+Comments or opinions from the submitter.
+
+TEMPLE_CODE := {Size=4:5}
+String
+An abbreviation of the temple in which LDS temple ordinances were performed. (See Appendix C)
+
+TEXT := {Size=1:248}
+String
+A string composed of any valid character from the GEDCOM character set.
+
+TEXT_FROM_SOURCE := {Size=0:248}
+String
+A verbatim copy of any description contained within the source. This indicates notes or text that are actually contained in the source document, not the submitter's opinion about the source. This should be, from the evidence point of view, "what the original record keeper said" as opposed tothe researcher's interpretation. The word TEXT, in this case, means from the text which appeared in the source record including labels.
+
+TIME_VALUE := {Size=1:12}
+Time
+The time of a specific event, usually a computer-timed event, where:
+hh =hours on a 24-hour clock
+mm =minutes
+ss =seconds (optional)
+fs =decimal fraction of a second (optional)
+
+TRANSMISSION_DATE := {Size=10:11}
+<DATE_EXACT>
+The date that this transmission was created.
+
+USER_REFERENCE_NUMBER := {Size=1:20}
+String
+A user-defined number or text that the submitter uses to identify this record. For instance, it may be a record number within the submitter's automated or manual system, or it may be a page and position number on a pedigree chart.
+
+USER_REFERENCE_TYPE := {Size=1:40}
+String
+A user-defined definition of the USER_REFERENCE_NUMBER.
+
+VERSION_NUMBER := {Size=1:15}
+String
+An identifier that represents the version level assigned to the associated product. It is defined and changed by the creators of the product.
+
+WHERE_WITHIN_SOURCE := {Size=1:248}
+String
+Specific location with in the information referenced. For a published work, this could include the volume of a multi-volume work and the page number(s). For a periodical, it could include volume, issue, and page numbers. For a newspaper, it could include a column number and page number. For an unpublished source, this could be a sheet number, page number, frame number, etc. A census record might have a line number or dwelling and family numbers in addition to the page number.
+
+XREF := {Size=1:22}
+Pointer
+Either a pointer or an unique cross-reference identifier. If this element appears before the tag in a GEDCOM line, then it is a cross-reference identifier. If it appears after the tag in a GEDCOM line, then it is a pointer. The method of delimiting a pointer or cross-reference identifier is to enclose the pointer or cross-reference identifier within at signs (@), for example, @I123@. A XREF may not begin with a number sign (#). This is to avoid confusion with an escape sequence prefix (@#). The use of a colon (:) in the XREF is reserved for creating future network cross-references and the use of an exclamation (!) is reserved for intra-record pointers. Uniqueness of the cross-reference identifier is required within the transmission file.
+
+XREF:FAM := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a fam_record.
+
+XREF:INDI := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, an individual record.
+
+XREF:NOTE := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a note record.
+
+XREF:OBJE := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a multimedia object.
+
+XREF:REPO := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a repository record.
+
+XREF:SOUR := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a SOURce record.
+
+XREF:SUBM := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a SUBMitter record.
+
+XREF:SUBN := {Size=1:22}
+Pointer
+A pointer to, or a cross-reference identifier of, a SUBmissioN record.
+
+YEAR := {Size=3:4}
+Decimal
+A numeric representation of the calendar year in which an event occurred.
+
+YEAR_GREG := {Size=3:7}
+[Decimal / <YEAR_MODIFIER>|Decimal]
+The slash "/" <DIGIT><DIGIT> a year modifier which shows the possible date alternatives for pre-1752 date brought about by a changing the beginning of the year from MAR to JAN in the English calendar change of 1752, for example, 15 APR 1699/00. A (B.C.) appended to the <YEAR> indicates a date before the birth of Christ.
+
+YEAR_MODIFIER := {Size=2}
+<DIGIT> <DIGIT>

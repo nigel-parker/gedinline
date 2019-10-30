@@ -1,0 +1,81 @@
+plugins {
+    id 'groovy'
+    id 'maven-publish'
+    id 'com.dorongold.task-tree' version '1.4'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+ 
+    compile 'com.google.guava:guava:r08'
+    compile 'commons-lang:commons-lang:2.1'
+    compile 'commons-io:commons-io:1.3.2'
+    compile 'joda-time:joda-time:1.5.2'
+    compile 'org.codehaus.groovy:groovy-all:2.4.9'
+
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+}
+
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        groovy { srcDirs += ['src/main/java'] }
+    }
+}
+
+test {
+    outputs.upToDateWhen { false }
+}
+
+task fatJar(type: Jar) {
+    dependsOn 'test'
+
+    manifest {
+        attributes 'Main-Class': 'gedinline.main.Main'
+    }
+
+    archiveBaseName = 'gedinline'
+
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+
+    with jar
+}
+
+group = 'gedinline'
+version = '3.0-beta-2'
+
+task gedinline {
+    dependsOn 'clean'
+    dependsOn 'fatJar'
+    dependsOn 'groovydoc'
+}
+
+publishing {
+    publications {
+        gedinline(MavenPublication) {
+            artifactId = 'gedinline'
+            artifact fatJar
+            pom {
+                name = 'GED-inline'
+                description = 'A validator for GEDCOM files'
+                url = 'http://ged-inline.elasticbeanstalk.com'
+/*
+                properties = [
+                        myProp: "value",
+                        "prop.with.dots": "anotherValue"
+                ]
+*/
+                developers {
+                    developer {
+                        id = 'nigel'
+                        name = 'Nigel Munro Parker'
+                        email = 'nigel.parker@sottovoce.no'
+                    }
+                }
+            }
+        }
+    }
+}

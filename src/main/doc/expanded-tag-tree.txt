@@ -1,0 +1,2338 @@
+HEAD                                                                  MANDATORY
+     GEDC                                                             MANDATORY
+          VERS                         GEDCOM_VERSION_NUMBER          MANDATORY
+          FORM                         LINEAGE-LINKED                 MANDATORY
+               VERS                    GEDCOM_VERSION_NUMBER          MANDATORY
+     CHAR                              CHARACTER_ENCODING             MANDATORY
+     DEST                              SYSTEM_ID                      
+     SOUR                              SYSTEM_ID                      MANDATORY
+          VERS                         PRODUCT_VERSION_NUMBER         
+          NAME                         NAME_OF_PRODUCT                
+          CORP                         NAME_OF_BUSINESS               
+               ADDR                                                   
+                    ADR1               ADDRESS_LINE1                  
+                    ADR2               ADDRESS_LINE2                  
+                    ADR3               ADDRESS_LINE3                  
+                    CITY               ADDRESS_CITY                   
+                    STAE               ADDRESS_STATE                  
+                    POST               ADDRESS_POSTAL_CODE            
+                    CTRY               ADDRESS_COUNTRY                
+               PHON                    PHONE_NUMBER                   
+               EMAIL                   ADDRESS_EMAIL                  
+               FAX                     ADDRESS_FAX                    
+               WWW                     ADDRESS_WEB_PAGE               
+          DATA                         NAME_OF_SOURCE_DATA            
+               DATE                    PUBLICATION_DATE               
+               COPR                    COPYRIGHT_SOURCE_DATA          
+     DATE                              FILE_CREATION_DATE             
+          TIME                         TIME_VALUE                     
+     LANG                              LANGUAGE_OF_TEXT               
+     SUBM                              @<XREF:SUBM>@                  
+     FILE                              GEDCOM_FILE_NAME               
+     COPR                              COPYRIGHT_GEDCOM_FILE          
+     NOTE                              GEDCOM_CONTENT_DESCRIPTION     
+
+
+SUBM                                                                  
+     NAME                              SUBMITTER_NAME                 MANDATORY
+     ADDR                                                             
+          ADR1                         ADDRESS_LINE1                  
+          ADR2                         ADDRESS_LINE2                  
+          ADR3                         ADDRESS_LINE3                  
+          CITY                         ADDRESS_CITY                   
+          STAE                         ADDRESS_STATE                  
+          POST                         ADDRESS_POSTAL_CODE            
+          CTRY                         ADDRESS_COUNTRY                
+     PHON                              PHONE_NUMBER                   
+     EMAIL                             ADDRESS_EMAIL                  
+     FAX                               ADDRESS_FAX                    
+     WWW                               ADDRESS_WEB_PAGE               
+     OBJE                              @<XREF:OBJE>@                  MULTIPLE
+     RIN                               AUTOMATED_RECORD_ID            
+     NOTE                              @<XREF:NOTE>@                  MULTIPLE
+     NOTE                              USER_TEXT                      MULTIPLE
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+
+
+FAM                                                                   MULTIPLE
+     ANUL                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     CENS                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     DIV                                                              MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     DIVF                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     ENGA                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     MARB                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     MARC                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     MARR                              HAPPENED                       MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     MARL                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     MARS                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     RESI                                                             MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     EVEN                              OPTIONAL_EVENT_DESCRIPTOR      MULTIPLE
+          HUSB                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          WIFE                                                        
+               AGE                     AGE_AT_EVENT                   MANDATORY
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+     HUSB                              @<XREF:INDI>@                  
+     WIFE                              @<XREF:INDI>@                  
+     CHIL                              @<XREF:INDI>@                  MULTIPLE
+     NCHI                              COUNT_OF_CHILDREN              
+     REFN                              USER_REFERENCE_NUMBER          MULTIPLE
+          TYPE                         USER_REFERENCE_TYPE            
+     RIN                               AUTOMATED_RECORD_ID            
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     NOTE                              @<XREF:NOTE>@                  MULTIPLE
+     NOTE                              USER_TEXT                      MULTIPLE
+     SOUR                              @<XREF:SOUR>@                  MULTIPLE
+          PAGE                         WHERE_WITHIN_SOURCE            
+          EVEN                         EVENT_TYPE_CITED_FROM          
+               ROLE                    ROLE_IN_EVENT                  
+          DATA                                                        
+               DATE                    ENTRY_RECORDING_DATE           
+               TEXT                    TEXT_FROM_SOURCE               MULTIPLE
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          QUAY                         CERTAINTY_ASSESSMENT           
+     OBJE                              @<XREF:OBJE>@                  MULTIPLE
+
+
+INDI                                                                  MULTIPLE
+     NAME                              NAME_PERSONAL                  MULTIPLE
+          TYPE                         NAME_TYPE                      
+          NPFX                         NAME_PIECE_PREFIX              
+          GIVN                         NAME_PIECE_GIVEN               
+          NICK                         NAME_PIECE_NICKNAME            
+          SPFX                         NAME_PIECE_SURNAME_PREFIX      
+          SURN                         NAME_PIECE_SURNAME             
+          NSFX                         NAME_PIECE_SUFFIX              
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          FONE                         NAME_PHONETIC                  MULTIPLE
+               TYPE                    PHONETISATION_METHOD           MANDATORY
+               NPFX                    NAME_PIECE_PREFIX              
+               GIVN                    NAME_PIECE_GIVEN               
+               NICK                    NAME_PIECE_NICKNAME            
+               SPFX                    NAME_PIECE_SURNAME_PREFIX      
+               SURN                    NAME_PIECE_SURNAME             
+               NSFX                    NAME_PIECE_SUFFIX              
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               SOUR                    @<XREF:SOUR>@                  MULTIPLE
+                    PAGE               WHERE_WITHIN_SOURCE            
+                    EVEN               EVENT_TYPE_CITED_FROM          
+                         ROLE          ROLE_IN_EVENT                  
+                    DATA                                              
+                         DATE          ENTRY_RECORDING_DATE           
+                         TEXT          TEXT_FROM_SOURCE               MULTIPLE
+                    OBJE               @<XREF:OBJE>@                  MULTIPLE
+                    NOTE               @<XREF:NOTE>@                  MULTIPLE
+                    NOTE               USER_TEXT                      MULTIPLE
+                    QUAY               CERTAINTY_ASSESSMENT           
+          ROMN                         NAME_ROMANIZED                 MULTIPLE
+               TYPE                    ROMANISATION_METHOD            MANDATORY
+               NPFX                    NAME_PIECE_PREFIX              
+               GIVN                    NAME_PIECE_GIVEN               
+               NICK                    NAME_PIECE_NICKNAME            
+               SPFX                    NAME_PIECE_SURNAME_PREFIX      
+               SURN                    NAME_PIECE_SURNAME             
+               NSFX                    NAME_PIECE_SUFFIX              
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               SOUR                    @<XREF:SOUR>@                  MULTIPLE
+                    PAGE               WHERE_WITHIN_SOURCE            
+                    EVEN               EVENT_TYPE_CITED_FROM          
+                         ROLE          ROLE_IN_EVENT                  
+                    DATA                                              
+                         DATE          ENTRY_RECORDING_DATE           
+                         TEXT          TEXT_FROM_SOURCE               MULTIPLE
+                    OBJE               @<XREF:OBJE>@                  MULTIPLE
+                    NOTE               @<XREF:NOTE>@                  MULTIPLE
+                    NOTE               USER_TEXT                      MULTIPLE
+                    QUAY               CERTAINTY_ASSESSMENT           
+     SEX                               SEX_VALUE                      
+     BIRT                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          FAMC                         @<XREF:FAM>@                   
+     CHR                               HAPPENED                       MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          FAMC                         @<XREF:FAM>@                   
+     DEAT                              HAPPENED                       MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     BURI                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     CREM                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     ADOP                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          FAMC                         @<XREF:FAM>@                   
+               ADOP                    ADOPTED_BY_WHICH_PARENT        
+     BAPM                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     BARM                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     BASM                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     CHRA                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     CONF                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     FCOM                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     NATU                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     EMIG                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     IMMI                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     CENS                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     PROB                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     WILL                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     GRAD                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     RETI                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     EVEN                              OPTIONAL_EVENT_DESCRIPTOR      MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+     CAST                              CASTE_NAME                     MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     DSCR                              PHYSICAL_DESCRIPTION           MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     EDUC                              SCHOLASTIC_ACHIEVEMENT         MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     IDNO                              ID_NUMBER                      MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     NATI                              NATIONAL_OR_TRIBAL_ORIGIN      MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     NCHI                              COUNT_OF_CHILDREN              MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     NMR                               NUMBER_OF_RELATIONSHIPS        MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     OCCU                              OCCUPATION                     MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     PROP                              POSSESSIONS                    MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     RELI                              RELIGIOUS_AFFILIATION          MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     RESI                                                             MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     TITL                              NOBILITY_TYPE_TITLE            MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     FACT                              ATTRIBUTE_DESCRIPTOR           MULTIPLE
+          TYPE                         EVENT_OR_FACT_CLASSIFICATION   
+          DATE                         DATE_VALUE                     
+          PLAC                         PLACE_NAME                     
+               FONE                    PLACE_PHONETIC                 MULTIPLE
+                    TYPE               PHONETISATION_METHOD           MANDATORY
+               ROMN                    PLACE_ROMANISED                MULTIPLE
+                    TYPE               ROMANISATION_METHOD            MANDATORY
+               MAP                                                    
+                    LATI               PLACE_LATITUDE                 MANDATORY
+                    LONG               PLACE_LONGITUDE                MANDATORY
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+          ADDR                                                        
+               ADR1                    ADDRESS_LINE1                  
+               ADR2                    ADDRESS_LINE2                  
+               ADR3                    ADDRESS_LINE3                  
+               CITY                    ADDRESS_CITY                   
+               STAE                    ADDRESS_STATE                  
+               POST                    ADDRESS_POSTAL_CODE            
+               CTRY                    ADDRESS_COUNTRY                
+          PHON                         PHONE_NUMBER                   
+          EMAIL                        ADDRESS_EMAIL                  
+          FAX                          ADDRESS_FAX                    
+          WWW                          ADDRESS_WEB_PAGE               
+          AGNC                         RESPONSIBLE_AGENCY             
+          RELI                         RELIGIOUS_AFFILIATION          
+          CAUS                         CAUSE_OF_EVENT                 
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          AGE                          AGE_AT_EVENT                   
+          TYPE                         USER_REFERENCE_TYPE            
+     FAMC                              @<XREF:FAM>@                   MULTIPLE
+          PEDI                         PEDIGREE_LINKAGE_TYPE          
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     FAMS                              @<XREF:FAM>@                   MULTIPLE
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     ASSO                              @<XREF:INDI>@                  MULTIPLE
+          RELA                         RELATION_IS_DESCRIPTOR         MANDATORY
+          SOUR                         @<XREF:SOUR>@                  MULTIPLE
+               PAGE                    WHERE_WITHIN_SOURCE            
+               EVEN                    EVENT_TYPE_CITED_FROM          
+                    ROLE               ROLE_IN_EVENT                  
+               DATA                                                   
+                    DATE               ENTRY_RECORDING_DATE           
+                    TEXT               TEXT_FROM_SOURCE               MULTIPLE
+               OBJE                    @<XREF:OBJE>@                  MULTIPLE
+               NOTE                    @<XREF:NOTE>@                  MULTIPLE
+               NOTE                    USER_TEXT                      MULTIPLE
+               QUAY                    CERTAINTY_ASSESSMENT           
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     REFN                              USER_REFERENCE_NUMBER          MULTIPLE
+          TYPE                         USER_REFERENCE_TYPE            
+     RIN                               AUTOMATED_RECORD_ID            
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     NOTE                              @<XREF:NOTE>@                  MULTIPLE
+     NOTE                              USER_TEXT                      MULTIPLE
+     SOUR                              @<XREF:SOUR>@                  MULTIPLE
+          PAGE                         WHERE_WITHIN_SOURCE            
+          EVEN                         EVENT_TYPE_CITED_FROM          
+               ROLE                    ROLE_IN_EVENT                  
+          DATA                                                        
+               DATE                    ENTRY_RECORDING_DATE           
+               TEXT                    TEXT_FROM_SOURCE               MULTIPLE
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          QUAY                         CERTAINTY_ASSESSMENT           
+     OBJE                              @<XREF:OBJE>@                  MULTIPLE
+
+
+OBJE                                                                  MULTIPLE
+     FILE                              MULTIMEDIA_FILE_REFERENCE      MANDATORY
+          FORM                         MULTIMEDIA_FORMAT              MANDATORY
+               TYPE                    SOURCE_MEDIA_TYPE              
+          TITL                         DESCRIPTIVE_TITLE              
+     REFN                              USER_REFERENCE_NUMBER          MULTIPLE
+          TYPE                         USER_REFERENCE_TYPE            
+     RIN                               AUTOMATED_RECORD_ID            
+     NOTE                              @<XREF:NOTE>@                  MULTIPLE
+     NOTE                              USER_TEXT                      MULTIPLE
+     SOUR                              @<XREF:SOUR>@                  MULTIPLE
+          PAGE                         WHERE_WITHIN_SOURCE            
+          EVEN                         EVENT_TYPE_CITED_FROM          
+               ROLE                    ROLE_IN_EVENT                  
+          DATA                                                        
+               DATE                    ENTRY_RECORDING_DATE           
+               TEXT                    TEXT_FROM_SOURCE               MULTIPLE
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          QUAY                         CERTAINTY_ASSESSMENT           
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+
+
+NOTE                                   USER_TEXT                      MULTIPLE
+     REFN                              USER_REFERENCE_NUMBER          MULTIPLE
+          TYPE                         USER_REFERENCE_TYPE            
+     RIN                               AUTOMATED_RECORD_ID            
+     SOUR                              @<XREF:SOUR>@                  MULTIPLE
+          PAGE                         WHERE_WITHIN_SOURCE            
+          EVEN                         EVENT_TYPE_CITED_FROM          
+               ROLE                    ROLE_IN_EVENT                  
+          DATA                                                        
+               DATE                    ENTRY_RECORDING_DATE           
+               TEXT                    TEXT_FROM_SOURCE               MULTIPLE
+          OBJE                         @<XREF:OBJE>@                  MULTIPLE
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+          QUAY                         CERTAINTY_ASSESSMENT           
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+
+
+REPO                                                                  MULTIPLE
+     NAME                              NAME_OF_REPOSITORY             MANDATORY
+     ADDR                                                             
+          ADR1                         ADDRESS_LINE1                  
+          ADR2                         ADDRESS_LINE2                  
+          ADR3                         ADDRESS_LINE3                  
+          CITY                         ADDRESS_CITY                   
+          STAE                         ADDRESS_STATE                  
+          POST                         ADDRESS_POSTAL_CODE            
+          CTRY                         ADDRESS_COUNTRY                
+     PHON                              PHONE_NUMBER                   
+     EMAIL                             ADDRESS_EMAIL                  
+     FAX                               ADDRESS_FAX                    
+     WWW                               ADDRESS_WEB_PAGE               
+     NOTE                              @<XREF:NOTE>@                  MULTIPLE
+     NOTE                              USER_TEXT                      MULTIPLE
+     REFN                              USER_REFERENCE_NUMBER          MULTIPLE
+          TYPE                         USER_REFERENCE_TYPE            
+     RIN                               AUTOMATED_RECORD_ID            
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+
+
+SOUR                                                                  MULTIPLE
+     DATA                                                             
+          EVEN                         EVENTS_RECORDED                MULTIPLE
+               DATE                    DATE_PERIOD                    
+               PLAC                    SOURCE_JURISDICTION_PLACE      
+          AGNC                         RESPONSIBLE_AGENCY             
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     AUTH                              SOURCE_ORIGINATOR              
+     TITL                              SOURCE_DESCRIPTIVE_TITLE       
+     ABBR                              SOURCE_FILED_BY_ENTRY          
+     PUBL                              SOURCE_PUBLICATION_FACTS       
+     TEXT                              TEXT_FROM_SOURCE               
+     REPO                              @<XREF:REPO>@                  MULTIPLE
+          CALN                         SOURCE_CALL_NUMBER             
+     REFN                              USER_REFERENCE_NUMBER          MULTIPLE
+          TYPE                         USER_REFERENCE_TYPE            
+     RIN                               AUTOMATED_RECORD_ID            
+     CHAN                                                             
+          DATE                         DATE_EXACT                     MANDATORY
+               TIME                    TIME_VALUE                     
+          NOTE                         @<XREF:NOTE>@                  MULTIPLE
+          NOTE                         USER_TEXT                      MULTIPLE
+     NOTE                              @<XREF:NOTE>@                  MULTIPLE
+     NOTE                              USER_TEXT                      MULTIPLE
+     OBJE                              @<XREF:OBJE>@                  MULTIPLE
+
+
+TRLR                                                                  MANDATORY
+
+
