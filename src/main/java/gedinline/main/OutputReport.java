@@ -110,8 +110,8 @@ public class OutputReport {
         return counter.getAntall();
     }
 
-    private String getValue(String type) {
-        return values.containsKey(type) ? values.get(type) : "Unknown";
+    public String getValue(String type) {
+        return values.getOrDefault(type, "Unknown");
     }
 
     public void outputError(String s) {

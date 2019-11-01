@@ -41,4 +41,27 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w551.ged'                   || 0                    | ''
 
     }
+
+    void 'Issue #1 fixed'() {
+
+        given:
+
+            def gedcomValidator = new GedInlineValidator(getInputStream(filename), '', new PrintWriter(new StringWriter()))
+            gedcomValidator.validate()
+
+        expect:
+
+            gedcomValidator.analysisStatistics.generatedBy == generatedBy
+
+        where:
+
+            filename                     || generatedBy
+
+            'encoding-utf-16-le-555.ged' || 'GS'
+            'w01.ged'                    || 'G'
+            'w12.ged'                    || 'GED-inline'
+            'w13.ged'                    || 'Reunion'
+
+
+    }
 }

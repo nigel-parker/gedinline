@@ -85,6 +85,10 @@ public class StructureListener {
             outputReport.incrementCounter(SOURCE);
         } else if (tag.equals(new Tag("SOUR")) && parentTag != null && parentTag.equals(new Tag("HEAD"))) {
             outputReport.reportValue(GENERATED_BY, value);
+        } else if (tag.equals(new Tag("NAME")) && parentTag != null && parentTag.equals(new Tag("SOUR"))) {
+            if (outputReport.getValue(GENERATED_BY).equals("")) {
+                outputReport.reportValue(GENERATED_BY, value);
+            }
         } else if (tag.equals(new Tag("VERS")) && parentTag != null && parentTag.equals(new Tag("SOUR"))) {
             outputReport.reportValue(SOURCE_VERSION, value);
         } else if (tag.equals(new Tag("DATE")) && parentTag != null && parentTag.equals(new Tag("HEAD"))) {
