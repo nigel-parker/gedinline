@@ -143,10 +143,12 @@ public class RecordCollector {
         int difference = Level.getDifference(previousLevel, level);
 
         for (int j = 0; j <= difference; j++) {
-            InputRecord inputRecord = stack.pop();
+            if (!stack.empty()) {
+                InputRecord inputRecord = stack.pop();
 
-            if (stack.isEmpty()) {
-                addRecord(inputRecord);
+                if (stack.isEmpty()) {
+                    addRecord(inputRecord);
+                }
             }
         }
     }

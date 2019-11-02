@@ -166,7 +166,7 @@ public class BasicParser {
             remainder = line.substring(i + 1);
         }
 
-        if (i == 1 || i == 2) {
+        if ((i == 1 || i == 2) && (!remainder.isEmpty())) {
             if (i == 2 && line.startsWith("0")) {
                 warn("Level numbers should not have leading zeroes");
             }
@@ -183,7 +183,7 @@ public class BasicParser {
                 warn("Invalid GEDCOM record '" + line + "'");
             }
         } else {
-            warn("Invalid GEDCOM record '" + line + "'");
+            warn("Invalid GEDCOM record '" + lineUntrimmed + "'");
         }
 
         if (lineUntrimmed.length() > MAX_LINE_LENGTH) {
@@ -198,7 +198,7 @@ public class BasicParser {
             }
         }
 
-        next = new InputLinePrecursor(lineNumber, level, remainder);
+        next = new InputLinePrecursor(lineNumber, level, remainder, lineUntrimmed);
         previousLevel = level;
     }
 
@@ -232,7 +232,7 @@ public class BasicParser {
                 warn("Invalid GEDCOM record '" + line + "'");
             }
         } else {
-            warn("Invalid GEDCOM record '" + line + "'");
+            warn("Invalid GEDCOM record '" + lineUntrimmed + "'");
         }
 
         if (lineUntrimmed.length() > MAX_LINE_LENGTH) {
@@ -247,7 +247,7 @@ public class BasicParser {
             }
         }
 
-        next = new InputLinePrecursor(lineNumber, level, remainder);
+        next = new InputLinePrecursor(lineNumber, level, remainder, lineUntrimmed);
         previousLevel = level;
     }
 
