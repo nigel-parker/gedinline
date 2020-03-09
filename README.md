@@ -9,7 +9,7 @@ GED-inline can validate GEDCOM version 5.5 and 5.5.1. Support for the new GEDCOM
 Meaning that most valid files will be recognised as such, but not all error situations
 will be flagged.
 
-The validator is also available for use at [GED-inline](http://ged-inline.elasticbeanstalk.com).
+The validator is also available for online use at [GED-inline](http://ged-inline.elasticbeanstalk.com).
 
 ### Getting Started
 #### Prerequisites
@@ -20,7 +20,8 @@ A recent Java JDK must be installed on your machine. You can verify that it is b
 javac -version
 ```
 
-on your command line.
+on your command line. Gedinline has been specifically tested on Java 8 and Java 11. Note that building on Java 11 
+may give the warning message 'An illegal reflective access operation has occurred' which may safely be ignored.
 
 #### Building GED-inline
 
