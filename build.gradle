@@ -45,7 +45,7 @@ task fatJar(type: Jar) {
 }
 
 group = 'gedinline'
-version = '3.0-beta-2'
+version = '3.0'
 
 task gedinline {
     dependsOn 'clean'
@@ -62,12 +62,6 @@ publishing {
                 name = 'GED-inline'
                 description = 'A validator for GEDCOM files'
                 url = 'http://ged-inline.elasticbeanstalk.com'
-/*
-                properties = [
-                        myProp: "value",
-                        "prop.with.dots": "anotherValue"
-                ]
-*/
                 developers {
                     developer {
                         id = 'nigel'
