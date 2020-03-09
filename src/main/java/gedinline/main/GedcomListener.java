@@ -2,17 +2,17 @@ package gedinline.main;
 
 import gedinline.lexical.InputLine;
 
-import java.util.Observable;
-import java.util.Observer;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
-public class GedcomListener implements Observer {
+public class GedcomListener implements PropertyChangeListener {
 
     private boolean headerSeen = false;
     private boolean submSeen = false;
 
-    public void update(Observable o, Object arg) {
+    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
 
-        InputLine inputLine = (InputLine) arg;
+        InputLine inputLine = (InputLine) propertyChangeEvent.getNewValue();
         String tag = inputLine.getTag().getTag();
         boolean gedcom555 = inputLine.getGedcomVersion().is555();
         int level = inputLine.getLevel().getLevel();

@@ -11,14 +11,14 @@ import gedinline.value.ParsingResult;
 import gedinline.value.SyntaxElement;
 import gedinline.value.ValueGrammar;
 
+import java.beans.PropertyChangeSupport;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Observable;
 import java.util.Set;
 
 
-public class GedInlineValidator extends Observable {
+public class GedInlineValidator {
 
     private Map<Tag, TagTree> expandedGrammarMap = Maps.newHashMap();
     private String filename = "Unknown";
@@ -28,6 +28,7 @@ public class GedInlineValidator extends Observable {
     private ValueGrammar valueGrammar;
     private WarningCollector warningCollector;
     private GedcomVersion gedcomVersion;
+    private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
 
     /**
      * Creates a GedInlineValidator.
@@ -70,7 +71,7 @@ public class GedInlineValidator extends Observable {
             TagTreeGrammar tagTreeGrammar = new TagTreeGrammar(gedcomVersion);
             valueGrammar = new ValueGrammar(gedcomVersion);
             initialiseDefaultRecordMap(gedcomVersion);
-            addObserver(new GedcomListener());
+            propertyChangeSupport.addPropertyChangeListener(new GedcomListener());
 
             for (Map.Entry<String, String> entry : recordMap.entrySet()) {
                 expandedGrammarMap.put(new Tag(entry.getKey()), tagTreeGrammar.expand(entry.getValue()));
@@ -174,7 +175,7 @@ public class GedInlineValidator extends Observable {
         }
 
         try {
-            notifyListener(inputLine1);
+            propertyChangeSupport.firePropertyChange("", null, inputLine1);
             validate(inputLine1, tagTree1.getSyntaxTreeNode());
 
         } catch (Exception e) {
@@ -300,10 +301,5 @@ public class GedInlineValidator extends Observable {
                 warningCollector.warning(inputLine, "Invalid content for " + inputLineTag + " tag: '" + value + "' " + detail + " <" + syntaxTreeNode.getSyntaxElementIdStem() + ">");
             }
         }
-    }
-
-    private void notifyListener(InputLine inputLine) {
-        setChanged();
-        notifyObservers(inputLine);
     }
 }
