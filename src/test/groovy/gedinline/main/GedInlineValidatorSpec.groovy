@@ -17,6 +17,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             'corner1.ged'                || 3                    | 'Invalid content for SURN tag'
             'encoding-utf-16-le-555.ged' || 0                    | ''
+            'Excel2GED-beta.ged'         || 2                    | ''
             'harvey.ged'                 || 2                    | ''
             'jiapu.ged'                  || 10                   | ''
             'multimedia-test.ged'        || 4                    | ''

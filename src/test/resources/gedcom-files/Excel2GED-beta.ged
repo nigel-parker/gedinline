@@ -1,0 +1,853 @@
+0 HEAD
+1 SOUR Excel2GED.xlsm
+2 VERS 3.19.12.09
+2 NAME Excel2GED
+2 CORP SourceForge.net
+3 ADDR
+4 ADR1 World Wide Web
+4 ADR2 Internet
+3 WWW sourceforge.net/projects/excel2ged
+1 DEST Other
+1 DATE 09 Dec 2019
+2 TIME 14:26:27
+1 SUBM @U1@
+1 FILE C:\Excel2GED\Excel2GEDtest\FH-GEDCOMs\Excel2GED3Beta20191209a.ged
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG English
+0 @U1@ SUBM
+1 NAME Firstname Middle Lastname
+1 ADDR 
+2 ADR1 1234 Residential Street
+2 CITY Silicon Valley
+2 STAE California
+2 POST 95129-8765
+2 CTRY USA
+1 PHON 1-800-555-1212
+1 EMAIL MyEmailAddress@@Email.com
+0 @I1@ INDI
+1 NAME Kepple Elias/Disney/
+2 GIVN Kepple Elias
+2 SURN Disney
+2 NICK W's PatGrPa
+1 SEX M
+1 BIRT
+2 DATE 2 Nov 1832
+2 PLAC Kilkenny, County Kilkenny, Ireland
+1 DEAT
+2 DATE 24 May 1891
+2 PLAC Ellis, Ellis, Kansas, USA
+1 FAMS @F1@
+1 OBJE @M10004@
+1 SOUR Where information was found.
+0 @I2@ INDI
+1 NAME Mary Jane/Richardson/
+2 GIVN Mary Jane
+2 SURN Richardson
+2 NICK W's PatGrMa
+1 SEX F
+1 BIRT
+2 DATE 20 Mar 1838
+2 PLAC Aghaboe, Queen's County, Ireland
+1 DEAT
+2 DATE 10 Mar 1909
+2 PLAC Ellis, Ellis, Kansas, USA
+1 FAMS @F1@
+1 OBJE @M20005@
+1 NOTE Blah, blah, blah.
+0 @I3@ INDI
+1 NAME Charles/Call/
+2 GIVN Charles
+2 SURN Call
+2 NICK W's MatGrPa
+1 SEX M
+1 BIRT
+2 DATE 22 Mar 1823
+2 PLAC New York, United States
+1 DEAT
+2 DATE 6 Jan 1890
+2 PLAC Paisley, Lake, Florida, USA
+1 FAMS @F2@
+1 NOTE A note without the keyword.
+0 @I4@ INDI
+1 NAME Henrietta/Gross/
+2 GIVN Henrietta
+2 SURN Gross
+2 NICK W's MatGrMa
+1 SEX F
+1 BIRT
+2 DATE 22 Jul 1837
+2 PLAC Miehlen, Rhein-Lahn, Rheinland-Pfalz, Deutschland
+1 DEAT
+2 DATE 1910
+1 FAMS @F2@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/LCVF-R7F
+0 @I5@ INDI
+1 NAME Elias Charles/Disney/
+2 GIVN Elias Charles
+2 SURN Disney
+2 NICK W's Father
+1 SEX M
+1 BIRT
+2 DATE 6 Feb 1859
+2 PLAC Bluevale, Morris-Turnberry, Huron, Ontario, Canada
+1 DEAT
+2 DATE 13 Sep 1941
+2 PLAC Los Angeles, Los Angeles, California, USA
+1 FAMS @F3@
+1 FAMC @F1@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/L7N1-4CZ
+0 @I6@ INDI
+1 NAME Flora/Call/
+2 GIVN Flora
+2 SURN Call
+2 NICK W's Mother
+1 SEX F
+1 BIRT
+2 DATE 22 Apr 1868
+2 PLAC Greenfield Township, Huron, Ohio, USA
+1 DEAT
+2 DATE 26 Nov 1938
+2 PLAC Portland, Washington, Oregon, USA
+1 FAMS @F3@
+1 FAMC @F2@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/L7N1-44F
+0 @I7@ INDI
+1 NAME Walter Elias/Disney/
+2 GIVN Walter Elias
+2 SURN Disney
+2 NICK "Walt" = "W"
+1 SEX M
+1 BIRT
+2 DATE 5 Dec 1901
+2 PLAC Chicago, Cook, Illinois, USA
+1 DEAT
+2 DATE 15 Dec 1966
+2 PLAC Burbank, Los Angeles, California, USA
+1 FAMS @F4@
+1 FAMC @F3@
+1 OBJE @M700010@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/L84S-ZRN
+1 SOUR en.wikipedia.org/wiki/Disney_family
+1 SOUR http://disneyfamily.website/index.html
+0 @I8@ INDI
+1 NAME Lillian Marie/Bounds/
+2 GIVN Lillian Marie
+2 SURN Bounds
+2 NICK W's wife
+1 SEX F
+1 BIRT
+2 DATE 15 Feb 1899
+2 PLAC Spalding, Nez Perce, Idaho, USA
+1 DEAT
+2 DATE 16 Dec 1997
+2 PLAC West Los Angeles, Los Angeles, Los Angeles, California, USA
+1 FAMS @F4@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/KFN1-V5P
+0 @I9@ INDI
+1 NAME BioPa of Sharon Mae/SM's Bio-Dad/
+2 GIVN BioPa of Sharon Mae
+2 SURN SM's Bio-Dad
+2 NICK SM's BioDad
+1 SEX M
+1 FAMS @F5@
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+0 @I10@ INDI
+1 NAME BioMa of Sharon Mae/SM's Bio-Mom/
+2 GIVN BioMa of Sharon Mae
+2 SURN SM's Bio-Mom
+2 NICK SM's BioMom
+1 SEX F
+1 FAMS @F5@
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+0 @I11@ INDI
+1 NAME Diane/Disney/
+2 GIVN Diane
+2 SURN Disney
+2 NICK W's Dau1
+1 SEX F
+1 BIRT
+2 DATE 18 Dec 1933
+2 PLAC Los Angeles, Los Angeles, California, USA
+1 DEAT
+2 DATE 19 Nov 2013
+2 PLAC Napa, Napa, California, USA
+1 FAMS @F6@
+1 FAMC @F4@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/MW7W-VCL
+0 @I12@ INDI
+1 NAME Ronald William/Miller/
+2 GIVN Ronald William
+2 SURN Miller
+2 NICK DD's Husb
+1 SEX M
+1 BIRT
+2 DATE 17 Apr 1933
+2 PLAC Los Angeles, Los Angeles, California, USA
+1 DEAT
+2 DATE 9 Feb 2019
+2 PLAC Napa, Napa, California, USA
+1 FAMS @F6@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/LTRZ-TG9
+0 @I13@ INDI
+1 NAME Sharon Mae/Disney/
+2 GIVN Sharon Mae
+2 SURN Disney
+2 NICK W's Dau2
+1 SEX F
+1 BIRT
+2 DATE 31 Dec 1936
+2 PLAC Whittier, Los Angeles, California, Usa
+1 DEAT
+2 DATE 16 Feb 1993
+2 PLAC Santa Monica, Los Angeles, California, USA
+1 FAMS @F7@
+1 FAMC @F4@
+1 NOTE Adopted.
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+1 FAMS @F8@
+1 FAMC @F5@
+1 NOTE Add'l row to ID biological parents.
+0 @I14@ INDI
+1 NAME Robert Borgfelt/Brown/
+2 GIVN Robert Borgfelt
+2 SURN Brown
+2 NICK SM's husb1
+1 SEX M
+1 BIRT
+2 DATE 15 May 1928
+2 PLAC Kaw Township, Jackson, Missouri, USA
+1 DEAT
+2 DATE 14 Sep 1967
+2 PLAC Los Angeles, Los Angeles, California, USA
+1 FAMS @F7@
+1 SOUR www.familysearch.org/tree/pedigree/landscape/KH1R-LS3
+0 @I15@ INDI
+1 NAME William S./Lund/
+2 GIVN William S.
+2 SURN Lund
+2 NICK SM's husb2
+1 SEX M
+1 BIRT
+2 DATE 1931
+1 FAMS @F8@
+1 NOTE Lund adopted Victoria Brown.
+1 SOUR www.pressreader.com/usa/the-arizona-republic/20101008/2814792727662
+2 CONC 17
+1 SOUR Marriage/Divorce: www.ancestry.com
+1 FAMS @F9@
+1 NOTE Sherry Cox = Wm Lund's 5th wife.
+1 SOUR www.courtlistener.com/opinion/2757621/jewels-v-lund
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+1 FAMS @F10@
+1 SOUR www.famechain.com/family-tree/85967/marilynn-lund  [Marilynn Ruth M
+2 CONC artlett]
+0 @I16@ INDI
+1 NAME Sherry/Cox/
+2 GIVN Sherry
+2 SURN Cox
+2 NICK Lund wife5
+1 SEX F
+1 BIRT
+2 DATE 1956
+1 FAMS @F9@
+1 NOTE Sherry Cox = Wm Lund's 5th wife.
+1 SOUR www.courtlistener.com/opinion/2757621/jewels-v-lund
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+0 @I17@ INDI
+1 NAME Victoria Diane's/V's Bio-Dad/
+2 GIVN Victoria Diane's
+2 SURN V's Bio-Dad
+2 NICK V's BioDad
+1 SEX M
+1 FAMS @F11@
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+0 @I18@ INDI
+1 NAME Victoria Diane's/V's Bio-Mom/
+2 GIVN Victoria Diane's
+2 SURN V's Bio-Mom
+2 NICK V's BioMom
+1 SEX F
+1 FAMS @F11@
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+0 @I19@ INDI
+1 NAME Victoria Diane/Brown/
+2 GIVN Victoria Diane
+2 SURN Brown
+2 NICK SM's Dau1
+1 SEX F
+1 BIRT
+2 DATE 21 Jan 1966
+1 DEAT
+2 DATE 12 Sep 2002
+1 FAMC @F11@
+1 NOTE Add'l row to ID biological parents.
+1 FAMC @F7@
+1 NOTE Adopted.
+1 SOUR www.hollywoodreporter.com/news/walt-disney-family-feud-inside-70602
+2 CONC 9
+1 FAMC @F8@
+1 NOTE Add'l row to ID 2nd adoptive father.
+0 @I20@ INDI
+1 NAME Papa/Pio/
+2 GIVN Papa
+2 SURN Pio
+2 NICK Own Pa
+1 SEX M
+1 FAMS @F12@
+1 FAMC @F12@
+1 NOTE Father ID cell turns red if ID same as Individual ID. The GEDCOM fi
+2 CONC le will export, but with an invalidation error: "The parents are childre
+2 CONC n in the same family." Any individuals claiming them as a parent will no
+2 CONC t be linked to them.
+0 @I21@ INDI
+1 NAME Mama/Mia/
+2 GIVN Mama
+2 SURN Mia
+2 NICK Own Ma
+1 SEX F
+1 FAMS @F13@
+1 FAMC @F13@
+1 NOTE Mother ID cell turns red if ID same as Individual ID. The GEDCOM fi
+2 CONC le will export, but with an invalidation error: "The parents are childre
+2 CONC n in the same family." Any individuals claiming them as a parent will no
+2 CONC t be linked to them.
+0 @I22@ INDI
+1 NAME Ultimate Egotist/Pio/
+2 GIVN Ultimate Egotist
+2 SURN Pio
+2 NICK Self-Marriage
+1 SEX M
+1 NOTE Claiming self as a spouse (entering Individual ID into Spouse ID column
+2 CONC ) turns the Spouse ID cell red, and is rejected by the family-numberin
+2 CONC g method; any children will not be linked to the parent.
+0 @I23@ INDI
+1 NAME Him/Pio/
+2 GIVN Him
+2 SURN Pio
+2 NICK LuvsHisSis
+1 SEX M
+1 FAMS @F14@
+1 NOTE Notice that the keyword "NOTE" (which is only a keyword when all UP
+2 CONC PERCASE and FOLLOWED by a SPACE) is optional unless the keyword "
+1 SOUR " precedes it somewhere. Nevertheless, it helps to use the keyword(
+2 CONC s) to break text into separate sources / notes.
+0 @I24@ INDI
+1 NAME Her/Pio/
+2 GIVN Her
+2 SURN Pio
+2 NICK LuvsHerBro
+1 SEX F
+1 FAMS @F14@
+1 NOTE Leading text without a keyword is treated as a note.
+1 SOUR Family Records (source example).
+1 NOTE Keywords "SOUR" & "NOTE" are treated as keywords only when all UPPE
+2 CONC RCASE and FOLLOWED by a SPACE. They can be used repeatedly in any orde
+2 CONC r in this field.
+0 @I25@ INDI
+1 NAME He/Pio/
+2 GIVN He
+2 SURN Pio
+2 NICK Oneway He
+1 SEX M
+1 FAMS @F15@
+1 NOTE ! Initial UNkeyed note. Keywords follow after filler:45678 6 2 4 6 8 71
+2 CONC 2 4 6 8 812345.
+1 SOUR #Sa...
+1 SOUR #Sb...
+1 NOTE #Na...
+1 NOTE #Nb...
+1 SOUR #Sc...
+1 NOTE #Nc...
+1 NOTE Final keyed note with filler: 378 412345678 512345678 612345678 71
+2 CONC 2 4 6 8 This note ends at "E": ABCDE
+0 @I26@ INDI
+1 NAME She/Lulu/
+2 GIVN She
+2 SURN Lulu
+2 NICK Dreamer She
+1 SEX F
+1 FAMS @F16@
+0 @I27@ INDI
+1 NAME Hugh/Hefner/
+2 GIVN Hugh
+2 SURN Hefner
+2 NICK Groom #1
+1 SEX M
+1 BIRT
+2 DATE 09 Apr 1926
+2 PLAC Chicago, Cook, Illinois
+1 DEAT
+2 DATE 27 Sep 2017
+2 PLAC Los Angeles, LA, CA
+1 FAMS @F17@
+1 FAMS @F18@
+1 FAMS @F19@
+1 NOTE Two separate HH entries both claim Crystal Harris as spouse, but she i
+2 CONC s given two different entries/IDs in order to demonstrate the "Runaway S
+2 CONC pouse" Marriage Counselor Code feature. (They did eventually marry.)
+1 FAMS @F20@
+0 @I28@ INDI
+1 NAME Mildred Marie/Williams/
+2 GIVN Mildred Marie
+2 SURN Williams
+2 NICK Hef's 1st
+1 SEX F
+1 BIRT
+2 DATE 10 Mar 1926
+2 PLAC Chicago, Cook, Illinois
+1 FAMS @F17@
+1 NOTE Edwin Gunn, second husband of Mildred Marie Williams, adopted her t
+2 CONC wo children (Christie Hefner, David Hefner) from her marriage to Hugh He
+2 CONC fner, "but they changed their names back to Hefner after Mildred and Gun
+2 CONC n separated."
+1 SOUR https://www.imdb.com/name/nm2259490/bio
+1 FAMS @F21@
+1 SOUR Marriage source: https://www.whosdatedwho.com/dating/mildred-willia
+2 CONC ms-and-edwin-gunn
+0 @I29@ INDI
+1 NAME Christie/Hefner/
+2 GIVN Christie
+2 SURN Hefner
+1 SEX F
+1 BIRT
+2 DATE 08 Nov 1952
+2 PLAC Chicago, Cook, Illinois
+1 FAMC @F17@
+1 SOUR https://en.wikipedia.org/wiki/Christie_Hefner
+1 FAMC @F21@
+1 NOTE Edwin Gunn, second husband of Mildred Marie Williams, adopted her t
+2 CONC wo children (Christie Hefner, David Hefner) from her marriage to Hugh He
+2 CONC fner, "but they changed their names back to Hefner after Mildred and Gun
+2 CONC n separated."
+1 SOUR https://www.imdb.com/name/nm2259490/bio
+0 @I30@ INDI
+1 NAME David/Hefner/
+2 GIVN David
+2 SURN Hefner
+1 SEX M
+1 BIRT
+2 DATE 30 Aug 1955
+2 PLAC Palo Alto, Santa Clara, CA
+1 FAMC @F17@
+1 FAMC @F21@
+1 NOTE Edwin Gunn, second husband of Mildred Marie Williams, adopted her t
+2 CONC wo children (Christie Hefner, David Hefner) from her marriage to Hugh He
+2 CONC fner, "but they changed their names back to Hefner after Mildred and Gun
+2 CONC n separated."
+1 SOUR https://www.imdb.com/name/nm2259490/bio
+0 @I31@ INDI
+1 NAME Edwin/Gunn/
+2 GIVN Edwin
+2 SURN Gunn
+2 NICK Ed
+1 SEX M
+1 BIRT
+2 DATE Abt 1926
+1 FAMS @F21@
+1 SOUR Marriage source: https://www.whosdatedwho.com/dating/mildred-willia
+2 CONC ms-and-edwin-gunn
+1 FAMS @F22@
+1 NOTE Edwin Gunn and Gwendolyn Mitchell "... divorced in 1981."
+1 SOUR www.whosdatedwho.com/dating/edwin-gunn-and-gwendolyn-jean-mitchell
+0 @I32@ INDI
+1 NAME Gwendolyn Jean/Mitchell/
+2 GIVN Gwendolyn Jean
+2 SURN Mitchell
+2 NICK Edwin's 2nd
+1 SEX F
+1 FAMS @F22@
+1 NOTE Edwin Gunn and Gwendolyn Mitchell "... divorced in 1981."
+1 SOUR https://www.whosdatedwho.com/dating/edwin-gunn-and-gwendolyn-jean-m
+2 CONC itchell
+0 @I33@ INDI
+1 NAME Kimberley/Conrad/
+2 GIVN Kimberley
+2 SURN Conrad
+2 NICK Hef's 2nd
+1 SEX F
+1 BIRT
+2 DATE 06 Aug 1962
+2 PLAC Moulton, Lawrence, Alabama
+1 FAMS @F18@
+0 @I34@ INDI
+1 NAME Marston/Hefner/
+2 GIVN Marston
+2 SURN Hefner
+1 SEX M
+1 BIRT
+2 DATE 09 Apr 1990
+2 PLAC Los Angeles, Los Angeles, CA
+1 FAMC @F18@
+0 @I35@ INDI
+1 NAME Cooper/Hefner/
+2 GIVN Cooper
+2 SURN Hefner
+1 SEX M
+1 BIRT
+2 DATE 04 Sep 1991
+2 PLAC Los Angeles, Los Angeles, CA
+1 FAMC @F18@
+0 @I36@ INDI
+1 NAME Crystal/Harris1/
+2 GIVN Crystal
+2 SURN Harris1
+2 NICK Ima Runaway
+1 SEX F
+1 BIRT
+2 DATE 29 Apr 1986
+2 PLAC Lake Havasu, Mohave, AZ
+1 NOTE Runaway bride claims no spouse, resulting in a "Runaway Spouse" Marriag
+2 CONC e Counselor Code for Hugh Hefner entry that claims her.
+0 @I37@ INDI
+1 NAME Crystal/Harris2/
+2 GIVN Crystal
+2 SURN Harris2
+2 NICK Hef's 3rd
+1 SEX F
+1 BIRT
+2 DATE 29 Apr 1986
+2 PLAC Lake Havasu, Mohave, AZ
+1 FAMS @F20@
+1 FAMC @F23@
+1 NOTE Runaway bride initially, but later did marry HH, claiming him here. Othe
+2 CONC r entry for her--with different  Individual ID--without claiming HH is t
+2 CONC o allow demonstration of "Runaway Spouse" Marriage Code.
+1 NOTE Linkage here to (fictitious) parents is only for test/demo.
+0 @I38@ INDI
+1 NAME Grampa/Smith/
+2 GIVN Grampa
+2 SURN Smith
+2 NICK Grampa
+1 SEX M
+1 FAMS @F23@
+1 NOTE Non-listed parents claimed to demonstrate Marriage Conselor Code.
+1 FAMS @F24@
+1 FAMS @F25@
+0 @I39@ INDI
+1 NAME Gramma/Johnson/
+2 GIVN Gramma
+2 SURN Johnson
+2 NICK Gramma
+1 SEX F
+1 FAMS @F23@
+1 FAMS @F26@
+1 FAMS @F27@
+0 @I40@ INDI
+1 NAME Gay Guy1/Smith/
+2 GIVN Gay Guy1
+2 SURN Smith
+2 NICK Gay Guy1
+1 SEX M
+1 FAMS @F28@
+1 FAMC @F23@
+1 FAMS @F29@
+1 FAMC @F23@
+1 FAMS @F30@
+1 FAMC @F23@
+1 FAMS @F31@
+1 FAMC @F23@
+1 NOTE Individual entry with unidentified spouse/partner required to be able t
+2 CONC o link any children they had to them.
+0 @I41@ INDI
+1 NAME Gay Gal1/Smith/
+2 GIVN Gay Gal1
+2 SURN Smith
+2 NICK Gay Gal1
+1 SEX F
+1 FAMS @F32@
+1 FAMC @F23@
+1 FAMS @F33@
+1 FAMC @F23@
+1 FAMS @F34@
+1 FAMC @F23@
+0 @I42@ INDI
+1 NAME Son1 ofGGuy1/Smith/
+2 GIVN Son1 ofGGuy1
+2 SURN Smith
+2 NICK Son1 ofGGuy1
+1 SEX M
+1 FAMS @F35@
+1 FAMC @F28@
+1 FAMS @F36@
+1 FAMC @F28@
+0 @I43@ INDI
+1 NAME Dau1 ofGGuy1/Smith/
+2 GIVN Dau1 ofGGuy1
+2 SURN Smith
+2 NICK Dau1 ofGGuy1
+1 SEX F
+1 FAMS @F37@
+1 FAMC @F28@
+0 @I44@ INDI
+1 NAME Dau2 ofGGuy1/Smith/
+2 GIVN Dau2 ofGGuy1
+2 SURN Smith
+2 NICK Dau2 ofGGuy1
+1 SEX F
+1 FAMC @F31@
+1 NOTE A "Single-Parent" must have a separate entry for each marriage/partnersh
+2 CONC ip (even if the spouse/partner is not identified/claimed) for a unique O
+2 CONC wnFamID to be generated that will link the child to them.
+0 @I45@ INDI
+1 NAME Gay Guy2/Williams/
+2 GIVN Gay Guy2
+2 SURN Williams
+2 NICK Gay Guy2
+1 SEX M
+1 FAMS @F29@
+0 @I46@ INDI
+1 NAME Gay Guy3/Jones/
+2 GIVN Gay Guy3
+2 SURN Jones
+2 NICK Gay Guy3
+1 SEX M
+1 FAMS @F28@
+1 FAMS @F38@
+0 @I47@ INDI
+1 NAME Gay Guy4/Brown/
+2 GIVN Gay Guy4
+2 SURN Brown
+2 NICK Gay Guy4
+1 SEX M
+1 FAMS @F30@
+1 NOTE Gay Guy4 doesn't reciprocate to Gay Guy1's claim.
+0 @I48@ INDI
+1 NAME Gay Gal2/Davis/
+2 GIVN Gay Gal2
+2 SURN Davis
+2 NICK Gay Gal2
+1 SEX F
+1 FAMS @F32@
+0 @I49@ INDI
+1 NAME Gay Gal3/Miller/
+2 GIVN Gay Gal3
+2 SURN Miller
+2 NICK Gay Gal3
+1 SEX F
+1 FAMS @F34@
+0 @I50@ INDI
+1 NAME Gay Gal4/Wilson/
+2 GIVN Gay Gal4
+2 SURN Wilson
+2 NICK Gay Gal4
+1 SEX F
+1 FAMS @F33@
+0 @I51@ INDI
+1 NAME GrammaJohnson's husb #2/Moore/
+2 GIVN GrammaJohnson's husb #2
+2 SURN Moore
+1 SEX M
+1 FAMS @F26@
+0 @I52@ INDI
+1 NAME GrammaJohnson's husb #3/Taylor/
+2 GIVN GrammaJohnson's husb #3
+2 SURN Taylor
+1 SEX M
+1 FAMS @F27@
+0 @I53@ INDI
+1 NAME GrampaSmith's wife #3/Anderson/
+2 GIVN GrampaSmith's wife #3
+2 SURN Anderson
+1 SEX F
+1 FAMS @F25@
+0 @I54@ INDI
+1 NAME GrampaSmith's wife #2/Thomas/
+2 GIVN GrampaSmith's wife #2
+2 SURN Thomas
+1 SEX F
+1 FAMS @F24@
+0 @I55@ INDI
+1 NAME Run-Run-Run-Run/Run-Away/
+2 GIVN Run-Run-Run-Run
+2 SURN Run-Away
+2 NICK Runaway Bride
+1 SEX F
+1 BIRT
+2 PLAC ?
+0 @I56@ INDI
+1 NAME Sum/Buddie/
+2 GIVN Sum
+2 SURN Buddie
+0 @M10004@ OBJE
+1 FILE C:\Excel2GED\Kepple-Ph01.jpg
+2 FORM jpg
+2 TITL M10004
+0 @M20005@ OBJE
+1 FILE C:\Excel2GED\MaryJR-Ph01.jpg
+2 FORM jpg
+2 TITL M20005
+0 @M700010@ OBJE
+1 FILE C:\Excel2GED\WaltShip-Ph01.jpg
+2 FORM jpg
+2 TITL M700010
+0 @F1@ FAM
+1 HUSB @I1@
+1 MARR
+2 DATE 18 Mar 1858
+2 PLAC Huron, Ontario, Canada
+1 WIFE @I2@
+1 CHIL @I5@
+0 @F2@ FAM
+1 HUSB @I3@
+1 MARR
+2 DATE 9 Sep 1855
+2 PLAC Pella, Marion, Iowa, USA
+1 WIFE @I4@
+1 CHIL @I6@
+0 @F3@ FAM
+1 HUSB @I5@
+1 MARR
+2 DATE 1 Jan 1888
+2 PLAC Kismet, Lake, Florida, USA
+1 WIFE @I6@
+1 CHIL @I7@
+0 @F4@ FAM
+1 HUSB @I7@
+1 MARR
+2 DATE 13 Jul 1925
+2 PLAC Lewiston, Nez Perce, Idaho, USA
+1 WIFE @I8@
+1 CHIL @I11@
+1 CHIL @I13@
+0 @F5@ FAM
+1 HUSB @I9@
+1 WIFE @I10@
+0 @F6@ FAM
+1 HUSB @I12@
+1 MARR
+2 DATE 9 May 1954
+2 PLAC Santa Barbara, Santa Barbara, California, USA
+1 WIFE @I11@
+0 @F7@ FAM
+1 HUSB @I14@
+1 MARR
+2 DATE 10 May 1959
+2 PLAC Pacific Palisades, Los Angeles, California, USA
+1 WIFE @I13@
+1 CHIL @I19@
+0 @F8@ FAM
+1 HUSB @I15@
+1 MARR
+2 DATE 1969
+1 WIFE @I13@
+0 @F9@ FAM
+1 HUSB @I15@
+1 WIFE @I16@
+1 MARR
+2 DATE 1999
+0 @F10@ FAM
+1 HUSB @I15@
+1 MARR
+2 DATE 1 Jul 1956
+2 PLAC Los Angeles, Los Angeles, California, USA
+0 @F11@ FAM
+1 HUSB @I17@
+1 WIFE @I18@
+0 @F12@ FAM
+1 HUSB @I20@
+1 CHIL @I20@
+0 @F13@ FAM
+1 WIFE @I21@
+1 CHIL @I21@
+0 @F14@ FAM
+1 HUSB @I23@
+1 WIFE @I24@
+0 @F15@ FAM
+1 HUSB @I25@
+0 @F16@ FAM
+1 WIFE @I26@
+0 @F17@ FAM
+1 HUSB @I27@
+1 MARR
+2 DATE 25 Jun 1949
+1 WIFE @I28@
+1 CHIL @I29@
+1 CHIL @I30@
+0 @F18@ FAM
+1 HUSB @I27@
+1 MARR
+2 DATE Jul 1989
+1 WIFE @I33@
+1 CHIL @I34@
+1 CHIL @I35@
+0 @F19@ FAM
+1 HUSB @I27@
+1 MARR
+2 DATE Jun 2011
+0 @F20@ FAM
+1 HUSB @I27@
+1 MARR
+2 DATE 31 Jan 2012
+1 WIFE @I37@
+0 @F21@ FAM
+1 HUSB @I31@
+1 MARR
+2 DATE 10 Apr 1960
+1 WIFE @I28@
+1 CHIL @I29@
+1 CHIL @I30@
+0 @F22@ FAM
+1 HUSB @I31@
+1 MARR
+2 DATE 01 Nov 1975
+1 WIFE @I32@
+0 @F23@ FAM
+1 HUSB @I38@
+1 WIFE @I39@
+1 CHIL @I37@
+1 CHIL @I40@
+1 CHIL @I41@
+0 @F24@ FAM
+1 HUSB @I38@
+1 WIFE @I54@
+0 @F25@ FAM
+1 HUSB @I38@
+1 WIFE @I53@
+0 @F26@ FAM
+1 HUSB @I51@
+1 WIFE @I39@
+0 @F27@ FAM
+1 HUSB @I52@
+1 WIFE @I39@
+0 @F28@ FAM
+1 HUSB @I40@
+1 WIFE @I46@
+1 CHIL @I42@
+1 CHIL @I43@
+0 @F29@ FAM
+1 HUSB @I40@
+1 WIFE @I45@
+0 @F30@ FAM
+1 HUSB @I40@
+1 WIFE @I47@
+0 @F31@ FAM
+1 HUSB @I40@
+1 CHIL @I44@
+0 @F32@ FAM
+1 HUSB @I48@
+1 WIFE @I41@
+0 @F33@ FAM
+1 HUSB @I50@
+1 WIFE @I41@
+0 @F34@ FAM
+1 HUSB @I49@
+1 WIFE @I41@
+0 @F35@ FAM
+1 HUSB @I42@
+0 @F36@ FAM
+1 HUSB @I42@
+0 @F37@ FAM
+1 WIFE @I43@
+0 @F38@ FAM
+1 HUSB @I46@
+0 TRLR
