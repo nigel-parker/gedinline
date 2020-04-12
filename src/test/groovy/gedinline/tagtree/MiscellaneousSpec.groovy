@@ -30,4 +30,23 @@ class MiscellaneousSpec extends InlineSpecification {
 
             result.contains('GEDCOM version assumed         5.5.5')
     }
+
+    void 'test for 3 PHON records bug'() {
+
+        when: 'the file contains 3 PHON records'
+
+            def innlegg = '''2 CORP gedcom.org
+3 ADDR
+4 ADR1 gedcom.org
+3 PHON +1-555-555-5555
+3 PHON +1-555-555-5555
+3 PHON +1-555-555-5555
+0 @U@ SUBM
+1 NAME gedcom.org'''
+            getResultShort(innlegg, 0, false)
+
+        then: 'everything is OK'
+
+            true
+    }
 }

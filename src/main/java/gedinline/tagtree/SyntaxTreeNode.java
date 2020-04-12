@@ -176,12 +176,12 @@ public class SyntaxTreeNode {
             return MULTIPLE;
         }
 
-        if (o1.isOptional() || o2.isOptional()) {
-            return OPTIONAL;
-        }
-
         if (o1.is3Times() || o2.is3Times()) {
             return UP_TO_3_TIMES;
+        }
+
+        if (o1.isOptional() || o2.isOptional()) {
+            return OPTIONAL;
         }
 
         return MANDATORY;

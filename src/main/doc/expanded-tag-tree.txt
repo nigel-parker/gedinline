@@ -17,10 +17,10 @@ HEAD                                                                  MANDATORY
                     STAE               ADDRESS_STATE                  
                     POST               ADDRESS_POSTAL_CODE            
                     CTRY               ADDRESS_COUNTRY                
-               PHON                    PHONE_NUMBER                   
-               EMAIL                   ADDRESS_EMAIL                  
-               FAX                     ADDRESS_FAX                    
-               WWW                     ADDRESS_WEB_PAGE               
+               PHON                    PHONE_NUMBER                   UP_TO_3_TIMES
+               EMAIL                   ADDRESS_EMAIL                  UP_TO_3_TIMES
+               FAX                     ADDRESS_FAX                    UP_TO_3_TIMES
+               WWW                     ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           DATA                         NAME_OF_SOURCE_DATA            
                DATE                    PUBLICATION_DATE               
                COPR                    COPYRIGHT_SOURCE_DATA          
@@ -43,10 +43,10 @@ SUBM
           STAE                         ADDRESS_STATE                  
           POST                         ADDRESS_POSTAL_CODE            
           CTRY                         ADDRESS_COUNTRY                
-     PHON                              PHONE_NUMBER                   
-     EMAIL                             ADDRESS_EMAIL                  
-     FAX                               ADDRESS_FAX                    
-     WWW                               ADDRESS_WEB_PAGE               
+     PHON                              PHONE_NUMBER                   UP_TO_3_TIMES
+     EMAIL                             ADDRESS_EMAIL                  UP_TO_3_TIMES
+     FAX                               ADDRESS_FAX                    UP_TO_3_TIMES
+     WWW                               ADDRESS_WEB_PAGE               UP_TO_3_TIMES
      OBJE                              @<XREF:OBJE>@                  MULTIPLE
      RIN                               AUTOMATED_RECORD_ID            
      NOTE                              @<XREF:NOTE>@                  MULTIPLE
@@ -84,10 +84,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -130,10 +130,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -176,10 +176,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -222,10 +222,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -268,10 +268,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -314,10 +314,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -360,10 +360,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -406,10 +406,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -452,10 +452,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -498,10 +498,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -544,10 +544,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -590,10 +590,10 @@ FAM                                                                   MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -725,10 +725,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -769,10 +769,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -813,10 +813,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -856,10 +856,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -899,10 +899,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -942,10 +942,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -987,10 +987,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1030,10 +1030,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1073,10 +1073,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1116,10 +1116,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1159,10 +1159,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1202,10 +1202,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1245,10 +1245,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1288,10 +1288,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1331,10 +1331,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1374,10 +1374,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1417,10 +1417,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1460,10 +1460,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1503,10 +1503,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1546,10 +1546,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1589,10 +1589,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1632,10 +1632,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1676,10 +1676,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1720,10 +1720,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1764,10 +1764,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1808,10 +1808,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1852,10 +1852,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1896,10 +1896,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1940,10 +1940,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -1984,10 +1984,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -2028,10 +2028,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -2072,10 +2072,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -2116,10 +2116,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -2160,10 +2160,10 @@ INDI                                                                  MULTIPLE
                STAE                    ADDRESS_STATE                  
                POST                    ADDRESS_POSTAL_CODE            
                CTRY                    ADDRESS_COUNTRY                
-          PHON                         PHONE_NUMBER                   
-          EMAIL                        ADDRESS_EMAIL                  
-          FAX                          ADDRESS_FAX                    
-          WWW                          ADDRESS_WEB_PAGE               
+          PHON                         PHONE_NUMBER                   UP_TO_3_TIMES
+          EMAIL                        ADDRESS_EMAIL                  UP_TO_3_TIMES
+          FAX                          ADDRESS_FAX                    UP_TO_3_TIMES
+          WWW                          ADDRESS_WEB_PAGE               UP_TO_3_TIMES
           AGNC                         RESPONSIBLE_AGENCY             
           RELI                         RELIGIOUS_AFFILIATION          
           CAUS                         CAUSE_OF_EVENT                 
@@ -2289,10 +2289,10 @@ REPO                                                                  MULTIPLE
           STAE                         ADDRESS_STATE                  
           POST                         ADDRESS_POSTAL_CODE            
           CTRY                         ADDRESS_COUNTRY                
-     PHON                              PHONE_NUMBER                   
-     EMAIL                             ADDRESS_EMAIL                  
-     FAX                               ADDRESS_FAX                    
-     WWW                               ADDRESS_WEB_PAGE               
+     PHON                              PHONE_NUMBER                   UP_TO_3_TIMES
+     EMAIL                             ADDRESS_EMAIL                  UP_TO_3_TIMES
+     FAX                               ADDRESS_FAX                    UP_TO_3_TIMES
+     WWW                               ADDRESS_WEB_PAGE               UP_TO_3_TIMES
      NOTE                              @<XREF:NOTE>@                  MULTIPLE
      NOTE                              USER_TEXT                      MULTIPLE
      REFN                              USER_REFERENCE_NUMBER          MULTIPLE
