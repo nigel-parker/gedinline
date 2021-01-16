@@ -3,6 +3,7 @@ package gedinline.value
 import gedinline.lexical.*
 import spock.lang.*
 
+@Unroll
 class AgeAtEventSpec extends Specification {
 
     void 'test forms common to all GEDCOM versions'() {
@@ -18,8 +19,6 @@ class AgeAtEventSpec extends Specification {
 
             'CHILD'      || true
             'child'      || true
-            '<child'     || true
-            '>child'     || true
             'INFANT'     || true
             'STILLBORN'  || true
             '37y 11m 2d' || true
@@ -31,6 +30,7 @@ class AgeAtEventSpec extends Specification {
             '11y 2d'     || true
 
             '444m 1000d' || false
+            '>111y'      || false
     }
 
     void 'test new forms for GEDCOM 555'() {
@@ -42,11 +42,20 @@ class AgeAtEventSpec extends Specification {
 
         where:
 
-            input        || expectedResult
+            input         || expectedResult
 
             '999y 11m 2d' || true
             '999y'        || true
             '999y 2m'     || true
             '999y 2d'     || true
+            '> 11y'       || true
+            '> 111y'      || true
+            '< child'     || true
+            '> child'     || true
+
+            '<child'      || false
+            '>child'      || false
+            '>11y'        || false
+
     }
 }

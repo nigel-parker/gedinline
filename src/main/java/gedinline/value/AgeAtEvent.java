@@ -25,7 +25,7 @@ public class AgeAtEvent {
                 "INFANT|" +
                 "STILLBORN)";
 
-        String regex555 = "(<|>|)" +
+        String regex555 = "(< |> |)" +
                 "(\\d{1,3}Y \\d{1,2}M \\d{1,3}D|" +
                 "\\d{1,3}Y|" +
                 "\\d{1,2}M|" +
