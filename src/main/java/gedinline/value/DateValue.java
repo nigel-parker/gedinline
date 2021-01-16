@@ -188,17 +188,15 @@ public class DateValue {
         }
     }
 
-    private boolean checkYearLength(String s) {
-        int length = s.length();
-
-        return (length >= 3 && StringUtils.isNumeric(s.substring(length - 3)));
-    }
-
     private boolean checkPattern(String s, DateTimeFormatter formatter) {
         try {
 
+            if (!s.matches("((\\d{1,2} )?(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC) )?\\d{3,4}")) {
+                return false;
+            }
+
             formatter.parseDateTime(s);
-            return checkYearLength(s);
+            return true;
 
         } catch (Exception e) {
             return false;

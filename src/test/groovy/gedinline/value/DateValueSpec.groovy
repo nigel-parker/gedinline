@@ -65,6 +65,8 @@ class DateValueSpec extends Specification {
             'MAR 1692/93'                                         || true
             '@#DJULIAN@ MAR 1692/93'                              || true
 
+            '3 January 1972'                                      || false
+
             '24 MAR 1924/25'                                      || false
             'MAR 1922/24'                                         || false
             '25 DEC 1922/23'                                      || false
@@ -135,6 +137,7 @@ class DateValueSpec extends Specification {
             'TO JAN 1972'                                           || true
             'BEF JAN 1972'                                          || true
             'AFT JAN 1972'                                          || true
+            'AFT 20 Nov 1345'                                       || true
             'CAL JAN 1972'                                          || true
             'EST JAN 1972'                                          || true
             'FROM JAN 1972 TO 1973'                                 || true
@@ -151,7 +154,6 @@ class DateValueSpec extends Specification {
             '03 jan 1972 '                                          || true
             ' (03 jan 1972) '                                       || true
 
-
             ''                                                      || false
             '12'                                                    || false
             '99'                                                    || false
@@ -162,6 +164,10 @@ class DateValueSpec extends Specification {
             '03 JAN 1972 B.C.'                                      || false
             'JAN 1972 B.C.'                                         || false
             '31 FEB 2019'                                           || false
+
+            'January 1972'                                          || false
+            'AFT 20 November 1345'                                  || false
+            '20 November 1345'                                      || false
 
             '@#DGREGORIAN@03 JAN 1972'                              || false
             '@#DJULIAN@ 5 AUG 1100 B.C.'                            || false
