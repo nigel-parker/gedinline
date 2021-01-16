@@ -40,6 +40,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w11.ged'                    || 56                   | ''
             'w14.ged'                    || 2                    | "*** Line 13:      Invalid GEDCOM line '10'"
             'w15.ged'                    || 7                    | "*** Line 12:      Invalid GEDCOM line '10'"
+            'w16.ged'                    || 0                    | ''
             'w550.ged'                   || 1                    | ''
             'w551.ged'                   || 0                    | ''
             'phon-x-3.ged'               || 0                    | ''

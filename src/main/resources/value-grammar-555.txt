@@ -288,7 +288,7 @@ NAME_TEXT := {Size=1:120}
 <TEXT>
 
 
-NAME_TYPE := {Size=5:30}
+NAME_TYPE := {Size=3:30}
 String
 
 
@@ -390,8 +390,8 @@ RESPONSIBLE_AGENCY := {Size=1:120}
 String
 
 
-ROLE_DESCRIPTOR := {Size=1:25}
-String
+ROLE_DESCRIPTOR := {Size=1:27}
+StringInBrackets
 
 
 ROLE_IN_EVENT := {Size=3:27}
