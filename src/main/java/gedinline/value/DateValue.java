@@ -41,6 +41,7 @@ public class DateValue {
             .withLocale(Locale.ENGLISH)
             .withZone(DateTimeZone.UTC);
 
+    private String originalString;
     private String s;
     private GedcomVersion gedcomVersion;
 
@@ -49,6 +50,7 @@ public class DateValue {
     }
 
     public DateValue(String s, GedcomVersion gedcomVersion) {
+        this.originalString = s;
         this.s = s.toUpperCase().trim();
         this.gedcomVersion = gedcomVersion;
     }
@@ -57,6 +59,8 @@ public class DateValue {
 
         if (gedcomVersion.is555()) {
             return new DateValue555(s).isValid();
+        } else if (gedcomVersion.is700()) {
+            return new DateValue700(originalString).isValid();
         }
 
         if (isValidDatePhrase(s)) {
