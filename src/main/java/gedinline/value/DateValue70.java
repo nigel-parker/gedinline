@@ -11,13 +11,8 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * User: nigel
- * Date: Jul 8, 2011
- * Time: 12:45:52 PM
- */
 @SuppressWarnings("Duplicates")
-public class DateValue700 {
+public class DateValue70 {
 
     private static final String FROM = "FROM ";
     private static final String TO = " TO ";
@@ -47,7 +42,7 @@ public class DateValue700 {
 
     private String s;
 
-    public DateValue700(String s) {
+    public DateValue70(String s) {
         this.s = s.trim();
     }
 

@@ -34,8 +34,8 @@ public class TagTree {
         Tag tag = syntaxTreeNode.getTag();
 
         if (gedcomVersion.is555() && !tag.isConxTag()) {
-            result.add(new Tag("CONC"));
-            result.add(new Tag("CONT"));
+            result.add(Tag.CONC);
+            result.add(Tag.CONT);
         }
 
         return result;

@@ -65,37 +65,37 @@ public class StructureListener {
             outputReport.incrementCounter(RECORD);
         }
 
-        if (tag.equals(new Tag("INDI"))) {
+        if (tag.equals(Tag.INDI)) {
             outputReport.incrementCounter(INDIVIDUAL);
-        } else if (tag.equals(new Tag("FAM"))) {
+        } else if (tag.equals(Tag.FAM)) {
             outputReport.incrementCounter(FAMILY);
         } else if (tag.isUserDefined()) {
             outputReport.incrementCounter(USER_DEFINED);
-        } else if (tag.equals(new Tag("SEX"))) {
+        } else if (tag.equals(Tag.SEX)) {
             if (value.equals("M")) {
                 outputReport.incrementCounter(MALE);
             } else if (value.equals("F")) {
                 outputReport.incrementCounter(FEMALE);
             }
-        } else if (tag.equals(new Tag("MARR"))) {
+        } else if (tag.equals(Tag.MARR)) {
             outputReport.incrementCounter(MARRIAGE);
-        } else if (tag.equals(new Tag("PLAC"))) {
+        } else if (tag.equals(Tag.PLAC)) {
             outputReport.incrementCounter(PLACE);
-        } else if (tag.equals(new Tag("SOUR")) && level == 0) {
+        } else if (tag.equals(Tag.SOUR) && level == 0) {
             outputReport.incrementCounter(SOURCE);
-        } else if (tag.equals(new Tag("SOUR")) && parentTag != null && parentTag.equals(new Tag("HEAD"))) {
+        } else if (tag.equals(Tag.SOUR) && parentTag != null && parentTag.equals(Tag.HEAD)) {
             outputReport.reportValue(GENERATED_BY, value);
-        } else if (tag.equals(new Tag("NAME")) && parentTag != null && parentTag.equals(new Tag("SOUR"))) {
+        } else if (tag.equals(Tag.NAME) && parentTag != null && parentTag.equals(Tag.SOUR)) {
             if (outputReport.getValue(GENERATED_BY).equals("")) {
                 outputReport.reportValue(GENERATED_BY, value);
             }
-        } else if (tag.equals(new Tag("VERS")) && parentTag != null && parentTag.equals(new Tag("SOUR"))) {
+        } else if (tag.equals(Tag.VERS) && parentTag != null && parentTag.equals(Tag.SOUR)) {
             outputReport.reportValue(SOURCE_VERSION, value);
-        } else if (tag.equals(new Tag("DATE")) && parentTag != null && parentTag.equals(new Tag("HEAD"))) {
+        } else if (tag.equals(Tag.DATE) && parentTag != null && parentTag.equals(Tag.HEAD)) {
             outputReport.reportValue(DATE, value);
-        } else if (tag.equals(new Tag("NAME")) && parentTag != null && parentTag.equals(new Tag("SUBM"))) {
+        } else if (tag.equals(Tag.NAME) && parentTag != null && parentTag.equals(Tag.SUBM)) {
             outputReport.reportValue(SUBMITTED_BY, value);
-        } else if (tag.equals(new Tag("VERS")) && parentTag != null && parentTag.equals(new Tag("GEDC"))) {
+        } else if (tag.equals(Tag.VERS) && parentTag != null && parentTag.equals(Tag.GEDC)) {
             if (!outputReport.hasKey(GEDCOM_VERSION_IN_FILE)) {
                 outputReport.reportValue(GEDCOM_VERSION_IN_FILE, value);
 
@@ -103,7 +103,7 @@ public class StructureListener {
                     warningSink.warning(inputLine.getLineNumber(), "Note that the de facto standard GEDCOM version is version 5.5.1");
                 }
             }
-        } else if (tag.equals(new Tag("CHAR"))) {
+        } else if (tag.equals(Tag.CHAR)) {
             outputReport.reportValue(ENCODING, value);
         }
     }

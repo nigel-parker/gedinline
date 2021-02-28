@@ -74,7 +74,7 @@ public class GedInlineValidator {
             propertyChangeSupport.addPropertyChangeListener(new GedcomListener());
 
             for (Map.Entry<String, String> entry : recordMap.entrySet()) {
-                expandedGrammarMap.put(new Tag(entry.getKey()), tagTreeGrammar.expand(entry.getValue()));
+                expandedGrammarMap.put(Tag.getInstance(entry.getKey()), tagTreeGrammar.expand(entry.getValue()));
             }
 
             while (recordCollector.hasNext()) {

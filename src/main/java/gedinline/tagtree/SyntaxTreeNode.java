@@ -90,7 +90,7 @@ public class SyntaxTreeNode {
             subtreeReference = new SubtreeReference(token);
             state = State.WAITING_FOR_OCCURRENCE;
         } else {
-            tag = new Tag(token);
+            tag = Tag.getInstance(token);
             state = State.WAITING_FOR_SYNTAX_ELEMENT;
         }
     }

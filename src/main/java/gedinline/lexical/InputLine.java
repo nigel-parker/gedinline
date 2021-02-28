@@ -49,10 +49,10 @@ public class InputLine {
         }
 
         try {
-            tag = new Tag(token, gedcomVersion);
+            tag = Tag.getInstance(token, gedcomVersion);
         } catch (GedcomException e) {
             warningSink.warning(lineNumber, e.getMessage());
-            tag = new Tag("xxxx");
+            tag = Tag.XXXX;
         }
 
         if (it.hasNext()) {

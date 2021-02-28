@@ -5,34 +5,48 @@ import org.apache.commons.lang.StringUtils;
 
 public class Tag {
 
-    private String tag;
-    private GedcomVersion gedcomVersion;
+    public static Tag CHAR = getInstance("CHAR");
+    public static Tag CONC = getInstance("CONC");
+    public static Tag CONT = getInstance("CONT");
+    public static Tag DATE = getInstance("DATE");
+    public static Tag FAM = getInstance("FAM");
+    public static Tag GEDC = getInstance("GEDC");
+    public static Tag HEAD = getInstance("HEAD");
+    public static Tag INDI = getInstance("INDI");
+    public static Tag MARR = getInstance("MARR");
+    public static Tag NAME = getInstance("NAME");
+    public static Tag PLAC = getInstance("PLAC");
+    public static Tag SEX = getInstance("SEX");
+    public static Tag SOUR = getInstance("SOUR");
+    public static Tag SUBM = getInstance("SUBM");
+    public static Tag TRLR = getInstance("TRLR");
+    public static Tag VERS = getInstance("VERS");
+    public static Tag XXXX = getInstance("xxxx");
 
-    public Tag(String s) throws GedcomException {
-        this(s, GedcomVersion.V_551);
+    protected String tag;
+
+    public static Tag getInstance(String s) {
+        return getInstance(s, GedcomVersion.V_551);
     }
 
-    public Tag(String s, GedcomVersion gedcomVersion) {
-        this.gedcomVersion = gedcomVersion;
+    public static Tag getInstance(String s, GedcomVersion gedcomVersion) {
+        if (gedcomVersion.is555()) {
+            return new Tag555(s);
+
+        } else if (gedcomVersion.is70()) {
+            return new Tag70(s);
+
+        } else {
+            return new Tag55(s);
+        }
+    }
+
+    protected Tag(String s) {
 
         String s1 = StringUtils.trimToEmpty(s);
 
         if (StringUtils.isBlank(s1)) {
             throw new GedcomException("Invalid tag '" + s + "'");
-        }
-
-        if (gedcomVersion.is555()) {
-            if (s1.length() > 31) {
-                throw new GedcomException("Tag '" + s + "' is too long");
-            }
-
-            if (!s1.matches("_?[a-zA-Z0-9]+")) {
-                throw new GedcomException("Tags must consist of alphanumerics: '" + s + "'");
-            }
-        } else {
-            if (!s1.matches("[a-zA-Z0-9_]+")) {
-                throw new GedcomException("Tags must consist of alphanumerics: '" + s + "'");
-            }
         }
 
         this.tag = s;
@@ -43,41 +57,34 @@ public class Tag {
     }
 
     public boolean isConcatenationTag() {
-        return tag.equals("CONC");
+        return this.equals(CONC);
     }
 
     public boolean isContinuationTag() {
-        return tag.equals("CONT");
+        return this.equals(CONT);
     }
 
     public boolean isConxTag() {
         return isConcatenationTag() || isContinuationTag();
     }
 
+    public boolean isFinalTag() {
+        return this.equals(TRLR);
+    }
+
     public boolean isUserDefined() {
         return tag.startsWith("_");
-    }
-
-    public boolean isEncodingTag() {
-        return tag.equals("CHAR");
-    }
-
-    public boolean isFinalTag() {
-        return tag.equals("TRLR");
     }
 
     public String toString() {
         return tag;
     }
 
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Tag pointer1 = (Tag) o;
-        return !(tag != null ? !tag.equals(pointer1.tag) : pointer1.tag != null);
+    public boolean equals(Object that) {
+        return this.tag.equals(((Tag) that).tag);
     }
 
     public int hashCode() {
-        return tag != null ? tag.hashCode() : 0;
+        return tag.hashCode();
     }
 }

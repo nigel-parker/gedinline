@@ -6,12 +6,11 @@ import spock.lang.*
 @SuppressWarnings("GroovyPointlessBoolean")
 class DateValueSpec extends Specification {
 
-    @IgnoreRest
     void 'test for valid GEDCOM 7.0.0 dates'() {
 
         expect:
 
-            new DateValue(input, GedcomVersion.V_700).isValid() == result
+            new DateValue(input, GedcomVersion.V_70).isValid() == result
 
         where:
 

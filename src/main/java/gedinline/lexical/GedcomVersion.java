@@ -2,17 +2,12 @@ package gedinline.lexical;
 
 import org.apache.commons.lang.StringUtils;
 
-/**
- * User: nigel
- * Date: Jul 7, 2011
- * Time: 2:30:21 PM
- */
 public class GedcomVersion {
 
     public static final GedcomVersion V_55 = new GedcomVersion("5.5");
     public static final GedcomVersion V_551 = new GedcomVersion("5.5.1");
     public static final GedcomVersion V_555 = new GedcomVersion("5.5.5");
-    public static final GedcomVersion V_700 = new GedcomVersion("7.0.0");
+    public static final GedcomVersion V_70 = new GedcomVersion("7.0");
 
     private String gedcomVersion;
 
@@ -28,8 +23,8 @@ public class GedcomVersion {
         return this.equals(V_555);
     }
 
-    public boolean is700() {
-        return this.equals(V_700);
+    public boolean is70() {
+        return this.equals(V_70);
     }
 
     public String getSuffix() {

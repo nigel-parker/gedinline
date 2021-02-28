@@ -59,8 +59,8 @@ public class DateValue {
 
         if (gedcomVersion.is555()) {
             return new DateValue555(s).isValid();
-        } else if (gedcomVersion.is700()) {
-            return new DateValue700(originalString).isValid();
+        } else if (gedcomVersion.is70()) {
+            return new DateValue70(originalString).isValid();
         }
 
         if (isValidDatePhrase(s)) {
