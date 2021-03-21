@@ -84,6 +84,9 @@ class ValueGrammarSpec extends Specification {
             'NAME_ROMANIZED_VARIATION' | 'kana'                                  | V_551   || true
             'NAME_TYPE'                | 'aka'                                   | V_551   || true
             'PHONETIC_TYPE'            | 'kana2'                                 | V_551   || true
+            'PHONETISATION_METHOD'     | 'hangul'                                | V_555   || true
+            'PHONETISATION_METHOD'     | 'kana'                                  | V_555   || true
+            'PHONETISATION_METHOD'     | 'abcde'                                 | V_555   || true
             'PLACE_LATITUDE'           | 'N18.150944'                            | V_551   || true
             'PLACE_LONGITUDE'          | 'E168.150944'                           | V_551   || true
             'PLACE_VALUE'              | ''                                      | V_551   || false

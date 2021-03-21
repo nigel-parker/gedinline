@@ -329,8 +329,8 @@ PHONE_NUMBER := {Size=1:25}
 String
 
 
-PHONETISATION_METHOD := {Size=5:30}
-[<user defined>|hangul|kana]
+PHONETISATION_METHOD := {Size=4:30}
+String
 
 
 PHYSICAL_DESCRIPTION := {Size=1:4095}
