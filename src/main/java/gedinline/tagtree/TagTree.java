@@ -2,7 +2,7 @@ package gedinline.tagtree;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import gedinline.lexical.GedcomVersionNew;
+import gedinline.lexical.GedcomVersion;
 import gedinline.lexical.Tag;
 import gedinline.main.ValidatorBugException;
 
@@ -12,10 +12,10 @@ import java.util.Set;
 public class TagTree {
 
     private SyntaxTreeNode syntaxTreeNode;
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
     private List<TagTree> subtrees = Lists.newArrayList();
 
-    public TagTree(SyntaxTreeNode syntaxTreeNode, GedcomVersionNew gedcomVersion) {
+    public TagTree(SyntaxTreeNode syntaxTreeNode, GedcomVersion gedcomVersion) {
         this.syntaxTreeNode = syntaxTreeNode;
         this.gedcomVersion = gedcomVersion;
     }

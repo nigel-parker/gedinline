@@ -27,7 +27,7 @@ public class GedInlineValidator {
     private StructureListener structureListener;
     private ValueGrammar valueGrammar;
     private WarningCollector warningCollector;
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
     private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
 
     /**
@@ -118,7 +118,7 @@ public class GedInlineValidator {
      *
      * @return
      */
-    public GedcomVersionNew getGedcomVersion() {
+    public GedcomVersion getGedcomVersion() {
         return gedcomVersion;
     }
 
@@ -133,7 +133,7 @@ public class GedInlineValidator {
         }
     }
 
-    private void initialiseDefaultRecordMap(GedcomVersionNew gedcomVersion) {
+    private void initialiseDefaultRecordMap(GedcomVersion gedcomVersion) {
 
         if (gedcomVersion.is555()) {
             recordMap.put("HEAD", "HEADER");

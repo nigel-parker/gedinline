@@ -1,6 +1,6 @@
 package gedinline.value;
 
-import gedinline.lexical.GedcomVersionNew;
+import gedinline.lexical.GedcomVersion;
 import org.apache.commons.lang.StringUtils;
 
 /**
@@ -14,14 +14,14 @@ public class ExpressionParser {
     private SyntaxExpression syntaxExpression;
     private String input;
     private SyntaxElementLocator syntaxElementLocator;
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
 
-    public ExpressionParser(SyntaxElement syntaxElement, SyntaxElementLocator syntaxElementLocator, GedcomVersionNew gedcomVersion) {
+    public ExpressionParser(SyntaxElement syntaxElement, SyntaxElementLocator syntaxElementLocator, GedcomVersion gedcomVersion) {
         this(syntaxElement.getSyntaxExpression(), syntaxElementLocator, gedcomVersion);
         this.syntaxElement = syntaxElement;
     }
 
-    public ExpressionParser(SyntaxExpression syntaxExpression, SyntaxElementLocator syntaxElementLocator, GedcomVersionNew gedcomVersion) {
+    public ExpressionParser(SyntaxExpression syntaxExpression, SyntaxElementLocator syntaxElementLocator, GedcomVersion gedcomVersion) {
         this.syntaxExpression = syntaxExpression;
         this.syntaxElementLocator = syntaxElementLocator;
         this.gedcomVersion = gedcomVersion;

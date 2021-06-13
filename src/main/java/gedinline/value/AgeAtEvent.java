@@ -1,13 +1,13 @@
 package gedinline.value;
 
-import gedinline.lexical.GedcomVersionNew;
+import gedinline.lexical.GedcomVersion;
 
 public class AgeAtEvent {
 
     private String s;
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
 
-    public AgeAtEvent(String s, GedcomVersionNew gedcomVersion) {
+    public AgeAtEvent(String s, GedcomVersion gedcomVersion) {
         this.s = s;
         this.gedcomVersion = gedcomVersion;
     }

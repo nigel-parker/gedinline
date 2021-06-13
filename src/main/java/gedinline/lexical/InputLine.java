@@ -17,9 +17,9 @@ public class InputLine {
     private Tag tag;
     private Pointer pointer;
     private String value = "";
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
 
-    public InputLine(InputLinePrecursor precursor,GedcomVersionNew gedcomVersion, WarningSink warningSink) {
+    public InputLine(InputLinePrecursor precursor, GedcomVersion gedcomVersion, WarningSink warningSink) {
         this.lineNumber = precursor.getLineNumber();
         this.level = precursor.getLevel();
         this.gedcomVersion = gedcomVersion;
@@ -82,7 +82,7 @@ public class InputLine {
         this.value = value;
     }
 
-    public GedcomVersionNew getGedcomVersion() {
+    public GedcomVersion getGedcomVersion() {
         return gedcomVersion;
     }
 

@@ -2,7 +2,7 @@ package gedinline.lexical
 
 import gedinline.main.*
 
-import static gedinline.lexical.GedcomVersionNew.*
+import static gedinline.lexical.GedcomVersion.*
 
 //@Unroll
 class BasicParserSpec extends FileReaderSpecification {

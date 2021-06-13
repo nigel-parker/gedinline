@@ -1,7 +1,7 @@
 package gedinline.value;
 
 import com.google.common.collect.ImmutableList;
-import gedinline.lexical.GedcomVersionNew;
+import gedinline.lexical.GedcomVersion;
 import org.apache.commons.lang.StringUtils;
 import org.joda.time.DateTimeZone;
 import org.joda.time.format.DateTimeFormat;
@@ -9,8 +9,8 @@ import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Locale;
 
-import static gedinline.lexical.GedcomVersionNew.V_55;
-import static gedinline.lexical.GedcomVersionNew.V_551;
+import static gedinline.lexical.GedcomVersion.V_55;
+import static gedinline.lexical.GedcomVersion.V_551;
 
 /**
  * User: nigel
@@ -43,13 +43,13 @@ public class DateValue {
 
     private String originalString;
     private String s;
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
 
     public DateValue(String s) {
         this(s, V_55);
     }
 
-    public DateValue(String s, GedcomVersionNew gedcomVersion) {
+    public DateValue(String s, GedcomVersion gedcomVersion) {
         this.originalString = s;
         this.s = s.toUpperCase().trim();
         this.gedcomVersion = gedcomVersion;

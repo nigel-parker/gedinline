@@ -10,7 +10,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input, GedcomVersionNew.V_70).isValid() == result
+            new DateValue(input, GedcomVersion.V_70).isValid() == result
 
         where:
 
@@ -124,7 +124,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input, GedcomVersionNew.V_555).isValid() == result
+            new DateValue(input, GedcomVersion.V_555).isValid() == result
 
         where:
 
@@ -219,7 +219,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input, GedcomVersionNew.V_551).isValid() == result
+            new DateValue(input, GedcomVersion.V_551).isValid() == result
 
         where:
 

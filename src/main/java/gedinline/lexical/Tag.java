@@ -26,10 +26,10 @@ public class Tag {
     protected String tag;
 
     public static Tag getInstance(String s) {
-        return getInstance(s, GedcomVersionNew.V_551);
+        return getInstance(s, GedcomVersion.V_551);
     }
 
-    public static Tag getInstance(String s, GedcomVersionNew gedcomVersion) {
+    public static Tag getInstance(String s, GedcomVersion gedcomVersion) {
         if (gedcomVersion.is555()) {
             return new Tag555(s);
 

@@ -29,7 +29,7 @@ public class BasicParser {
     private static final String GEDCOM_TRIGGER = "1 GEDC";
     private static final String GEDCOM_VERSION_TRIGGER = "2 VERS ";
 
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
     private boolean valid555HeaderSeen;
     private Level level;
     private int lineNumber;
@@ -101,10 +101,10 @@ public class BasicParser {
 
         if (gedcomVersion == null) {
             log.warning("No GEDCOM version number found, assuming version 5.5.1");
-            gedcomVersion = GedcomVersionNew.V_551;
+            gedcomVersion = GedcomVersion.V_551;
         } else if (!gedcomVersion.isSupported()) {
             log.warning("No validation support for GEDCOM version " + gedcomVersion + ", assuming rules for version 5.5.1");
-            gedcomVersion = GedcomVersionNew.V_551;
+            gedcomVersion = GedcomVersion.V_551;
         } else if (gedcomVersion.is70()) {
             declaredEncoding = "UTF-8";
         }
@@ -112,7 +112,7 @@ public class BasicParser {
         return declaredEncoding;
     }
 
-    public GedcomVersionNew getGedcomVersion() {
+    public GedcomVersion getGedcomVersion() {
         return gedcomVersion;
     }
 
@@ -298,7 +298,7 @@ public class BasicParser {
 //                gedcomVersion = new GedcomVersion(StringUtils.substringAfter(line, GEDCOM_VERSION_TRIGGER).trim());
                 String gedcomVersionS = StringUtils.substringAfter(line, GEDCOM_VERSION_TRIGGER).trim();
                 System.out.println("%%% gedcomVersionS = " + gedcomVersionS);
-                gedcomVersion = GedcomVersionNew.fromString(gedcomVersionS);
+                gedcomVersion = GedcomVersion.fromString(gedcomVersionS);
                 gedcomTagSeen = false;
             }
 

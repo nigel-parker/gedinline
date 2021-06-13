@@ -26,7 +26,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             gedcomValidator.numberOfWarnings == 0
     }
 
-    @IgnoreRest
     void 'verify test file #filename'() {
 
         expect:
@@ -38,7 +37,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             filename                     || expectedWarningCount | expectedContent
 
             'corner1.ged'                || 3                    | 'Invalid content for SURN tag'
-/*
             'encoding-utf-16-le-555.ged' || 0                    | ''
             'Excel2GED-beta.ged'         || 2                    | ''
             'harvey.ged'                 || 2                    | ''
@@ -67,7 +65,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w550.ged'                   || 1                    | ''
             'w551.ged'                   || 0                    | ''
             'phon-x-3.ged'               || 0                    | ''
-*/
     }
 
     void 'Issue #1 fixed'() {

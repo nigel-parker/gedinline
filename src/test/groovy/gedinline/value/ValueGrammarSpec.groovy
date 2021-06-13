@@ -2,7 +2,7 @@ package gedinline.value
 
 import spock.lang.*
 
-import static gedinline.lexical.GedcomVersionNew.*
+import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class ValueGrammarSpec extends Specification {

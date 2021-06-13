@@ -22,7 +22,7 @@ import java.util.Stack;
 public class RecordCollector {
 
     private InputRecord next = null;
-    private GedcomVersionNew gedcomVersion;
+    private GedcomVersion gedcomVersion;
     private WarningSink log;
     private StructureListener structureListener;
     private boolean trailerFound = false;
@@ -51,7 +51,7 @@ public class RecordCollector {
         structureListener.handleGedcomVersion(gedcomVersion);
     }
 
-    public GedcomVersionNew getGedcomVersion() {
+    public GedcomVersion getGedcomVersion() {
         return gedcomVersion;
     }
 
