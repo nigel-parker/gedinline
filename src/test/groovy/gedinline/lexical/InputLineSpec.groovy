@@ -11,7 +11,7 @@ class InputLineSpec extends Specification {
         expect:
 
             InputLinePrecursor precursor = new InputLinePrecursor(1, new Level(0), input, "")
-            InputLine inputLine = new InputLine(precursor, GedcomVersion.V_551, new NullLogger())
+            InputLine inputLine = new InputLine(precursor, GedcomVersionNew.V_551, new NullLogger())
 
             if (label) {
                 assert inputLine.label.pointer == label

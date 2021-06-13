@@ -31,6 +31,7 @@ class FileReaderSpecification extends Specification {
         def gedcomValidator = new GedInlineValidator(inputStream, filename, new PrintWriter(stringWriter))
         def okResult = gedcomValidator.validate()
 
+        println "%%% stringWriter = ${stringWriter}"
         assert okResult
         assert stringWriter.toString().contains(expectedContent)
         assert gedcomValidator.numberOfWarnings == expectedWarningCount

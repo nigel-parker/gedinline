@@ -4,7 +4,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
-import gedinline.lexical.GedcomVersion;
+import gedinline.lexical.GedcomVersionNew;
 import gedinline.main.ValidatorBugException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
@@ -16,9 +16,9 @@ import java.util.*;
 public class TagTreeGrammar {
 
     private Multimap<String, String> subtrees = ArrayListMultimap.create();
-    private GedcomVersion gedcomVersion;
+    private GedcomVersionNew gedcomVersion;
 
-    public TagTreeGrammar(GedcomVersion gedcomVersion) {
+    public TagTreeGrammar(GedcomVersionNew gedcomVersion) {
         this.gedcomVersion = gedcomVersion;
         handleFile(gedcomVersion.is555() ? "tag-tree-555.txt" : "tag-tree.txt");
     }
@@ -150,7 +150,7 @@ public class TagTreeGrammar {
         }
     }
 
-    public void setGedcomVersion(GedcomVersion gedcomVersion) {
+    public void setGedcomVersion(GedcomVersionNew gedcomVersion) {
         this.gedcomVersion = gedcomVersion;
     }
 }

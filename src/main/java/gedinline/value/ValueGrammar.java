@@ -1,6 +1,6 @@
 package gedinline.value;
 
-import gedinline.lexical.GedcomVersion;
+import gedinline.lexical.GedcomVersionNew;
 import gedinline.main.ValidatorBugException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
@@ -26,7 +26,7 @@ public class ValueGrammar implements SyntaxElementLocator {
     private String description = "";
 
     @SuppressWarnings("unchecked")
-    public ValueGrammar(GedcomVersion gedcomVersion) {
+    public ValueGrammar(GedcomVersionNew gedcomVersion) {
         String filename = gedcomVersion.is555() ? "value-grammar-555.txt" : "value-grammar.txt";
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filename);
         List<String> list;

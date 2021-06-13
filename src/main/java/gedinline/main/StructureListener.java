@@ -1,9 +1,6 @@
 package gedinline.main;
 
-import gedinline.lexical.GedcomVersion;
-import gedinline.lexical.InputLine;
-import gedinline.lexical.InputRecord;
-import gedinline.lexical.Tag;
+import gedinline.lexical.*;
 
 import java.io.PrintWriter;
 
@@ -45,7 +42,7 @@ public class StructureListener {
         return outputReport.getCounter(WARNING);
     }
 
-    public void handleGedcomVersion(GedcomVersion gedcomVersion) {
+    public void handleGedcomVersion(GedcomVersionNew gedcomVersion) {
         outputReport.reportValue(GEDCOM_VERSION_ASSUMED, gedcomVersion.toString());
     }
 
@@ -99,7 +96,7 @@ public class StructureListener {
             if (!outputReport.hasKey(GEDCOM_VERSION_IN_FILE)) {
                 outputReport.reportValue(GEDCOM_VERSION_IN_FILE, value);
 
-                if (new GedcomVersion(value).equals(GedcomVersion.V_55)) {
+                if (new GedcomVersion(value).equals(GedcomVersionNew.V_55)) {
                     warningSink.warning(inputLine.getLineNumber(), "Note that the de facto standard GEDCOM version is version 5.5.1");
                 }
             }

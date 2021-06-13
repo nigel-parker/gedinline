@@ -3,7 +3,7 @@ package gedinline.lexical
 import gedinline.main.*
 import spock.lang.*
 
-import static gedinline.lexical.GedcomVersion.*
+import static gedinline.lexical.GedcomVersionNew.*
 
 //@Unroll
 class TagSpec extends Specification {
