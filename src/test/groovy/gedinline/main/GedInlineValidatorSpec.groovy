@@ -1,9 +1,30 @@
 package gedinline.main
 
+import gedinline.util.*
 import spock.lang.*
 
 @Unroll
 class GedInlineValidatorSpec extends FileReaderSpecification {
+
+    @Ignore
+    void utviklingV7() {
+
+        given:
+
+            def testFileGenerator = new TestFileGenerator()
+            def initialString = testFileGenerator.generate([:])
+
+            def stringWriter = new StringWriter()
+            def inputStream = new ByteArrayInputStream(initialString.getBytes())
+            def gedcomValidator = new GedInlineValidator(inputStream, 'gedcom-v7.ged', new PrintWriter(stringWriter))
+            def okResult = gedcomValidator.validate()
+
+        expect:
+
+            okResult
+            stringWriter == ''
+            gedcomValidator.numberOfWarnings == 0
+    }
 
     void 'verify test file #filename'() {
 

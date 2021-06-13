@@ -10,13 +10,14 @@ public class GedcomVersion {
     public static final GedcomVersion V_70 = new GedcomVersion("7.0");
 
     private String gedcomVersion;
+    private String tagTree;
 
     public GedcomVersion(String gedcomVersion) {
         this.gedcomVersion = gedcomVersion;
     }
 
     public boolean isSupported() {
-        return gedcomVersion.equals("5.5") || gedcomVersion.equals("5.5.1") || gedcomVersion.equals("5.5.5");
+        return gedcomVersion.equals("5.5") || gedcomVersion.equals("5.5.1") || gedcomVersion.equals("5.5.5") || gedcomVersion.equals("7.0");
     }
 
     public boolean is555() {

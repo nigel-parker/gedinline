@@ -91,12 +91,12 @@ public class BasicParser {
 
     private String getEncoding(InputStream inputStream) throws IOException {
         inputStream.mark(0);
-        String encoding;
+        String declaredEncoding;
 
         if (isValidGedcom(inputStream, ASCII)) {
-            encoding = tryEncoding(inputStream, ASCII);
+            declaredEncoding = tryEncoding(inputStream, ASCII);
         } else {
-            encoding = tryEncoding(inputStream, UTF_16);
+            declaredEncoding = tryEncoding(inputStream, UTF_16);
         }
 
         if (gedcomVersion == null) {
@@ -105,9 +105,11 @@ public class BasicParser {
         } else if (!gedcomVersion.isSupported()) {
             log.warning("No validation support for GEDCOM version " + gedcomVersion + ", assuming rules for version 5.5.1");
             gedcomVersion = GedcomVersion.V_551;
+        } else if (gedcomVersion.is70()) {
+            declaredEncoding = "UTF-8";
         }
 
-        return encoding;
+        return declaredEncoding;
     }
 
     public GedcomVersion getGedcomVersion() {
@@ -273,7 +275,7 @@ public class BasicParser {
     }
 
     private String tryEncoding(InputStream inputStream, String encodingString) throws IOException {
-        String encodingFromFile = null;
+        String declaredEncoding = null;
         LineIterator iterator = IOUtils.lineIterator(inputStream, encodingString);
         int lineCount = 0;
         boolean gedcomTagSeen = false;
@@ -297,8 +299,8 @@ public class BasicParser {
                 gedcomTagSeen = false;
             }
 
-            if (line.contains(ENCODING_TRIGGER) && encodingFromFile == null) {
-                encodingFromFile = StringUtils.substringAfter(line, ENCODING_TRIGGER).trim();
+            if (line.contains(ENCODING_TRIGGER) && declaredEncoding == null) {
+                declaredEncoding = StringUtils.substringAfter(line, ENCODING_TRIGGER).trim();
             }
 
             if (lineCount <= headerLineCount) {
@@ -314,7 +316,7 @@ public class BasicParser {
             throw new InvalidFormatException("File not recognised as valid GEDCOM file");
         }
 
-        return encodingFromFile;
+        return declaredEncoding;
     }
 
     private boolean isValidGedcom(InputStream inputStream, String encodingString) throws IOException {
@@ -325,7 +327,6 @@ public class BasicParser {
         try {
             inputStream.reset();
         } catch (IOException e) {
-//            Log.error("Problem reading file", e);
             throw new InvalidFormatException("Problem reading file");
         }
 
