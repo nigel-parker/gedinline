@@ -87,7 +87,7 @@ public class GedInlineValidator {
                         throw new GedcomException("Ignoring unknown record type at level 0: " + tag);
                     }
 
-                    validate(inputRecord, expandedGrammarMap.get(tag));
+                    validateRecord(inputRecord, expandedGrammarMap.get(tag));
                 } catch (GedcomException e) {
                     warningCollector.warning(inputLine, e.getMessage());
                 }
@@ -135,7 +135,10 @@ public class GedInlineValidator {
 
     private void initialiseDefaultRecordMap(GedcomVersion gedcomVersion) {
 
-        if (gedcomVersion.is555()) {
+        if (gedcomVersion.is70()) {
+            recordMap.put("HEAD", "HEADER");
+            recordMap.put("TRLR", "TRAILER");
+        } else if (gedcomVersion.is555()) {
             recordMap.put("HEAD", "HEADER");
             recordMap.put("SUBM", "SUBMITTER_RECORD");
             recordMap.put("FAM", "FAM_GROUP_RECORD");
@@ -159,7 +162,7 @@ public class GedInlineValidator {
         }
     }
 
-    private void validate(InputRecord inputRecord1, TagTree tagTree1) {
+    private void validateRecord(InputRecord inputRecord1, TagTree tagTree1) {
 
         // Naming convention: this is a recursive method which handles a node and its immediate subnodes. Name1 is used
         // for any attributes of the node, name2 for subnodes.
@@ -176,7 +179,7 @@ public class GedInlineValidator {
 
         try {
             propertyChangeSupport.firePropertyChange("", null, inputLine1);
-            validate(inputLine1, tagTree1.getSyntaxTreeNode());
+            validateLine(inputLine1, tagTree1.getSyntaxTreeNode());
 
         } catch (Exception e) {
             warningCollector.warning(inputLine1, e.getMessage());
@@ -233,7 +236,7 @@ public class GedInlineValidator {
                     debug(inputLine1, "tagTree2 = \n" + tagTree2);
 
                     warningCollector.setCountMode();
-                    validate(inputrecord2, tagTree2);
+                    validateRecord(inputrecord2, tagTree2);
                     int warningCount = warningCollector.getCount();
 
                     debug(inputLine1, "warningCount = " + warningCount);
@@ -247,7 +250,7 @@ public class GedInlineValidator {
                 }
 
                 if (tagTree3 != null) {
-                    validate(inputrecord2, tagTree3); // recurse
+                    validateRecord(inputrecord2, tagTree3); // recurse
                 }
             }
         }
@@ -259,7 +262,7 @@ public class GedInlineValidator {
         }
     }
 
-    private void validate(InputLine inputLine, SyntaxTreeNode syntaxTreeNode) {
+    private void validateLine(InputLine inputLine, SyntaxTreeNode syntaxTreeNode) {
         Tag inputLineTag = inputLine.getTag();
 
         if (inputLineTag.isUserDefined()) {

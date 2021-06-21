@@ -1,0 +1,6 @@
+
+GEDC-VERS := {Size=1:9999}
+String
+
+ADDR := {Size=1:9999}
+String

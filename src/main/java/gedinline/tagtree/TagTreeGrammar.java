@@ -20,7 +20,7 @@ public class TagTreeGrammar {
 
     public TagTreeGrammar(GedcomVersion gedcomVersion) {
         this.gedcomVersion = gedcomVersion;
-        handleFile(gedcomVersion.is555() ? "tag-tree-555.txt" : "tag-tree.txt");
+        handleFile(gedcomVersion.getTagTree());
     }
 
     @SuppressWarnings("unchecked")

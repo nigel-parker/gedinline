@@ -27,7 +27,7 @@ public class ValueGrammar implements SyntaxElementLocator {
 
     @SuppressWarnings("unchecked")
     public ValueGrammar(GedcomVersion gedcomVersion) {
-        String filename = gedcomVersion.is555() ? "value-grammar-555.txt" : "value-grammar.txt";
+        String filename = gedcomVersion.getValueGrammar();
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filename);
         List<String> list;
 

@@ -9,6 +9,7 @@ public class Debug {
 
     public static boolean active(InputLine inputLine) {
         return active(inputLine.getLineNumber());
+//        return true;
     }
 
     public static boolean active(int lineNumber) {

@@ -21,8 +21,8 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
         expect:
 
-            okResult
             stringWriter == ''
+            okResult
             gedcomValidator.numberOfWarnings == 0
     }
 

@@ -295,9 +295,7 @@ public class BasicParser {
             }
 
             if (gedcomTagSeen && line.contains(GEDCOM_VERSION_TRIGGER) && gedcomVersion == null) {
-//                gedcomVersion = new GedcomVersion(StringUtils.substringAfter(line, GEDCOM_VERSION_TRIGGER).trim());
                 String gedcomVersionS = StringUtils.substringAfter(line, GEDCOM_VERSION_TRIGGER).trim();
-                System.out.println("%%% gedcomVersionS = " + gedcomVersionS);
                 gedcomVersion = GedcomVersion.fromString(gedcomVersionS);
                 gedcomTagSeen = false;
             }
