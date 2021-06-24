@@ -1,7 +1,7 @@
 package gedinline.tagtree;
 
 public enum Occurrence {
-    MANDATORY, OPTIONAL, MULTIPLE, UP_TO_3_TIMES;
+    MANDATORY, OPTIONAL, MULTIPLE, UP_TO_3_TIMES, AT_LEAST_1;
 
     public boolean isMandatory() {
         return this == MANDATORY;

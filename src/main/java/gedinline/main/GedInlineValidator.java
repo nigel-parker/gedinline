@@ -198,28 +198,22 @@ public class GedInlineValidator {
             Tag tag2 = syntaxTreeNode2.getTag();
             Occurrence occurrence2 = syntaxTreeNode2.getOccurrence();
             int tagCount2 = inputRecord1.getTagCount(tag2);
+            boolean occurrenceOk = checkOccurrenceRules(occurrence2, tagCount2);
 
-            switch (occurrence2) {
-                case MANDATORY:
-                    if (tagCount2 == 0) {
+            if (!occurrenceOk) {
+                switch (occurrence2) {
+                    case MANDATORY:
                         warningCollector.warning(inputLine1, "Mandatory tag " + tag2 + " not found under " + tag1);
-                    }
+                        break;
 
-                    break;
-
-                case OPTIONAL:
-                    if (tagCount2 >= 2) {
+                    case OPTIONAL:
                         warningCollector.warning(inputLine1, "Tag " + tag2 + " occurs more than once");
-                    }
+                        break;
 
-                    break;
-
-                case UP_TO_3_TIMES:
-                    if (tagCount2 > 3) {
+                    case UP_TO_3_TIMES:
                         warningCollector.warning(inputLine1, "Tag " + tag2 + " occurs too many times, maximum is 3 times");
-                    }
-
-                    break;
+                        break;
+                }
             }
         }
 
@@ -261,6 +255,28 @@ public class GedInlineValidator {
                 }
             }
         }
+    }
+
+    static boolean checkOccurrenceRules(Occurrence occurrence, int tagCount) {
+        switch (occurrence) {
+
+            case MANDATORY:
+                return tagCount == 1;
+
+            case OPTIONAL:
+                return tagCount <= 1;
+
+            case MULTIPLE:
+                return true;
+
+            case UP_TO_3_TIMES:
+                return tagCount <= 3;
+
+            case AT_LEAST_1:
+                return tagCount >= 1;
+        }
+
+        return true;
     }
 
     private void debug(InputLine inputLine, String message) {

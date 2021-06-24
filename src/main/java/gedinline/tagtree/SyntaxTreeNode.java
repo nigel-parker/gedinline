@@ -153,6 +153,8 @@ public class SyntaxTreeNode {
             occurrence = UP_TO_3_TIMES;
         } else if (token.equals("{0:M}")) {
             occurrence = MULTIPLE;
+        } else if (token.equals("{1:M}")) {
+            occurrence = AT_LEAST_1;
         } else {
             throw new ValidatorBugException("Invalid occurrence " + token);
         }
