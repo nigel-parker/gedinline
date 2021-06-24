@@ -12,7 +12,8 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
         given:
 
             def testFileGenerator = new TestFileGenerator()
-            def initialString = testFileGenerator.generate([:])
+            def initialString = testFileGenerator.getValidVariant(2)
+//            def initialString = testFileGenerator.getErrorVariant(1)
 
             def stringWriter = new StringWriter()
             def inputStream = new ByteArrayInputStream(initialString.getBytes())
@@ -21,9 +22,9 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
         expect:
 
-            stringWriter == ''
-            okResult
+            println stringWriter.toString()
             gedcomValidator.numberOfWarnings == 0
+            okResult
     }
 
     void 'verify test file #filename'() {

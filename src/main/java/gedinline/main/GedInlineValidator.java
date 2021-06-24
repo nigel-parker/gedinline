@@ -137,6 +137,13 @@ public class GedInlineValidator {
 
         if (gedcomVersion.is70()) {
             recordMap.put("HEAD", "HEADER");
+            recordMap.put("FAM", "FAMILY_RECORD");
+            recordMap.put("INDI", "INDIVIDUAL_RECORD");
+            recordMap.put("OBJE", "MULTIMEDIA_RECORD");
+            recordMap.put("REPO", "REPOSITORY_RECORD");
+            recordMap.put("SNOTE", "SHARED_NOTE_RECORD");
+            recordMap.put("SOUR", "SOURCE_RECORD");
+            recordMap.put("SUBM", "SUBMITTER_RECORD");
             recordMap.put("TRLR", "TRAILER");
         } else if (gedcomVersion.is555()) {
             recordMap.put("HEAD", "HEADER");

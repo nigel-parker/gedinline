@@ -8,18 +8,18 @@ public class Cardinality {
     private int minimum;
     private int maximum;
 
-    public Cardinality(String cardinality) {
-        cardinality = cardinality.trim();
+    public Cardinality(String c1) {
+        String c2 = c1.equals("") ? "{Size=1:9999}" : c1.trim();
 
-        if (!cardinality.matches("\\{Size=\\d+(:\\d+)?}")) {
-            throw new ValidatorBugException("Invalid cardinality " + cardinality);
+        if (!c2.matches("\\{Size=\\d+(:\\d+)?}")) {
+            throw new ValidatorBugException("Invalid cardinality " + c2);
         }
 
-        if (cardinality.contains(":")) {
-            minimum = Integer.parseInt(StringUtils.substringBetween(cardinality, "=", ":"));
-            maximum = Integer.parseInt(StringUtils.substringBetween(cardinality, ":", "}"));
+        if (c2.contains(":")) {
+            minimum = Integer.parseInt(StringUtils.substringBetween(c2, "=", ":"));
+            maximum = Integer.parseInt(StringUtils.substringBetween(c2, ":", "}"));
         } else {
-            minimum = Integer.parseInt(StringUtils.substringBetween(cardinality, "=", "}"));
+            minimum = Integer.parseInt(StringUtils.substringBetween(c2, "=", "}"));
             maximum = minimum;
         }
     }

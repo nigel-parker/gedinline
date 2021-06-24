@@ -1,11 +1,35 @@
 package gedinline.value
 
+
 import spock.lang.*
 
 import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class ValueGrammarSpec extends Specification {
+
+    @Ignore
+    void 'test value grammar for #element \'#input\' version V7.0'() {
+
+        expect:
+
+            def version = V_70
+            def grammar = new ValueGrammar(version)
+            def syntaxElement = grammar.find(element)
+            def expressionParser = new ExpressionParser(syntaxElement, grammar, version)
+            ParsingResult result1 = expressionParser.parse(input)
+            String remainder = result1.getRemainder()
+
+            result1.isOk() == result
+            remainder == '' || remainder == input
+
+        where:
+
+            element  | input   || result
+
+            'g7:TAG' | 'EXT3'  || false
+            'g7:TAG' | '_EXT3' || true
+    }
 
     void 'test value grammar for #element \'#input\' version #version '() {
 

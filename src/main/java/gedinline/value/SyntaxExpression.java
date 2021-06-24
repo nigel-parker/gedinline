@@ -105,6 +105,13 @@ public class SyntaxExpression {
 
     private void parse(String e) {
 
+        if (e.startsWith("regex:")) {
+            Term term = new Term(Term.Type.ATOM);
+            term.addString(e);
+            parseTree = term;
+            return;
+        }
+
         Stack<Term> stack = new Stack<Term>();
 
         for (char c : e.toCharArray()) {
