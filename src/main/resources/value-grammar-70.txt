@@ -1,453 +1,453 @@
 
-<g7:ABBR>
+g7:ABBR :=
 String
 
-<g7:ADDR>
+g7:ADDR :=
 String
 
-<g7:ADOP-FAMC>
+g7:ADOP-FAMC :=
 String
 
-<g7:ADOP>
+g7:ADOP :=
 String
 
-<g7:AGE>
+g7:AGE :=
 String
 
-<g7:AGNC>
+g7:AGNC :=
 String
 
-<g7:ALIA>
+g7:ALIA :=
 String
 
-<g7:ANCI>
+g7:ANCI :=
 String
 
-<g7:ANUL>
+g7:ANUL :=
 String
 
-<g7:ASSO>
+g7:ASSO :=
 String
 
-<g7:AUTH>
+g7:AUTH :=
 String
 
-<g7:BAPM>
+g7:BAPM :=
 String
 
-<g7:BARM>
+g7:BARM :=
 String
 
-<g7:BASM>
+g7:BASM :=
 String
 
-<g7:BIRT>
+g7:BIRT :=
 String
 
-<g7:BLES>
+g7:BLES :=
 String
 
-<g7:BURI>
+g7:BURI :=
 String
 
-<g7:CALN>
+g7:CALN :=
 String
 
-<g7:CAST>
+g7:CAST :=
 String
 
-<g7:CAUS>
+g7:CAUS :=
 String
 
-<g7:CHIL>
+g7:CHIL :=
 String
 
-<g7:CHR>
+g7:CHR :=
 String
 
-<g7:CHRA>
+g7:CHRA :=
 String
 
-<g7:CITY>
+g7:CITY :=
 String
 
-<g7:CONF>
+g7:CONF :=
 String
 
-<g7:COPR>
+g7:COPR :=
 String
 
-<g7:CORP>
+g7:CORP :=
 String
 
-<g7:CREM>
+g7:CREM :=
 String
 
-<g7:CTRY>
+g7:CTRY :=
 String
 
-<g7:DATA-EVEN-DATE>
+g7:DATA-EVEN-DATE :=
 String
 
-<g7:DATA-EVEN>
+g7:DATA-EVEN :=
 String
 
-<g7:DATE-exact>
+g7:DATE-exact :=
 String
 
-<g7:DATE>
+g7:DATE :=
 String
 
-<g7:DEAT>
+g7:DEAT :=
 String
 
-<g7:DESI>
+g7:DESI :=
 String
 
-<g7:DEST>
+g7:DEST :=
 String
 
-<g7:DIV>
+g7:DIV :=
 String
 
-<g7:DIVF>
+g7:DIVF :=
 String
 
-<g7:DSCR>
+g7:DSCR :=
 String
 
-<g7:EDUC>
+g7:EDUC :=
 String
 
-<g7:EMAIL>
+g7:EMAIL :=
 String
 
-<g7:EMIG>
+g7:EMIG :=
 String
 
-<g7:ENGA>
+g7:ENGA :=
 String
 
-<g7:EXID-TYPE>
+g7:EXID-TYPE :=
 String
 
-<g7:EXID>
+g7:EXID :=
 String
 
-<g7:FAM-CENS>
+g7:FAM-CENS :=
 String
 
-<g7:FAM-EVEN>
+g7:FAM-EVEN :=
 String
 
-<g7:FAM-FACT>
+g7:FAM-FACT :=
 String
 
-<g7:FAM-HUSB>
+g7:FAM-HUSB :=
 String
 
-<g7:FAM-NCHI>
+g7:FAM-NCHI :=
 String
 
-<g7:FAM-RESI>
+g7:FAM-RESI :=
 String
 
-<g7:FAM-WIFE>
+g7:FAM-WIFE :=
 String
 
-<g7:FAMC-ADOP>
+g7:FAMC-ADOP :=
 String
 
-<g7:FAMC-STAT>
+g7:FAMC-STAT :=
 String
 
-<g7:FAMC>
+g7:FAMC :=
 String
 
-<g7:FAMS>
+g7:FAMS :=
 String
 
-<g7:FAX>
+g7:FAX :=
 String
 
-<g7:FCOM>
+g7:FCOM :=
 String
 
-<g7:FILE-TRAN>
+g7:FILE-TRAN :=
 String
 
-<g7:FILE>
+g7:FILE :=
 String
 
-<g7:FORM>
+g7:FORM :=
 String
 
-<g7:GEDC-VERS>
+g7:GEDC-VERS :=
 String
 
-<g7:GIVN>
+g7:GIVN :=
 String
 
-<g7:GRAD>
+g7:GRAD :=
 String
 
-<g7:HEAD-DATE>
+g7:HEAD-DATE :=
 String
 
-<g7:HEAD-LANG>
+g7:HEAD-LANG :=
 String
 
-<g7:HEAD-PLAC-FORM>
+g7:HEAD-PLAC-FORM :=
 String
 
-<g7:HEAD-SOUR-DATA>
+g7:HEAD-SOUR-DATA :=
 String
 
-<g7:HEAD-SOUR>
+g7:HEAD-SOUR :=
 String
 
-<g7:HEIGHT>
+g7:HEIGHT :=
 String
 
-<g7:IDNO>
+g7:IDNO :=
 String
 
-<g7:IMMI>
+g7:IMMI :=
 String
 
-<g7:INDI-CENS>
+g7:INDI-CENS :=
 String
 
-<g7:INDI-EVEN>
+g7:INDI-EVEN :=
 String
 
-<g7:INDI-FACT>
+g7:INDI-FACT :=
 String
 
-<g7:INDI-FAMC>
+g7:INDI-FAMC :=
 String
 
-<g7:INDI-NAME>
+g7:INDI-NAME :=
 String
 
-<g7:INDI-NCHI>
+g7:INDI-NCHI :=
 String
 
-<g7:INDI-RELI>
+g7:INDI-RELI :=
 String
 
-<g7:INDI-RESI>
+g7:INDI-RESI :=
 String
 
-<g7:INDI-TITL>
+g7:INDI-TITL :=
 String
 
-<g7:LANG>
+g7:LANG :=
 String
 
-<g7:LATI>
+g7:LATI :=
 String
 
-<g7:LEFT>
+g7:LEFT :=
 String
 
-<g7:LONG>
+g7:LONG :=
 String
 
-<g7:MARB>
+g7:MARB :=
 String
 
-<g7:MARC>
+g7:MARC :=
 String
 
-<g7:MARL>
+g7:MARL :=
 String
 
-<g7:MARR>
+g7:MARR :=
 String
 
-<g7:MARS>
+g7:MARS :=
 String
 
-<g7:MEDI>
+g7:MEDI :=
 String
 
-<g7:MIME>
+g7:MIME :=
 String
 
-<g7:NAME-TRAN>
+g7:NAME-TRAN :=
 String
 
-<g7:NAME-TYPE>
+g7:NAME-TYPE :=
 String
 
-<g7:NAME>
+g7:NAME :=
 String
 
-<g7:NATI>
+g7:NATI :=
 String
 
-<g7:NATU>
+g7:NATU :=
 String
 
-<g7:NICK>
+g7:NICK :=
 String
 
-<g7:NMR>
+g7:NMR :=
 String
 
-<g7:NO-DATE>
+g7:NO-DATE :=
 String
 
-<g7:NO>
+g7:NO :=
 String
 
-<g7:NOTE-TRAN>
+g7:NOTE-TRAN :=
 String
 
-<g7:NOTE>
+g7:NOTE :=
 String
 
-<g7:NPFX>
+g7:NPFX :=
 String
 
-<g7:NSFX>
+g7:NSFX :=
 String
 
-<g7:OBJE>
+g7:OBJE :=
 String
 
-<g7:OCCU>
+g7:OCCU :=
 String
 
-<g7:ord-STAT>
+g7:ord-STAT :=
 String
 
-<g7:ORDN>
+g7:ORDN :=
 String
 
-<g7:PAGE>
+g7:PAGE :=
 String
 
-<g7:PEDI>
+g7:PEDI :=
 String
 
-<g7:PHON>
+g7:PHON :=
 String
 
-<g7:PHRASE>
+g7:PHRASE :=
 String
 
-<g7:PLAC-FORM>
+g7:PLAC-FORM :=
 String
 
-<g7:PLAC-TRAN>
+g7:PLAC-TRAN :=
 String
 
-<g7:PLAC>
+g7:PLAC :=
 String
 
-<g7:POST>
+g7:POST :=
 String
 
-<g7:PROB>
+g7:PROB :=
 String
 
-<g7:PROP>
+g7:PROP :=
 String
 
-<g7:PUBL>
+g7:PUBL :=
 String
 
-<g7:QUAY>
+g7:QUAY :=
 String
 
-<g7:record-SNOTE>
+g7:record-SNOTE :=
 String
 
-<g7:REFN>
+g7:REFN :=
 String
 
-<g7:RELI>
+g7:RELI :=
 String
 
-<g7:REPO>
+g7:REPO :=
 String
 
-<g7:RESN>
+g7:RESN :=
 String
 
-<g7:RETI>
+g7:RETI :=
 String
 
-<g7:ROLE>
+g7:ROLE :=
 String
 
-<g7:SDATE>
+g7:SDATE :=
 String
 
-<g7:SEX>
+g7:SEX :=
 String
 
-<g7:SNOTE>
+g7:SNOTE :=
 String
 
-<g7:SOUR-EVEN>
+g7:SOUR-EVEN :=
 String
 
-<g7:SOUR>
+g7:SOUR :=
 String
 
-<g7:SPFX>
+g7:SPFX :=
 String
 
-<g7:SSN>
+g7:SSN :=
 String
 
-<g7:STAE>
+g7:STAE :=
 String
 
-<g7:SUBM-LANG>
+g7:SUBM-LANG :=
 String
 
-<g7:SUBM>
+g7:SUBM :=
 String
 
-<g7:SURN>
+g7:SURN :=
 String
 
 g7:TAG :=
 regex:_[A-Z0-9_]* .*
 
-<g7:TEMP>
+g7:TEMP :=
 String
 
-<g7:TEXT>
+g7:TEXT :=
 String
 
-<g7:TIME>
+g7:TIME :=
 String
 
-<g7:TITL>
+g7:TITL :=
 String
 
-<g7:TOP>
+g7:TOP :=
 String
 
-<g7:TYPE>
+g7:TYPE :=
 String
 
-<g7:UID>
+g7:UID :=
 String
 
-<g7:VERS>
+g7:VERS :=
 String
 
-<g7:WIDTH>
+g7:WIDTH :=
 String
 
-<g7:WILL>
+g7:WILL :=
 String
 
-<g7:WWW>
+g7:WWW :=
 String

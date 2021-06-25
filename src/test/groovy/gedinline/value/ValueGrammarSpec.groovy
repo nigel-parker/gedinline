@@ -8,7 +8,7 @@ import static gedinline.lexical.GedcomVersion.*
 @Unroll
 class ValueGrammarSpec extends Specification {
 
-    @Ignore
+    @IgnoreRest
     void 'test value grammar for #element \'#input\' version V7.0'() {
 
         expect:
@@ -25,10 +25,10 @@ class ValueGrammarSpec extends Specification {
 
         where:
 
-            element  | input   || result
+            element  | input       || result
 
-            'g7:TAG' | 'EXT3'  || false
-            'g7:TAG' | '_EXT3' || true
+            'g7:TAG' | 'EXT3 URI'  || false
+            'g7:TAG' | '_EXT3 URI' || true
     }
 
     void 'test value grammar for #element \'#input\' version #version '() {

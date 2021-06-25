@@ -6,14 +6,14 @@ import spock.lang.*
 @Unroll
 class GedInlineValidatorSpec extends FileReaderSpecification {
 
-    @Ignore
+    @IgnoreRest
     void utviklingV7() {
 
         given:
 
             def testFileGenerator = new TestFileGenerator()
-            def initialString = testFileGenerator.getValidVariant(2)
-//            def initialString = testFileGenerator.getErrorVariant(1)
+//            def initialString = testFileGenerator.getValidVariant(2)
+            def initialString = testFileGenerator.getErrorVariant(1)
 
             def stringWriter = new StringWriter()
             def inputStream = new ByteArrayInputStream(initialString.getBytes())
