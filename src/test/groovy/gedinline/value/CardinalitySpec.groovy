@@ -19,6 +19,6 @@ class CardinalitySpec extends Specification {
 
             '{Size=1:120}' || 1       | 120
             '{Size=3}'     || 3       | 3
-            ''             || 1       | 9999
+            ''             || 0       | 9999
     }
 }

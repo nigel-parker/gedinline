@@ -36,6 +36,8 @@ public class TagTree {
         if (gedcomVersion.is555() && !tag.isConxTag()) {
             result.add(Tag.CONC);
             result.add(Tag.CONT);
+        } else if (gedcomVersion.is70() && !tag.isConxTag()) {
+            result.add(Tag.CONT);
         }
 
         return result;

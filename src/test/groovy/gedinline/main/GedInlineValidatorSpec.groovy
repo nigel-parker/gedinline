@@ -23,8 +23,42 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
         expect:
 
             println stringWriter.toString()
-            gedcomValidator.numberOfWarnings == 0
-            okResult
+            gedcomValidator.numberOfWarnings == 13
+    }
+
+    void 'V7.0 continuations'() {
+
+        expect:
+
+            def testLine = '0 @1@ SNOTE '
+
+            def testFileGenerator = new TestFileGenerator()
+            def gedcomUnderTest = testFileGenerator.withBody(testLine + input + '\n')
+            println "%%% input: \n${gedcomUnderTest}"
+            def stringWriter = new StringWriter()
+            def inputStream = new ByteArrayInputStream(gedcomUnderTest.getBytes())
+            def gedcomValidator = new GedInlineValidator(inputStream, 'gedcom-v7.ged', new PrintWriter(stringWriter))
+            gedcomValidator.validate()
+
+            println stringWriter.toString()
+
+            expectedResult == (gedcomValidator.numberOfWarnings == 0)
+
+        where:
+
+            input             || expectedResult | comment
+
+            '@@me'            || false          | 'Should be: true'
+
+            'abc'             || true           | ''
+            '  abc   '        || true           | 'Leading and trailing spaces allowed'
+            'abc\n1 CONT xyz' || true           | ''
+            'abc\n1 CONT'     || true           | 'Empty continuation 1'
+            'abc\n1 CONT '    || true           | 'Empty continuation 2'
+            ''                || true           | 'I assume that empty SNOTES are allowed'
+
+            'abc\n1 CONC xyz' || false          | 'CONC invalid for 7.0'
+
     }
 
     void 'verify test file #filename'() {

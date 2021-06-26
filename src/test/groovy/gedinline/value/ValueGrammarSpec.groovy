@@ -8,7 +8,7 @@ import static gedinline.lexical.GedcomVersion.*
 @Unroll
 class ValueGrammarSpec extends Specification {
 
-    @IgnoreRest
+//    @Ignore
     void 'test value grammar for #element \'#input\' version V7.0'() {
 
         expect:

@@ -9,7 +9,7 @@ public class Cardinality {
     private int maximum;
 
     public Cardinality(String c1) {
-        String c2 = c1.equals("") ? "{Size=1:9999}" : c1.trim();
+        String c2 = c1.equals("") ? "{Size=0:9999}" : c1.trim();
 
         if (!c2.matches("\\{Size=\\d+(:\\d+)?}")) {
             throw new ValidatorBugException("Invalid cardinality " + c2);

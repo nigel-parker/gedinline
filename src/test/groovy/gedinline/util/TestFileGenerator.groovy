@@ -9,10 +9,15 @@ class TestFileGenerator {
         }
     }
 
+    String withBody(String body) {
+        generate([body: body])
+    }
+
     String getErrorVariant(int variant) {
         // %%% midlertidig
         new File('/Users/nigel/Filer/slektsforskning/gedinline/src/test/resources/gedcom-files/harvey-70.ged').text
     }
+
     private String generate(Map map) {
         def initial = '0 HEAD\n1 GEDC\n2 VERS 7.0{patchNumber}{headerBody}\n{body}0 TRLR\n'
         def template = new VsTemplate(initial)

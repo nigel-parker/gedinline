@@ -115,8 +115,6 @@ public class GedInlineValidator {
 
     /**
      * Returns the GedcomVersion declared in the inputStream.
-     *
-     * @return
      */
     public GedcomVersion getGedcomVersion() {
         return gedcomVersion;
