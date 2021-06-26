@@ -122,7 +122,10 @@ public class RecordCollector {
 
         if (!unsatisfiedPointers.isEmpty()) {
             Pointer s = unsatisfiedPointers.iterator().next();
-            log.warning("Can't find pointer reference " + s + " in file");
+
+            if (!s.getMeat().equals("VOID")) {
+                log.warning("Can't find pointer reference " + s + " in file");
+            }
         }
 
         if (!trailerFound) {

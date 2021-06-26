@@ -2,20 +2,22 @@ package gedinline.util
 
 class TestFileGenerator {
 
-    String getValidVariant(int variant) {
+    String getVariant(int variant) {
         switch (variant) {
-            case 1: return generate([:])
-            case 2: return generate([headerBody: '\n1 SCHMA\n2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID'])
+            case 1: return withBody('')
+            case 2: return withHeaderBody('\n1 SCHMA\n2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID')
+            case 3: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
+            case 4: return new File('src/test/resources/gedcom-files/harvey-70.ged').text
+            case 5: return withBody('') // stack overflow
         }
+    }
+
+    String withHeaderBody(String body) {
+        generate([headerBody: body])
     }
 
     String withBody(String body) {
         generate([body: body])
-    }
-
-    String getErrorVariant(int variant) {
-        // %%% midlertidig
-        new File('/Users/nigel/Filer/slektsforskning/gedinline/src/test/resources/gedcom-files/harvey-70.ged').text
     }
 
     private String generate(Map map) {
