@@ -9,7 +9,7 @@ g7:ADOP-FAMC :=
 String
 
 g7:ADOP :=
-String
+[Y|Null]
 
 g7:AGE :=
 String
@@ -24,7 +24,7 @@ g7:ANCI :=
 String
 
 g7:ANUL :=
-String
+[Y|Null]
 
 g7:ASSO :=
 String
@@ -33,22 +33,22 @@ g7:AUTH :=
 String
 
 g7:BAPM :=
-String
+[Y|Null]
 
 g7:BARM :=
-String
+[Y|Null]
 
 g7:BASM :=
-String
+[Y|Null]
 
 g7:BIRT :=
-String
+[Y|Null]
 
 g7:BLES :=
-String
+[Y|Null]
 
 g7:BURI :=
-String
+[Y|Null]
 
 g7:CALN :=
 String
@@ -63,16 +63,16 @@ g7:CHIL :=
 String
 
 g7:CHR :=
-String
+[Y|Null]
 
 g7:CHRA :=
-String
+[Y|Null]
 
 g7:CITY :=
 String
 
 g7:CONF :=
-String
+[Y|Null]
 
 g7:COPR :=
 String
@@ -81,7 +81,7 @@ g7:CORP :=
 String
 
 g7:CREM :=
-String
+[Y|Null]
 
 g7:CTRY :=
 String
@@ -99,7 +99,7 @@ g7:DATE :=
 String
 
 g7:DEAT :=
-String
+[Y|Null]
 
 g7:DESI :=
 String
@@ -108,10 +108,10 @@ g7:DEST :=
 String
 
 g7:DIV :=
-String
+[Y|Null]
 
 g7:DIVF :=
-String
+[Y|Null]
 
 g7:DSCR :=
 String
@@ -123,10 +123,10 @@ g7:EMAIL :=
 String
 
 g7:EMIG :=
-String
+[Y|Null]
 
 g7:ENGA :=
-String
+[Y|Null]
 
 g7:EXID-TYPE :=
 String
@@ -135,7 +135,7 @@ g7:EXID :=
 String
 
 g7:FAM-CENS :=
-String
+[Y|Null]
 
 g7:FAM-EVEN :=
 String
@@ -147,7 +147,7 @@ g7:FAM-HUSB :=
 String
 
 g7:FAM-NCHI :=
-String
+Decimal
 
 g7:FAM-RESI :=
 String
@@ -156,10 +156,10 @@ g7:FAM-WIFE :=
 String
 
 g7:FAMC-ADOP :=
-String
+[HUSB|WIFE|BOTH]
 
 g7:FAMC-STAT :=
-String
+[CHALLENGED|DISPROVEN|PROVEN]
 
 g7:FAMC :=
 String
@@ -171,7 +171,7 @@ g7:FAX :=
 String
 
 g7:FCOM :=
-String
+[Y|Null]
 
 g7:FILE-TRAN :=
 String
@@ -189,7 +189,7 @@ g7:GIVN :=
 String
 
 g7:GRAD :=
-String
+[Y|Null]
 
 g7:HEAD-DATE :=
 String
@@ -207,16 +207,16 @@ g7:HEAD-SOUR :=
 String
 
 g7:HEIGHT :=
-String
+Decimal
 
 g7:IDNO :=
 String
 
 g7:IMMI :=
-String
+[Y|Null]
 
 g7:INDI-CENS :=
-String
+[Y|Null]
 
 g7:INDI-EVEN :=
 String
@@ -231,7 +231,7 @@ g7:INDI-NAME :=
 String
 
 g7:INDI-NCHI :=
-String
+Decimal
 
 g7:INDI-RELI :=
 String
@@ -249,28 +249,28 @@ g7:LATI :=
 String
 
 g7:LEFT :=
-String
+Decimal
 
 g7:LONG :=
 String
 
 g7:MARB :=
-String
+[Y|Null]
 
 g7:MARC :=
-String
+[Y|Null]
 
 g7:MARL :=
-String
+[Y|Null]
 
 g7:MARR :=
-String
+[Y|Null]
 
 g7:MARS :=
-String
+[Y|Null]
 
 g7:MEDI :=
-String
+[AUDIO|BOOK|CARD|ELECTRONIC|FICHE|FILM|MAGAZINE|MANUSCRIPT|MAP|NEWSPAPER|PHOTO|TOMBSTONE|VIDEO|OTHER]
 
 g7:MIME :=
 String
@@ -279,7 +279,7 @@ g7:NAME-TRAN :=
 String
 
 g7:NAME-TYPE :=
-String
+[AKA|BIRTH|IMMIGRANT|MAIDEN|MARRIED|PROFESSIONAL|OTHER]
 
 g7:NAME :=
 String
@@ -288,19 +288,19 @@ g7:NATI :=
 String
 
 g7:NATU :=
-String
+[Y|Null]
 
 g7:NICK :=
 String
 
 g7:NMR :=
-String
+Decimal
 
 g7:NO-DATE :=
 String
 
 g7:NO :=
-String
+[ADOP|BAPM|BARM|BASM|BIRT|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORD|PROB|RETI|WILL|ANUL|CENS|DIV|DIVF|ENGA|MARB|MARC|MARL|MARS|MARR]
 
 g7:NOTE-TRAN :=
 String
@@ -321,16 +321,16 @@ g7:OCCU :=
 String
 
 g7:ord-STAT :=
-String
+[BIC|CANCELED|CHILD|COMPLETED|EXCLUDED|DNS|DNS_CAN|INFANT|PRE_1970|STILLBORN|SUBMITTED|UNCLEARED]
 
 g7:ORDN :=
-String
+[Y|Null]
 
 g7:PAGE :=
 String
 
 g7:PEDI :=
-String
+[ADOPTED|BIRTH|FOSTER|SEALING|OTHER]
 
 g7:PHON :=
 String
@@ -351,7 +351,7 @@ g7:POST :=
 String
 
 g7:PROB :=
-String
+[Y|Null]
 
 g7:PROP :=
 String
@@ -360,7 +360,7 @@ g7:PUBL :=
 String
 
 g7:QUAY :=
-String
+[0|1|2|3]
 
 g7:record-SNOTE :=
 String
@@ -375,25 +375,25 @@ g7:REPO :=
 String
 
 g7:RESN :=
-String
+[CONFIDENTIAL|LOCKED|PRIVACY]
 
 g7:RETI :=
-String
+[Y|Null]
 
 g7:ROLE :=
-String
+[CHIL|CLERGY|FATH|FRIEND|GODP|HUSB|MOTH|MULTIPLE|NGHBR|OFFICIATOR|PARENT|SPOU|WIFE|WITN|OTHER]
 
 g7:SDATE :=
 String
 
 g7:SEX :=
-String
+[M|F|X|U]
 
 g7:SNOTE :=
 String
 
 g7:SOUR-EVEN :=
-String
+[ADOP|BAPM|BARM|BASM|BIRT|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORD|PROB|RETI|WILL|ANUL|CENS|DIV|DIVF|ENGA|MARB|MARC|MARL|MARS|MARR]
 
 g7:SOUR :=
 String
@@ -432,7 +432,7 @@ g7:TITL :=
 String
 
 g7:TOP :=
-String
+Decimal
 
 g7:TYPE :=
 String
@@ -444,17 +444,17 @@ g7:VERS :=
 String
 
 g7:WIDTH :=
-String
+Decimal
 
 g7:WILL :=
-String
+[Y|Null]
 
 g7:WWW :=
 String
 
 XREF :=
 Pointer
-Either a pointer or an unique cross-reference identifier. If this element appears before the tag in a GEDCOM line, then it is a cross-reference identifier. If it appears after the tag in a GEDCOM line, then it is a pointer. The method of delimiting a pointer or cross-reference identifier is to enclose the pointer or cross-reference identifier within at signs (@), for example, @I123@. A XREF may not begin with a number sign (#). This is to avoid confusion with an escape sequence prefix (@#). The use of a colon (:) in the XREF is reserved for creating future network cross-references and the use of an exclamation (!) is reserved for intra-record pointers. Uniqueness of the cross-reference identifier is required within the transmission file.
+Either a pointer or a unique cross-reference identifier. If this element appears before the tag in a GEDCOM line, then it is a cross-reference identifier. If it appears after the tag in a GEDCOM line, then it is a pointer. The method of delimiting a pointer or cross-reference identifier is to enclose the pointer or cross-reference identifier within at signs (@), for example, @I123@. A XREF may not begin with a number sign (#). This is to avoid confusion with an escape sequence prefix (@#). The use of a colon (:) in the XREF is reserved for creating future network cross-references and the use of an exclamation (!) is reserved for intra-record pointers. Uniqueness of the cross-reference identifier is required within the transmission file.
 
 XREF:FAM :=
 Pointer

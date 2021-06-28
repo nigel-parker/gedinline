@@ -9,7 +9,7 @@ class GenerateExpandedTagTreeSpec extends Specification {
 
         given:
 
-            def grammar = new TagTreeGrammar(GedcomVersion.V_555);
+            def grammar = new TagTreeGrammar(GedcomVersion.V_70);
             def tagTreeStructures = grammar.expandAll(grammar.getSubtree('FILE'))
             def expandedTagTree = new StringBuilder()
 

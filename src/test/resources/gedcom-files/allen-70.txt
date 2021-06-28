@@ -1,0 +1,6 @@
+0 @I@ INDI
+1 NAME Lt. Cmndr. Joseph /Allen/ jr.
+2 NPFX Lt. Cmndr.
+2 GIVN Joseph
+2 SURN Allen
+2 NSFX jr.

@@ -21,6 +21,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             def actualNumberOfWarnings = gedcomValidator.numberOfWarnings
 
             if (actualNumberOfWarnings) {
+                println testFileContent
                 println stringWriter.toString()
             }
 
@@ -34,9 +35,16 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             1       || 0                        | ''
             2       || 0                        | ''
-            3       || 1                        | 'Should be 0'
-            4       || 13                       | 'Valid 5.5 file treated at 7.0'
-            5       || 0                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
+            3       || 13                       | 'Valid 5.5 file treated as 7.0'
+            4       || 1                        | ''
+            5       || 0                        | ''
+            6       || 0                        | ''
+            7       || 2                        | ''
+            8       || 0                        | ''
+            9       || 0                        | ''
+
+            101     || 1                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
+            102     || 0                        | 'TBD: ADDR payload is required, see spec p. 37'
 
     }
 

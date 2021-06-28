@@ -586,6 +586,18 @@ REPO @<XREF:REPO>@ {1:1}
 +2 MEDI <g7:MEDI> {0:1}
 +3 PHRASE <g7:PHRASE> {0:1}
 
+FILE:
+
+    <<HEADER>> {1:1}
+    <<FAMILY_RECORD>> {0:M}
+    <<INDIVIDUAL_RECORD>> {0:M}
+    <<MULTIMEDIA_RECORD>> {0:M}
+    <<REPOSITORY_RECORD>> {0:M}
+    <<SHARED_NOTE_RECORD>> {0:M}
+    <<SOURCE_RECORD>> {0:M}
+    <<SUBMITTER_RECORD>> {0:1}
+    <<TRAILER>> {1:1}
+
 
 TRAILER:
 

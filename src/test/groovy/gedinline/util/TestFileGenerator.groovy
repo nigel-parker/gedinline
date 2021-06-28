@@ -6,9 +6,16 @@ class TestFileGenerator {
         switch (variant) {
             case 1: return withBody('')
             case 2: return withHeaderBody('\n1 SCHMA\n2 TAG _SKYPEID http://xmlns.com/foaf/0.1/skypeID')
-            case 3: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
-            case 4: return new File('src/test/resources/gedcom-files/harvey-70.ged').text
-            case 5: return withBody('') // stack overflow
+            case 3: return new File('src/test/resources/gedcom-files/harvey-70.ged').text
+            case 4: return withBody(new File('src/test/resources/gedcom-files/stockdale-70.txt').text)
+            case 5: return withBody(new File('src/test/resources/gedcom-files/allen-70.txt').text)
+            case 6: return withBody('0 @I@ INDI\n1 BAPM Y\n')
+            case 7: return withBody('0 @I@ INDI\n1 ADOP\n2 FAMC @F@\n3 ADOP\n')
+            case 8: return withBody('0 @I@ INDI\n1 OBJE @VOID@\n2 CROP\n3 TOP 1\n')
+            case 9: return withBody('0 @S@ SOUR\n1 REPO @VOID@\n2 CALN 1\n3 MEDI Book\n')
+
+            case 101: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
+            case 102: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')
         }
     }
 
