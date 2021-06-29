@@ -1,6 +1,7 @@
 package gedinline.value;
 
 import gedinline.main.ValidatorBugException;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,10 @@ public class SyntaxExpression {
 
     public String getExpression() {
         return expression;
+    }
+
+    public Term getTerm() {
+        return parseTree;
     }
 
     public List<SyntaxExpression> getTerms() {
@@ -38,9 +43,12 @@ public class SyntaxExpression {
         return parseTree.isDisjunction();
     }
 
+    public boolean isList() {
+        return parseTree.isList();
+    }
+
     public boolean isRegex() {
-        String atom = parseTree.getAtom();
-        return parseTree.isAtom() && atom.startsWith("regex:");
+        return parseTree.isRegex();
     }
 
     public boolean isSyntaxElement() {
@@ -105,14 +113,23 @@ public class SyntaxExpression {
 
     private void parse(String e) {
 
-        if (e.startsWith("regex:")) {
-            Term term = new Term(Term.Type.ATOM);
-            term.addString(e);
-            parseTree = term;
-            return;
-        }
-
         Stack<Term> stack = new Stack<Term>();
+
+        String regexMarker = "regex:";
+        String listMarker = "list:";
+
+        if (e.startsWith(regexMarker)) {
+            // have to do this a special case because regexes can contain chars which clash with disjunction syntax
+            Term atom = new Term(Term.Type.ATOM);
+            atom.addString(StringUtils.substringAfter(e, regexMarker));
+            Term regex = new Term(Term.Type.REGEX);
+            regex.addTerm(atom);
+            parseTree = regex;
+            return;
+        } else if (e.startsWith(listMarker)) {
+            stack.push(new Term(Term.Type.LIST));
+            e = StringUtils.substringAfter(e, listMarker);
+        }
 
         for (char c : e.toCharArray()) {
             switch (c) {

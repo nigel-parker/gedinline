@@ -9,7 +9,7 @@ import java.util.List;
 public class Term {
 
     enum Type {
-        CONJUNCTION, DISJUNCTION, ATOM
+        LIST, CONJUNCTION, DISJUNCTION, REGEX, ATOM
     }
 
     private String atom = "";
@@ -54,6 +54,14 @@ public class Term {
 
     public boolean isDisjunction() {
         return type == Type.DISJUNCTION;
+    }
+
+    public boolean isList() {
+        return type == Type.LIST;
+    }
+
+    public boolean isRegex() {
+        return type == Type.REGEX;
     }
 
     public String toString() {

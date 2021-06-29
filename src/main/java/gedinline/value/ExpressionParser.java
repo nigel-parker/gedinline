@@ -1,7 +1,10 @@
 package gedinline.value;
 
 import gedinline.lexical.GedcomVersion;
+import gedinline.util.Utils;
 import org.apache.commons.lang.StringUtils;
+
+import java.util.List;
 
 /**
  * User: nigel
@@ -77,7 +80,7 @@ public class ExpressionParser {
             }
 
         } else if (syntaxExpression.isRegex()) {
-            String regex = syntaxExpression.getExpression().substring(6);
+            String regex = syntaxExpression.getTerm().getTerms().get(0).getAtom();
 
             if (input.matches(regex)) {
                 return okResult(new StringResult(""), "");
@@ -133,6 +136,27 @@ public class ExpressionParser {
             } else {
                 return fail();
             }
+
+        } else if (syntaxExpression.isList()) {
+
+            SyntaxExpression listType = syntaxExpression.getTerms().get(0);
+            ExpressionParser parser = new ExpressionParser(listType, syntaxElementLocator, gedcomVersion);
+            List<String> items = Utils.splitGedcomList(input);
+
+            if (items.isEmpty()) {
+                return fail();
+            }
+
+            for (String s : items) {
+                String trimmed = s.trim();
+                ParsingResult result = parser.parse(trimmed);
+
+                if (!result.isOk()) {
+                    return fail();
+                }
+            }
+
+            return okResult(new StringResult(""), "");
 
         } else if (syntaxExpression.isConjunction()) {
             String remainder = input;

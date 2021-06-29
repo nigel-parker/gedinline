@@ -6,7 +6,6 @@ import spock.lang.*
 @Unroll
 class GedInlineValidatorSpec extends FileReaderSpecification {
 
-    @IgnoreRest
     void utviklingV70() {
 
         given:
@@ -42,6 +41,9 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             7       || 2                        | ''
             8       || 0                        | ''
             9       || 0                        | ''
+            10      || 0                        | ''
+            11      || 0                        | ''
+            12      || 0                        | ''
 
             101     || 1                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
             102     || 0                        | 'TBD: ADDR payload is required, see spec p. 37'

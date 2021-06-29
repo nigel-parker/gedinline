@@ -20,5 +20,13 @@ class SyntaxExpressionSpec extends Specification {
             new SyntaxExpression('regex:A').regex
             new SyntaxExpression('regex:\\d{1,3}\\.\\d{1,3}(\\.\\d{1,3}(\\.\\d{1,3})?)?').regex
             new SyntaxExpression('regex:_[A-Z0-9_]*').regex
+
+            def syntaxExpression1 = new SyntaxExpression('list:String')
+            syntaxExpression1.list
+            syntaxExpression1.term.terms.first().isAtom()
+
+            def syntaxExpression2 = new SyntaxExpression('list:[a!b]')
+            syntaxExpression2.list
+            syntaxExpression2.term.terms.first().isDisjunction()
     }
 }

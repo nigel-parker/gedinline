@@ -90,7 +90,7 @@ g7:DATA-EVEN-DATE :=
 String
 
 g7:DATA-EVEN :=
-String
+list:[ADOP|BAPM|BARM|BASM|BIRT|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORD|PROB|RETI|WILL|ANUL|CENS|DIV|DIVF|ENGA|MARB|MARC|MARL|MARS|MARR]
 
 g7:DATE-exact :=
 String
@@ -198,7 +198,7 @@ g7:HEAD-LANG :=
 String
 
 g7:HEAD-PLAC-FORM :=
-String
+list:String
 
 g7:HEAD-SOUR-DATA :=
 String
@@ -339,13 +339,13 @@ g7:PHRASE :=
 String
 
 g7:PLAC-FORM :=
-String
+list:String
 
 g7:PLAC-TRAN :=
-String
+list:String
 
 g7:PLAC :=
-String
+list:String
 
 g7:POST :=
 String
@@ -375,7 +375,7 @@ g7:REPO :=
 String
 
 g7:RESN :=
-[CONFIDENTIAL|LOCKED|PRIVACY]
+list:[CONFIDENTIAL|LOCKED|PRIVACY]
 
 g7:RETI :=
 [Y|Null]
