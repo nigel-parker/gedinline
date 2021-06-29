@@ -228,7 +228,7 @@ g7:INDI-FAMC :=
 String
 
 g7:INDI-NAME :=
-String
+PersonalName
 
 g7:INDI-NCHI :=
 Decimal
@@ -276,7 +276,7 @@ g7:MIME :=
 String
 
 g7:NAME-TRAN :=
-String
+PersonalName
 
 g7:NAME-TYPE :=
 [AKA|BIRTH|IMMIGRANT|MAIDEN|MARRIED|PROFESSIONAL|OTHER]

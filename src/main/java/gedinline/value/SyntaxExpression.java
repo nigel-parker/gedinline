@@ -35,8 +35,20 @@ public class SyntaxExpression {
         return result;
     }
 
+    public boolean isAgeAtEvent() {
+        return parseTree.getAtom().equals("AgeAtEvent");
+    }
+
     public boolean isConjunction() {
         return parseTree.isConjunction();
+    }
+
+    public boolean isDateValue() {
+        return parseTree.getAtom().equals("DateValue");
+    }
+
+    public boolean isDecimal() {
+        return parseTree.getAtom().equals("Decimal");
     }
 
     public boolean isDisjunction() {
@@ -45,15 +57,6 @@ public class SyntaxExpression {
 
     public boolean isList() {
         return parseTree.isList();
-    }
-
-    public boolean isRegex() {
-        return parseTree.isRegex();
-    }
-
-    public boolean isSyntaxElement() {
-        String atom = parseTree.getAtom();
-        return parseTree.isAtom() && atom.startsWith("<") && atom.endsWith(">");
     }
 
     public boolean isLiteral() {
@@ -67,8 +70,24 @@ public class SyntaxExpression {
                 !isDecimal();
     }
 
-    public boolean isDecimal() {
-        return parseTree.getAtom().equals("Decimal");
+    public boolean isNonSpaceString() {
+        return parseTree.getAtom().equals("NonSpaceString");
+    }
+
+    public boolean isNull() {
+        return parseTree.getAtom().equals("Null");
+    }
+
+    public boolean isPersonalName() {
+        return parseTree.getAtom().equals("PersonalName");
+    }
+
+    public boolean isPointer() {
+        return parseTree.getAtom().equals("Pointer");
+    }
+
+    public boolean isRegex() {
+        return parseTree.isRegex();
     }
 
     public boolean isString() {
@@ -79,32 +98,17 @@ public class SyntaxExpression {
         return parseTree.getAtom().equals("StringInBrackets");
     }
 
-    public boolean isNonSpaceString() {
-        return parseTree.getAtom().equals("NonSpaceString");
+    public boolean isSyntaxElement() {
+        String atom = parseTree.getAtom();
+        return parseTree.isAtom() && atom.startsWith("<") && atom.endsWith(">");
     }
 
     public boolean isTimeValue() {
         return parseTree.getAtom().equals("Time");
     }
 
-    public boolean isAgeAtEvent() {
-        return parseTree.getAtom().equals("AgeAtEvent");
-    }
-
     public boolean isWhitespace() {
         return parseTree.getAtom().equals("Whitespace");
-    }
-
-    public boolean isNull() {
-        return parseTree.getAtom().equals("Null");
-    }
-
-    public boolean isPointer() {
-        return parseTree.getAtom().equals("Pointer");
-    }
-
-    public boolean isDateValue() {
-        return parseTree.getAtom().equals("DateValue");
     }
 
     public String getSyntaxElementName() {
