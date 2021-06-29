@@ -70,6 +70,10 @@ public class SyntaxExpression {
                 !isDecimal();
     }
 
+    public boolean isMediaType() {
+        return parseTree.getAtom().equals("MediaType");
+    }
+
     public boolean isNonSpaceString() {
         return parseTree.getAtom().equals("NonSpaceString");
     }
@@ -78,9 +82,7 @@ public class SyntaxExpression {
         return parseTree.getAtom().equals("Null");
     }
 
-    public boolean isPersonalName() {
-        return parseTree.getAtom().equals("PersonalName");
-    }
+    public boolean isPersonalName() { return parseTree.getAtom().equals("PersonalName"); }
 
     public boolean isPointer() {
         return parseTree.getAtom().equals("Pointer");

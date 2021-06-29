@@ -135,6 +135,13 @@ public class ExpressionParser {
                 return fail();
             }
 
+        } else if (syntaxExpression.isMediaType()) {
+            if (new MediaType(input, gedcomVersion).isValid()) {
+                return okResult(new StringResult(input), "");
+            } else {
+                return fail();
+            }
+
         } else if (syntaxExpression.isLiteral()) {
             String literal = syntaxExpression.getExpression();
 
