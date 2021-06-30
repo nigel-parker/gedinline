@@ -21,5 +21,7 @@ class MediaTypeSpec extends Specification {
             'application/octet-stream' || true
             'image/vnd.microsoft.icon' || true
             'image/svg+xml'            || true
+
+            'image'                    || false
     }
 }

@@ -70,9 +70,7 @@ public class SyntaxExpression {
                 !isDecimal();
     }
 
-    public boolean isMediaType() {
-        return parseTree.getAtom().equals("MediaType");
-    }
+    public boolean isMediaType() { return parseTree.getAtom().equals("MediaType"); }
 
     public boolean isNonSpaceString() {
         return parseTree.getAtom().equals("NonSpaceString");
@@ -91,6 +89,8 @@ public class SyntaxExpression {
     public boolean isRegex() {
         return parseTree.isRegex();
     }
+
+    public boolean isSemanticVersionNumber() { return parseTree.getAtom().equals("SemanticVersionNumber"); }
 
     public boolean isString() {
         return parseTree.getAtom().equals("String");

@@ -4,12 +4,12 @@ import gedinline.lexical.*
 import groovy.transform.*
 
 @CompileStatic
-class MediaType {
+class SemanticVersionNumber {
 
     String s
     GedcomVersion gedcomVersion
 
-    MediaType(String s, GedcomVersion gedcomVersion) {
+    SemanticVersionNumber(String s, GedcomVersion gedcomVersion) {
         this.s = s;
         this.gedcomVersion = gedcomVersion;
 
@@ -17,12 +17,9 @@ class MediaType {
     }
 
     boolean isValid() {
-        // somewhat simplified but should cover the majority of normal cases
 
-        def mtChar = /[A-Za-z0-9+\-\.]/
-        def mtToken = "$mtChar+"
-
-        String regex70 = "$mtToken/$mtToken(;$mtToken=$mtToken)*"
+        def numericIdentifier = /(0|[1-9][0-9]*)/
+        String regex70 = "${numericIdentifier}\\.${numericIdentifier}(\\.${numericIdentifier})?"
 
         return s.matches(regex70);
     }

@@ -183,7 +183,7 @@ g7:FORM :=
 MediaType
 
 g7:GEDC-VERS :=
-String
+SemanticVersionNumber
 
 g7:GIVN :=
 String
