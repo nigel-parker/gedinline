@@ -120,7 +120,7 @@ g7:EDUC :=
 String
 
 g7:EMAIL :=
-String
+Email
 
 g7:EMIG :=
 [Y|Null]

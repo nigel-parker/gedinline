@@ -47,6 +47,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             13      || 0                        | ''
             14      || 0                        | ''
             15      || 0                        | ''
+            16      || 2                        | ''
 
             101     || 1                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
             102     || 0                        | 'TBD: ADDR payload is required, see spec p. 37'

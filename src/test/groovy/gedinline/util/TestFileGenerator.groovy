@@ -19,6 +19,7 @@ class TestFileGenerator {
             case 13: return withBody('0 @I@ INDI\n1 NAME Napoleon\n2 TRAN Napoléon\n3 LANG fr\n')
             case 14: return withHeaderBody('\n1 NOTE note\n2 MIME font/ttf')
             case 15: return generate([patchNumber: '.1'])
+            case 16: return withBody('0 @R@ REPO\n1 EMAIL peter@hotmail\n')
 
             case 101: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
             case 102: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')

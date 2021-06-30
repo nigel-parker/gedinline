@@ -149,6 +149,13 @@ public class ExpressionParser {
                 return fail();
             }
 
+        } else if (syntaxExpression.isEmail()) {
+            if (new Email(input, gedcomVersion).isValid()) {
+                return okResult(new StringResult(input), "");
+            } else {
+                return fail();
+            }
+
         } else if (syntaxExpression.isLiteral()) {
             String literal = syntaxExpression.getExpression();
 

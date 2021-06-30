@@ -55,6 +55,8 @@ public class SyntaxExpression {
         return parseTree.isDisjunction();
     }
 
+    public boolean isEmail() { return parseTree.getAtom().equals("Email"); }
+
     public boolean isList() {
         return parseTree.isList();
     }
