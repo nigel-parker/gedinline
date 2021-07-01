@@ -8,7 +8,6 @@ class SyntaxExpressionSpec extends Specification {
 
         expect:
 
-            new SyntaxExpression('aa').literal
             new SyntaxExpression('String').string
             new SyntaxExpression('<syntax-element>').syntaxElement
             new SyntaxExpression('[aa|b]').disjunction

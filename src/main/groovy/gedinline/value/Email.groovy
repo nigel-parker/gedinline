@@ -4,10 +4,10 @@ import gedinline.lexical.*
 import groovy.transform.*
 
 @CompileStatic
-class Email {
+class Email extends Validator{
 
-    String s
-    GedcomVersion gedcomVersion
+    Email() {
+    }
 
     Email(String s, GedcomVersion gedcomVersion) {
         this.s = s;

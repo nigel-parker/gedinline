@@ -35,10 +35,6 @@ public class SyntaxExpression {
         return result;
     }
 
-    public boolean isAgeAtEvent() {
-        return parseTree.getAtom().equals("AgeAtEvent");
-    }
-
     public boolean isConjunction() {
         return parseTree.isConjunction();
     }
@@ -55,24 +51,9 @@ public class SyntaxExpression {
         return parseTree.isDisjunction();
     }
 
-    public boolean isEmail() { return parseTree.getAtom().equals("Email"); }
-
     public boolean isList() {
         return parseTree.isList();
     }
-
-    public boolean isLiteral() {
-        return parseTree.isAtom() &&
-                !isSyntaxElement() &&
-                !isString() &&
-                !isWhitespace() &&
-                !isNull() &&
-                !isPointer() &&
-                !isRegex() &&
-                !isDecimal();
-    }
-
-    public boolean isMediaType() { return parseTree.getAtom().equals("MediaType"); }
 
     public boolean isNonSpaceString() {
         return parseTree.getAtom().equals("NonSpaceString");
@@ -91,8 +72,6 @@ public class SyntaxExpression {
     public boolean isRegex() {
         return parseTree.isRegex();
     }
-
-    public boolean isSemanticVersionNumber() { return parseTree.getAtom().equals("SemanticVersionNumber"); }
 
     public boolean isString() {
         return parseTree.getAtom().equals("String");

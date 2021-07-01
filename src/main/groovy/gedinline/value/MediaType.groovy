@@ -4,16 +4,14 @@ import gedinline.lexical.*
 import groovy.transform.*
 
 @CompileStatic
-class MediaType {
+class MediaType extends Validator {
 
-    String s
-    GedcomVersion gedcomVersion
+    MediaType() {
+    }
 
     MediaType(String s, GedcomVersion gedcomVersion) {
         this.s = s;
         this.gedcomVersion = gedcomVersion;
-
-        assert gedcomVersion.is70();
     }
 
     boolean isValid() {

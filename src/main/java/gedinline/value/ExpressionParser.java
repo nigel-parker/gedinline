@@ -121,46 +121,9 @@ public class ExpressionParser {
                 return fail();
             }
 
-        } else if (syntaxExpression.isAgeAtEvent()) {
-            if (new AgeAtEvent(input, gedcomVersion).isValid()) {
-                return okResult(new StringResult(input), "");
-            } else {
-                return fail();
-            }
-
         } else if (syntaxExpression.isPersonalName()) {
             if (new PersonalName(input, gedcomVersion).isValid()) {
                 return okResult(new StringResult(input), "");
-            } else {
-                return fail();
-            }
-
-        } else if (syntaxExpression.isMediaType()) {
-            if (new MediaType(input, gedcomVersion).isValid()) {
-                return okResult(new StringResult(input), "");
-            } else {
-                return fail();
-            }
-
-        } else if (syntaxExpression.isSemanticVersionNumber()) {
-            if (new SemanticVersionNumber(input, gedcomVersion).isValid()) {
-                return okResult(new StringResult(input), "");
-            } else {
-                return fail();
-            }
-
-        } else if (syntaxExpression.isEmail()) {
-            if (new Email(input, gedcomVersion).isValid()) {
-                return okResult(new StringResult(input), "");
-            } else {
-                return fail();
-            }
-
-        } else if (syntaxExpression.isLiteral()) {
-            String literal = syntaxExpression.getExpression();
-
-            if (input.toUpperCase().startsWith(literal.toUpperCase())) {
-                return okResult(new StringResult(literal), input.substring(literal.length()));
             } else {
                 return fail();
             }
@@ -222,9 +185,41 @@ public class ExpressionParser {
             SyntaxElement syntaxElement = syntaxElementLocator.find(syntaxExpression.getSyntaxElementName());
             ExpressionParser parser1 = new ExpressionParser(syntaxElement, syntaxElementLocator, gedcomVersion);
             return parser1.parse(input);
-        }
 
-        return null;
+        } else {
+
+            String literal = syntaxExpression.getExpression();
+//            System.out.println("%%% literal = " + literal);
+            Validator validator = getValidator(literal);
+//            System.out.println("%%% validator = " + validator);
+
+            if (validator != null) {
+                validator.setGedcomVersion(gedcomVersion);
+                validator.setS(input);
+
+                if (validator.isValid()) {
+                    return okResult(new StringResult(input), "");
+                } else {
+                    return fail();
+                }
+
+            } else {
+
+                if (input.toUpperCase().startsWith(literal.toUpperCase())) {
+                    return okResult(new StringResult(literal), input.substring(literal.length()));
+                } else {
+                    return fail();
+                }
+            }
+        }
+    }
+
+    private Validator getValidator(String name) {
+        try {
+            return ((Validator) Class.forName("gedinline.value." + name).newInstance());
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private ParsingResult fail() {

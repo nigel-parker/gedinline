@@ -450,7 +450,7 @@ g7:WILL :=
 [Y|Null]
 
 g7:WWW :=
-String
+Url
 
 XREF :=
 Pointer

@@ -1,18 +1,20 @@
-package gedinline.value;
+package gedinline.value
 
-import gedinline.lexical.GedcomVersion;
+import gedinline.lexical.*
+import groovy.transform.*
 
-public class AgeAtEvent {
+@CompileStatic
+class AgeAtEvent extends Validator{
 
-    private String s;
-    private GedcomVersion gedcomVersion;
+    AgeAtEvent() {
+    }
 
-    public AgeAtEvent(String s, GedcomVersion gedcomVersion) {
+    AgeAtEvent(String s, GedcomVersion gedcomVersion) {
         this.s = s;
         this.gedcomVersion = gedcomVersion;
     }
 
-    public boolean isValid() {
+    boolean isValid() {
         String regex551 = "(<|>|)" +
                 "(\\d{1,2}Y \\d{1,2}M \\d{1,3}D|" +
                 "\\d{1,2}Y|" +

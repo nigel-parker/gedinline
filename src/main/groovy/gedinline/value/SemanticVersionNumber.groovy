@@ -4,10 +4,10 @@ import gedinline.lexical.*
 import groovy.transform.*
 
 @CompileStatic
-class SemanticVersionNumber {
+class SemanticVersionNumber extends Validator {
 
-    String s
-    GedcomVersion gedcomVersion
+    SemanticVersionNumber() {
+    }
 
     SemanticVersionNumber(String s, GedcomVersion gedcomVersion) {
         this.s = s;
