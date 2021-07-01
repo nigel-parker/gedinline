@@ -174,10 +174,10 @@ g7:FCOM :=
 [Y|Null]
 
 g7:FILE-TRAN :=
-String
+FileReference
 
 g7:FILE :=
-String
+FileReference
 
 g7:FORM :=
 MediaType

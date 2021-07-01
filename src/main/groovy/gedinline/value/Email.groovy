@@ -21,6 +21,6 @@ class Email extends Validator{
         // email addresses have many subtleties. This is a very simple compromise that covers the majority of
         // normal cases.
 
-        return s.matches(/[^@]+?@[^@]+?\.[^@]+/);
+        s.matches(/[^@]+?@[^@]+?\.[^@]+/);
     }
 }

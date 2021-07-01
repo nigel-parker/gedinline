@@ -22,6 +22,6 @@ class MediaType extends Validator {
 
         String regex70 = "$mtToken/$mtToken(;$mtToken=$mtToken)*"
 
-        return s.matches(regex70);
+        s.matches(regex70);
     }
 }

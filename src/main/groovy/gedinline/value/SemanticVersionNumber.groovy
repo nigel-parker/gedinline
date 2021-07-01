@@ -21,6 +21,6 @@ class SemanticVersionNumber extends Validator {
         def numericIdentifier = /(0|[1-9][0-9]*)/
         String regex70 = "${numericIdentifier}\\.${numericIdentifier}(\\.${numericIdentifier})?"
 
-        return s.matches(regex70);
+        s.matches(regex70);
     }
 }

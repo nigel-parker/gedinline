@@ -21,6 +21,7 @@ class TestFileGenerator {
             case 15: return generate([patchNumber: '.0'])
             case 16: return withBody('0 @R@ REPO\n1 EMAIL peter@hotmail\n')
             case 17: return withBody('0 @R@ REPO\n1 WWW https://www.hotmail.com\n')
+            case 18: return withBody('0 @O@ OBJE\n1 FILE media/original.mp3\n2 FORM audio/mp3\n')
 
             case 101: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
             case 102: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')

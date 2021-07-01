@@ -40,6 +40,6 @@ class AgeAtEvent extends Validator{
                 "STILLBORN)";
 
         String regex = gedcomVersion.is555() ? regex555 : regex551;
-        return s.toUpperCase().matches(regex);
+        s.toUpperCase().matches(regex);
     }
 }
