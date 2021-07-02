@@ -6,7 +6,7 @@ import spock.lang.*
 @Unroll
 class GedInlineValidatorSpec extends FileReaderSpecification {
 
-//    @IgnoreRest
+    @IgnoreRest
     void utviklingV70() {
 
         given:

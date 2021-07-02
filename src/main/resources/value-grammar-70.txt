@@ -438,7 +438,7 @@ g7:TYPE :=
 String
 
 g7:UID :=
-String
+Uuid
 
 g7:VERS :=
 String
