@@ -246,13 +246,13 @@ g7:LANG :=
 String
 
 g7:LATI :=
-String
+Latitude
 
 g7:LEFT :=
 Decimal
 
 g7:LONG :=
-String
+Longitude
 
 g7:MARB :=
 [Y|Null]
