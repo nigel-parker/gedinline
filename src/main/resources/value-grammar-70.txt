@@ -417,7 +417,7 @@ g7:SURN :=
 String
 
 g7:TAG :=
-regex:_[A-Z0-9_]* .*
+ExtensionTag
 
 g7:TEMP :=
 String
