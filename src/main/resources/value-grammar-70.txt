@@ -129,7 +129,7 @@ g7:ENGA :=
 [Y|Null]
 
 g7:EXID-TYPE :=
-String
+Uri
 
 g7:EXID :=
 String
