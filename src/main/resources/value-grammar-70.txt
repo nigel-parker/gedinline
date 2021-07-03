@@ -195,7 +195,7 @@ g7:HEAD-DATE :=
 String
 
 g7:HEAD-LANG :=
-String
+Language
 
 g7:HEAD-PLAC-FORM :=
 list:String
@@ -243,7 +243,7 @@ g7:INDI-TITL :=
 String
 
 g7:LANG :=
-String
+Language
 
 g7:LATI :=
 Latitude
@@ -408,7 +408,7 @@ g7:STAE :=
 String
 
 g7:SUBM-LANG :=
-String
+Language
 
 g7:SUBM :=
 String
