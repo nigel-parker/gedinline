@@ -27,8 +27,15 @@ class TestFileGenerator {
             case 21: return withHeaderBody('\n1 LANG no')
             case 22: return withBody('0 @R@ REPO\n1 NAME N\n1 EXID name\n2 TYPE http://xmlns.com\n')
 
-            case 101: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
-            case 102: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')
+            case 101: return withBody('0 @I@ INDI\n1 NAME X\u0000X\n')
+            case 102: return withBody('0 @I@ INDI\n1 NAME X\u001FX\n')
+            case 103: return withBody('0 @I@ INDI\n1 NAME X\u007FX\n')
+            case 104: return withBody('0 @I@ INDI\n1 NAME X\uD800X\n')
+            case 105: return withBody('0 @I@ INDI\n1 NAME X\uDFFFX\n')
+            case 106: return withBody('0 @I@ INDI\n1 NAME X\uFFFEX\n')
+
+            case 201: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
+            case 202: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')
         }
     }
 

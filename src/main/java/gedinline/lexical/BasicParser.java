@@ -258,7 +258,8 @@ public class BasicParser {
         char c = iterator.current();
 
         while (c != CharacterIterator.DONE) {
-            if ((Character.isISOControl(c) && c != '\n' && c != '\r') || c == UNICODE_REPLACEMENT_CHARACTER) {
+//            System.out.println("%%% c = " + c + ": " + Integer.toHexString(((int) c)));
+            if ((Character.isISOControl(c) && c != '\n' && c != '\r') || (c == UNICODE_REPLACEMENT_CHARACTER) || c >= '\uFFFE') {
                 return true;
             }
 
