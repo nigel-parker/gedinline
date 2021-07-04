@@ -34,6 +34,7 @@ class TestFileGenerator {
             case 105: return withBody('0 @I@ INDI\n1 NAME X\uDFFFX\n')
             case 106: return withBody('0 @I@ INDI\n1 NAME X\uFFFEX\n')
             case 107: return withBody('0 @I@ INDI\n 1 NAME X\n')
+            case 108: return withBody('0 @I@ INDI\n\n1 NAME X\n')
 
             case 201: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
             case 202: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')

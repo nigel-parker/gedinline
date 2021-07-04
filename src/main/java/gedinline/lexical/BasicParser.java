@@ -145,6 +145,8 @@ public class BasicParser {
                 }
 
                 return true;
+            } else if (gedcomVersion.is70()) {
+                warn("Blank lines are not allowed");
             }
         }
 
