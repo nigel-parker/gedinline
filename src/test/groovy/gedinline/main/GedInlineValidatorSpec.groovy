@@ -62,6 +62,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             104     || 0                        | 'TBD: cant detect surrogates, they are converted to ? under input'
             105     || 0                        | 'TBD: cant detect surrogates, they are converted to ? under input'
             106     || 1                        | ''
+            107     || 1                        | ''
 
             201     || 1                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
             202     || 0                        | 'TBD: ADDR payload is required, see spec p. 37'

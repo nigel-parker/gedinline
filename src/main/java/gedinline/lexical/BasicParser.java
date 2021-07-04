@@ -8,6 +8,7 @@ import org.apache.commons.io.LineIterator;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 
@@ -65,15 +66,15 @@ public class BasicParser {
         } else if (encoding.equals(UTF_8)) {
             UnicodeBomInputStream unicodeBomInputStream = new UnicodeBomInputStream(inputStream);
             unicodeBomInputStream.skipBOM();
-            reader = new InputStreamReader(unicodeBomInputStream, UTF_8);
+            reader = new InputStreamReader(unicodeBomInputStream, StandardCharsets.UTF_8);
 
         } else if (encoding.equals(UNICODE)) {
 
             UnicodeBomInputStream unicodeBomInputStream = new UnicodeBomInputStream(inputStream);
-            reader = new InputStreamReader(unicodeBomInputStream, UTF_16);
+            reader = new InputStreamReader(unicodeBomInputStream, StandardCharsets.UTF_16);
 
         } else if (encoding.equals(ASCII)) {
-            reader = new InputStreamReader(inputStream, "US-ASCII");
+            reader = new InputStreamReader(inputStream, StandardCharsets.US_ASCII);
 
         } else if (encoding.equals(ANSEL)) {
             reader = new AnselInputStreamReader(inputStream);
@@ -131,9 +132,7 @@ public class BasicParser {
             if (line.length() > 0) {
                 String trimmedLine = line.trim();
 
-                if (!fileFormatHasBeenVerified && trimmedLine.equals("0 HEADER")) {
-                    throw new InvalidFormatException("File not recognised as valid GEDCOM file, appears to be in FTW TEXT format");
-                } else if (!fileFormatHasBeenVerified && !trimmedLine.equals("0 HEAD")) {
+                if (!fileFormatHasBeenVerified && !trimmedLine.equals("0 HEAD")) {
                     throw new InvalidFormatException("File not recognised as valid GEDCOM file");
                 } else {
                     fileFormatHasBeenVerified = true;
@@ -205,9 +204,15 @@ public class BasicParser {
     }
 
     public void handleLine(String lineUntrimmed) {
+        String digits = "0123456789";
+
+        if (gedcomVersion.is70() && StringUtils.indexOfAny(lineUntrimmed, digits) != 0) {
+            warn("Line does not start with a level number");
+        }
+
         String line = lineUntrimmed.trim();
         String remainder;
-        int i = StringUtils.indexOfAnyBut(line, "0123456789");
+        int i = StringUtils.indexOfAnyBut(line, digits);
 
         if (i == -1) {
             i = line.length();
@@ -286,10 +291,6 @@ public class BasicParser {
 
         while (iterator.hasNext() && lineCount++ < 50) {
             String line = iterator.nextLine();
-
-            if (line.startsWith("0 HEADER")) {
-                throw new InvalidFormatException("File not recognised as valid GEDCOM file, appears to be in FTW TEXT format");
-            }
 
             if (line.contains(GEDCOM_TRIGGER)) {
                 gedcomTagSeen = true;
