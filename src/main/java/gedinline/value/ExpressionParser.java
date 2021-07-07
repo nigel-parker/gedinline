@@ -48,17 +48,6 @@ public class ExpressionParser {
                 return okResult(new StringResult(input.substring(0, i)), input.substring(i));
             }
 
-        } else if (syntaxExpression.isPointer()) {
-            if (input.length() < 3 ||
-                    !input.startsWith("@") ||
-                    !input.substring(1, 2).matches("[a-zA-Z0-9_]") ||
-                    !input.substring(1).contains("@")) {
-                return fail();
-            }
-
-            int i = StringUtils.indexOf(input.substring(1), "@") + 2;
-            return okResult(new StringResult(input.substring(0, i)), input.substring(i));
-
         } else if (syntaxExpression.isWhitespace()) {
             int i = StringUtils.indexOfAnyBut(input, " \\t");
 
@@ -189,17 +178,19 @@ public class ExpressionParser {
         } else {
 
             String literal = syntaxExpression.getExpression();
-//            System.out.println("%%% literal = " + literal);
+//            System.out.println("%%% literal = '" + literal + "'");
             Validator validator = getValidator(literal);
-//            System.out.println("%%% validator = " + validator);
+//            System.out.println("%%% validator 2 = " + validator);
 
             if (validator != null) {
                 validator.setGedcomVersion(gedcomVersion);
                 validator.setS(input);
 
                 if (validator.isValid()) {
+//                    System.out.println("%%% okResult()");
                     return okResult(new StringResult(input), "");
                 } else {
+//                    System.out.println("%%% fail()");
                     return fail();
                 }
 
@@ -216,7 +207,11 @@ public class ExpressionParser {
 
     private Validator getValidator(String name) {
         try {
-            return ((Validator) Class.forName("gedinline.value." + name).newInstance());
+            String className = "gedinline.value." + name;
+//            System.out.println("%%% className = " + className);
+            Validator validator = (Validator) Class.forName(className).newInstance();
+
+            return validator;
         } catch (Exception e) {
             return null;
         }

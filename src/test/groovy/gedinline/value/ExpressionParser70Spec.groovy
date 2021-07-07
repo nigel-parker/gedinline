@@ -5,7 +5,7 @@ import spock.lang.*
 
 class ExpressionParser70Spec extends Specification {
 
-    void 'test simple expression'() {
+    void 'test simple expression #expression'() {
 
         expect:
 
@@ -27,6 +27,11 @@ class ExpressionParser70Spec extends Specification {
 
             expression             | input            || ok    | expectedValue | remainder
 
+            'Pointer'              | '@F1@'           || true  | '@F1@'        | ''
+            'Pointer'              | '@f1@'           || false | null          | '@f1@'
+            'Pointer'              | '@F1-1@'         || false | null          | '@F1-1@'
+            'Pointer'              | '@F1'            || false | null          | '@F1'
+
             'String'               | ''               || true  | ''            | ''
             'String'               | 'Abc'            || true  | 'Abc'         | ''
 
@@ -46,11 +51,6 @@ class ExpressionParser70Spec extends Specification {
             '[0|1|2|3]'            | '3'              || true  | '3'           | ''
 
             'regex:_[A-Z0-9_]* .*' | '_A URI'         || true  | ''            | ''
-
-            'Pointer'              | '@F1@'           || true  | '@F1@'        | ''
-            'Pointer'              | '@f1@'           || true  | '@f1@'        | '' // TBD: small letters not allowed in V7.0
-            'Pointer'              | '@F1-1@'         || true  | '@F1-1@'      | '' // TBD: valid pointer for V5.5.1, V7.0 is more restrictive
-            'Pointer'              | '@F1'            || false | null          | '@F1'
 
             'list:[A|B|C]'         | 'B, A'           || true  | ''            | ''
             'list:[A|B|C]'         | ''               || false | null          | ''

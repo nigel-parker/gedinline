@@ -3,13 +3,12 @@ package gedinline.lexical;
 import com.google.common.base.Splitter;
 import gedinline.main.GedcomException;
 import gedinline.main.WarningSink;
+import gedinline.value.Pointer;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.Iterator;
 
 public class InputLine {
-
-    private static final String XXXXXXXXX = "@xxxxxxxxx@";
 
     private int lineNumber;
     private Level level;
@@ -34,11 +33,10 @@ public class InputLine {
         String token = it.next();
 
         if (Pointer.looksValid(token)) {
-            try {
-                label = new Pointer(token);
-            } catch (GedcomException e) {
-                warningSink.warning(lineNumber, e.getMessage());
-                label = new Pointer(XXXXXXXXX);
+            label = new Pointer(token, gedcomVersion);
+
+            if (!label.isValid()) {
+                warningSink.warning(lineNumber, "Invalid pointer '" + token + "'");
             }
 
             if (!it.hasNext()) {
@@ -59,13 +57,10 @@ public class InputLine {
             token = it.next();
 
             if (Pointer.looksValid(token)) {
-                try {
-                    pointer = new Pointer(token);
-                } catch (GedcomException e) {
-                    warningSink.warning(lineNumber, e.getMessage());
-                    //label = new Pointer("@xxxxxxxxx@");
-                    //pointer = new Pointer(XXXXXXXXX);
-                    pointer = null;
+                pointer = new Pointer(token, gedcomVersion);
+
+                if (!pointer.isValid()) {
+                    warningSink.warning(lineNumber, "Invalid pointer '" + token + "'");
                 }
             } else {
                 value = StringUtils.substringAfter(line, tag + " ");

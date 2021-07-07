@@ -160,7 +160,7 @@ public class OutputReport {
 
     /**
      * The SEX tag is not obligatory although in the vast majority og cases it is present. This method corrects
-     * the number of individuals with unknown gener for files which omit SEX.
+     * the number of individuals with unknown gender for files which omit SEX.
      */
     private void calculateUnknownGender() {
         int individuals = findCounter(INDIVIDUAL).getAntall();

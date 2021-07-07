@@ -6,7 +6,6 @@ import spock.lang.*
 @Unroll
 class GedInlineValidatorSpec extends FileReaderSpecification {
 
-//    @IgnoreRest
     void utviklingV70() {
 
         given:
@@ -105,6 +104,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
     }
 
+//    @IgnoreRest
     void 'verify test file #filename'() {
 
         expect:
@@ -119,7 +119,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'encoding-utf-16-le-555.ged' || 0                    | ''
             'Excel2GED-beta.ged'         || 2                    | ''
             'harvey.ged'                 || 2                    | ''
-            'jiapu.ged'                  || 10                   | ''
             'multimedia-test.ged'        || 4                    | ''
             'olson-555.ged'              || 8                    | ''
             'simple-555.ged'             || 1                    | ''

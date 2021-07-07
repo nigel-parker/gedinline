@@ -139,6 +139,8 @@ class BasicParserSpec extends FileReaderSpecification {
 
             '3 BIRT a\tb'                        | V_551         || 1
 //            '3 BIRT a\tb'                        | V_555         || 0
+
+            '0 @I1 SUBM'                         | V_551         || 0 // Pointer validation occurs at next level
     }
 
     class WarningCounter implements WarningSink {

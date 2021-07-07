@@ -1,18 +1,17 @@
 package gedinline.lexical;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 import gedinline.main.GedcomException;
 import gedinline.main.NullLogger;
 import gedinline.main.StructureListener;
 import gedinline.main.WarningSink;
+import gedinline.value.Pointer;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
-import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -29,8 +28,7 @@ public class RecordCollector {
     private BasicParser basicParser;
     private Level previousLevel = new Level();
     private Stack<InputRecord> stack = new Stack<InputRecord>();
-    private Set<Pointer> labels = Sets.newHashSet();
-    private Set<Pointer> pointers = Sets.newHashSet();
+    private XrefCollector xrefCollector = new XrefCollector();
     private boolean finished = false;
 
     public RecordCollector(InputStream inputStream) {
@@ -83,15 +81,11 @@ public class RecordCollector {
                 Pointer pointer = inputLine.getPointer();
 
                 if (label != null) {
-                    if (labels.contains(label)) {
-                        throw new GedcomException("Duplicate occurrence of cross reference @" + label + "@");
-                    }
-
-                    labels.add(label);
+                    xrefCollector.addLabel(label);
                 }
 
                 if (pointer != null) {
-                    pointers.add(pointer);
+                    xrefCollector.addPointer(pointer);
                 }
 
                 adjustStack(level);
@@ -118,14 +112,9 @@ public class RecordCollector {
         }
 
         adjustStack(new Level(0));
-        Sets.SetView<Pointer> unsatisfiedPointers = Sets.difference(pointers, labels);
 
-        if (!unsatisfiedPointers.isEmpty()) {
-            Pointer s = unsatisfiedPointers.iterator().next();
-
-            if (!s.getMeat().equals("VOID")) {
-                log.warning("Can't find pointer reference " + s + " in file");
-            }
+        for (Pointer pointer: xrefCollector.getUnsatisfiedPointers() ) {
+            log.warning("Can't find pointer reference " + pointer + " in file");
         }
 
         if (!trailerFound) {
