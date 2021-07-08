@@ -1,6 +1,7 @@
 package gedinline.value;
 
 import gedinline.lexical.GedcomVersion;
+import gedinline.main.Debug;
 import gedinline.util.Utils;
 import org.apache.commons.lang.StringUtils;
 
@@ -208,10 +209,10 @@ public class ExpressionParser {
     private Validator getValidator(String name) {
         try {
             String className = "gedinline.value." + name;
-//            System.out.println("%%% className = " + className);
-            Validator validator = (Validator) Class.forName(className).newInstance();
 
-            return validator;
+            log("%%% className = " + className);
+
+            return ((Validator) Class.forName(className).newInstance());
         } catch (Exception e) {
             return null;
         }
@@ -263,6 +264,8 @@ public class ExpressionParser {
     }
 
     private void log(String s) {
-        //System.out.println("--- " + s);
+        if (Debug.active()) {
+            System.out.println("--- " + s);
+        }
     }
 }

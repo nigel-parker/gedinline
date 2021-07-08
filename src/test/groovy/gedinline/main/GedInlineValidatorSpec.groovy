@@ -67,7 +67,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             109     || 1                        | 'Tabs are allowed, except in personal names'
 
             201     || 1                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
-            202     || 0                        | 'TBD: ADDR payload is required, see spec p. 37'
+//            202     || 1                        | 'TBD: ADDR payload is required, see spec p. 37'
 
     }
 

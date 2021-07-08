@@ -5,9 +5,6 @@ String
 g7:ADDR :=
 String
 
-g7:ADOP-FAMC :=
-String
-
 g7:ADOP :=
 [Y|Null]
 
@@ -17,17 +14,8 @@ String
 g7:AGNC :=
 String
 
-g7:ALIA :=
-String
-
-g7:ANCI :=
-String
-
 g7:ANUL :=
 [Y|Null]
-
-g7:ASSO :=
-String
 
 g7:AUTH :=
 String
@@ -57,9 +45,6 @@ g7:CAST :=
 String
 
 g7:CAUS :=
-String
-
-g7:CHIL :=
 String
 
 g7:CHR :=
@@ -101,9 +86,6 @@ String
 g7:DEAT :=
 [Y|Null]
 
-g7:DESI :=
-String
-
 g7:DEST :=
 String
 
@@ -143,16 +125,10 @@ String
 g7:FAM-FACT :=
 String
 
-g7:FAM-HUSB :=
-String
-
 g7:FAM-NCHI :=
 Decimal
 
 g7:FAM-RESI :=
-String
-
-g7:FAM-WIFE :=
 String
 
 g7:FAMC-ADOP :=
@@ -160,12 +136,6 @@ g7:FAMC-ADOP :=
 
 g7:FAMC-STAT :=
 [CHALLENGED|DISPROVEN|PROVEN]
-
-g7:FAMC :=
-String
-
-g7:FAMS :=
-String
 
 g7:FAX :=
 String
@@ -222,9 +192,6 @@ g7:INDI-EVEN :=
 String
 
 g7:INDI-FACT :=
-String
-
-g7:INDI-FAMC :=
 String
 
 g7:INDI-NAME :=
@@ -314,9 +281,6 @@ String
 g7:NSFX :=
 String
 
-g7:OBJE :=
-String
-
 g7:OCCU :=
 String
 
@@ -371,9 +335,6 @@ String
 g7:RELI :=
 String
 
-g7:REPO :=
-String
-
 g7:RESN :=
 list:[CONFIDENTIAL|LOCKED|PRIVACY]
 
@@ -389,14 +350,8 @@ String
 g7:SEX :=
 [M|F|X|U]
 
-g7:SNOTE :=
-String
-
 g7:SOUR-EVEN :=
 [ADOP|BAPM|BARM|BASM|BIRT|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORD|PROB|RETI|WILL|ANUL|CENS|DIV|DIVF|ENGA|MARB|MARC|MARL|MARS|MARR]
-
-g7:SOUR :=
-String
 
 g7:SPFX :=
 String
@@ -409,9 +364,6 @@ String
 
 g7:SUBM-LANG :=
 Language
-
-g7:SUBM :=
-String
 
 g7:SURN :=
 String

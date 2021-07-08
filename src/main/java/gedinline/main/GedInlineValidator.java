@@ -10,6 +10,7 @@ import gedinline.value.ExpressionParser;
 import gedinline.value.ParsingResult;
 import gedinline.value.SyntaxElement;
 import gedinline.value.ValueGrammar;
+import org.apache.commons.lang.StringUtils;
 
 import java.beans.PropertyChangeSupport;
 import java.io.*;
@@ -178,7 +179,7 @@ public class GedInlineValidator {
         if (Debug.active(inputLine1)) {
             System.out.println("");
             System.out.println("--- validating inputLine " + inputLine1 + " and " + inputRecord1.getInputRecords().size() + " subsidiaries");
-            System.out.println("--- vha tagTree \n" + tagTree1);
+            System.out.println("--- vha tagTree \n" + StringUtils.abbreviate(tagTree1.toString(),100));
             System.out.println("");
         }
 
