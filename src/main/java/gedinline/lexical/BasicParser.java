@@ -249,11 +249,7 @@ public class BasicParser {
         }
 
         if (checkForIllegalCharacters(line)) {
-            if (line.contains("\t")) {
-                warn("Line contains tab character, not allowed under GEDCOM rules");
-            } else {
-                warn("Line contains illegal character(s)");
-            }
+            warn("Line contains illegal character(s)");
         }
 
         next = new InputLinePrecursor(lineNumber, level, remainder, lineUntrimmed);
@@ -266,7 +262,11 @@ public class BasicParser {
 
         while (c != CharacterIterator.DONE) {
 //            System.out.println("%%% c = " + c + ": " + Integer.toHexString(((int) c)));
-            if ((Character.isISOControl(c) && c != '\n' && c != '\r') || (c == UNICODE_REPLACEMENT_CHARACTER) || c >= '\uFFFE') {
+            if ((Character.isISOControl(c) && c != '\t' && c != '\n' && c != '\r') || (c == UNICODE_REPLACEMENT_CHARACTER) || c >= '\uFFFE') {
+                return true;
+            }
+
+            if (!gedcomVersion.is70() && c == '\t') {
                 return true;
             }
 
