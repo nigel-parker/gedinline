@@ -9,14 +9,7 @@ class ExtensionTag extends Validator{
     ExtensionTag() {
     }
 
-    ExtensionTag(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-
-        assert gedcomVersion.is70();
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         def regex = /_[A-Z0-9_]* (?<URI>.*)/
 
@@ -27,8 +20,6 @@ class ExtensionTag extends Validator{
         }
 
         def uriInput = matcher.group('URI')
-        def uri = new Uri(uriInput, gedcomVersion)
-
-        uri.isValid()
+        new Uri().isValid(uriInput, gedcomVersion)
     }
 }

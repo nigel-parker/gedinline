@@ -11,7 +11,7 @@ class FileReferenceSpec extends Specification {
 
         expect:
 
-            new FileReference(input, V_70).isValid() == expectedResult
+            new FileReference().isValid(input, V_70) == expectedResult
 
         where:
 

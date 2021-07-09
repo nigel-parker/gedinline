@@ -1,7 +1,9 @@
 package gedinline.value
 
-import gedinline.lexical.*
+
 import spock.lang.*
+
+import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class SemanticVersionNumberSpec extends Specification {
@@ -10,7 +12,7 @@ class SemanticVersionNumberSpec extends Specification {
 
         expect:
 
-            new SemanticVersionNumber(input, GedcomVersion.V_70).isValid() == expectedResult
+            new SemanticVersionNumber().isValid(input, V_70) == expectedResult
 
         where:
 

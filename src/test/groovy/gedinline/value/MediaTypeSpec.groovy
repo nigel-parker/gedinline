@@ -1,7 +1,9 @@
 package gedinline.value
 
-import gedinline.lexical.*
+
 import spock.lang.*
+
+import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class MediaTypeSpec extends Specification {
@@ -10,7 +12,7 @@ class MediaTypeSpec extends Specification {
 
         expect:
 
-            new MediaType(input, GedcomVersion.V_70).isValid() == expectedResult
+            new MediaType().isValid(input, V_70) == expectedResult
 
         where:
 

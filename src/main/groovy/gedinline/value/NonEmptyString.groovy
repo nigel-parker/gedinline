@@ -9,14 +9,7 @@ class NonEmptyString extends Validator{
     NonEmptyString() {
     }
 
-    NonEmptyString(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-
-        assert gedcomVersion.is70();
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
         s.size() >= 1
     }
 }

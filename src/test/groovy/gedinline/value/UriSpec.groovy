@@ -11,7 +11,7 @@ class UriSpec extends Specification {
 
         expect:
 
-            new Uri(input, V_70).isValid() == expectedResult
+            new Uri().isValid(input, V_70) == expectedResult
 
         where:
 

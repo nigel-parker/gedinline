@@ -9,12 +9,7 @@ class MediaType extends Validator {
     MediaType() {
     }
 
-    MediaType(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
         // somewhat simplified but should cover the majority of normal cases
 
         def mtChar = /[A-Za-z0-9+\-\.]/

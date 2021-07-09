@@ -33,7 +33,7 @@ class ExpressionParser70Spec extends Specification {
             'Pointer'              | '@F1-1@'         || false | null          | '@F1-1@'
             'Pointer'              | '@F1'            || false | null          | '@F1'
 
-//            'String'               | ''               || true  | ''            | ''
+            'String'               | ''               || true  | ''            | ''
             'String'               | 'Abc'            || true  | 'Abc'         | ''
 
             '[Y|Null]'             | 'Y'              || true  | 'Y'           | ''
@@ -57,8 +57,8 @@ class ExpressionParser70Spec extends Specification {
             'list:[A|B|C]'         | ''               || false | null          | ''
             'list:[A|B|C]'         | ' '              || false | null          | ' '
 
-//            'list:String'          | ' '              || true  | ''            | ''
-//            'list:String'          | ', , one, more,' || true  | ''            | ''
+            'list:String'          | ' '              || true  | ''            | ''
+            'list:String'          | ', , one, more,' || true  | ''            | ''
     }
 
     private ParsingResult getParsingResult(String expression, String input) {

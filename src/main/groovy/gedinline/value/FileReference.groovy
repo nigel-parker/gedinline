@@ -10,14 +10,7 @@ class FileReference extends Validator {
     FileReference() {
     }
 
-    FileReference(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-
-        assert gedcomVersion.is70();
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         def schemes = ['http', 'https', 'ftp', 'file'] as String[]
         def urlValidator = new UrlValidator(schemes)

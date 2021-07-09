@@ -10,7 +10,7 @@ class EmailSpec extends Specification {
 
         expect:
 
-            new Email(input, GedcomVersion.V_70).isValid() == expectedResult
+            new Email().isValid(input, GedcomVersion.V_70) == expectedResult
 
         where:
 

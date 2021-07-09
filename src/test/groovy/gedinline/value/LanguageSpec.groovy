@@ -1,7 +1,8 @@
 package gedinline.value
 
-import gedinline.lexical.*
 import spock.lang.*
+
+import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class LanguageSpec extends Specification {
@@ -10,7 +11,7 @@ class LanguageSpec extends Specification {
 
         expect:
 
-            new Language(input, GedcomVersion.V_70).isValid() == expectedResult
+            new Language().isValid(input, V_70) == expectedResult
 
         where:
 

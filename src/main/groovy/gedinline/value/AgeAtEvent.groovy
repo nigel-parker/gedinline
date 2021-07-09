@@ -9,12 +9,7 @@ class AgeAtEvent extends Validator{
     AgeAtEvent() {
     }
 
-    AgeAtEvent(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
         String regex551 = "(<|>|)" +
                 "(\\d{1,2}Y \\d{1,2}M \\d{1,3}D|" +
                 "\\d{1,2}Y|" +

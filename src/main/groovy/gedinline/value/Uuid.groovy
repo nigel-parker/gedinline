@@ -9,14 +9,18 @@ class Uuid extends Validator{
     Uuid() {
     }
 
-    Uuid(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-
-        assert gedcomVersion.is70();
-    }
-
-    boolean isValid() {
+//    Uuid(String s, GedcomVersion gedcomVersion) {
+//        this.s = s;
+//        this.gedcomVersion = gedcomVersion;
+//
+//        assert gedcomVersion.is70();
+//    }
+//
+//    boolean isValid() {
+//        isValid(s, gedcomVersion)
+//    }
+//
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         s.matches(/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}/);
     }

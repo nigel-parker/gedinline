@@ -9,14 +9,7 @@ class Longitude extends Validator {
     Longitude() {
     }
 
-    Longitude(String s, GedcomVersion gedcomVersion) {
-        this.s = s
-        this.gedcomVersion = gedcomVersion
-
-        assert gedcomVersion.is70()
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         def matcher = s =~ /(E|W)(\d+(\.\d+)?)/
 

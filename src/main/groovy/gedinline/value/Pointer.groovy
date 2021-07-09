@@ -23,12 +23,17 @@ class Pointer extends Validator {
     boolean isVoid() {
         s == '@VOID@'
     }
+
     static boolean looksValid(String s) {
         String s1 = StringUtils.trimToEmpty(s);
         return !StringUtils.isBlank(s1) && s1.startsWith("@") && !s1.startsWith("@#");
     }
 
     boolean isValid() {
+        isValid(s, gedcomVersion)
+    }
+
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
         String regex = gedcomVersion.is70() ? "@[A-Z0-9_]+@" : "@[A-Za-z0-9][^@]*@";
 
         return s.matches(regex);

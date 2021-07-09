@@ -1,7 +1,9 @@
 package gedinline.value
 
-import gedinline.lexical.*
+
 import spock.lang.*
+
+import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class UuidSpec extends Specification {
@@ -10,7 +12,7 @@ class UuidSpec extends Specification {
 
         expect:
 
-            new Uuid(input, GedcomVersion.V_70).isValid() == expectedResult
+            new Uuid().isValid(input, V_70) == expectedResult
 
         where:
 

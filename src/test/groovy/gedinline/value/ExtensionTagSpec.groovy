@@ -11,7 +11,7 @@ class ExtensionTagSpec extends Specification {
 
         expect:
 
-            new ExtensionTag(input, V_70).isValid() == expectedResult
+            new ExtensionTag().isValid(input, V_70) == expectedResult
 
         where:
 

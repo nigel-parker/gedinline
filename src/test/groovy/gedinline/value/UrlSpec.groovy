@@ -11,7 +11,7 @@ class UrlSpec extends Specification {
 
         expect:
 
-            new Url(input, V_70).isValid() == expectedResult
+            new Url().isValid(input, V_70) == expectedResult
 
         where:
 

@@ -1,6 +1,7 @@
 package gedinline.value
 
 import gedinline.lexical.*
+import gedinline.main.*
 import groovy.transform.*
 
 @CompileStatic
@@ -9,12 +10,7 @@ class Uri extends Validator {
     Uri() {
     }
 
-    Uri(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         def scheme = /(?<scheme>\w+)/
         def host = /(?<host>[^\/]*)/
@@ -24,7 +20,6 @@ class Uri extends Validator {
         def fragment = /(?<fragment>.*)/
 
         def regex = "$scheme:(//$authority)?$path(\\?$query)?(#$fragment)?"
-//        println "%%% regex = ${regex}"
 
         def matcher = s =~ regex
 
@@ -33,15 +28,17 @@ class Uri extends Validator {
         }
 
         def result = [
-                scheme: matcher.group('scheme'),
-                host: matcher.group('host'),
+                scheme   : matcher.group('scheme'),
+                host     : matcher.group('host'),
                 authority: matcher.group('authority'),
-                path: matcher.group('path'),
-                query: matcher.group('query'),
-                fragment: matcher.group('fragment')
+                path     : matcher.group('path'),
+                query    : matcher.group('query'),
+                fragment : matcher.group('fragment')
         ]
 
-//        println "%%% result = ${result}"
+        if (Debug.active()) {
+            println "--- URI parse result = ${result}"
+        }
 
         true
     }

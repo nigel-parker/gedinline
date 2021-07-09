@@ -1,7 +1,9 @@
 package gedinline.value
 
-import gedinline.lexical.*
+
 import spock.lang.*
+
+import static gedinline.lexical.GedcomVersion.*
 
 @Unroll
 class LatitudeSpec extends Specification {
@@ -10,7 +12,7 @@ class LatitudeSpec extends Specification {
 
         expect:
 
-            new Latitude(input, GedcomVersion.V_70).isValid() == expectedResult
+            new Latitude().isValid(input, V_70) == expectedResult
 
         where:
 

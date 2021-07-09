@@ -178,27 +178,26 @@ public class ExpressionParser {
 
         } else {
 
-            String literal = syntaxExpression.getExpression();
-//            System.out.println("%%% literal = '" + literal + "'");
-            Validator validator = getValidator(literal);
-//            System.out.println("%%% validator 2 = " + validator);
+            String syntaxExpression = this.syntaxExpression.getExpression();
+            Validator validator = getValidator(syntaxExpression);
+            String result = validator == null ? "not found" : "located";
+
+            log("--- syntax expression '" + syntaxExpression + "': validator " + result);
 
             if (validator != null) {
-                validator.setGedcomVersion(gedcomVersion);
-                validator.setS(input);
 
-                if (validator.isValid()) {
-//                    System.out.println("%%% okResult()");
+                if (validator.isValid(input, gedcomVersion)) {
+                    log("--- okResult()");
                     return okResult(new StringResult(input), "");
                 } else {
-//                    System.out.println("%%% fail()");
+                    log("--- fail()");
                     return fail();
                 }
 
             } else {
 
-                if (input.toUpperCase().startsWith(literal.toUpperCase())) {
-                    return okResult(new StringResult(literal), input.substring(literal.length()));
+                if (input.toUpperCase().startsWith(syntaxExpression.toUpperCase())) {
+                    return okResult(new StringResult(syntaxExpression), input.substring(syntaxExpression.length()));
                 } else {
                     return fail();
                 }

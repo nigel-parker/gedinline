@@ -12,4 +12,8 @@ class Validator {
     boolean isValid() {
         false
     }
+
+    boolean isValid(String s, GedcomVersion gedcomVersion1) {
+        false
+    }
 }

@@ -11,14 +11,7 @@ class Language extends Validator {
     Language() {
     }
 
-    Language(String s, GedcomVersion gedcomVersion) {
-        this.s = s
-        this.gedcomVersion = gedcomVersion
-
-        assert gedcomVersion.is70()
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         init()
 

@@ -10,8 +10,8 @@ class AgeAtEventSpec extends Specification {
 
         expect:
 
-            new AgeAtEvent(input, GedcomVersion.V_555).isValid() == expectedResult
-            new AgeAtEvent(input, GedcomVersion.V_551).isValid() == expectedResult
+            new AgeAtEvent().isValid(input, GedcomVersion.V_555) == expectedResult
+            new AgeAtEvent().isValid(input, GedcomVersion.V_551) == expectedResult
 
         where:
 
@@ -37,8 +37,8 @@ class AgeAtEventSpec extends Specification {
 
         expect:
 
-            new AgeAtEvent(input, GedcomVersion.V_555).isValid() == expectedResult
-            new AgeAtEvent(input, GedcomVersion.V_551).isValid() == !expectedResult
+            new AgeAtEvent().isValid(input, GedcomVersion.V_555) == expectedResult
+            new AgeAtEvent().isValid(input, GedcomVersion.V_551) == !expectedResult
 
         where:
 

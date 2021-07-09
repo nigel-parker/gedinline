@@ -10,12 +10,7 @@ class Url extends Validator {
     Url() {
     }
 
-    Url(String s, GedcomVersion gedcomVersion) {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         def s2 = s.toLowerCase().startsWith('http') ? s : 'http://' + s
 

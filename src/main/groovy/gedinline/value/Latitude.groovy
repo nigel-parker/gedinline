@@ -9,14 +9,7 @@ class Latitude extends Validator {
     Latitude() {
     }
 
-    Latitude(String s, GedcomVersion gedcomVersion) {
-        this.s = s
-        this.gedcomVersion = gedcomVersion
-
-        assert gedcomVersion.is70()
-    }
-
-    boolean isValid() {
+    boolean isValid(String s, GedcomVersion gedcomVersion) {
 
         def matcher = s =~ /(N|S)(\d+(\.\d+)?)/
 
