@@ -5,7 +5,7 @@ import gedinline.lexical.InputLine;
 public class Debug {
 
     private static final int DEBUG_LINE_NUMBER = -1;
-//    private static final int DEBUG_LINE_NUMBER = 5;
+//    private static final int DEBUG_LINE_NUMBER = 56;
 
     public static boolean active(InputLine inputLine) {
         if (active()) {

@@ -23,9 +23,10 @@ class TestFileGenerator {
             case 17: return withBody('0 @R@ REPO\n1 WWW https://www.hotmail.com\n')
             case 18: return withBody('0 @O@ OBJE\n1 FILE media/original.mp3\n2 FORM audio/mp3\n')
             case 19: return withBody('0 @R@ REPO\n1 NAME N\n1 UID c73bcdcc-2669-4bf6-81d3-e4aa73fb11fd\n')
-            case 20: return withBody('0 @I@ INDI\n1 OCCU\n2 PLAC\n3 MAP\n4 LATI N82\n4 LONG E120\n')
+            case 20: return withBody('0 @I@ INDI\n1 OCCU X\n2 PLAC X\n3 MAP\n4 LATI N82\n4 LONG E120\n')
             case 21: return withHeaderBody('\n1 LANG no')
             case 22: return withBody('0 @R@ REPO\n1 NAME N\n1 EXID name\n2 TYPE http://xmlns.com\n')
+            case 23: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')
 
             case 101: return withBody('0 @I@ INDI\n1 NAME X\u0000X\n')
             case 102: return withBody('0 @I@ INDI\n1 NAME X\u001FX\n')
@@ -38,7 +39,6 @@ class TestFileGenerator {
             case 109: return withBody('0 @I@ INDI\n1 NAME X\tX\n')
 
             case 201: return withBody(new File('src/test/resources/gedcom-files/gordon-70.txt').text)
-            case 202: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')
         }
     }
 
