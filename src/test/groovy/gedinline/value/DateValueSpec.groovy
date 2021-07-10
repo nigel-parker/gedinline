@@ -1,16 +1,18 @@
 package gedinline.value
 
-import gedinline.lexical.*
+
 import spock.lang.*
+
+import static gedinline.lexical.GedcomVersion.*
 
 @SuppressWarnings("GroovyPointlessBoolean")
 class DateValueSpec extends Specification {
 
-    void 'test for valid GEDCOM 7.0.0 dates'() {
+    void 'test for valid GEDCOM 7.0 dates'() {
 
         expect:
 
-            new DateValue(input, GedcomVersion.V_70).isValid() == result
+            new DateValue(input, V_70).isValid() == result
 
         where:
 
@@ -124,7 +126,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input, GedcomVersion.V_555).isValid() == result
+            new DateValue(input, V_555).isValid() == result
 
         where:
 
@@ -219,7 +221,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input, GedcomVersion.V_551).isValid() == result
+            new DateValue(input, V_551).isValid() == result
 
         where:
 

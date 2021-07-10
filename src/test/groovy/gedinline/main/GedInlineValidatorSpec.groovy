@@ -57,6 +57,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             21      || 0                        | ''
             22      || 0                        | ''
             23      || 1                        | 'ADDR payload is required, see spec p. 37'
+            24      || 1                        | ''
 
             101     || 1                        | ''
             102     || 1                        | ''
@@ -117,8 +118,10 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                 || expectedWarningCount | expectedContent
 
+            'harvey.ged'             || 2                    | ''
             'multimedia-test.ged'    || 4                    | ''
             'olson-555.ged'          || 8                    | ''
+            'phon-x-3.ged'           || 0                    | ''
             'simple-555.ged'         || 1                    | ''
             'simple.ged'             || 3                    | ''
             'smith.ged'              || 27                   | ''
@@ -140,7 +143,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w16.ged'                || 0                    | ''
             'w550.ged'               || 1                    | ''
             'w551.ged'               || 0                    | ''
-            'phon-x-3.ged'           || 0                    | ''
     }
 
     void 'Issue #1 fixed'() {

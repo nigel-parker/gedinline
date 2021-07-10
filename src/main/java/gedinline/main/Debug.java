@@ -16,6 +16,7 @@ public class Debug {
     }
 
     public static boolean active() {
+//        return true;
         return false;
     }
 
