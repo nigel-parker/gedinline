@@ -15,7 +15,14 @@ class Language extends Validator {
 
         init()
 
-        s.toLowerCase() in languageCodes
+        def regex = /(?<languageCode>[a-zA-Z]{1,8})(-[a-zA-Z0-9]{1,8})*/
+        def matcher = s =~ regex
+
+        if (!matcher.matches()) {
+            return false
+        }
+
+        matcher.group('languageCode') in languageCodes
     }
 
     void init() {

@@ -60,6 +60,8 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             24      || 1                        | ''
             25      || 1                        | ''
             26      || 1                        | ''
+            27      || 0                        | ''
+            28      || 1                        | ''
 
             101     || 1                        | ''
             102     || 1                        | ''

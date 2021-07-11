@@ -18,9 +18,12 @@ class LanguageSpec extends Specification {
             input           | expectedResult
 
             'no'            | true
-            'NO'            | true
+            'en'            | true
+            'en-GB'         | true
 
             'nc'            | false
             'anything-else' | false
+
+            'i-navajo'      | false     // TBD: ???
     }
 }

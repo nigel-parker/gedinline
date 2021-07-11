@@ -30,6 +30,8 @@ class TestFileGenerator {
             case 24: return withHeaderBody('\n1 DATE 06 JAN 2017')
             case 25: return withBody('0 @I@ INDI\n1 NO BAPM\n2 DATE TO 06 DEC 2002\n')
             case 26: return withHeaderBody('\n1 DATE 6 JAN 2017\n2 TIME 13:63')
+            case 27: return withBody('0 @I@ INDI\n1 NAME /孔/德庸\n2 GIVN 德庸\n2 SURN 孔\n2 TRAN /Kǒng/ Déyōng\n3 GIVN Déyōng\n3 SURN Kǒng\n3 LANG zh-pinyin\n')
+            case 28: return withBody('0 @S1@ SOUR\n1 DATA\n2 EVEN BIRT\n3 PLAC 千代田, 東京, 日本\n4 FORM 区, 都, 国\n4 LANG ja\n4 TRAN Chiyoda, Tokyo, Nihon\n5 LANG ja-Latn\n4 TRAN Chiyoda, Tokyo, Japan\n5 LANG xx\n')
 
             case 101: return withBody('0 @I@ INDI\n1 NAME X\u0000X\n')
             case 102: return withBody('0 @I@ INDI\n1 NAME X\u001FX\n')
