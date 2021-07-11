@@ -378,7 +378,7 @@ g7:TEXT :=
 NonEmptyString
 
 g7:TIME :=
-NonEmptyString
+Time
 
 g7:TITL :=
 NonEmptyString

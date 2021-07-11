@@ -104,13 +104,6 @@ public class ExpressionParser {
                 return fail();
             }
 
-        } else if (syntaxExpression.isTimeValue()) {
-            if (new TimeValue(input).isValid()) {
-                return okResult(new StringResult(input), "");
-            } else {
-                return fail();
-            }
-
         } else if (syntaxExpression.isPersonalName()) {
             if (new PersonalName(input, gedcomVersion).isValid()) {
                 return okResult(new StringResult(input), "");
@@ -209,7 +202,7 @@ public class ExpressionParser {
         try {
             String className = "gedinline.value." + name;
 
-            log("%%% className = " + className);
+            log("--- validator className = " + className);
 
             return ((Validator) Class.forName(className).newInstance());
         } catch (Exception e) {
