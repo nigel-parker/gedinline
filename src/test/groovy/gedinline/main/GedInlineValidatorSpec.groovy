@@ -36,7 +36,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             1       || 0                        | ''
             2       || 0                        | ''
-            3       || 13                       | 'Valid 5.5 file treated as 7.0'
+            3       || 27                       | 'Valid 5.5 file treated as 7.0'
             4       || 1                        | ''
             5       || 0                        | ''
             6       || 0                        | ''

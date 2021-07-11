@@ -81,7 +81,7 @@ g7:DATE-exact :=
 DateExact
 
 g7:DATE :=
-NonEmptyString
+DateValue
 
 g7:DEAT :=
 [Y|Null]
