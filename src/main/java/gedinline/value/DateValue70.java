@@ -69,7 +69,7 @@ public class DateValue70 {
         return isValidDate(s);
     }
 
-    private boolean isValidDate(String s1) {
+    static boolean isValidDate(String s1) {
 
         if (s1.startsWith(CAL_FRENCH)) {
             return isValidFrenchDate(StringUtils.substringAfter(s1, CAL_FRENCH));
@@ -88,7 +88,7 @@ public class DateValue70 {
         }
     }
 
-    private boolean isValidGregorianDate(String s1) {
+    private static boolean isValidGregorianDate(String s1) {
 
         Matcher matcher = JULIAN_PATTERN.matcher(s1);
         boolean valid = matcher.find();
@@ -123,19 +123,19 @@ public class DateValue70 {
         return b;
     }
 
-    private boolean isValidJulianDate(String s1) {
+    private static boolean isValidJulianDate(String s1) {
         return JULIAN_PATTERN.matcher(s1).find();
     }
 
-    private boolean isValidFrenchDate(String s1) {
+    private static boolean isValidFrenchDate(String s1) {
         return s1.matches("(((1|2|3)?\\d )?(VEND|BRUM|FRIM|NIVO|PLUV|VENT|GERM|FLOR|PRAI|MESS|THER|FRUC|COMP) )?" + YEARS);
     }
 
-    private boolean isValidHebrewDate(String s1) {
+    private static boolean isValidHebrewDate(String s1) {
         return s1.matches("(((1|2|3)?\\d )?(TSH|CSH|KSL|TVT|SHV|ADR|ADS|NSN|IYR|SVN|TMZ|AAV|ELL) )?" + YEARS);
     }
 
-    private boolean checkValidDate(String s, DateTimeFormatter formatter) {
+    private static boolean checkValidDate(String s, DateTimeFormatter formatter) {
         try {
 
             formatter.parseDateTime(s);

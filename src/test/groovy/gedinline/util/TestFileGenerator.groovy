@@ -28,6 +28,7 @@ class TestFileGenerator {
             case 22: return withBody('0 @R@ REPO\n1 NAME N\n1 EXID name\n2 TYPE http://xmlns.com\n')
             case 23: return withBody('0 @A@ REPO\n1 NAME test\n1 ADDR\n')
             case 24: return withHeaderBody('\n1 DATE 06 JAN 2017')
+            case 25: return withBody('0 @I@ INDI\n1 NO BAPM\n2 DATE TO 06 DEC 2002\n')
 
             case 101: return withBody('0 @I@ INDI\n1 NAME X\u0000X\n')
             case 102: return withBody('0 @I@ INDI\n1 NAME X\u001FX\n')

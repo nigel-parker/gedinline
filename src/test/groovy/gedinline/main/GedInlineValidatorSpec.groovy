@@ -58,6 +58,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             22      || 0                        | ''
             23      || 1                        | 'ADDR payload is required, see spec p. 37'
             24      || 1                        | ''
+            25      || 1                        | ''
 
             101     || 1                        | ''
             102     || 1                        | ''
