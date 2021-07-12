@@ -83,7 +83,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -261,7 +261,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -439,7 +439,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -617,7 +617,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -795,7 +795,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -973,7 +973,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -1151,7 +1151,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -1329,7 +1329,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -1507,7 +1507,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -1685,7 +1685,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -1863,7 +1863,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -2041,7 +2041,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -2219,7 +2219,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -2397,7 +2397,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -2681,7 +2681,7 @@ FAM                                                                   MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -2942,7 +2942,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -3116,7 +3116,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -3290,7 +3290,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -3464,7 +3464,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -3638,7 +3638,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -3812,7 +3812,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -3986,7 +3986,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -4160,7 +4160,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -4334,7 +4334,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -4508,7 +4508,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -4682,7 +4682,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -4856,7 +4856,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -5030,7 +5030,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -5204,7 +5204,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -5378,7 +5378,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -5552,7 +5552,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -5726,7 +5726,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -5900,7 +5900,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -6074,7 +6074,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -6248,7 +6248,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -6422,7 +6422,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -6596,7 +6596,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -6770,7 +6770,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -6944,7 +6944,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -7118,7 +7118,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -7292,7 +7292,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -7466,7 +7466,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -7640,7 +7640,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -7814,7 +7814,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -7988,7 +7988,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -8162,7 +8162,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -8336,7 +8336,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -8510,7 +8510,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -8684,7 +8684,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -8861,7 +8861,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9036,7 +9036,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9211,7 +9211,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9437,7 +9437,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9532,7 +9532,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9627,7 +9627,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9722,7 +9722,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -9817,7 +9817,7 @@ INDI                                                                  MULTIPLE
                     LATI               g7:LATI                        MANDATORY
                     LONG               g7:LONG                        MANDATORY
                EXID                    g7:EXID                        MULTIPLE
-                    TYPE               g7:TYPE                        
+                    TYPE               g7:EXID-TYPE                   
                NOTE                    g7:NOTE                        MULTIPLE
                     MIME               g7:MIME                        
                     LANG               g7:LANG                        
@@ -10380,7 +10380,7 @@ SOUR                                                                  MULTIPLE
                          LATI          g7:LATI                        MANDATORY
                          LONG          g7:LONG                        MANDATORY
                     EXID               g7:EXID                        MULTIPLE
-                         TYPE          g7:TYPE                        
+                         TYPE          g7:EXID-TYPE                   
                     NOTE               g7:NOTE                        MULTIPLE
                          MIME          g7:MIME                        
                          LANG          g7:LANG                        
