@@ -5,6 +5,15 @@ NonEmptyString
 g7:ADDR :=
 NonEmptyString
 
+g7:ADR1 :=
+NonEmptyString
+
+g7:ADR2 :=
+NonEmptyString
+
+g7:ADR3 :=
+NonEmptyString
+
 g7:ADOP :=
 [Y|Null]
 

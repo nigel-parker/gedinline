@@ -558,7 +558,7 @@ PLAC <g7:PLAC> {1:1}
 +2 LATI <g7:LATI> {1:1}
 +2 LONG <g7:LONG> {1:1}
 +1 EXID <g7:EXID> {0:M}
-+2 TYPE <g7:TYPE> {0:1}
++2 TYPE <g7:EXID-TYPE> {0:1}
 +1 <<NOTE_STRUCTURE>> {0:M}
 
 
