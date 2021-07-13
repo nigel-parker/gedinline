@@ -172,7 +172,7 @@ public class ExpressionParser {
         } else {
 
             String syntaxExpression = this.syntaxExpression.getExpression();
-            Validator validator = getValidator(syntaxExpression);
+            Validator validator = Validator.of(syntaxExpression);
             String result = validator == null ? "not found" : "located";
 
             log("--- syntax expression '" + syntaxExpression + "': validator " + result);
@@ -195,18 +195,6 @@ public class ExpressionParser {
                     return fail();
                 }
             }
-        }
-    }
-
-    private Validator getValidator(String name) {
-        try {
-            String className = "gedinline.value." + name;
-
-            log("--- validator className = " + className);
-
-            return ((Validator) Class.forName(className).newInstance());
-        } catch (Exception e) {
-            return null;
         }
     }
 
