@@ -1,5 +1,6 @@
 package gedinline.lexical
 
+import com.google.common.collect.*
 import gedinline.main.*
 import gedinline.value.*
 import groovy.transform.*
@@ -30,6 +31,6 @@ class XrefCollector {
     }
 
     Set<Pointer> getUnsatisfiedPointers() {
-        pointers - labels
+        Sets.difference(pointers, labels)
     }
 }

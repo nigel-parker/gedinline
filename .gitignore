@@ -2,3 +2,4 @@ build/*
 .gradle
 .idea
 nigel.txt
+report.txt
