@@ -23,6 +23,7 @@ class DatePeriodSpec extends Specification {
             'FROM 6 DEC 2002 TO 6 DEC 2002'         || true
             'FROM JULIAN 6 DEC 2 BCE TO 6 DEC 2002' || true
 
+            'FROM Sep 1953'                         || false // Only upper case months allowed
             '6 DEC 2002'                            || false
             'FROM 06 DEC 2002'                      || false
             'TO 06 DEC 2002'                        || false
