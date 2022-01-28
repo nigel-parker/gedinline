@@ -1,6 +1,5 @@
 package gedinline.value
 
-
 import spock.lang.*
 
 import static gedinline.lexical.GedcomVersion.*
@@ -12,7 +11,7 @@ class DatePeriodSpec extends Specification {
 
         expect:
 
-            new DatePeriod().isValid(input, V_70) == expectedResult
+            new DatePeriod().validate(input, V_70).isValid() == expectedResult
 
         where:
 
@@ -23,7 +22,7 @@ class DatePeriodSpec extends Specification {
             'FROM 6 DEC 2002 TO 6 DEC 2002'         || true
             'FROM JULIAN 6 DEC 2 BCE TO 6 DEC 2002' || true
 
-            'FROM Sep 1953'                         || false // Only upper case months allowed
+            'FROM Sep 1953'                         || false
             '6 DEC 2002'                            || false
             'FROM 06 DEC 2002'                      || false
             'TO 06 DEC 2002'                        || false

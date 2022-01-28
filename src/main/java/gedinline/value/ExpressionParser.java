@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class ExpressionParser {
 
+    public final static String REPLACE_WITH = "Replace with:";
+
     private SyntaxElement syntaxElement;
     private SyntaxExpression syntaxExpression;
     private String input;
@@ -98,7 +100,11 @@ public class ExpressionParser {
             // Note that for speed this code overrides most of the date parsing specification in the value-grammar.
             // DATE_EXACT and DATE_PERIOD are still parsed the old way.
 
-            if (new DateValue(input, gedcomVersion).isValid()) {
+            ValidationResult vr = new DateValue(input, gedcomVersion).validate();
+
+            if (vr.hasMessage()) {
+                return fail(vr.getMessage());
+            } else if (vr.isValid()) {
                 return okResult(new StringResult(input), "");
             } else {
                 return fail();
@@ -178,8 +184,11 @@ public class ExpressionParser {
             log("--- syntax expression '" + syntaxExpression + "': validator " + result);
 
             if (validator != null) {
+                ValidationResult vr = validator.validate(input, gedcomVersion);
 
-                if (validator.isValid(input, gedcomVersion)) {
+                if (vr.hasMessage()) {
+                    return fail(vr.getMessage());
+                } else if (vr.isValid()) {
                     log("--- okResult()");
                     return okResult(new StringResult(input), "");
                 } else {

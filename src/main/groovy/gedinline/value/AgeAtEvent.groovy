@@ -4,7 +4,7 @@ import gedinline.lexical.*
 import groovy.transform.*
 
 @CompileStatic
-class AgeAtEvent extends Validator{
+class AgeAtEvent extends Validator {
 
     AgeAtEvent() {
     }
@@ -20,7 +20,7 @@ class AgeAtEvent extends Validator{
                 "\\d{1,2}M \\d{1,3}D|" +
                 "CHILD|" +
                 "INFANT|" +
-                "STILLBORN)";
+                "STILLBORN)"
 
         String regex555 = "(< |> |)" +
                 "(\\d{1,3}Y \\d{1,2}M \\d{1,3}D|" +
@@ -32,9 +32,9 @@ class AgeAtEvent extends Validator{
                 "\\d{1,3}M \\d{1,3}D|" +
                 "CHILD|" +
                 "INFANT|" +
-                "STILLBORN)";
+                "STILLBORN)"
 
-        String regex = gedcomVersion.is555() ? regex555 : regex551;
+        String regex = gedcomVersion.is555() ? regex555 : regex551
         s.toUpperCase().matches(regex);
     }
 }

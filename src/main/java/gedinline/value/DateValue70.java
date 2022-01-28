@@ -11,8 +11,12 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static gedinline.value.ExpressionParser.REPLACE_WITH;
+
 @SuppressWarnings("Duplicates")
 public class DateValue70 {
+
+    public static final String MONTH_VALUES_UPPER = REPLACE_WITH + "Month values must be upper case";
 
     private static final String FROM = "FROM ";
     private static final String TO = " TO ";
@@ -46,16 +50,20 @@ public class DateValue70 {
         this.s = s.trim();
     }
 
-    public boolean isValid() {
+    public ValidationResult isValid() {
 
         if (s.startsWith(FROM) && s.contains(TO)) {
-            return isValidDate(StringUtils.substringBetween(s, FROM, TO)) &&
-                    isValidDate(StringUtils.substringAfter(s, TO));
+            ValidationResult fromTo = isValidDate(StringUtils.substringBetween(s, FROM, TO));
+            ValidationResult to = isValidDate(StringUtils.substringAfter(s, TO));
+
+            return ValidationResult.combine(fromTo, to);
         }
 
         if (s.startsWith(BET) && s.contains(AND)) {
-            return isValidDate(StringUtils.substringBetween(s, BET, AND)) &&
-                    isValidDate(StringUtils.substringAfter(s, AND));
+            ValidationResult betAnd = isValidDate(StringUtils.substringBetween(s, BET, AND));
+            ValidationResult and = isValidDate(StringUtils.substringAfter(s, AND));
+
+            return ValidationResult.combine(betAnd, and);
         }
 
         for (String prefix : PREFIXES) {
@@ -69,7 +77,20 @@ public class DateValue70 {
         return isValidDate(s);
     }
 
-    static boolean isValidDate(String s1) {
+    static ValidationResult isValidDate(String s) {
+        boolean sValid = isValidDateInternal(s);
+        boolean sToUpperCaseValid = isValidDateInternal(s.toUpperCase());
+
+        if (sValid) {
+            return ValidationResult.TRUE;
+        } else if (sToUpperCaseValid) {
+            return ValidationResult.of(MONTH_VALUES_UPPER);
+        } else {
+            return ValidationResult.FALSE;
+        }
+    }
+
+    static boolean isValidDateInternal(String s1) {
 
         if (s1.startsWith(CAL_FRENCH)) {
             return isValidFrenchDate(StringUtils.substringAfter(s1, CAL_FRENCH));

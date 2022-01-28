@@ -1,18 +1,20 @@
 package gedinline.value
 
-
 import spock.lang.*
 
 import static gedinline.lexical.GedcomVersion.*
+import static gedinline.value.ExpressionParser.*
 
 @SuppressWarnings("GroovyPointlessBoolean")
 class DateValueSpec extends Specification {
+
+    static def UPPER_CASE_MONTHS = REPLACE_WITH + 'Month values must be upper case'
 
     void 'test for valid GEDCOM 7.0 dates'() {
 
         expect:
 
-            new DateValue(input, V_70).isValid() == result
+            new DateValue(input, V_70).validate().isValid() == result
 
         where:
 
@@ -56,16 +58,12 @@ class DateValueSpec extends Specification {
             'BET HEBREW 3 SVN 1972 AND JULIAN 3 DEC 1972'     || true
 
             ' 3 JAN 1972 '                                    || true
-            'BET 9 AND 12 JAN 1972'                           || true // Strange but 9 is now taken as year 9
+            'BET 9 AND 12 JAN 1972'                           || true // Strange but 9 is now taken as year 9 AD
 
             '24 MAR 1692/93'                                  || false
             'MAR 1692/93'                                     || false
             'JULIAN MAR 1692/93'                              || false
-
-
-            '3 jan 1972 '                                     || false
             ' (03 jan 1972) '                                 || false
-            '3 Jan 1972'                                      || false
             '3 January 1972'                                  || false
 
             '24 MAR 1924/25'                                  || false
@@ -122,11 +120,32 @@ class DateValueSpec extends Specification {
             '()'                                              || false
     }
 
+    void 'test for error message overriding'() {
+
+        expect:
+
+            def validationResult = new DateValue(input, V_70).validate()
+
+            validationResult.isValid() == isValid
+            validationResult.getMessage() == message
+
+        where:
+
+            input                       || isValid | message
+
+            '3 Jan 1972'                || false   | UPPER_CASE_MONTHS
+            'FROM jan 1972 TO jan 1972' || false   | UPPER_CASE_MONTHS
+            'FROM jan 1972 TO JAN 1972' || false   | UPPER_CASE_MONTHS
+            'FROM JAN 1972 TO jan 1972' || false   | UPPER_CASE_MONTHS
+            'GREGORIAN 3 Jan 1972'      || false   | UPPER_CASE_MONTHS
+
+    }
+
     void 'test for valid GEDCOM 5.5.5 dates'() {
 
         expect:
 
-            new DateValue(input, V_555).isValid() == result
+            new DateValue(input, V_555).validate().isValid() == result
 
         where:
 
@@ -221,7 +240,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input, V_551).isValid() == result
+            new DateValue(input, V_551).validate().isValid() == result
 
         where:
 
@@ -303,7 +322,7 @@ class DateValueSpec extends Specification {
 
         expect:
 
-            new DateValue(input).isValid() == result
+            new DateValue(input).validate().isValid() == result
 
         where:
 

@@ -12,12 +12,12 @@ class Pointer extends Validator {
     }
 
     Pointer(String s, GedcomVersion gedcomVersion) throws GedcomException {
-        this.s = s;
-        this.gedcomVersion = gedcomVersion;
+        this.s = s
+        this.gedcomVersion = gedcomVersion
     }
 
     String getPointer() {
-        return s;
+        s
     }
 
     boolean isVoid() {
@@ -25,8 +25,8 @@ class Pointer extends Validator {
     }
 
     static boolean looksValid(String s) {
-        String s1 = StringUtils.trimToEmpty(s);
-        return !StringUtils.isBlank(s1) && s1.startsWith("@") && !s1.startsWith("@#");
+        def s1 = StringUtils.trimToEmpty(s)
+        !StringUtils.isBlank(s1) && s1.startsWith("@") && !s1.startsWith("@#")
     }
 
     boolean isValid() {
@@ -34,12 +34,12 @@ class Pointer extends Validator {
     }
 
     boolean isValid(String s, GedcomVersion gedcomVersion) {
-        String regex = gedcomVersion.is70() ? "@[A-Z0-9_]+@" : "@[A-Za-z0-9][^@]*@";
+        String regex = gedcomVersion.is70() ? "@[A-Z0-9_]+@" : "@[A-Za-z0-9][^@]*@"
 
-        return s.matches(regex);
+        s.matches(regex)
     }
 
     String toString() {
-        return s;
+        s
     }
 }

@@ -11,6 +11,8 @@ import java.util.Locale;
 
 import static gedinline.lexical.GedcomVersion.V_55;
 import static gedinline.lexical.GedcomVersion.V_551;
+import static gedinline.value.ValidationResult.TRUE;
+import static gedinline.value.ValidationResult.of;
 
 /**
  * User: nigel
@@ -55,42 +57,42 @@ public class DateValue {
         this.gedcomVersion = gedcomVersion;
     }
 
-    public boolean isValid() {
+    public ValidationResult validate() {
 
         if (gedcomVersion.is555()) {
-            return new DateValue555(s).isValid();
+            return of(new DateValue555(s).isValid());
         } else if (gedcomVersion.is70()) {
             return new DateValue70(originalString).isValid();
         }
 
         if (isValidDatePhrase(s)) {
-            return true;
+            return TRUE;
         }
 
         if (s.startsWith(FROM) && s.contains(TO)) {
-            return isValidDate(StringUtils.substringBetween(s, FROM, TO)) &&
-                    isValidDate(StringUtils.substringAfter(s, TO));
+            return of(isValidDate(StringUtils.substringBetween(s, FROM, TO)) &&
+                    isValidDate(StringUtils.substringAfter(s, TO)));
         }
 
         if (s.startsWith(BET) && s.contains(AND)) {
-            return isValidDate(StringUtils.substringBetween(s, BET, AND)) &&
-                    isValidDate(StringUtils.substringAfter(s, AND));
+            return of(isValidDate(StringUtils.substringBetween(s, BET, AND)) &&
+                    isValidDate(StringUtils.substringAfter(s, AND)));
         }
 
         if (s.startsWith(INT) && s.contains(SPACE_OPEN_BRACKET)) {
-            return isValidDate(StringUtils.substringBetween(s, INT, SPACE_OPEN_BRACKET)) &&
-                    isValidDatePhrase(OPEN_BRACKET + StringUtils.substringAfter(s, SPACE_OPEN_BRACKET));
+            return of(isValidDate(StringUtils.substringBetween(s, INT, SPACE_OPEN_BRACKET)) &&
+                    isValidDatePhrase(OPEN_BRACKET + StringUtils.substringAfter(s, SPACE_OPEN_BRACKET)));
         }
 
         for (String prefix : ImmutableList.of("ABT", "AFT", "BEF", "CAL", "EST", "FROM", "TO")) {
             String prefix1 = prefix + " ";
 
             if (s.startsWith(prefix1)) {
-                return isValidDate(s.substring(prefix1.length()));
+                return of(isValidDate(s.substring(prefix1.length())));
             }
         }
 
-        return isValidDate(s);
+        return of(isValidDate(s));
     }
 
     private boolean isValidDatePhrase(String s1) {
@@ -106,7 +108,6 @@ public class DateValue {
                 calendar = Calendar.FRENCH;
                 s1 = StringUtils.substringAfter(s1, ESCAPE_F);
             } else if (s1.startsWith(ESCAPE_G)) {
-                calendar = Calendar.GREGORIAN;
                 s1 = StringUtils.substringAfter(s1, ESCAPE_G);
             } else if (s1.startsWith(ESCAPE_H)) {
                 calendar = Calendar.HEBREW;

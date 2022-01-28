@@ -18,6 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import static gedinline.value.ExpressionParser.REPLACE_WITH;
+
 
 public class GedInlineValidator {
 
@@ -179,7 +181,7 @@ public class GedInlineValidator {
         if (Debug.active(inputLine1)) {
             System.out.println("");
             System.out.println("--- validating inputLine " + inputLine1 + " and " + inputRecord1.getInputRecords().size() + " subsidiaries");
-            System.out.println("--- vha tagTree \n" + StringUtils.abbreviate(tagTree1.toString(),100));
+            System.out.println("--- vha tagTree \n" + StringUtils.abbreviate(tagTree1.toString(), 100));
             System.out.println("");
         }
 
@@ -323,7 +325,16 @@ public class GedInlineValidator {
                     detail = "is not a valid";
                 }
 
-                warningCollector.warning(inputLine, "Invalid content for " + inputLineTag + " tag: '" + value + "' " + detail + " <" + syntaxTreeNode.getSyntaxElementIdStem() + ">");
+                final String message;
+
+                if (detail.startsWith(REPLACE_WITH)) {
+                    message = StringUtils.substringAfter(detail, REPLACE_WITH);
+                } else {
+                    message = "'" + value + "' " + detail + " <" + syntaxTreeNode.getSyntaxElementIdStem() + ">";
+                }
+
+                String prefix = "Invalid content for " + inputLineTag + " tag: ";
+                warningCollector.warning(inputLine, prefix + message);
             }
         }
     }

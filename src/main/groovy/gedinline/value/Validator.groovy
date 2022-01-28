@@ -18,6 +18,10 @@ class Validator {
         false
     }
 
+    ValidationResult validate(String s, GedcomVersion gedcomVersion1) {
+        ValidationResult.of(isValid(s, gedcomVersion1))
+    }
+
     private static Map<String, Validator> validators = [:]
 
     static Validator of(String shortName) {

@@ -5,13 +5,18 @@ import groovy.transform.*
 
 import java.util.regex.*
 
+import static gedinline.lexical.GedcomVersion.*
+import static gedinline.value.ValidationResult.*
+
 @CompileStatic
 class DatePeriod extends Validator {
 
     DatePeriod() {
     }
 
-    boolean isValid(String s, GedcomVersion gedcomVersion) {
+    ValidationResult validate(String s, GedcomVersion gedcomVersion) {
+
+        assert gedcomVersion == V_70
 
         def dateFrom1 = /(?<dateFrom1>.*)/
         def dateFrom2 = /(?<dateFrom2>.*)/
@@ -27,7 +32,7 @@ class DatePeriod extends Validator {
         def matcher = s =~ regex
 
         if (!matcher.matches()) {
-            return false
+            return FALSE
         }
 
         try {
@@ -37,9 +42,9 @@ class DatePeriod extends Validator {
             check(matcher, 'dateTo1')
             check(matcher, 'dateTo2')
 
-            true
-        } catch (Exception e) {
-            false
+            TRUE
+        } catch (DateValidationFailure dvf) {
+            dvf.validationResult
         }
     }
 
@@ -47,8 +52,20 @@ class DatePeriod extends Validator {
 
         def group = matcher.group(date)
 
-        if (group != null && !DateValue70.isValidDate(group)) {
-            throw new RuntimeException()
+        if (group != null) {
+            def result = DateValue70.isValidDate(group)
+
+            if (!result.isValid()) {
+                throw new DateValidationFailure(result)
+            }
+        }
+    }
+
+    private class DateValidationFailure extends RuntimeException {
+        ValidationResult validationResult
+
+        DateValidationFailure(ValidationResult validationResult) {
+            this.validationResult = validationResult
         }
     }
 }

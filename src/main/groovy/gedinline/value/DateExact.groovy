@@ -4,13 +4,32 @@ import gedinline.lexical.*
 import gedinline.main.*
 import groovy.transform.*
 
+import static gedinline.lexical.GedcomVersion.*
+import static gedinline.value.DateValue70.*
+import static gedinline.value.ValidationResult.*
+
 @CompileStatic
 class DateExact extends Validator {
 
     DateExact() {
     }
 
+    ValidationResult validate(String s, GedcomVersion gedcomVersion) {
+        def vr1 = isValid(s, gedcomVersion)
+        def vr2 = isValid(s.toUpperCase(), gedcomVersion)
+
+        if (vr1) {
+            TRUE
+        } else if (vr2) {
+            ValidationResult.of(MONTH_VALUES_UPPER);
+        } else {
+            FALSE
+        }
+    }
+
     boolean isValid(String s, GedcomVersion gedcomVersion) {
+
+        assert gedcomVersion == V_70
 
         def integer = /[1-9][0-9]*/
         def day = "(?<day>$integer)"
