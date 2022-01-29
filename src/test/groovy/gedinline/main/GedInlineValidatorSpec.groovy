@@ -104,8 +104,8 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'abc\n1 CONT xyz' || true           | ''
             'abc\n1 CONT'     || true           | 'Empty continuation 1'
             'abc\n1 CONT '    || true           | 'Empty continuation 2'
+            ''                || true           | 'Empty SNOTES are allowed'
 
-            ''                || false          | 'I assume that empty SNOTES are not allowed'
             'abc\n1 CONC xyz' || false          | 'CONC invalid for 7.0'
 
             '@@me'            || false          | 'TBD: Should be true'
@@ -144,7 +144,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w14.ged'                || 2                    | "*** Line 13:      Invalid GEDCOM line '10'"
             'w15.ged'                || 7                    | "*** Line 12:      Invalid GEDCOM line '10'"
             'w16.ged'                || 0                    | ''
-            'w17.ged'                || 2                    | 'Month values must be upper case'
+            'w17.ged'                || 1                    | 'Month values must be upper case'
             'w550.ged'               || 1                    | ''
             'w551.ged'               || 0                    | ''
     }

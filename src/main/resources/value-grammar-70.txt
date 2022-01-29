@@ -1,6 +1,6 @@
 
 g7:ABBR :=
-NonEmptyString
+Text
 
 g7:ADDR :=
 NonEmptyString
@@ -21,13 +21,13 @@ g7:AGE :=
 NonEmptyString
 
 g7:AGNC :=
-NonEmptyString
+Text
 
 g7:ANUL :=
 [Y|Null]
 
 g7:AUTH :=
-NonEmptyString
+Text
 
 g7:BAPM :=
 [Y|Null]
@@ -51,10 +51,10 @@ g7:CALN :=
 NonEmptyString
 
 g7:CAST :=
-NonEmptyString
+Text
 
 g7:CAUS :=
-NonEmptyString
+Text
 
 g7:CHR :=
 [Y|Null]
@@ -69,10 +69,10 @@ g7:CONF :=
 [Y|Null]
 
 g7:COPR :=
-NonEmptyString
+Text
 
 g7:CORP :=
-NonEmptyString
+Text
 
 g7:CREM :=
 [Y|Null]
@@ -105,10 +105,10 @@ g7:DIVF :=
 [Y|Null]
 
 g7:DSCR :=
-NonEmptyString
+Text
 
 g7:EDUC :=
-NonEmptyString
+Text
 
 g7:EMAIL :=
 Email
@@ -129,16 +129,16 @@ g7:FAM-CENS :=
 [Y|Null]
 
 g7:FAM-EVEN :=
-NonEmptyString
+Text
 
 g7:FAM-FACT :=
-NonEmptyString
+Text
 
 g7:FAM-NCHI :=
 Decimal
 
 g7:FAM-RESI :=
-NonEmptyString
+Text
 
 g7:FAMC-ADOP :=
 [HUSB|WIFE|BOTH]
@@ -165,7 +165,7 @@ g7:GEDC-VERS :=
 SemanticVersionNumber
 
 g7:GIVN :=
-NonEmptyString
+Text
 
 g7:GRAD :=
 [Y|Null]
@@ -180,7 +180,7 @@ g7:HEAD-PLAC-FORM :=
 list:NonEmptyString
 
 g7:HEAD-SOUR-DATA :=
-NonEmptyString
+Text
 
 g7:HEAD-SOUR :=
 NonEmptyString
@@ -198,10 +198,10 @@ g7:INDI-CENS :=
 [Y|Null]
 
 g7:INDI-EVEN :=
-NonEmptyString
+Text
 
 g7:INDI-FACT :=
-NonEmptyString
+Text
 
 g7:INDI-NAME :=
 PersonalName
@@ -210,13 +210,13 @@ g7:INDI-NCHI :=
 Decimal
 
 g7:INDI-RELI :=
-NonEmptyString
+Text
 
 g7:INDI-RESI :=
-NonEmptyString
+Text
 
 g7:INDI-TITL :=
-NonEmptyString
+Text
 
 g7:LANG :=
 Language
@@ -258,16 +258,16 @@ g7:NAME-TYPE :=
 [AKA|BIRTH|IMMIGRANT|MAIDEN|MARRIED|PROFESSIONAL|OTHER]
 
 g7:NAME :=
-NonEmptyString
+Text
 
 g7:NATI :=
-NonEmptyString
+Text
 
 g7:NATU :=
 [Y|Null]
 
 g7:NICK :=
-NonEmptyString
+Text
 
 g7:NMR :=
 Decimal
@@ -279,19 +279,19 @@ g7:NO :=
 [ADOP|BAPM|BARM|BASM|BIRT|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORD|PROB|RETI|WILL|ANUL|CENS|DIV|DIVF|ENGA|MARB|MARC|MARL|MARS|MARR]
 
 g7:NOTE-TRAN :=
-NonEmptyString
+Text
 
 g7:NOTE :=
-NonEmptyString
+Text
 
 g7:NPFX :=
-NonEmptyString
+Text
 
 g7:NSFX :=
-NonEmptyString
+Text
 
 g7:OCCU :=
-NonEmptyString
+Text
 
 g7:ord-STAT :=
 [BIC|CANCELED|CHILD|COMPLETED|EXCLUDED|DNS|DNS_CAN|INFANT|PRE_1970|STILLBORN|SUBMITTED|UNCLEARED]
@@ -300,7 +300,7 @@ g7:ORDN :=
 [Y|Null]
 
 g7:PAGE :=
-NonEmptyString
+Text
 
 g7:PEDI :=
 [ADOPTED|BIRTH|FOSTER|SEALING|OTHER]
@@ -309,7 +309,7 @@ g7:PHON :=
 NonEmptyString
 
 g7:PHRASE :=
-NonEmptyString
+Text
 
 g7:PLAC-FORM :=
 list:NonEmptyString
@@ -327,22 +327,22 @@ g7:PROB :=
 [Y|Null]
 
 g7:PROP :=
-NonEmptyString
+Text
 
 g7:PUBL :=
-NonEmptyString
+Text
 
 g7:QUAY :=
 [0|1|2|3]
 
 g7:record-SNOTE :=
-NonEmptyString
+Text
 
 g7:REFN :=
 NonEmptyString
 
 g7:RELI :=
-NonEmptyString
+Text
 
 g7:RESN :=
 list:[CONFIDENTIAL|LOCKED|PRIVACY]
@@ -363,7 +363,7 @@ g7:SOUR-EVEN :=
 [ADOP|BAPM|BARM|BASM|BIRT|BLES|BURI|CENS|CHR|CHRA|CONF|CREM|DEAT|EMIG|FCOM|GRAD|IMMI|NATU|ORD|PROB|RETI|WILL|ANUL|CENS|DIV|DIVF|ENGA|MARB|MARC|MARL|MARS|MARR]
 
 g7:SPFX :=
-NonEmptyString
+Text
 
 g7:SSN :=
 NonEmptyString
@@ -375,28 +375,28 @@ g7:SUBM-LANG :=
 Language
 
 g7:SURN :=
-NonEmptyString
+Text
 
 g7:TAG :=
 ExtensionTag
 
 g7:TEMP :=
-NonEmptyString
+Text
 
 g7:TEXT :=
-NonEmptyString
+Text
 
 g7:TIME :=
 Time
 
 g7:TITL :=
-NonEmptyString
+Text
 
 g7:TOP :=
 Decimal
 
 g7:TYPE :=
-NonEmptyString
+Text
 
 g7:UID :=
 Uuid

@@ -47,6 +47,7 @@ class Validator {
             'NonEmptyString',
             'Pointer',
             'SemanticVersionNumber',
+            'Text',
             'Time',
             'Uri',
             'Url',
