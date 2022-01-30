@@ -48,6 +48,29 @@ task fatJar(type: Jar) {
 group = 'gedinline'
 version = '3.0.1-beta'
 
+task createProperties(dependsOn: processResources) {
+    doLast {
+        new File("$buildDir/resources/main/version.properties").withWriter { w ->
+            Properties p = new Properties()
+            p['version'] = project.version.toString()
+            p.store w, null
+        }
+    }
+}
+
+task copyReadMe(type: Copy) {
+    from 'src/test/resources/readMe'
+    include 'README.md'
+    into '.'
+    expand([
+            version: version,
+    ])
+}
+
+classes {
+    dependsOn createProperties, copyReadMe
+}
+
 task gedinline {
     dependsOn 'clean'
     dependsOn 'fatJar'

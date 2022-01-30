@@ -85,7 +85,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             def testFileGenerator = new TestFileGenerator()
             def gedcomUnderTest = testFileGenerator.withBody(testLine + input + '\n')
-            println "%%% input: \n${gedcomUnderTest}"
             def stringWriter = new StringWriter()
             def inputStream = new ByteArrayInputStream(gedcomUnderTest.getBytes())
             def gedcomValidator = new GedInlineValidator(inputStream, 'gedcom-v7.ged', new PrintWriter(stringWriter))
@@ -121,7 +120,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                 || expectedWarningCount | expectedContent
 
-            'harvey.ged'             || 2                    | ''
+            'harvey.ged'             || 2                    | 'Report generated on'
             'multimedia-test.ged'    || 4                    | ''
             'olson-555.ged'          || 8                    | ''
             'phon-x-3.ged'           || 0                    | ''

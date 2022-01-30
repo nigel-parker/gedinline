@@ -6,6 +6,8 @@ import com.google.common.collect.TreeMultimap;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -142,6 +144,9 @@ public class OutputReport {
         }
 
         printBlankLine();
+        printBlankLine();
+        printFooter();
+        printBlankLine();
         printWriter.close();
 
         analysisStatistics = new AnalysisStatistics(
@@ -201,5 +206,18 @@ public class OutputReport {
         }
 
         printWriter.println(col1 + col2 + "  " + col3);
+    }
+
+    private void printFooter() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+
+        String date = now.format(dateFormatter);
+        String time = now.format(timeFormatter);
+
+        String version = new GedInline().getVersion();
+
+        printWriter.println("Report generated on " + date + " at " + time + " by GED-inline " + version);
     }
 }
