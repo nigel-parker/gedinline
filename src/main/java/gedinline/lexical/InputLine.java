@@ -43,6 +43,10 @@ public class InputLine {
                 throw new GedcomException("Invalid GEDCOM line '" + precursor.getLevelAndLine() + "'");
             }
 
+            if (level.getLevel() != 0) {
+                throw new GedcomException("Cross-reference identifier " + token + " is not valid here" );
+            }
+
             token = it.next();
         }
 

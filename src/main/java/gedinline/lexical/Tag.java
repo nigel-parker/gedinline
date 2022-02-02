@@ -1,7 +1,10 @@
 package gedinline.lexical;
 
 import gedinline.main.GedcomException;
+import gedinline.tagtree.XrefType;
 import org.apache.commons.lang.StringUtils;
+
+import static gedinline.tagtree.XrefType.*;
 
 public class Tag {
 
@@ -54,6 +57,45 @@ public class Tag {
 
     public String getTag() {
         return tag;
+    }
+
+    public XrefType getXrefType() {
+        switch (tag) {
+            case "ALIA":
+            case "ASSO":
+            case "CHIL":
+            case "HUSB":
+            case "INDI":
+            case "WIFE":
+                return INDIVIDUAL;
+
+            case "ANCI":
+            case "DESI":
+            case "SUBM":
+            case "SUBN":
+                return SUBMITTER;
+
+            case "FAM":
+            case "FAMC":
+            case "FAMS":
+                return FAMILY;
+
+            case "NOTE":
+            case "SNOTE":
+                return NOTE;
+
+            case "OBJE":
+                return MULTIMEDIA;
+
+            case "REPO":
+                return REPOSITORY;
+
+            case "SOUR":
+                return SOURCE;
+
+            default:
+                throw new GedcomException("Unknown XREF type for tag " + tag);
+        }
     }
 
     public boolean isConcatenationTag() {

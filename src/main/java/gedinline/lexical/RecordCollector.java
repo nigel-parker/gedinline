@@ -79,13 +79,14 @@ public class RecordCollector {
                 InputLine inputLine = new InputLine(inputLinePrecursor, gedcomVersion, log);
                 Pointer label = inputLine.getLabel();
                 Pointer pointer = inputLine.getPointer();
+                Tag tag = inputLine.getTag();
 
                 if (label != null) {
-                    xrefCollector.addLabel(label);
+                    xrefCollector.addLabel(label, tag);
                 }
 
                 if (pointer != null) {
-                    xrefCollector.addPointer(pointer);
+                    xrefCollector.addPointer(pointer, tag);
                 }
 
                 adjustStack(level);

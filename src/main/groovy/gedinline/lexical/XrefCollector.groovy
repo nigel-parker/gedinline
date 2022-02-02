@@ -1,36 +1,39 @@
 package gedinline.lexical
 
-import com.google.common.collect.*
-import gedinline.main.*
+import gedinline.tagtree.*
 import gedinline.value.*
 import groovy.transform.*
 
 @CompileStatic
 class XrefCollector {
 
-    Set<Pointer> labels = []
-    Set<Pointer> pointers = []
+    Map<XrefType, XrefStore> map = [:]
 
-    void addLabel(Pointer label) {
-
-        if (label.isVoid()) {
-            throw new GedcomException("Invalid label " + label);
+    XrefCollector() {
+        XrefType.values().each { XrefType xrefType ->
+            map.put(xrefType, new XrefStore())
         }
-
-        if (label in labels) {
-            throw new GedcomException("Duplicate occurrence of label " + label);
-        }
-
-        labels << label
     }
 
-    void addPointer(Pointer pointer) {
-        if (!pointer.isVoid()) {
-            pointers << pointer
-        }
+    void addLabel(Pointer label, Tag tag) {
+        getXrefStore(tag).addLabel(label)
+    }
+
+    void addPointer(Pointer pointer, Tag tag) {
+        getXrefStore(tag).addPointer(pointer)
     }
 
     Set<Pointer> getUnsatisfiedPointers() {
-        Sets.difference(pointers, labels)
+        def set = [] as Set
+
+        XrefType.values().each { XrefType xrefType ->
+            set.addAll(map[xrefType].getUnsatisfiedPointers())
+        }
+
+        set
+    }
+
+    private XrefStore getXrefStore(Tag tag) {
+        map[tag.xrefType]
     }
 }

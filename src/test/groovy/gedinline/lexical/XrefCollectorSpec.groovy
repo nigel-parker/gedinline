@@ -10,6 +10,7 @@ class XrefCollectorSpec extends Specification {
 
         given:
 
+            def indiTag = new Tag('INDI')
             def xrefCollector = new XrefCollector()
             def gedcomVersion = GedcomVersion.V_70
 
@@ -25,19 +26,18 @@ class XrefCollectorSpec extends Specification {
 
         when:
 
-            xrefCollector.addLabel(p11)
-            xrefCollector.addLabel(p12)
+            xrefCollector.addLabel(p11, indiTag)
+            xrefCollector.addLabel(p12, indiTag)
 
         then:
 
             def e1 = thrown(GedcomException)
             e1.message == "Duplicate occurrence of label @1@"
 
-
         when:
 
-            xrefCollector.addLabel(p2)
-            xrefCollector.addLabel(pVoid)
+            xrefCollector.addLabel(p2, indiTag)
+            xrefCollector.addLabel(pVoid, indiTag)
 
         then:
 
@@ -46,11 +46,11 @@ class XrefCollectorSpec extends Specification {
 
         when:
 
-            xrefCollector.addPointer(p11)
-            xrefCollector.addPointer(p12)
-            xrefCollector.addPointer(p2)
-            xrefCollector.addPointer(p3)
-            xrefCollector.addPointer(pVoid)
+            xrefCollector.addPointer(p11, indiTag)
+            xrefCollector.addPointer(p12, indiTag)
+            xrefCollector.addPointer(p2, indiTag)
+            xrefCollector.addPointer(p3, indiTag)
+            xrefCollector.addPointer(pVoid, indiTag)
 
         then:
 
