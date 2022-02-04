@@ -120,13 +120,13 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                 || expectedWarningCount | expectedContent
 
-            'harvey.ged'             || 2                    | 'Report generated on'
+            'harvey.ged'             || 1                    | 'Report generated on'
             'multimedia-test.ged'    || 4                    | ''
             'olson-555.ged'          || 8                    | ''
             'phon-x-3.ged'           || 0                    | ''
             'simple-555.ged'         || 1                    | ''
-            'simple.ged'             || 3                    | ''
-            'smith.ged'              || 27                   | ''
+            'simple.ged'             || 2                    | ''
+            'smith.ged'              || 26                   | ''
             'torture-test-5-5-1.ged' || 0                    | ''
             'w01.ged'                || 0                    | ''
             'w02.ged'                || 1                    | 'Level numbers should not have leading zeroes'
@@ -141,11 +141,11 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w10.ged'                || 1                    | 'Other                       1'
             'w11.ged'                || 57                   | 'Unknown XREF type'
             'w14.ged'                || 2                    | "*** Line 13:      Invalid GEDCOM line '10'"
-            'w15.ged'                || 7                    | "*** Line 12:      Invalid GEDCOM line '10'"
+            'w15.ged'                || 6                    | "*** Line 12:      Invalid GEDCOM line '10'"
             'w16.ged'                || 0                    | ''
             'w17.ged'                || 1                    | 'Month values must be upper case'
             'w18.ged'                || 1                    | 'Cross-reference identifier @I2@ is not valid here'
-            'w550.ged'               || 1                    | ''
+            'w550.ged'               || 0                    | ''
             'w551.ged'               || 0                    | ''
     }
 

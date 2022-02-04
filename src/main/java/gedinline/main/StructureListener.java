@@ -98,11 +98,6 @@ public class StructureListener {
         } else if (tag.equals(Tag.VERS) && parentTag != null && parentTag.equals(Tag.GEDC)) {
             if (!outputReport.hasKey(GEDCOM_VERSION_IN_FILE)) {
                 outputReport.reportValue(GEDCOM_VERSION_IN_FILE, value);
-
-//                if (new GedcomVersion(value).equals(GedcomVersionNew.V_55)) {
-                if (GedcomVersion.fromString(value).equals(GedcomVersion.V_55)) {
-                    warningSink.warning(inputLine.getLineNumber(), "Note that the de facto standard GEDCOM version is version 5.5.1");
-                }
             }
         } else if (tag.equals(Tag.CHAR)) {
             outputReport.reportValue(ENCODING, value);

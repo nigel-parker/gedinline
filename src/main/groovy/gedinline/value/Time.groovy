@@ -9,6 +9,12 @@ import java.time.format.*
 @CompileStatic
 class Time extends Validator {
 
+    static DateTimeFormatter DTF1 = DateTimeFormatter.ofPattern('H:m')
+    static DateTimeFormatter DTF2 = DateTimeFormatter.ofPattern('H:m:s')
+    static DateTimeFormatter DTF3 = DateTimeFormatter.ofPattern('H:m:s.S')
+    static DateTimeFormatter DTF4 = DateTimeFormatter.ofPattern('H:m:s.SS')
+    static DateTimeFormatter DTF5 = DateTimeFormatter.ofPattern('H:m:s.SSS')
+
     Time() {
     }
 
@@ -20,18 +26,18 @@ class Time extends Validator {
             return false
         }
 
-        isCorrect(s2, 'H:m') ||
-                isCorrect(s2, 'H:m:s') ||
-                isCorrect(s2, 'H:m:s.S') ||
-                isCorrect(s2, 'H:m:s.SS') ||
-                isCorrect(s2, 'H:m:s.SSS')
+        isCorrect(s2, DTF1) ||
+                isCorrect(s2, DTF2) ||
+                isCorrect(s2, DTF3) ||
+                isCorrect(s2, DTF4) ||
+                isCorrect(s2, DTF5)
     }
 
-    private boolean isCorrect(String s, String pattern) {
+    private boolean isCorrect(String s, DateTimeFormatter pattern) {
 
         try {
 
-            LocalTime.parse(s, DateTimeFormatter.ofPattern(pattern))
+            LocalTime.parse(s, pattern)
 
             true
         } catch (e) {

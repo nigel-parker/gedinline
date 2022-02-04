@@ -20,13 +20,12 @@ import java.util.Set;
 
 import static gedinline.value.ExpressionParser.REPLACE_WITH;
 
-
 public class GedInlineValidator {
 
     private Map<Tag, TagTree> expandedGrammarMap = Maps.newHashMap();
-    private String filename = "Unknown";
+    private String filename;
     private InputStream inputStream;
-    private Map<String, String> recordMap = new HashMap<String, String>();
+    private Map<String, String> recordMap = new HashMap<>();
     private StructureListener structureListener;
     private ValueGrammar valueGrammar;
     private WarningCollector warningCollector;
@@ -74,7 +73,9 @@ public class GedInlineValidator {
             TagTreeGrammar tagTreeGrammar = new TagTreeGrammar(gedcomVersion);
             valueGrammar = new ValueGrammar(gedcomVersion);
             initialiseDefaultRecordMap(gedcomVersion);
+            LinkListener linkListener = new LinkListener(warningCollector);
             propertyChangeSupport.addPropertyChangeListener(new GedcomListener());
+            propertyChangeSupport.addPropertyChangeListener(linkListener);
 
             for (Map.Entry<String, String> entry : recordMap.entrySet()) {
                 expandedGrammarMap.put(Tag.getInstance(entry.getKey()), tagTreeGrammar.expand(entry.getValue()));
@@ -96,12 +97,9 @@ public class GedInlineValidator {
                 }
             }
 
+            linkListener.reportMissingLinks();
             structureListener.closeNormal();
             return true;
-
-        } catch (InvalidFormatException e) {
-            structureListener.closeError(e.getMessage());
-            return false;
 
         } catch (RuntimeException e) {
             structureListener.closeError(e.getMessage());
@@ -179,10 +177,10 @@ public class GedInlineValidator {
         Tag tag1 = inputLine1.getTag();
 
         if (Debug.active(inputLine1)) {
-            System.out.println("");
+            System.out.println();
             System.out.println("--- validating inputLine " + inputLine1 + " and " + inputRecord1.getInputRecords().size() + " subsidiaries");
             System.out.println("--- vha tagTree \n" + StringUtils.abbreviate(tagTree1.toString(), 100));
-            System.out.println("");
+            System.out.println();
         }
 
         try {
@@ -310,11 +308,10 @@ public class GedInlineValidator {
             ParsingResult parsingResult = expressionParser.parse(value);
 
             if (Debug.active(inputLine)) {
-                System.out.println("");
+                System.out.println();
                 System.out.println("--- looking at inputLine " + inputLine + " OK: " + parsingResult.parsedEverythingOk());
-                System.out.println("");
+                System.out.println();
             }
-
 
             if (!parsingResult.parsedEverythingOk()) {
                 String detail;
@@ -337,5 +334,9 @@ public class GedInlineValidator {
                 warningCollector.warning(inputLine, prefix + message);
             }
         }
+    }
+
+    public String toString() {
+        return "Validator for " + filename;
     }
 }

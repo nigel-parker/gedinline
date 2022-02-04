@@ -8,7 +8,7 @@ import org.apache.commons.lang.StringUtils;
 
 import java.util.Iterator;
 
-public class InputLine {
+public class InputLine implements Line {
 
     private int lineNumber;
     private Level level;
@@ -44,7 +44,7 @@ public class InputLine {
             }
 
             if (level.getLevel() != 0) {
-                throw new GedcomException("Cross-reference identifier " + token + " is not valid here" );
+                throw new GedcomException("Cross-reference identifier " + token + " is not valid here");
             }
 
             token = it.next();
@@ -70,15 +70,6 @@ public class InputLine {
                 value = StringUtils.substringAfter(line, tag + " ");
             }
         }
-    }
-
-    public InputLine(int lineNumber, Level level, Pointer label, Tag tag, Pointer pointer, String value) {
-        this.lineNumber = lineNumber;
-        this.level = level;
-        this.label = label;
-        this.tag = tag;
-        this.pointer = pointer;
-        this.value = value;
     }
 
     public GedcomVersion getGedcomVersion() {
