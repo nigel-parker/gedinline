@@ -120,6 +120,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                 || expectedWarningCount | expectedContent
 
+            'fs-long-url.ged'        || 0                    | ''
             'harvey.ged'             || 1                    | 'Report generated on'
             'multimedia-test.ged'    || 4                    | ''
             'olson-555.ged'          || 8                    | ''

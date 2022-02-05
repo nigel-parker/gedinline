@@ -244,7 +244,7 @@ public class BasicParser {
             warn("Invalid GEDCOM record '" + lineUntrimmed + "'");
         }
 
-        if (lineUntrimmed.length() > MAX_LINE_LENGTH) {
+        if (lineUntrimmed.length() > MAX_LINE_LENGTH && !gedcomVersion.is70()) {
             warn("Line is more than " + MAX_LINE_LENGTH + " characters");
         }
 
