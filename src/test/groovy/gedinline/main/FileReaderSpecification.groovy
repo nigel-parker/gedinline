@@ -22,6 +22,9 @@ class FileReaderSpecification extends Specification {
     }
 
     void verify(String filename, int expectedWarningCount, String expectedContent) {
+        verify(filename, expectedWarningCount, expectedContent, true)
+    }
+    void verify(String filename, int expectedWarningCount, String expectedContent, boolean ok) {
         def inputStream = getInputStream(filename)
 
         assert inputStream
@@ -31,8 +34,7 @@ class FileReaderSpecification extends Specification {
         def gedcomValidator = new GedInlineValidator(inputStream, filename, new PrintWriter(stringWriter))
         def okResult = gedcomValidator.validate()
 
-        println "%%% stringWriter = ${stringWriter}"
-        assert okResult
+        assert okResult == ok
         assert stringWriter.toString().contains(expectedContent)
         assert gedcomValidator.numberOfWarnings == expectedWarningCount
     }

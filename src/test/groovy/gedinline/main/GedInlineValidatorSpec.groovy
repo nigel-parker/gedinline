@@ -110,6 +110,13 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             '@@me'            || false          | 'TBD: Should be true'
     }
 
+    void 'verify handling of empty file'() {
+
+        expect:
+
+            verify('empty.ged', 0, 'File not recognised as a valid GEDCOM file', false)
+    }
+
     void 'verify test file #filename'() {
 
         expect:

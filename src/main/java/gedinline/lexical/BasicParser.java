@@ -291,6 +291,10 @@ public class BasicParser {
         HeaderParser headerParser = new HeaderParser();
         int headerLineCount = headerParser.getLineCount();
 
+        if (!iterator.hasNext()) {
+            throw new InvalidFormatException("File not recognised as a valid GEDCOM file");
+        }
+
         while (iterator.hasNext() && lineCount++ < 50) {
             String line = iterator.nextLine();
 
