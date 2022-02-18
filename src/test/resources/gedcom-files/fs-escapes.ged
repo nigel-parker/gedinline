@@ -1,0 +1,9 @@
+﻿0 HEAD
+1 GEDC
+2 VERS 7.0
+0 @I1@ INDI
+1 NAME John /Doe/
+1 NOTE me@example.com is an example email address.
+2 CONT @@me and @I are example social media handles.
+2 CONT @@@@@ has four @ characters where only the first is escaped.
+0 TRLR
