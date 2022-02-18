@@ -6,7 +6,7 @@ import spock.lang.*
 
 class LinkListenerSpec extends Specification {
 
-    static GedcomVersion gedcomVersion = null
+    static GedcomVersion gedcomVersion = GedcomVersion.V_70
 
     LinkListener linkListener
 
@@ -70,6 +70,24 @@ class LinkListenerSpec extends Specification {
 
             linkListener.warningCount == 1
             linkListener.missingFams.toString() == '[(@I1@, @F1@)]'
+    }
+
+    void 'Void CHIL link'() {
+
+        when:
+
+            inputLine '@I1@', 0, 'INDI', null
+            inputLine null, 1, 'FAMC', '@F1@'
+
+            inputLine '@F1@', 0, 'FAM', null
+            inputLine null, 1, 'HUSB', '@VOID@'
+            inputLine null, 1, 'WIFE', '@VOID@'
+            inputLine null, 1, 'CHIL', '@I1@'
+            inputLine null, 1, 'CHIL', '@VOID@'
+
+        then:
+
+            linkListener.warningCount == 0
     }
 
     void 'test for pointer/pair equality'() {

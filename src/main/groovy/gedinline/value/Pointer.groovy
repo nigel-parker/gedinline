@@ -21,7 +21,7 @@ class Pointer extends Validator {
     }
 
     boolean isVoid() {
-        s == '@VOID@'
+        gedcomVersion?.is70() && s == '@VOID@'
     }
 
     static boolean looksValid(String s) {

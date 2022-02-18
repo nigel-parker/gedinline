@@ -127,7 +127,9 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                 || expectedWarningCount | expectedContent
 
+            'fs-minimal70.ged'       || 0                    | ''
             'fs-long-url.ged'        || 0                    | ''
+            'fs-voidptr.ged'         || 0                    | ''
             'harvey.ged'             || 1                    | 'Report generated on'
             'multimedia-test.ged'    || 4                    | ''
             'olson-555.ged'          || 8                    | ''
@@ -153,6 +155,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w16.ged'                || 0                    | ''
             'w17.ged'                || 1                    | 'Month values must be upper case'
             'w18.ged'                || 1                    | 'Cross-reference identifier @I2@ is not valid here'
+            'w19.ged'                || 0                    | ''
             'w550.ged'               || 0                    | ''
             'w551.ged'               || 0                    | ''
     }

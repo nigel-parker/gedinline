@@ -40,27 +40,28 @@ class LinkListener implements PropertyChangeListener {
         if (tag in tags) {
 
             switch (tag) {
+
                 case { it == 'INDI' && level == 0 }:
                     currentIndi = label
-                    break
-
-                case { it == 'FAMC' && level == 1 }:
-                    famc << new Pair(currentIndi, pointer)
-                    break
-
-                case { it == 'FAMS' && level == 1 }:
-                    fams << new Pair(currentIndi, pointer)
                     break
 
                 case { it == 'FAM' && level == 0 }:
                     currentFam = label
                     break
 
-                case { it == 'CHIL' && level == 1 }:
+                case { it == 'FAMC' && level == 1 && !pointer.isVoid() }:
+                    famc << new Pair(currentIndi, pointer)
+                    break
+
+                case { it == 'FAMS' && level == 1 && !pointer.isVoid() }:
+                    fams << new Pair(currentIndi, pointer)
+                    break
+
+                case { it == 'CHIL' && level == 1 && !pointer.isVoid() }:
                     chil << new Pair(pointer, currentFam)
                     break
 
-                case { it in ['HUSB', 'WIFE'] && level == 1 }:
+                case { it in ['HUSB', 'WIFE'] && level == 1 && !pointer.isVoid() }:
                     parent << new Pair(pointer, currentFam)
                     break
             }
