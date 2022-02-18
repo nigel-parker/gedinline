@@ -18,6 +18,10 @@ class DatePeriod extends Validator {
 
         assert gedcomVersion == V_70
 
+        if (s == '') {
+            return TRUE
+        }
+
         def dateFrom1 = /(?<dateFrom1>.*)/
         def dateFrom2 = /(?<dateFrom2>.*)/
         def dateTo1 = /(?<dateTo1>.*)/

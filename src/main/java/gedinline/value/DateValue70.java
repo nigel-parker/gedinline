@@ -52,6 +52,10 @@ public class DateValue70 {
 
     public ValidationResult isValid() {
 
+        if (s.equals("")) {
+            return ValidationResult.TRUE;
+        }
+
         if (s.startsWith(FROM) && s.contains(TO)) {
             ValidationResult fromTo = isValidDate(StringUtils.substringBetween(s, FROM, TO));
             ValidationResult to = isValidDate(StringUtils.substringAfter(s, TO));

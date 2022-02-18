@@ -20,6 +20,7 @@ class DateValueSpec extends Specification {
 
             input                                             || result
 
+            ''                                                || true
             '3 JAN 1895'                                      || true
             'JAN 1895'                                        || true
             '1895'                                            || true
@@ -70,7 +71,6 @@ class DateValueSpec extends Specification {
             'MAR 1922/24'                                     || false
             '25 DEC 1922/23'                                  || false
 
-            ''                                                || false
             '03 JAN 1972'                                     || false
             '3 JAN  1972'                                     || false
             '03 JAN'                                          || false

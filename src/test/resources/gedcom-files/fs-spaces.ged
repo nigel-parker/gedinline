@@ -1,0 +1,16 @@
+﻿0 HEAD
+1 GEDC
+2 VERS 7.0
+0 @I1@ INDI
+1 EVEN Event
+2 TYPE EVEN and DATE with payload
+2 DATE 1820
+1 EVEN
+2 TYPE EVEN and DATE with no space or payload
+2 DATE
+3 PHRASE 5 January (year unknown)
+1 EVEN 
+2 TYPE EVEN and DATE with space but no payload
+2 DATE 
+3 PHRASE 5 January (year unknown)
+0 TRLR

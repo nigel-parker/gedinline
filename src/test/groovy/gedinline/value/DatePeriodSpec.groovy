@@ -17,6 +17,7 @@ class DatePeriodSpec extends Specification {
 
             input                                   || expectedResult
 
+            ''                                      || true
             'FROM 6 DEC 2002'                       || true
             'TO 6 DEC 2002'                         || true
             'FROM 6 DEC 2002 TO 6 DEC 2002'         || true

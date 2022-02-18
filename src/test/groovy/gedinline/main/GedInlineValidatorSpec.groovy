@@ -127,8 +127,9 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                 || expectedWarningCount | expectedContent
 
-            'fs-minimal70.ged'       || 0                    | ''
             'fs-long-url.ged'        || 0                    | ''
+            'fs-minimal70.ged'       || 0                    | ''
+            'fs-spaces.ged'          || 0                    | ''
             'fs-voidptr.ged'         || 0                    | ''
             'harvey.ged'             || 1                    | 'Report generated on'
             'multimedia-test.ged'    || 4                    | ''
