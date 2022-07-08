@@ -10118,7 +10118,7 @@ INDI                                                                  MULTIPLE
 
 OBJE                                                                  MULTIPLE
      RESN                              g7:RESN                        
-     FILE                              g7:FILE                        MANDATORY
+     FILE                              g7:FILE                        AT_LEAST_1
           FORM                         g7:FORM                        MANDATORY
                MEDI                    g7:MEDI                        
                     PHRASE             g7:PHRASE                      

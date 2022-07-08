@@ -24,6 +24,7 @@ class FileReaderSpecification extends Specification {
     void verify(String filename, int expectedWarningCount, String expectedContent) {
         verify(filename, expectedWarningCount, expectedContent, true)
     }
+
     void verify(String filename, int expectedWarningCount, String expectedContent, boolean ok) {
         def inputStream = getInputStream(filename)
 

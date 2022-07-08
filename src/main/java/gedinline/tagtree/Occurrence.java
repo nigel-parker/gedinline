@@ -19,6 +19,10 @@ public enum Occurrence {
         return this == UP_TO_3_TIMES;
     }
 
+    public boolean isAtLeastOnce() {
+        return this == AT_LEAST_1;
+    }
+
     public String toString() {
         return this == OPTIONAL ? "" : super.toString();
     }

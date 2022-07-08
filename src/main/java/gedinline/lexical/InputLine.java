@@ -32,7 +32,7 @@ public class InputLine implements Line {
 
         String token = it.next();
 
-        if (Pointer.looksValid(token)) {
+        if (Pointer.looksValid(token, gedcomVersion)) {
             label = new Pointer(token, gedcomVersion);
 
             if (!label.isValid()) {
@@ -60,14 +60,11 @@ public class InputLine implements Line {
         if (it.hasNext()) {
             token = it.next();
 
-            if (Pointer.looksValid(token)) {
+            if (Pointer.looksValid(token, gedcomVersion)) {
                 pointer = new Pointer(token, gedcomVersion);
-
-                if (!pointer.isValid()) {
-                    warningSink.warning(lineNumber, "Invalid pointer '" + token + "'");
-                }
             } else {
-                value = StringUtils.substringAfter(line, tag + " ");
+                String v1 = StringUtils.substringAfter(line, tag + " ");
+                value = (gedcomVersion.is70() && v1.startsWith("@@") ? v1.substring(1) : v1);
             }
         }
     }

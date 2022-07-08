@@ -186,6 +186,10 @@ public class SyntaxTreeNode {
             return OPTIONAL;
         }
 
+        if (o1.isAtLeastOnce() || o2.isAtLeastOnce()) {
+            return AT_LEAST_1;
+        }
+
         return MANDATORY;
     }
 

@@ -20,7 +20,9 @@ class XrefCollector {
     }
 
     void addPointer(Pointer pointer, Tag tag) {
-        getXrefStore(tag).addPointer(pointer)
+        if (pointer.isValid()) {
+            getXrefStore(tag).addPointer(pointer)
+        }
     }
 
     Set<Pointer> getUnsatisfiedPointers() {

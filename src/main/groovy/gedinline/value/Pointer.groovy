@@ -24,9 +24,14 @@ class Pointer extends Validator {
         gedcomVersion?.is70() && s == '@VOID@'
     }
 
-    static boolean looksValid(String s) {
+    static boolean looksValid(String s, GedcomVersion gedcomVersion) {
         def s1 = StringUtils.trimToEmpty(s)
-        !StringUtils.isBlank(s1) && s1.startsWith("@") && !s1.startsWith("@#")
+
+        if (gedcomVersion.is70()) {
+            !StringUtils.isBlank(s1) && s1.startsWith("@") && !s1.startsWith("@@")
+        } else {
+            !StringUtils.isBlank(s1) && s1.startsWith("@") && !s1.startsWith("@#")
+        }
     }
 
     boolean isValid() {

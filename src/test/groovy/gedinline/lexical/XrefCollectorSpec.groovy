@@ -19,10 +19,12 @@ class XrefCollectorSpec extends Specification {
             def p2 = new Pointer('@2@', gedcomVersion)
             def p3 = new Pointer('@3@', gedcomVersion)
             def pVoid = new Pointer('@VOID@', gedcomVersion)
+            def pInvalid = new Pointer('@#@', gedcomVersion)
 
         expect:
 
             pVoid.isVoid()
+            !pInvalid.isValid()
 
         when:
 
@@ -55,5 +57,14 @@ class XrefCollectorSpec extends Specification {
         then:
 
             xrefCollector.getUnsatisfiedPointers() == [p3] as Set
+
+        when:
+
+            xrefCollector.addPointer(pInvalid, indiTag)
+
+        then:
+
+            xrefCollector.getUnsatisfiedPointers() == [p3] as Set
+
     }
 }

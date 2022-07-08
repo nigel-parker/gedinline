@@ -107,7 +107,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             'abc\n1 CONC xyz' || false          | 'CONC invalid for 7.0'
 
-            '@@me'            || false          | 'TBD: Should be true'
+            '@@me'            || true           | ''
     }
 
     void 'verify handling of empty file'() {
@@ -115,6 +115,20 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
         expect:
 
             verify('empty.ged', 0, 'File not recognised as a valid GEDCOM file', false)
+    }
+
+    void 'these should both have 0 warnings #filename'() {
+
+        expect:
+
+            verify(filename, expectedWarningCount, expectedContent)
+
+        where:
+
+            filename                  || expectedWarningCount | expectedContent
+
+            'fs-maximal70.ged'        || 2                    | ''
+            'fs-extension-record.ged' || 5                    | ''
     }
 
     void 'verify test file #filename'() {
@@ -127,8 +141,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             filename                   || expectedWarningCount | expectedContent
 
-//            'fs-escapes.ged'           || 0                    | ''
-//            'fs-extension-record.ged'  || 0                    | ''
+            'fs-escapes.ged'           || 0                    | ''
             'fs-long-url.ged'          || 0                    | ''
             'fs-minimal70.ged'         || 0                    | ''
             'fs-remarriage1.ged'       || 0                    | ''
@@ -136,6 +149,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'fs-same-sex-marriage.ged' || 0                    | ''
             'fs-spaces.ged'            || 0                    | ''
             'fs-voidptr.ged'           || 0                    | ''
+            'at-least-once.ged'        || 0                    | ''
             'harvey.ged'               || 1                    | 'Report generated on'
             'multimedia-test.ged'      || 4                    | ''
             'olson-555.ged'            || 8                    | ''
@@ -185,7 +199,5 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w01.ged'                    || 'G'
             'w12.ged'                    || 'GED-inline'
             'w13.ged'                    || 'Reunion'
-
-
     }
 }

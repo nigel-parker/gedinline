@@ -1,0 +1,12 @@
+﻿0 HEAD
+1 GEDC
+2 VERS 7.0
+1 SUBM @U1@
+0 @O1@ OBJE
+1 FILE file:///path/to/file1
+2 FORM text/plain
+1 FILE media/original.mp3
+2 FORM audio/mp3
+0 @U1@ SUBM
+1 NAME GEDCOM Steering Committee
+0 TRLR

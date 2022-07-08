@@ -61,6 +61,32 @@ class ExpressionParser70Spec extends Specification {
             'list:String'          | ', , one, more,' || true  | ''            | ''
     }
 
+    void 'bugfix \'#expression\' / \'#input\''() {
+
+        expect:
+
+            def parsingResult = getParsingResult(expression, input)
+
+            parsingResult.input == input
+            parsingResult.ok == ok
+            def actualValue = parsingResult.value
+
+            if (expectedValue == null) {
+                assert actualValue == null
+            } else {
+                assert (actualValue as StringResult).string == expectedValue
+            }
+
+            parsingResult.remainder == remainder
+
+        where:
+
+            expression                      | input     || ok   | expectedValue | remainder
+
+            '[EXCLUDED|DNS|DNS_CAN|INFANT]' | 'DNS_CAN' || true | 'DNS'         | '_CAN'
+            '[EXCLUDED|DNS_CAN|DNS|INFANT]' | 'DNS_CAN' || true | 'DNS_CAN'     | ''
+    }
+
     private ParsingResult getParsingResult(String expression, String input) {
         new ExpressionParser(new SyntaxExpression(expression), null, GedcomVersion.V_70).parse(input)
     }
