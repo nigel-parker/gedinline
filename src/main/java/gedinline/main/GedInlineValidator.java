@@ -86,14 +86,16 @@ public class GedInlineValidator {
                 InputLine inputLine = inputRecord.getInputLine();
                 Tag tag = inputLine.getTag();
 
-                try {
-                    if (!recordMap.keySet().contains(tag.toString())) {
-                        throw new GedcomException("Ignoring unknown record type at level 0: " + tag);
-                    }
+                if (!tag.isUserDefined()) {
+                    try {
+                        if (!recordMap.keySet().contains(tag.toString())) {
+                            throw new GedcomException("Ignoring unknown record type at level 0: " + tag);
+                        }
 
-                    validateRecord(inputRecord, expandedGrammarMap.get(tag));
-                } catch (GedcomException e) {
-                    warningCollector.warning(inputLine, e.getMessage());
+                        validateRecord(inputRecord, expandedGrammarMap.get(tag));
+                    } catch (GedcomException e) {
+                        warningCollector.warning(inputLine, e.getMessage());
+                    }
                 }
             }
 

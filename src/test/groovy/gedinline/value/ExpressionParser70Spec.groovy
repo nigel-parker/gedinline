@@ -59,6 +59,10 @@ class ExpressionParser70Spec extends Specification {
 
             'list:String'          | ' '              || true  | ''            | ''
             'list:String'          | ', , one, more,' || true  | ''            | ''
+
+            'list:NonEmptyString'  | 'one'            || true  | ''            | ''
+            'list:NonEmptyString'  | ' '              || false | null          | ' '
+            'list:NonEmptyString'  | ', , one, more,' || false | null          | ', , one, more,'
     }
 
     void 'bugfix \'#expression\' / \'#input\''() {

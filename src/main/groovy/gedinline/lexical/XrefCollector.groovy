@@ -7,11 +7,11 @@ import groovy.transform.*
 @CompileStatic
 class XrefCollector {
 
-    Map<XrefType, XrefStore> map = [:]
+    Map<String, XrefStore> map = [:]
 
     XrefCollector() {
         XrefType.values().each { XrefType xrefType ->
-            map.put(xrefType, new XrefStore())
+            map.put(xrefType.toString(), new XrefStore())
         }
     }
 
@@ -28,14 +28,28 @@ class XrefCollector {
     Set<Pointer> getUnsatisfiedPointers() {
         def set = [] as Set
 
-        XrefType.values().each { XrefType xrefType ->
-            set.addAll(map[xrefType].getUnsatisfiedPointers())
+        map.keySet().each { String key ->
+            set.addAll(map[key].getUnsatisfiedPointers())
         }
 
         set
     }
 
     private XrefStore getXrefStore(Tag tag) {
-        map[tag.xrefType]
+        def key
+
+        if (tag.isUserDefined()) {
+            def tagAsString = tag.toString()
+
+            if (!map.containsKey(tagAsString)) {
+                map.put(tagAsString, new XrefStore())
+            }
+
+            key = tagAsString
+        } else {
+            key = tag.xrefType.toString()
+        }
+
+        map[key]
     }
 }

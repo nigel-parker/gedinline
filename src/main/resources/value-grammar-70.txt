@@ -177,7 +177,7 @@ g7:HEAD-LANG :=
 Language
 
 g7:HEAD-PLAC-FORM :=
-list:NonEmptyString
+list:String
 
 g7:HEAD-SOUR-DATA :=
 Text
@@ -312,13 +312,13 @@ g7:PHRASE :=
 Text
 
 g7:PLAC-FORM :=
-list:NonEmptyString
+list:String
 
 g7:PLAC-TRAN :=
-list:NonEmptyString
+list:String
 
 g7:PLAC :=
-list:NonEmptyString
+list:String
 
 g7:POST :=
 NonEmptyString
