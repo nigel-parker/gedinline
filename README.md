@@ -2,7 +2,7 @@
 
 GED-inline is a validator for GEDCOM files. GEDCOM files contain text data describing family trees. They are used to exchange family tree data between different genealogical solutions. See [gedcom.io](https://gedcom.io/) for further information.
 
-GED-inline can validate GEDCOM version 5.5 and 5.5.1. Support for the new GEDCOM 7.0 standard has beta status: the new structures will be largely validated. However there is currently no support for GEDZIP and prelinimary support for extensions. In addition there is some support for the unofficial GEDCOM 5.5.5 standard.
+GED-inline can validate GEDCOM version 5.5 and 5.5.1. Support for the new GEDCOM 7.0 standard has beta status: the new structures will be largely validated. However there is currently no support for GEDZIP and incomplete support for extensions. In addition there is some support for the unofficial GEDCOM 5.5.5 standard.
 
 The validator is also available for online use at [GED-inline](http://ged-inline.elasticbeanstalk.com).
 
@@ -38,13 +38,13 @@ on Mac or Linux. If everything goes well you should see a 'BUILD SUCCESSFUL' mes
 GED-inline can be run from the command line. Try it out on an example file from the project:
 
 ```
-java -jar build/libs/gedinline-3.0.5-beta.jar build/resources/test/gedcom-files/harvey-70.ged
+java -jar build/libs/gedinline-3.0.6-beta.jar build/resources/test/gedcom-files/harvey-70.ged
 ```
 
 To save the result, redirect the output to a file:
 
 ```
-java -jar build/libs/gedinline-3.0.5-beta.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
+java -jar build/libs/gedinline-3.0.6-beta.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
 ```
 
 ### The jar file
@@ -52,7 +52,7 @@ java -jar build/libs/gedinline-3.0.5-beta.jar build/resources/test/gedcom-files/
 GED-inline can also be accessed as a Java library:
 
 ```
-build/libs/gedinline-3.0.5-beta.jar
+build/libs/gedinline-3.0.6-beta.jar
 ```
 
 Validation is performed by the gedinline.main.GedInlineValidator class. The validater requires a GEDCOM file to analyse and a PrintWriter to write the validation report to. Create it like this:

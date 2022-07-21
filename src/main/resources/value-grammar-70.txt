@@ -18,7 +18,7 @@ g7:ADOP :=
 [Y|Null]
 
 g7:AGE :=
-NonEmptyString
+AgeAtEvent
 
 g7:AGNC :=
 Text

@@ -9,7 +9,7 @@ class TestFileGenerator {
             case 3: return new File('src/test/resources/gedcom-files/harvey-70.ged').text
             case 4: return withBody(new File('src/test/resources/gedcom-files/stockdale-70.txt').text)
             case 5: return withBody(new File('src/test/resources/gedcom-files/allen-70.txt').text)
-            case 6: return withBody('0 @I@ INDI\n1 BAPM Y\n')
+            case 6: return withBody('0 @I@ INDI\n1 BAPM Y\n2 AGE\n')
             case 7: return withBody('0 @I@ INDI\n1 ADOP\n2 FAMC @#@\n3 ADOP\n')
             case 8: return withBody('0 @I@ INDI\n1 OBJE @VOID@\n2 CROP\n3 TOP 1\n')
             case 9: return withBody('0 @S@ SOUR\n1 REPO @VOID@\n2 CALN 1\n3 MEDI Book\n')
