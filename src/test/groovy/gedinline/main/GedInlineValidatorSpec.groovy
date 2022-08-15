@@ -72,7 +72,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             108     || 1                        | 'Blank lines not allowed'
             109     || 1                        | 'Tabs are allowed, except in personal names'
 
-            201     || 1                        | 'TBD: Handling of stack overflow problem, see spec p. 35'
+            201     || 0                        | 'Handling of stack overflow problem, see spec p. 35'
 
     }
 
@@ -117,20 +117,6 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             verify('empty.ged', 0, 'File not recognised as a valid GEDCOM file', false)
     }
 
-    @Ignore
-    void 'this file should have 0 warnings #filename'() {
-
-        expect:
-
-            verify(filename, expectedWarningCount, expectedContent)
-
-        where:
-
-            filename           || expectedWarningCount | expectedContent
-
-            'fs-maximal70.ged' || 0                    | ''
-    }
-
     void 'verify test file #filename'() {
 
         expect:
@@ -144,6 +130,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'fs-escapes.ged'           || 0                    | ''
             'fs-extension-record.ged'  || 0                    | ''
             'fs-long-url.ged'          || 0                    | ''
+            'fs-maximal70.ged'         || 0                    | ''
             'fs-minimal70.ged'         || 0                    | ''
             'fs-remarriage1.ged'       || 0                    | ''
             'fs-remarriage2.ged'       || 0                    | ''

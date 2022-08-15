@@ -132,13 +132,24 @@ public class TagTreeGrammar {
         return result;
     }
 
+    int expandLevel = 0;
+
     public List<TagTree> expand(TagTree tagTree, Occurrence occurrence) {
+        expandLevel++;
+
         SyntaxTreeNode syntaxTreeNode = tagTree.getSyntaxTreeNode().with(occurrence);
 
         if (syntaxTreeNode.isSubtreeReference()) {
-            List<TagTree> tagTrees = getSubtree(syntaxTreeNode.getSubtreeReference().getId());
+            if (expandLevel >= 10) {
+                expandLevel--;
 
-            return expand(tagTrees, syntaxTreeNode.getOccurrence());
+                return ImmutableList.of();
+            } else {
+                List<TagTree> tagTrees = getSubtree(syntaxTreeNode.getSubtreeReference().getId());
+
+                expandLevel--;
+                return expand(tagTrees, syntaxTreeNode.getOccurrence());
+            }
         } else {
             TagTree result = new TagTree(syntaxTreeNode, gedcomVersion);
 
@@ -146,6 +157,7 @@ public class TagTreeGrammar {
                 result.addSubtree(tree);
             }
 
+            expandLevel--;
             return ImmutableList.of(result);
         }
     }
