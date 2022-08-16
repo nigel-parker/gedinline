@@ -2,7 +2,7 @@
 
 GED-inline is a validator for GEDCOM files. GEDCOM files contain text data describing family trees. They are used to exchange family tree data between different genealogical solutions. See [gedcom.io](https://gedcom.io/) for further information.
 
-GED-inline can validate GEDCOM version 5.5 and 5.5.1. Support for the new GEDCOM 7.0 standard has beta status: the new structures will be largely validated. However there is currently no support for GEDZIP and incomplete support for extensions. In addition there is some support for the unofficial GEDCOM 5.5.5 standard.
+GED-inline can validate GEDCOM version 5.5, 5.5.1 and 7.0. However for 7.0 there is currently no support for GEDZIP and incomplete support for extensions. In addition there is some support for the unofficial GEDCOM 5.5.5 standard.
 
 The validator is also available for online use at [GED-inline](http://ged-inline.elasticbeanstalk.com).
 
