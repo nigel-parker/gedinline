@@ -142,6 +142,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'multimedia-test.ged'      || 4                    | ''
             'olson-555.ged'            || 8                    | ''
             'phon-x-3.ged'             || 0                    | ''
+            'refn.ged'                 || 0                    | ''
             'simple-555.ged'           || 1                    | ''
             'simple.ged'               || 2                    | ''
             'smith.ged'                || 26                   | ''

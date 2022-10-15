@@ -66,6 +66,7 @@ public class Tag {
             case "CHIL":
             case "HUSB":
             case "INDI":
+            case "REFN":
             case "WIFE":
                 return INDIVIDUAL;
 
