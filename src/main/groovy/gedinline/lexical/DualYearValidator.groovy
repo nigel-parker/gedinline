@@ -1,11 +1,8 @@
 package gedinline.lexical
 
-
 import org.joda.time.*
 
 import java.text.*
-
-import static java.util.Calendar.*
 
 class DualYearValidator {
 
@@ -30,7 +27,7 @@ class DualYearValidator {
             return false
         }
 
-        def year = date[YEAR]
+        def year = new LocalDate(date).year
 
         def last2Digits1 = year % 100
         def last2Digits2 = dualYear.substring(1) as int

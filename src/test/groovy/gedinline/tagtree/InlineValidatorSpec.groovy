@@ -2,9 +2,9 @@ package gedinline.tagtree
 
 class InlineValidatorSpec extends InlineSpecification {
 
-    final VALID_SUBMITTER1 = '0 @U1@ SUBM\n1 NAME Nigel'
-    final VALID_SUBMITTER2 = '0 @U2@ SUBM\n1 NAME Nigel'
-    final VALID_SOURCE = '0 @S1@ SOUR'
+    def VALID_SUBMITTER1 = '0 @U1@ SUBM\n1 NAME Nigel'
+    def VALID_SUBMITTER2 = '0 @U2@ SUBM\n1 NAME Nigel'
+    def VALID_SOURCE = '0 @S1@ SOUR'
 
     void 'test SUBMITTER_RECORD rules'() {
 

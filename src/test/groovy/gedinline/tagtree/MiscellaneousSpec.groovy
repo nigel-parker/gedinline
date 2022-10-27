@@ -2,7 +2,7 @@ package gedinline.tagtree
 
 class MiscellaneousSpec extends InlineSpecification {
 
-    final VALID_DATE = '0 @I00001@ INDI\n1 BIRT\n2 DATE 6 APR'
+    def VALID_DATE = '0 @I00001@ INDI\n1 BIRT\n2 DATE 6 APR'
 
     void 'test SUBMITTER_RECORD rules'() {
 

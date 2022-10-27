@@ -2,7 +2,7 @@ package gedinline.tagtree
 
 class ConcAndContSpec extends InlineSpecification {
 
-    final VALID_SOURCE = '0 @S1@ SOUR\n1 TITL My source'
+    def VALID_SOURCE = '0 @S1@ SOUR\n1 TITL My source'
 
     void 'test SUBMITTER_RECORD rules'() {
 
