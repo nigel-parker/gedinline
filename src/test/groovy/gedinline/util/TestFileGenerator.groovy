@@ -15,7 +15,7 @@ class TestFileGenerator {
             case 9: return withBody('0 @S@ SOUR\n1 REPO @VOID@\n2 CALN 1\n3 MEDI Book\n')
             case 10: return withHeaderBody('\n1 PLAC\n2 FORM a,b,c')
             case 11: return withBody('0 @I@ INDI\n1 RESN LOCKED, PRIVACY \n')
-            case 12: return withBody('0 @S@ SOUR\n1 DATA\n2 EVEN BARM, BASM\n')
+            case 12: return withBody('0 @S@ SOUR\n1 DATA\n2 EVEN BARM, OCCU\n')
             case 13: return withBody('0 @I@ INDI\n1 NAME Napoleon\n2 TRAN Napoléon\n3 LANG fr\n')
             case 14: return withHeaderBody('\n1 NOTE note\n2 MIME font/ttf')
             case 15: return generate([patchNumber: '.0'])
