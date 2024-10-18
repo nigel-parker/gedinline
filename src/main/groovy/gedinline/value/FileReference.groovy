@@ -10,16 +10,23 @@ class FileReference extends Validator {
     FileReference() {
     }
 
-    boolean isValid(String s, GedcomVersion gedcomVersion) {
+    boolean isValid(String inputString, GedcomVersion gedcomVersion) {
 
-        def schemes = ['http', 'https', 'ftp', 'file'] as String[]
-        def urlValidator = new UrlValidator(schemes)
-        def decoded = URLDecoder.decode('file:/' + s, 'UTF-8')
+        def withAddedFileScheme = 'file:/' + inputString
+        def decoded = URLDecoder.decode(inputString, 'UTF-8')
 
-        if (urlValidator.isValid(s)) {
-            true
-        } else {
-            urlValidator.isValid(decoded) && !decoded.contains('..')
-        }
+        def webSchemes = ['http', 'https', 'ftp'] as String[]
+        def fileScheme = ['file'] as String[]
+
+        def webUrlValidator = new UrlValidator(webSchemes)
+        def fileValidator = new UrlValidator(fileScheme)
+
+        webUrlValidator.isValid(inputString) ||
+                fileValidator.isValid(inputString) ||
+                (fileValidator.isValid(withAddedFileScheme) &&
+                        !inputString.contains('#') &&
+                        !inputString.contains('?') &&
+                        !decoded.contains('..') &&
+                        !decoded.contains('\\'))
     }
 }
