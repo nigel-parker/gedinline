@@ -6,6 +6,31 @@ import spock.lang.*
 
 class XrefCollectorSpec extends Specification {
 
+    void 'test for Voswinkel bug'() {
+
+        given:
+
+            def indiTag = new Tag('INDI')
+            def witnessedTag = new Tag('_WITNESSED')
+            def xrefCollector = new XrefCollector()
+            def gedcomVersion = GedcomVersion.V_70
+
+            def p1461 = new Pointer('@I1461@', gedcomVersion)
+            def p1462 = new Pointer('@I1462@', gedcomVersion)
+            def p592 = new Pointer('@I592@', gedcomVersion)
+
+            xrefCollector.addLabel(p1461, indiTag)
+            xrefCollector.addLabel(p1462, indiTag)
+            xrefCollector.addPointer(p592, witnessedTag)
+            xrefCollector.addLabel(p592, indiTag)
+            xrefCollector.addPointer(p1461, indiTag)
+
+        expect:
+
+            xrefCollector.getUnsatisfiedPointers() == [] as Set
+
+    }
+
     void test() {
 
         given:
@@ -65,31 +90,5 @@ class XrefCollectorSpec extends Specification {
         then:
 
             xrefCollector.getUnsatisfiedPointers() == [p3] as Set
-    }
-
-    void 'test for handling of extension tags'() {
-
-        given:
-
-            def tag = new Tag('_LOC')
-            def xrefCollector = new XrefCollector()
-            def gedcomVersion = GedcomVersion.V_70
-
-            def p1 = new Pointer('@LOC1@', gedcomVersion)
-            def p2 = new Pointer('@LOC2@', gedcomVersion)
-            def p3 = new Pointer('@LOC3@', gedcomVersion)
-
-        when:
-
-            xrefCollector.addPointer(p1, tag)
-            xrefCollector.addLabel(p1, tag)
-            xrefCollector.addLabel(p2, tag)
-            xrefCollector.addPointer(p2, tag)
-            xrefCollector.addPointer(p3, tag)
-
-        then:
-
-            xrefCollector.getUnsatisfiedPointers() == [p3] as Set
-
     }
 }

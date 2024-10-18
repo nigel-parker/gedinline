@@ -158,7 +158,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w09.ged'                  || 0                    | ''
             'w10.ged'                  || 1                    | 'Mandatory tag DATE not found under STAT'
             'w10.ged'                  || 1                    | 'Other                       1'
-            'w11.ged'                  || 57                   | "Can't find pointer reference @PERSON1@ in file"
+            'w11.ged'                  || 56                   | ''
             'w14.ged'                  || 2                    | "*** Line 13:      Invalid GEDCOM line '10'"
             'w15.ged'                  || 6                    | "*** Line 12:      Invalid GEDCOM line '10'"
             'w16.ged'                  || 0                    | ''

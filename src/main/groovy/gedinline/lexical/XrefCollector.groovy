@@ -20,7 +20,7 @@ class XrefCollector {
     }
 
     void addPointer(Pointer pointer, Tag tag) {
-        if (pointer.isValid()) {
+        if (pointer.isValid() && !tag.isUserDefined()) {
             getXrefStore(tag).addPointer(pointer)
         }
     }
