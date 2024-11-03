@@ -8,6 +8,7 @@ public class ParsingResult {
     private ParseResultValue value;
     private String remainder;
     private String errorMessage;
+    private boolean suppressValue;
 
     public ParsingResult() {
     }
@@ -70,5 +71,13 @@ public class ParsingResult {
 
     public void setRemainder(String remainder) {
         this.remainder = remainder;
+    }
+
+    public boolean isSuppressValue() {
+        return suppressValue;
+    }
+
+    public void setSuppressValue(boolean suppressValue) {
+        this.suppressValue = suppressValue;
     }
 }

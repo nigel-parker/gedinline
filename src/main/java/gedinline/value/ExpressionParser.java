@@ -21,6 +21,7 @@ public class ExpressionParser {
     private String input;
     private SyntaxElementLocator syntaxElementLocator;
     private GedcomVersion gedcomVersion;
+    private boolean suppressValue = false;
 
     public ExpressionParser(SyntaxElement syntaxElement, SyntaxElementLocator syntaxElementLocator, GedcomVersion gedcomVersion) {
         this(syntaxElement.getSyntaxExpression(), syntaxElementLocator, gedcomVersion);
@@ -216,6 +217,7 @@ public class ExpressionParser {
         parsingResult.setInput(input);
         parsingResult.setOk(false);
         parsingResult.setValue(null);
+        parsingResult.setSuppressValue(suppressValue);
         parsingResult.setRemainder(input);
         parsingResult.setErrorMessage(errorMessage);
         log("fail");
@@ -239,6 +241,7 @@ public class ExpressionParser {
                 }
             } else if (parsedLength > cardinality.getMaximum()) {
                 log("fail: too long");
+                suppressValue = true;
                 return fail("is more than " + cardinality.getMaximum() + " characters, the maximum length for");
             }
         }

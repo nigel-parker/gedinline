@@ -328,6 +328,8 @@ public class GedInlineValidator {
 
                 if (detail.startsWith(REPLACE_WITH)) {
                     message = StringUtils.substringAfter(detail, REPLACE_WITH);
+                } else if (parsingResult.isSuppressValue()) {
+                    message = "the value " + detail + " <" + syntaxTreeNode.getSyntaxElementIdStem() + ">";
                 } else {
                     message = "'" + value + "' " + detail + " <" + syntaxTreeNode.getSyntaxElementIdStem() + ">";
                 }

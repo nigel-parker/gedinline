@@ -159,6 +159,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w10.ged'                  || 1                    | 'Mandatory tag DATE not found under STAT'
             'w10.ged'                  || 1                    | 'Other                       1'
             'w11.ged'                  || 56                   | ''
+            'w12.ged'                  || 5                    | 'the value is more than 30 characters'
             'w14.ged'                  || 2                    | "*** Line 13:      Invalid GEDCOM line '10'"
             'w15.ged'                  || 6                    | "*** Line 12:      Invalid GEDCOM line '10'"
             'w16.ged'                  || 0                    | ''
@@ -186,7 +187,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
 
             'encoding-utf-16-le-555.ged' || 'GS'
             'w01.ged'                    || 'G'
-            'w12.ged'                    || 'GED-inline'
+            'w12.ged'                    || 'Reunion'
             'w13.ged'                    || 'Reunion'
     }
 }
