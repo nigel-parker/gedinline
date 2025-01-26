@@ -46,7 +46,7 @@ task fatJar(type: Jar) {
 }
 
 group = 'gedinline'
-version = '3.1.5'
+version = '3.1.6'
 
 task createProperties(dependsOn: processResources) {
     doLast {
