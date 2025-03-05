@@ -71,25 +71,41 @@ class LinkListener implements PropertyChangeListener {
     void reportMissingLinks() {
 
         missingFams.each { Pair pair ->
-            warningCollector.warning("Missing FAMS tag for individual ${pair.individual}")
+            warningCollector.warning("Individual ${pair.individual} is missing a FAMS tag for family ${pair.family}")
         }
 
         missingFamc.each { Pair pair ->
-            warningCollector.warning("Missing FAMC tag for individual ${pair.individual}")
+            warningCollector.warning("Individual ${pair.individual} is missing a FAMC tag for family ${pair.family}")
+        }
+
+        missingChil.each { Pair pair ->
+            warningCollector.warning("Family ${pair.family} is missing a CHIL tag for individual ${pair.individual}")
+        }
+
+        missingParent.each { Pair pair ->
+            warningCollector.warning("Missing HUSB or WIFE tag for family ${pair.family}")
         }
     }
 
     int getWarningCount() {
         // for test purposes
-        missingFamc.size() + missingFams.size()
+        missingFamc.size() + missingFams.size() + missingChil.size() + missingParent.size()
     }
 
     Set<Pair> getMissingFamc() {
         Sets.difference(chil, famc)
     }
 
+    Set<Pair> getMissingChil() {
+        Sets.difference(famc, chil)
+    }
+
     Set<Pair> getMissingFams() {
         Sets.difference(parent, fams)
+    }
+
+    Set<Pair> getMissingParent() {
+        Sets.difference(fams, parent)
     }
 
     String toString() {

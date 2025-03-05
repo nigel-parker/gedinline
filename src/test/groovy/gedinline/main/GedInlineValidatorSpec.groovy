@@ -145,7 +145,7 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'refn.ged'                 || 0                    | '' // Fixes #17. Restored support for REFN tag
             'simple-555.ged'           || 1                    | ''
             'simple.ged'               || 2                    | ''
-            'smith.ged'                || 26                   | ''
+            'smith.ged'                || 27                   | ''
             'torture-test-5-5-1.ged'   || 0                    | ''
             'w01.ged'                  || 0                    | ''
             'w02.ged'                  || 1                    | 'Level numbers should not have leading zeroes'
@@ -159,13 +159,14 @@ class GedInlineValidatorSpec extends FileReaderSpecification {
             'w10.ged'                  || 1                    | 'Mandatory tag DATE not found under STAT'
             'w10.ged'                  || 1                    | 'Other                       1'
             'w11.ged'                  || 56                   | ''
-            'w12.ged'                  || 5                    | 'the value is more than 30 characters'
+            'w12.ged'                  || 6                    | 'the value is more than 30 characters'
             'w14.ged'                  || 2                    | "*** Line 13:      Invalid GEDCOM line '10'"
             'w15.ged'                  || 6                    | "*** Line 12:      Invalid GEDCOM line '10'"
             'w16.ged'                  || 0                    | ''
             'w17.ged'                  || 1                    | 'Month values must be upper case'
             'w18.ged'                  || 1                    | 'Cross-reference identifier @I2@ is not valid here'
             'w19.ged'                  || 0                    | ''
+            'w20.ged'                  || 4                    | 'Family @F1@ is missing a CHIL tag for individual @I1@'
             'w550.ged'                 || 0                    | ''
             'w551.ged'                 || 0                    | ''
     }

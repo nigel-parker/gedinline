@@ -40,6 +40,21 @@ class LinkListenerSpec extends Specification {
             linkListener.missingFamc.toString() == '[(@I1@, @F1@)]'
     }
 
+    void 'CHIL link missing'() {
+
+        when:
+
+            inputLine '@I1@', 0, 'INDI', null
+            inputLine null, 1, 'FAMC', '@F1@'
+
+            inputLine '@F1@', 0, 'FAM', null
+
+        then:
+
+            linkListener.warningCount == 1
+            linkListener.missingChil.toString() == '[(@I1@, @F1@)]'
+    }
+
     void 'FAMS link present'() {
 
         when:
@@ -70,6 +85,21 @@ class LinkListenerSpec extends Specification {
 
             linkListener.warningCount == 1
             linkListener.missingFams.toString() == '[(@I1@, @F1@)]'
+    }
+
+    void 'HUSB/WIFE link missing'() {
+
+        when:
+
+            inputLine '@I1@', 0, 'INDI', null
+            inputLine null, 1, 'FAMS', '@F1@'
+
+            inputLine '@F1@', 0, 'FAM', null
+
+        then:
+
+            linkListener.warningCount == 1
+            linkListener.missingParent.toString() == '[(@I1@, @F1@)]'
     }
 
     void 'Void CHIL link'() {
