@@ -22,7 +22,7 @@ on your command line. Depending on your Java version you must choose the correct
 | Java 8 - 16  |  v3-main   | V3.x.x             | Java 8, Java 11            |
 | Java 17 ++   |  v4-main   | V4.x.x             | Java 17, Java 21, Java 23  |
 
-The current version of GED-inline is 4.0.1
+The current version of GED-inline is 4.0.0
 
 #### Building GED-inline
 
@@ -45,13 +45,13 @@ on Mac or Linux. If everything goes well you should see a 'BUILD SUCCESSFUL' mes
 GED-inline can be run from the command line. Try it out on an example file from the project:
 
 ```
-java -jar build/libs/gedinline-4.0.1.jar build/resources/test/gedcom-files/harvey-70.ged
+java -jar build/libs/gedinline-4.0.0.jar build/resources/test/gedcom-files/harvey-70.ged
 ```
 
 To save the result, redirect the output to a file:
 
 ```
-java -jar build/libs/gedinline-4.0.1.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
+java -jar build/libs/gedinline-4.0.0.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
 ```
 
 ### The jar file
@@ -59,7 +59,7 @@ java -jar build/libs/gedinline-4.0.1.jar build/resources/test/gedcom-files/harve
 GED-inline can also be accessed as a Java library:
 
 ```
-build/libs/gedinline-4.0.1.jar
+build/libs/gedinline-4.0.0.jar
 ```
 
 Validation is performed by the gedinline.main.GedInlineValidator class. The validater requires a GEDCOM file to analyse and a PrintWriter to write the validation report to. Create it like this:
