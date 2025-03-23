@@ -9,13 +9,20 @@ The validator is also available for online use at [GED-inline](http://ged-inline
 ### Getting Started
 #### Prerequisites
 
-A recent Java JDK must be installed on your machine. You can verify that it is by typing
+A Java JDK must be installed on your machine. You can verify this by typing
 
 ```
 javac -version
 ```
 
-on your command line. Gedinline has been specifically tested on Java 8 and Java 11. Note that building on Java 11 may give the warning message 'An illegal reflective access operation has occurred' which may safely be ignored.
+on your command line. Depending on your Java version you must choose the correct branch and version of GED-inline:
+
+| Java version |   Branch   | GED-inline version | Tested specifically  with  |
+|:-------------|:----------:|:------------------:|----------------------------|
+| Java 8 - 16  |  v3-main   | V3.x.x             | Java 8, Java 11            |
+| Java 17 ++   |  v4-main   | V4.x.x             | Java 17, Java 21, Java 23  |
+
+The current version of GED-inline is ${version}
 
 #### Building GED-inline
 
