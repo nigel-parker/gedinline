@@ -4,7 +4,7 @@ GED-inline is a validator for GEDCOM files. GEDCOM files contain text data descr
 
 GED-inline can validate GEDCOM version 5.5, 5.5.1 and 7.0. However for 7.0 there is currently no support for GEDZIP and incomplete support for extensions. In addition there is some support for the unofficial GEDCOM 5.5.5 standard.
 
-The validator is also available for online use at [GED-inline](http://ged-inline.elasticbeanstalk.com).
+The validator is also available for online use at [GED-inline](https://ged-inline.org).
 
 ### Getting Started
 #### Prerequisites
