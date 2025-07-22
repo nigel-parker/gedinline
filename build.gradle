@@ -35,6 +35,10 @@ test {
     outputs.upToDateWhen { false }
 }
 
+jar {
+    archiveBaseName = 'gedinline-slim'
+}
+
 task fatJar(type: Jar) {
     dependsOn 'test'
 
@@ -42,7 +46,7 @@ task fatJar(type: Jar) {
         attributes 'Main-Class': 'gedinline.main.Main'
     }
 
-    archiveBaseName = 'gedinline-fat'
+    archiveBaseName = 'gedinline'
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
