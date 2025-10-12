@@ -16,8 +16,10 @@ class AnalysisStatistics {
     Integer warningsPer10kLines
     String analysisTime
     String speed
+    Integer warnings
+    Integer linesPerSecond
 
-    AnalysisStatistics(Date timestamp, String filename, String gedcomVersion, String generatedBy, String generatedByVersion, String generatedDate, Integer numberOfLines, Integer numberOfRecords, Integer warningsPer10kLines, String analysisTime, String speed) {
+    AnalysisStatistics(Date timestamp, String filename, String gedcomVersion, String generatedBy, String generatedByVersion, String generatedDate, Integer numberOfLines, Integer numberOfRecords, Integer warningsPer10kLines, String analysisTime, String speed, Integer warnings, Integer linesPerSecond) {
         this.timestamp = timestamp
         this.filename = filename
         this.gedcomVersion = gedcomVersion
@@ -29,5 +31,7 @@ class AnalysisStatistics {
         this.warningsPer10kLines = warningsPer10kLines
         this.analysisTime = analysisTime
         this.speed = speed
+        this.warnings = warnings
+        this.linesPerSecond = linesPerSecond
     }
 }

@@ -30,6 +30,7 @@ public class StructureListener {
         outputReport.reportValue(ANALYSIS_TIME, "" + seconds + " second" + pluralEnding + " to analyse the file (excluding upload time)");
         outputReport.reportValue(SPEED, (teller * 1000 / time) + " records per second");
         outputReport.reportValue(WARNINGS_PER_10000_LINES, (warnings * 10000 / lines) + "");
+        outputReport.reportValue(LINES_PER_SECOND, (lines * 1000 / time) + "");
         outputReport.printReport();
     }
 

@@ -37,6 +37,7 @@ public class OutputReport {
     public static final String USER_DEFINED = "User-defined";
     public static final String WARNING = "Warnings";
     public static final String WARNINGS_PER_10000_LINES = "Warnings per 10000 lines";
+    public static final String LINES_PER_SECOND = "Lines per second";
 
     private static final String VALUE = "value";
 
@@ -160,7 +161,9 @@ public class OutputReport {
                 Integer.valueOf(getCount(RECORD)),
                 Integer.valueOf(getValue(WARNINGS_PER_10000_LINES)),
                 getValue(ANALYSIS_TIME),
-                getValue(SPEED));
+                getValue(SPEED),
+                Integer.valueOf(getCount(WARNING)),
+                Integer.valueOf(getValue(LINES_PER_SECOND)));
     }
 
     /**
