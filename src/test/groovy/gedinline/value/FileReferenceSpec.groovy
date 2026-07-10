@@ -15,30 +15,32 @@ class FileReferenceSpec extends Specification {
 
         where:
 
-            input                           | expectedResult
+            input                                                              | expectedResult
 
-            'http://sottovoce.no'           | true
-            'https://sottovoce.no'          | true
-            'https://sottovoce.no?all=true' | true
-            'https://sottovoce.no#top'      | true
-            'ftp://sottovoce.no'            | true
-            'file://sottovoce.no'           | true
-            'file://sottovoce.no/a'         | true
-            'file://sottovoce.no/%2fa'      | true
-            'file://sottovoce.no/%5c'       | true
+            'http://sottovoce.no'                                              | true
+            'https://sottovoce.no'                                             | true
+            'https://sottovoce.no?all=true'                                    | true
+            'https://sottovoce.no#top'                                         | true
+            'http://www.rosekamp.dk/Musik_web/D.htm#Dysthe,%20Carl%20SchøYEN,' | true
+            'ftp://sottovoce.no'                                               | true
+            'file://sottovoce.no'                                              | true
+            'file://sottovoce.no/a'                                            | true
+            'file://sottovoce.no/%2fa'                                         | true
+            'file://sottovoce.no/%5c'                                          | true
 
-            'file:data/sottovoce.pdf'       | true
-            'sottovoce.pdf'                 | true
-            'sotto%20voce.pdf'              | true
-            'sottovoce.pdf/%2fa'            | true
+            'file:data/sottovoce.pdf'                                          | true
+            'sottovoce.pdf'                                                    | true
+            'sotto%20voce.pdf'                                                 | true
+            'sottovoce.pdf/%2fa'                                               | true
+            'media/Døsthe.jpg'                                                 | true
 
-            'sotto voce.pdf'                | false
-            '/sottovoce.pdf'                | false
-            'sottovoce..pdf'                | false
-            '\\sottovoce.pdf'               | false
-            'sottovoce.pdf/%5c'             | false
-            'sottovoce.pdf#top'             | false
-            'sottovoce.pdf?binary=true'     | false
+            'sotto voce.pdf'                                                   | false
+            '/sottovoce.pdf'                                                   | false
+            'sottovoce..pdf'                                                   | false
+            '\\sottovoce.pdf'                                                  | false
+            'sottovoce.pdf/%5c'                                                | false
+            'sottovoce.pdf#top'                                                | false
+            'sottovoce.pdf?binary=true'                                        | false
 
     }
 }
