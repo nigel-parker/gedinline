@@ -57,6 +57,11 @@ class ExpressionParser70Spec extends Specification {
             'list:[A|B|C]'         | ''               || false | null          | ''
             'list:[A|B|C]'         | ' '              || false | null          | ' '
 
+            // A list element must be consumed entirely, not merely matched as a prefix
+
+            'list:[A|B|C]'         | 'AX'             || false | null          | 'AX'
+            'list:[A|B|C]'         | 'A, BX'          || false | null          | 'A, BX'
+
             'list:String'          | ' '              || true  | ''            | ''
             'list:String'          | ', , one, more,' || true  | ''            | ''
 

@@ -132,7 +132,7 @@ public class ExpressionParser {
                 String trimmed = s.trim();
                 ParsingResult result = parser.parse(trimmed);
 
-                if (!result.isOk()) {
+                if (!result.parsedEverythingOk()) {
                     return fail();
                 }
             }
