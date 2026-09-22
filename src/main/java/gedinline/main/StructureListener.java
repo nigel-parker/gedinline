@@ -29,9 +29,17 @@ public class StructureListener {
         String pluralEnding = seconds == 1 ? "" : "s";
         outputReport.reportValue(ANALYSIS_TIME, "" + seconds + " second" + pluralEnding + " to analyse the file (excluding upload time)");
         outputReport.reportValue(SPEED, (teller * 1000 / time) + " records per second");
-        outputReport.reportValue(WARNINGS_PER_10000_LINES, (warnings * 10000 / lines) + "");
-        outputReport.reportValue(LINES_PER_SECOND, (lines * 1000 / time) + "");
+        outputReport.reportValue(WARNINGS_PER_10000_LINES, warningsPer10kLines(warnings, lines) + "");
+        outputReport.reportValue(LINES_PER_SECOND, linesPerSecond(lines, time) + "");
         outputReport.printReport();
+    }
+
+    static long linesPerSecond(int lines, long millis) {
+        return (long) lines * 1000 / millis;
+    }
+
+    static long warningsPer10kLines(int warnings, int lines) {
+        return (long) warnings * 10000 / lines;
     }
 
     public void closeError(String s) {
