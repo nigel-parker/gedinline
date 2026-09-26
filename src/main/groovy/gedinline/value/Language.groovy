@@ -6,14 +6,13 @@ import groovy.transform.*
 @CompileStatic
 class Language extends Validator {
 
-    static Set languageCodes
+    // Loaded once, eagerly, so that concurrent validation threads share one immutable set
+    static final Set<String> languageCodes = loadLanguageCodes()
 
     Language() {
     }
 
     boolean isValid(String s, GedcomVersion gedcomVersion) {
-
-        init()
 
         def regex = /(?<languageCode>[a-zA-Z]{1,8})(-[a-zA-Z0-9]{1,8})*/
         def matcher = s =~ regex
@@ -25,12 +24,9 @@ class Language extends Validator {
         matcher.group('languageCode') in languageCodes
     }
 
-    void init() {
-
-        if (!languageCodes) {
-            def inputStream = getClass().getClassLoader().getResourceAsStream('language-codes.txt')
-
-            languageCodes = inputStream.readLines() as Set
+    private static Set<String> loadLanguageCodes() {
+        Language.classLoader.getResourceAsStream('language-codes.txt').withStream { InputStream inputStream ->
+            Collections.unmodifiableSet(inputStream.readLines() as Set<String>)
         }
     }
 

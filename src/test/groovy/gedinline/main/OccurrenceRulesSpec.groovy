@@ -10,7 +10,7 @@ class OccurrenceRulesSpec extends Specification {
 
         expect:
 
-            GedInlineValidator.checkOccurrenceRules(occurrence, tagCount) == ok
+            RecordValidator.checkOccurrenceRules(occurrence, tagCount) == ok
 
         where:
 

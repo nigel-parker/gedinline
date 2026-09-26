@@ -22,7 +22,7 @@ on your command line. Depending on your Java version you must choose the correct
 | Java 8 - 16  |  v3-main   | V3.x.x             | Java 8, Java 11            |
 | Java 17 ++   |  v4-main   | V4.x.x             | Java 17, Java 21, Java 23  |
 
-The current version of GED-inline is 4.0.6
+The current version of GED-inline is 4.1.0
 
 #### Building GED-inline
 
@@ -45,13 +45,22 @@ on Mac or Linux. If everything goes well you should see a 'BUILD SUCCESSFUL' mes
 GED-inline can be run from the command line. Try it out on an example file from the project:
 
 ```
-java -jar build/libs/gedinline-4.0.6.jar build/resources/test/gedcom-files/harvey-70.ged
+java -jar build/libs/gedinline-4.1.0.jar build/resources/test/gedcom-files/harvey-70.ged
 ```
 
 To save the result, redirect the output to a file:
 
 ```
-java -jar build/libs/gedinline-4.0.6.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
+java -jar build/libs/gedinline-4.1.0.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
+```
+
+Records are validated on a pool of worker threads, one per available processor, while the file itself is read on
+the calling thread. The report is the same whatever the number of threads. Use `--parallelism N` (or `-p N`) to
+choose the number of validation threads yourself; `--parallelism 1` gives the single-threaded behaviour of earlier
+versions:
+
+```
+java -jar build/libs/gedinline-4.1.0.jar --parallelism 1 build/resources/test/gedcom-files/harvey-70.ged
 ```
 
 ### The jar file
@@ -59,7 +68,7 @@ java -jar build/libs/gedinline-4.0.6.jar build/resources/test/gedcom-files/harve
 GED-inline can also be accessed as a Java library:
 
 ```
-build/libs/gedinline-4.0.6.jar
+build/libs/gedinline-4.1.0.jar
 ```
 
 Validation is performed by the gedinline.main.GedInlineValidator class. The validater requires a GEDCOM file to analyse and a PrintWriter to write the validation report to. Create it like this:
@@ -68,7 +77,9 @@ Validation is performed by the gedinline.main.GedInlineValidator class. The vali
 new GedInlineValidator(gedcomFile, outputReportWriter)
 ```
 
-Use the validate() method to start validation. For further details see the groovydoc at build/docs/groovydoc/gedinline/main/GedInlineValidator.html.
+Use the validate() method to start validation. By default records are validated on as many threads as there are
+available processors; call setParallelism(n) before validate() to change this, with 1 meaning single-threaded. For
+further details see the groovydoc at build/docs/groovydoc/gedinline/main/GedInlineValidator.html.
 
 ### License
 

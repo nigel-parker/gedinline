@@ -54,6 +54,15 @@ To save the result, redirect the output to a file:
 java -jar build/libs/gedinline-${version}.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
 ```
 
+Records are validated on a pool of worker threads, one per available processor, while the file itself is read on
+the calling thread. The report is the same whatever the number of threads. Use `--parallelism N` (or `-p N`) to
+choose the number of validation threads yourself; `--parallelism 1` gives the single-threaded behaviour of earlier
+versions:
+
+```
+java -jar build/libs/gedinline-${version}.jar --parallelism 1 build/resources/test/gedcom-files/harvey-70.ged
+```
+
 ### The jar file
 
 GED-inline can also be accessed as a Java library:
@@ -68,7 +77,9 @@ Validation is performed by the gedinline.main.GedInlineValidator class. The vali
 new GedInlineValidator(gedcomFile, outputReportWriter)
 ```
 
-Use the validate() method to start validation. For further details see the groovydoc at build/docs/groovydoc/gedinline/main/GedInlineValidator.html.
+Use the validate() method to start validation. By default records are validated on as many threads as there are
+available processors; call setParallelism(n) before validate() to change this, with 1 meaning single-threaded. For
+further details see the groovydoc at build/docs/groovydoc/gedinline/main/GedInlineValidator.html.
 
 ### License
 

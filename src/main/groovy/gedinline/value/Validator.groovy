@@ -22,18 +22,7 @@ class Validator {
         ValidationResult.of(isValid(s, gedcomVersion1))
     }
 
-    private static Map<String, Validator> validators = [:]
-
-    static Validator of(String shortName) {
-
-        if (!validators) {
-            init()
-        }
-
-        validators[shortName]
-    }
-
-    private static List<String> names = [
+    private static final List<String> names = [
             'AgeAtEvent',
             'DateExact',
             'DatePeriod',
@@ -54,11 +43,20 @@ class Validator {
             'Uuid',
     ]
 
-    private static void init() {
+    // Built once, eagerly, so that concurrent callers never observe a partly filled map
+    private static final Map<String, Validator> validators = createValidators()
+
+    static Validator of(String shortName) {
+        validators[shortName]
+    }
+
+    private static Map<String, Validator> createValidators() {
+        Map<String, Validator> map = [:]
 
         names.each { String name ->
-            def validator = Class.forName('gedinline.value.' + name).newInstance() as Validator
-            validators.put(name, validator)
+            map.put(name, Class.forName('gedinline.value.' + name).newInstance() as Validator)
         }
+
+        Collections.unmodifiableMap(map)
     }
 }
