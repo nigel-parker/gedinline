@@ -1,13 +1,11 @@
 package gedinline.lexical
 
-import org.joda.time.*
+import java.time.*
+import java.time.format.*
 
-import java.text.*
+import static gedinline.value.GedcomDateFormats.*
 
 class DualYearValidator {
-
-    static final PATTERN_1 = 'dd MMM yyyy'
-    static final PATTERN_2 = 'MMM yyyy'
 
     String s1
     String dualYear
@@ -27,7 +25,7 @@ class DualYearValidator {
             return false
         }
 
-        def year = new LocalDate(date).year
+        def year = date.year
 
         def last2Digits1 = year % 100
         def last2Digits2 = dualYear.substring(1) as int
@@ -36,9 +34,9 @@ class DualYearValidator {
             return false
         }
 
-        def oldNewYear = new LocalDate(year, 3, 25).toDateTimeAtStartOfDay().toDate()
+        def oldNewYear = LocalDate.of(year, 3, 25)
 
-        if (date >= oldNewYear) {
+        if (!date.isBefore(oldNewYear)) {
             return false
         }
 
@@ -49,10 +47,10 @@ class DualYearValidator {
         true
     }
 
-    Date getDate() {
+    LocalDate getDate() {
         try {
-            new SimpleDateFormat(variant1 ? PATTERN_1 : PATTERN_2, Locale.ENGLISH).parse(s1)
-        } catch (Exception ignored) {
+            variant1 ? LocalDate.parse(s1, DAY_MONTH_YEAR) : YearMonth.parse(s1, MONTH_YEAR).atDay(1)
+        } catch (DateTimeParseException ignored) {
             null
         }
     }

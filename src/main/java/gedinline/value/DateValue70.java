@@ -2,16 +2,14 @@ package gedinline.value;
 
 import com.google.common.collect.ImmutableList;
 import org.apache.commons.lang.StringUtils;
-import org.joda.time.DateTimeZone;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 import java.util.List;
-import java.util.Locale;
+import java.time.format.DateTimeFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static gedinline.value.ExpressionParser.REPLACE_WITH;
+import static gedinline.value.GedcomDateFormats.*;
 
 @SuppressWarnings("Duplicates")
 public class DateValue70 {
@@ -34,15 +32,6 @@ public class DateValue70 {
     private static final String CAL_JULIAN = "JULIAN ";
     private static final List<String> PREFIXES = ImmutableList.of("ABT", "AFT", "BEF", "CAL", "EST", "FROM", "TO");
 
-    private static DateTimeFormatter FORMAT_1 = DateTimeFormat.forPattern("dd MMM yyyy")
-            .withLocale(Locale.ENGLISH)
-            .withZone(DateTimeZone.UTC);
-    private static DateTimeFormatter FORMAT_2 = DateTimeFormat.forPattern("MMM yyyy")
-            .withLocale(Locale.ENGLISH)
-            .withZone(DateTimeZone.UTC);
-    private static DateTimeFormatter FORMAT_3 = DateTimeFormat.forPattern("yyyy")
-            .withLocale(Locale.ENGLISH)
-            .withZone(DateTimeZone.UTC);
 
     private String s;
 
@@ -135,14 +124,14 @@ public class DateValue70 {
             return true;
         }
 
-        boolean b = checkValidDate(s1, FORMAT_1);
+        boolean b = checkValidDate(s1, DAY_MONTH_YEAR);
 
         if (!b) {
-            b = checkValidDate(s1, FORMAT_2);
+            b = checkValidDate(s1, MONTH_YEAR);
         }
 
         if (!b) {
-            b = checkValidDate(s1, FORMAT_3);
+            b = checkValidDate(s1, YEAR);
         }
 
         return b;
@@ -163,7 +152,7 @@ public class DateValue70 {
     private static boolean checkValidDate(String s, DateTimeFormatter formatter) {
         try {
 
-            formatter.parseDateTime(s);
+            formatter.parse(s);
             return true;
 
         } catch (Exception e) {

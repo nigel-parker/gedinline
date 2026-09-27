@@ -3,16 +3,14 @@ package gedinline.value;
 import com.google.common.collect.ImmutableList;
 import gedinline.lexical.GedcomVersion;
 import org.apache.commons.lang.StringUtils;
-import org.joda.time.DateTimeZone;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
-import java.util.Locale;
+import java.time.format.DateTimeFormatter;
 
 import static gedinline.lexical.GedcomVersion.V_55;
 import static gedinline.lexical.GedcomVersion.V_551;
 import static gedinline.value.ValidationResult.TRUE;
 import static gedinline.value.ValidationResult.of;
+import static gedinline.value.GedcomDateFormats.*;
 
 /**
  * User: nigel
@@ -33,15 +31,6 @@ public class DateValue {
     private static final String ESCAPE_G = "@#DGREGORIAN@ ";
     private static final String ESCAPE_H = "@#DHEBREW@ ";
     private static final String ESCAPE_J = "@#DJULIAN@ ";
-    private static DateTimeFormatter FORMAT_1 = DateTimeFormat.forPattern("dd MMM yyyy")
-            .withLocale(Locale.ENGLISH)
-            .withZone(DateTimeZone.UTC);
-    private static DateTimeFormatter FORMAT_2 = DateTimeFormat.forPattern("MMM yyyy")
-            .withLocale(Locale.ENGLISH)
-            .withZone(DateTimeZone.UTC);
-    private static DateTimeFormatter FORMAT_3 = DateTimeFormat.forPattern("yyyy")
-            .withLocale(Locale.ENGLISH)
-            .withZone(DateTimeZone.UTC);
 
     private String originalString;
     private String s;
@@ -157,16 +146,16 @@ public class DateValue {
         }
 
         if (bc && gedcomVersion.equals(V_551)) {
-            return checkPattern(s1, FORMAT_3);
+            return checkPattern(s1, YEAR);
         } else {
-            boolean b = checkPattern(s1, FORMAT_1);
+            boolean b = checkPattern(s1, DAY_MONTH_YEAR);
 
             if (!b) {
-                b = checkPattern(s1, FORMAT_2);
+                b = checkPattern(s1, MONTH_YEAR);
             }
 
             if (!b) {
-                b = checkPattern(s1, FORMAT_3);
+                b = checkPattern(s1, YEAR);
             }
 
             return b;
@@ -200,7 +189,7 @@ public class DateValue {
                 return false;
             }
 
-            formatter.parseDateTime(s);
+            formatter.parse(s);
             return true;
 
         } catch (Exception e) {
