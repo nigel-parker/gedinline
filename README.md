@@ -1,5 +1,9 @@
 ## GED-inline
 
+> **This branch is deprecated.** GED-inline 3 (Java 8 - 16) is no longer maintained and will receive no further fixes.
+> Current development is GED-inline 4 on the [main](https://github.com/nigel-parker/gedinline/tree/main) branch;
+> see its README for the Java version it requires.
+
 GED-inline is a validator for GEDCOM files. GEDCOM files contain text data describing family trees. They are used to exchange family tree data between different genealogical solutions. See [gedcom.io](https://gedcom.io/) for further information.
 
 GED-inline can validate GEDCOM version 5.5, 5.5.1 and 7.0. However for 7.0 there is currently no support for GEDZIP and incomplete support for extensions. In addition there is some support for the unofficial GEDCOM 5.5.5 standard.
