@@ -10,10 +10,11 @@ repositories {
 
 dependencies {
 
-    implementation 'org.apache.groovy:groovy-all:4.0.30'
+    implementation 'org.apache.groovy:groovy:4.0.30'
     implementation('commons-validator:commons-validator:1.11.0') { transitive = false }
 
     testImplementation 'org.spockframework:spock-core:2.4-M5-groovy-4.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 sourceSets {
