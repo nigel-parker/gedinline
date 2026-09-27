@@ -2,8 +2,8 @@ package gedinline.value
 
 import gedinline.lexical.*
 import gedinline.main.*
+import gedinline.util.*
 import groovy.transform.*
-import org.apache.commons.lang.*
 
 @CompileStatic
 class Pointer extends Validator {

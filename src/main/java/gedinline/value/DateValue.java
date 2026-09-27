@@ -1,7 +1,7 @@
 package gedinline.value;
 
 import gedinline.lexical.GedcomVersion;
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;

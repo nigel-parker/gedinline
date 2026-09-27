@@ -1,6 +1,6 @@
 package gedinline.lexical;
 
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 public enum GedcomVersion {
 

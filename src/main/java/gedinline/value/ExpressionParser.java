@@ -2,8 +2,8 @@ package gedinline.value;
 
 import gedinline.lexical.GedcomVersion;
 import gedinline.main.Debug;
+import gedinline.util.StringUtils;
 import gedinline.util.Utils;
-import org.apache.commons.lang.StringUtils;
 
 import java.util.List;
 

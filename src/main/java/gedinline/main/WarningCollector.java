@@ -1,7 +1,7 @@
 package gedinline.main;
 
 import gedinline.lexical.InputLine;
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;

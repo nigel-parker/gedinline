@@ -9,11 +9,11 @@ import gedinline.main.RecordResult.Warning;
 import gedinline.tagtree.Occurrence;
 import gedinline.tagtree.SyntaxTreeNode;
 import gedinline.tagtree.TagTree;
+import gedinline.util.StringUtils;
 import gedinline.value.ExpressionParser;
 import gedinline.value.ParsingResult;
 import gedinline.value.SyntaxElement;
 import gedinline.value.ValueGrammar;
-import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;

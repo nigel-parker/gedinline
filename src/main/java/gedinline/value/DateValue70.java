@@ -1,6 +1,6 @@
 package gedinline.value;
 
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;

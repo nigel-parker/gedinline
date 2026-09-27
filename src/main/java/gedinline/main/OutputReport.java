@@ -1,6 +1,6 @@
 package gedinline.main;
 
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 import java.io.PrintWriter;
 import java.time.LocalDateTime;

@@ -2,8 +2,8 @@ package gedinline.lexical;
 
 import gedinline.main.GedcomException;
 import gedinline.main.WarningSink;
+import gedinline.util.StringUtils;
 import gedinline.value.Pointer;
-import org.apache.commons.lang.StringUtils;
 
 import java.util.StringTokenizer;
 

@@ -2,8 +2,8 @@ package gedinline.value;
 
 import gedinline.lexical.GedcomVersion;
 import gedinline.main.ValidatorBugException;
+import gedinline.util.StringUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
 
 import java.io.IOException;
 import java.io.InputStream;

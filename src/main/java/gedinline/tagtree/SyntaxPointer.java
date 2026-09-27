@@ -1,7 +1,7 @@
 package gedinline.tagtree;
 
 import gedinline.main.GedcomException;
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 public class SyntaxPointer {
 

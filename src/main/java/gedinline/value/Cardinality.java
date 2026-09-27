@@ -1,7 +1,7 @@
 package gedinline.value;
 
 import gedinline.main.ValidatorBugException;
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 public class Cardinality {
 

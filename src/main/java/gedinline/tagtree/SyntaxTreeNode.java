@@ -2,7 +2,7 @@ package gedinline.tagtree;
 
 import gedinline.lexical.Tag;
 import gedinline.main.ValidatorBugException;
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 import static gedinline.tagtree.Occurrence.*;
 

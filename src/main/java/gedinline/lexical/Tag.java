@@ -2,7 +2,7 @@ package gedinline.lexical;
 
 import gedinline.main.GedcomException;
 import gedinline.tagtree.XrefType;
-import org.apache.commons.lang.StringUtils;
+import gedinline.util.StringUtils;
 
 import static gedinline.tagtree.XrefType.*;
 
