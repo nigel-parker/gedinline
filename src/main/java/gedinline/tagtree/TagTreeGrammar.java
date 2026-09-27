@@ -1,9 +1,5 @@
 package gedinline.tagtree;
 
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Multimap;
 import gedinline.lexical.GedcomVersion;
 import gedinline.main.ValidatorBugException;
 import org.apache.commons.io.IOUtils;
@@ -15,7 +11,7 @@ import java.util.*;
 
 public class TagTreeGrammar {
 
-    private Multimap<String, String> subtrees = ArrayListMultimap.create();
+    private Map<String, List<String>> subtrees = new HashMap<>();
     private GedcomVersion gedcomVersion;
 
     public TagTreeGrammar(GedcomVersion gedcomVersion) {
@@ -43,14 +39,14 @@ public class TagTreeGrammar {
                 subtreeName = StringUtils.substringBefore(s, ":");
             } else {
                 if (!StringUtils.isBlank(s)) {
-                    subtrees.put(subtreeName, s.trim());
+                    subtrees.computeIfAbsent(subtreeName, k -> new ArrayList<>()).add(s.trim());
                 }
             }
         }
     }
 
     public List<TagTree> getSubtree(String subtreeName) {
-        List<TagTree> result = Lists.newArrayList();
+        List<TagTree> result = new ArrayList<>();
         Collection<String> stringCollection = getSubtreeNames(subtreeName);
         Stack<TagTree> stack = new Stack<TagTree>();
         int currentLevel = 0;
@@ -113,7 +109,7 @@ public class TagTreeGrammar {
     }
 
     public List<TagTree> expandAll(List<TagTree> tagTrees) {
-        List<TagTree> result = Lists.newArrayList();
+        List<TagTree> result = new ArrayList<>();
 
         for (TagTree tagTree : tagTrees) {
             result.addAll(expand(tagTree, tagTree.getSyntaxTreeNode().getOccurrence()));
@@ -123,7 +119,7 @@ public class TagTreeGrammar {
     }
 
     public List<TagTree> expand(List<TagTree> tagTrees, Occurrence occurrence) {
-        List<TagTree> result = Lists.newArrayList();
+        List<TagTree> result = new ArrayList<>();
 
         for (TagTree tagTree : tagTrees) {
             result.addAll(expand(tagTree, occurrence));
@@ -143,7 +139,7 @@ public class TagTreeGrammar {
             if (expandLevel >= 10) {
                 expandLevel--;
 
-                return ImmutableList.of();
+                return List.of();
             } else {
                 List<TagTree> tagTrees = getSubtree(syntaxTreeNode.getSubtreeReference().getId());
 
@@ -158,7 +154,7 @@ public class TagTreeGrammar {
             }
 
             expandLevel--;
-            return ImmutableList.of(result);
+            return List.of(result);
         }
     }
 

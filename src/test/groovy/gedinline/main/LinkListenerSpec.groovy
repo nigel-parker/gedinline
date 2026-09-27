@@ -102,6 +102,25 @@ class LinkListenerSpec extends Specification {
             linkListener.missingParent.toString() == '[(@I1@, @F1@)]'
     }
 
+    void 'several FAMC links missing are reported in order of appearance'() {
+
+        when:
+
+            inputLine '@I3@', 0, 'INDI', null
+            inputLine '@I1@', 0, 'INDI', null
+            inputLine '@I2@', 0, 'INDI', null
+
+            inputLine '@F1@', 0, 'FAM', null
+            inputLine null, 1, 'CHIL', '@I3@'
+            inputLine null, 1, 'CHIL', '@I1@'
+            inputLine null, 1, 'CHIL', '@I2@'
+
+        then:
+
+            linkListener.warningCount == 3
+            linkListener.missingFamc.toString() == '[(@I3@, @F1@), (@I1@, @F1@), (@I2@, @F1@)]'
+    }
+
     void 'Void CHIL link'() {
 
         when:

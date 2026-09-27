@@ -1,9 +1,9 @@
 package gedinline.main;
 
-import com.google.common.collect.Maps;
 import gedinline.lexical.InputLine;
 import org.apache.commons.lang.StringUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
@@ -11,7 +11,7 @@ public class WarningCollector implements WarningSink {
 
     private Stack<WarningCount> stack = new Stack<WarningCount>();
     private StructureListener structureListener;
-    private Map<String, Integer> counts = Maps.newHashMap();
+    private Map<String, Integer> counts = new HashMap<>();
 
     public WarningCollector(StructureListener structureListener) {
         this.structureListener = structureListener;

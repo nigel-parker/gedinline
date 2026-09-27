@@ -1,10 +1,9 @@
 package gedinline.value;
 
-import com.google.common.collect.ImmutableList;
 import org.apache.commons.lang.StringUtils;
 
-import java.util.List;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,7 +29,7 @@ public class DateValue70 {
     private static final String CAL_GREGORIAN = "GREGORIAN ";
     private static final String CAL_HEBREW = "HEBREW ";
     private static final String CAL_JULIAN = "JULIAN ";
-    private static final List<String> PREFIXES = ImmutableList.of("ABT", "AFT", "BEF", "CAL", "EST", "FROM", "TO");
+    private static final List<String> PREFIXES = List.of("ABT", "AFT", "BEF", "CAL", "EST", "FROM", "TO");
 
 
     private String s;

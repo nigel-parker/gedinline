@@ -1,10 +1,10 @@
 package gedinline.value;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
 import gedinline.main.ValidatorBugException;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Term {
 
@@ -13,7 +13,7 @@ public class Term {
     }
 
     private String atom = "";
-    private List<Term> terms = Lists.newArrayList();
+    private List<Term> terms = new ArrayList<>();
     private Type type;
 
     public Term(Type type) {
@@ -68,9 +68,13 @@ public class Term {
         if (isAtom()) {
             return atom;
         } else if (isConjunction()) {
-            return Joiner.on(" ").join(terms);
+            return join(" ");
         } else {
-            return "[" + Joiner.on("|").join(terms) + "]";
+            return "[" + join("|") + "]";
         }
+    }
+
+    private String join(String separator) {
+        return terms.stream().map(String::valueOf).collect(Collectors.joining(separator));
     }
 }

@@ -1,6 +1,5 @@
 package gedinline.main
 
-import com.google.common.collect.*
 import gedinline.lexical.*
 import gedinline.value.*
 import groovy.transform.*
@@ -93,19 +92,19 @@ class LinkListener implements PropertyChangeListener {
     }
 
     Set<Pair> getMissingFamc() {
-        Sets.difference(chil, famc)
+        chil.findAll { !famc.contains(it) }
     }
 
     Set<Pair> getMissingChil() {
-        Sets.difference(famc, chil)
+        famc.findAll { !chil.contains(it) }
     }
 
     Set<Pair> getMissingFams() {
-        Sets.difference(parent, fams)
+        parent.findAll { !fams.contains(it) }
     }
 
     Set<Pair> getMissingParent() {
-        Sets.difference(fams, parent)
+        fams.findAll { !parent.contains(it) }
     }
 
     String toString() {

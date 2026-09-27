@@ -1,6 +1,5 @@
 package gedinline.tagtree;
 
-import com.google.common.base.Splitter;
 import gedinline.lexical.Tag;
 import gedinline.main.ValidatorBugException;
 import org.apache.commons.lang.StringUtils;
@@ -29,7 +28,7 @@ public class SyntaxTreeNode {
 
         origin = s;
 
-        for (String token : Splitter.on(" ").omitEmptyStrings().split(s)) {
+        for (String token : StringUtils.split(s, ' ')) {
 
             switch (state) {
                 case START:

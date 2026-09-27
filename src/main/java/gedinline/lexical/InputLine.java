@@ -1,12 +1,11 @@
 package gedinline.lexical;
 
-import com.google.common.base.Splitter;
 import gedinline.main.GedcomException;
 import gedinline.main.WarningSink;
 import gedinline.value.Pointer;
 import org.apache.commons.lang.StringUtils;
 
-import java.util.Iterator;
+import java.util.StringTokenizer;
 
 public class InputLine implements Line {
 
@@ -24,13 +23,13 @@ public class InputLine implements Line {
         this.gedcomVersion = gedcomVersion;
         String line = precursor.getLine();
 
-        Iterator<String> it = Splitter.on(" ").omitEmptyStrings().split(line).iterator();
+        StringTokenizer it = new StringTokenizer(line, " ");
 
-        if (!it.hasNext()) {
+        if (!it.hasMoreTokens()) {
             throw new GedcomException("Invalid GEDCOM line '" + precursor.getLevelAndLine() + "'");
         }
 
-        String token = it.next();
+        String token = it.nextToken();
 
         if (Pointer.looksValid(token, gedcomVersion)) {
             label = new Pointer(token, gedcomVersion);
@@ -39,7 +38,7 @@ public class InputLine implements Line {
                 warningSink.warning(lineNumber, "Invalid pointer '" + token + "'");
             }
 
-            if (!it.hasNext()) {
+            if (!it.hasMoreTokens()) {
                 throw new GedcomException("Invalid GEDCOM line '" + precursor.getLevelAndLine() + "'");
             }
 
@@ -47,7 +46,7 @@ public class InputLine implements Line {
                 throw new GedcomException("Cross-reference identifier " + token + " is not valid here");
             }
 
-            token = it.next();
+            token = it.nextToken();
         }
 
         try {
@@ -57,8 +56,8 @@ public class InputLine implements Line {
             tag = Tag.XXXX;
         }
 
-        if (it.hasNext()) {
-            token = it.next();
+        if (it.hasMoreTokens()) {
+            token = it.nextToken();
 
             if (Pointer.looksValid(token, gedcomVersion)) {
                 pointer = new Pointer(token, gedcomVersion);

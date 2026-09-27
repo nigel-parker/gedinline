@@ -1,6 +1,5 @@
 package gedinline.lexical;
 
-import com.google.common.collect.Lists;
 import gedinline.main.GedcomException;
 import gedinline.main.NullLogger;
 import gedinline.main.StructureListener;
@@ -11,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -54,7 +54,7 @@ public class RecordCollector {
     }
 
     public List<InputRecord> getInputRecords() {
-        List<InputRecord> result = Lists.newArrayList();
+        List<InputRecord> result = new ArrayList<>();
 
         while (hasNext()) {
             result.add(next());

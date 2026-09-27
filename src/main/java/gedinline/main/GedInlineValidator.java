@@ -1,6 +1,5 @@
 package gedinline.main;
 
-import com.google.common.collect.Maps;
 import gedinline.lexical.*;
 import gedinline.main.RecordResult.Event;
 import gedinline.main.RecordResult.LineValidated;
@@ -16,7 +15,7 @@ import java.util.concurrent.*;
 
 public class GedInlineValidator {
 
-    private Map<Tag, TagTree> expandedGrammarMap = Maps.newHashMap();
+    private Map<Tag, TagTree> expandedGrammarMap = new HashMap<>();
     private String filename;
     private InputStream inputStream;
     private Map<String, String> recordMap = new HashMap<>();

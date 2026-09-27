@@ -1,12 +1,11 @@
 package gedinline.value;
 
-import com.google.common.collect.Lists;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConcatenationResult extends ParseResultValue {
 
-    private List<ParseResultValue> concatenation = Lists.newArrayList();
+    private List<ParseResultValue> concatenation = new ArrayList<>();
 
     public ConcatenationResult() {
     }

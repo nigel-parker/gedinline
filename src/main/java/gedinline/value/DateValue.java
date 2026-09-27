@@ -1,10 +1,10 @@
 package gedinline.value;
 
-import com.google.common.collect.ImmutableList;
 import gedinline.lexical.GedcomVersion;
 import org.apache.commons.lang.StringUtils;
 
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import static gedinline.lexical.GedcomVersion.V_55;
 import static gedinline.lexical.GedcomVersion.V_551;
@@ -73,7 +73,7 @@ public class DateValue {
                     isValidDatePhrase(OPEN_BRACKET + StringUtils.substringAfter(s, SPACE_OPEN_BRACKET)));
         }
 
-        for (String prefix : ImmutableList.of("ABT", "AFT", "BEF", "CAL", "EST", "FROM", "TO")) {
+        for (String prefix : List.of("ABT", "AFT", "BEF", "CAL", "EST", "FROM", "TO")) {
             String prefix1 = prefix + " ";
 
             if (s.startsWith(prefix1)) {

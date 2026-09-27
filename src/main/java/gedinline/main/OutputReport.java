@@ -1,16 +1,18 @@
 package gedinline.main;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.TreeMultimap;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class OutputReport {
 
@@ -41,11 +43,11 @@ public class OutputReport {
 
     private static final String VALUE = "value";
 
-    private Map<String, Counter> tellere = Maps.newTreeMap();
-    private List<Counter> utskriftsliste = Lists.newArrayList();
-    private TreeMultimap<Integer, String> warnings = TreeMultimap.create();
+    private Map<String, Counter> tellere = new TreeMap<>();
+    private List<Counter> utskriftsliste = new ArrayList<>();
+    private Map<Integer, Set<String>> warnings = new TreeMap<>();
     private PrintWriter printWriter;
-    private Map<String, String> values = Maps.newHashMap();
+    private Map<String, String> values = new HashMap<>();
     private AnalysisStatistics analysisStatistics;
 
     public OutputReport(PrintWriter printWriter) {
@@ -123,7 +125,7 @@ public class OutputReport {
     }
 
     public void outputWarning(int lineNumber, String s) {
-        warnings.put(lineNumber, s);
+        warnings.computeIfAbsent(lineNumber, k -> new TreeSet<>()).add(s);
     }
 
     public void printReport() {
@@ -140,8 +142,10 @@ public class OutputReport {
 
         printBlankLine();
 
-        for (String s : warnings.values()) {
-            printWriter.println(s);
+        for (Set<String> lineWarnings : warnings.values()) {
+            for (String s : lineWarnings) {
+                printWriter.println(s);
+            }
         }
 
         printBlankLine();
