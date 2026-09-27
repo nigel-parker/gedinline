@@ -3,9 +3,9 @@ package gedinline.lexical;
 import gedinline.main.InvalidFormatException;
 import gedinline.main.NullLogger;
 import gedinline.main.WarningSink;
+import gedinline.util.IOUtils;
+import gedinline.util.LineIterator;
 import gedinline.util.StringUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.LineIterator;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

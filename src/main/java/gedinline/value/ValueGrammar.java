@@ -2,8 +2,8 @@ package gedinline.value;
 
 import gedinline.lexical.GedcomVersion;
 import gedinline.main.ValidatorBugException;
+import gedinline.util.IOUtils;
 import gedinline.util.StringUtils;
-import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,14 +25,13 @@ public class ValueGrammar implements SyntaxElementLocator {
     private SyntaxExpression syntaxExpression;
     private String description = "";
 
-    @SuppressWarnings("unchecked")
     public ValueGrammar(GedcomVersion gedcomVersion) {
         String filename = gedcomVersion.getValueGrammar();
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filename);
         List<String> list;
 
         try {
-            list = (List<String>) IOUtils.readLines(inputStream);
+            list = IOUtils.readLines(inputStream);
         } catch (IOException e) {
             throw new ValidatorBugException("Cant find grammar file", e);
         }
