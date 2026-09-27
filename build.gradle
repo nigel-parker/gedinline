@@ -112,7 +112,3 @@ publishing {
 tasks.withType(PublishToMavenLocal) {
     dependsOn fatJar
 }
-
-tasks.withType(PublishToMavenRepository) {
-    dependsOn fatJar
-}
