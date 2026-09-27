@@ -24,6 +24,12 @@ sourceSets {
     }
 }
 
+// Target Java 17 whatever JDK runs Gradle, so the jar runs on Java 17 and later
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }

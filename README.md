@@ -15,12 +15,13 @@ A Java JDK must be installed on your machine. You can verify this by typing
 javac -version
 ```
 
-on your command line. Depending on your Java version you must choose the correct branch and version of GED-inline:
+on your command line. GED-inline 4 requires Java 17 or later. Use the `main` branch:
 
-| Java version |   Branch   | GED-inline version | Tested specifically  with  |
-|:-------------|:----------:|:------------------:|----------------------------|
-| Java 8 - 16  |  v3-main   | V3.x.x             | Java 8, Java 11            |
-| Java 17 ++   |  v4-main   | V4.x.x             | Java 17, Java 21, Java 23  |
+| Java version |   Branch   | GED-inline version | Status                                   | Tested specifically with          |
+|:-------------|:----------:|:------------------:|------------------------------------------|-----------------------------------|
+| Java 17 ++   |    main    | V4.x.x             | Current development                      | Java 17, Java 21, Java 23, Java 25 |
+| Java 17 ++   |  v4-main   | V4.x.x             | Kept for existing users, same as main    | Java 17, Java 21, Java 23, Java 25 |
+| Java 8 - 16  |  v3-main   | V3.x.x             | Deprecated, no further fixes             | Java 8, Java 11                   |
 
 The current version of GED-inline is 4.1.1
 
