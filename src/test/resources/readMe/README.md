@@ -9,23 +9,38 @@ The validator is also available for online use at [GED-inline](https://ged-inlin
 ### Getting Started
 #### Prerequisites
 
-A Java JDK must be installed on your machine. You can verify this by typing
+GED-inline 4 requires Java 17 or later. You can check which version you have by typing
+
+```
+java -version
+```
+
+on your command line. GED-inline has been tested specifically with Java 17, Java 21, Java 23 and Java 25.
+
+#### Downloading GED-inline
+
+The simplest way to get GED-inline is to download the file `gedinline-${version}.jar` from the
+[latest release](https://github.com/nigel-parker/gedinline/releases/latest). Nothing else needs to be installed,
+and there is nothing to build.
+
+The current version of GED-inline is ${version}
+
+#### Building GED-inline from source
+
+You only need to build GED-inline yourself if you want to change the code or try changes that have not been released
+yet. Building needs a Java JDK, not just Java. You can verify that one is installed by typing
 
 ```
 javac -version
 ```
 
-on your command line. GED-inline 4 requires Java 17 or later. Use the `main` branch:
+Use the `main` branch:
 
-| Java version |   Branch   | GED-inline version | Status                                   | Tested specifically with          |
-|:-------------|:----------:|:------------------:|------------------------------------------|-----------------------------------|
-| Java 17 ++   |    main    | V4.x.x             | Current development                      | Java 17, Java 21, Java 23, Java 25 |
-| Java 17 ++   |  v4-main   | V4.x.x             | Kept for existing users, same as main    | Java 17, Java 21, Java 23, Java 25 |
-| Java 8 - 16  |  v3-main   | V3.x.x             | Deprecated, no further fixes             | Java 8, Java 11                   |
-
-The current version of GED-inline is ${version}
-
-#### Building GED-inline
+| Java version |   Branch   | GED-inline version | Status                                   |
+|:-------------|:----------:|:------------------:|------------------------------------------|
+| Java 17 ++   |    main    | V4.x.x             | Current development                      |
+| Java 17 ++   |  v4-main   | V4.x.x             | Kept for existing users, same as main    |
+| Java 8 - 16  |  v3-main   | V3.x.x             | Deprecated, no further fixes             |
 
 To build the validator, type the following in the project directory:
 
@@ -39,48 +54,44 @@ on Windows, or
 ./gradlew gedinline
 ```
 
-on Mac or Linux. If everything goes well you should see a 'BUILD SUCCESSFUL' message.
+on Mac or Linux. If everything goes well you should see a 'BUILD SUCCESSFUL' message, and the jar file is in
+`build/libs/gedinline-${version}.jar`.
 
 ### Running the standalone version
 
-GED-inline can be run from the command line. Try it out on an example file from the project:
+GED-inline is run from the command line. In the folder where you saved the jar file, type
+
+```
+java -jar gedinline-${version}.jar my-family-tree.ged
+```
+
+where `my-family-tree.ged` is the GEDCOM file you want to validate. To save the result, redirect the output to a
+file:
+
+```
+java -jar gedinline-${version}.jar my-family-tree.ged > report.txt
+```
+
+If you have built GED-inline from source, you can try it out on an example file from the project:
 
 ```
 java -jar build/libs/gedinline-${version}.jar build/resources/test/gedcom-files/harvey-70.ged
 ```
 
-To save the result, redirect the output to a file:
-
-```
-java -jar build/libs/gedinline-${version}.jar build/resources/test/gedcom-files/harvey-70.ged > report.txt
-```
-
-Records are validated on a pool of worker threads, one per available processor, while the file itself is read on
-the calling thread. The report is the same whatever the number of threads. Use `--parallelism N` (or `-p N`) to
-choose the number of validation threads yourself; `--parallelism 1` gives the single-threaded behaviour of earlier
-versions:
-
-```
-java -jar build/libs/gedinline-${version}.jar --parallelism 1 build/resources/test/gedcom-files/harvey-70.ged
-```
-
 ### The jar file
 
-GED-inline can also be accessed as a Java library:
+GED-inline can also be used as a Java library. Add the jar file to your classpath: either the downloaded
+`gedinline-${version}.jar`, or `build/libs/gedinline-${version}.jar` if you built it yourself. The jar is
+self-contained: it includes the libraries GED-inline needs (Groovy 4 and Apache Commons Validator).
 
-```
-build/libs/gedinline-${version}.jar
-```
-
-Validation is performed by the gedinline.main.GedInlineValidator class. The validater requires a GEDCOM file to analyse and a PrintWriter to write the validation report to. Create it like this:
+Validation is performed by the gedinline.main.GedInlineValidator class. The validator requires a GEDCOM file to analyse and a PrintWriter to write the validation report to. Create it like this:
 
 ```
 new GedInlineValidator(gedcomFile, outputReportWriter)
 ```
 
-Use the validate() method to start validation. By default records are validated on as many threads as there are
-available processors; call setParallelism(n) before validate() to change this, with 1 meaning single-threaded. For
-further details see the groovydoc at build/docs/groovydoc/gedinline/main/GedInlineValidator.html.
+Use the validate() method to start validation. If you build from source, `./gradlew gedinline` also generates the
+groovydoc; for further details see build/docs/groovydoc/gedinline/main/GedInlineValidator.html.
 
 ### License
 
